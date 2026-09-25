@@ -10,10 +10,7 @@ export default function Manifesto() {
       <Reveal>
         <div className="grid gap-10 md:grid-cols-[3fr_8fr] md:gap-[clamp(40px,6vw,96px)]">
           <div className="flex flex-col gap-4">
-            <div className="eyebrow">{t('eyebrow')}</div>
-            <div className="serif italic text-[20px] text-[var(--gold-dark)] border-t border-[var(--olive-15)] pt-3.5 tracking-[0.02em]">
-              <em>i.</em>
-            </div>
+            <div className="eyebrow">{t('eyebrow')} · i.</div>
           </div>
           <div>
             <p
