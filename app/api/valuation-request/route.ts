@@ -73,9 +73,6 @@ export async function POST(req: Request) {
   const notifyTo = process.env.LEAD_NOTIFY_EMAIL;
   const from = process.env.RESEND_FROM_EMAIL || 'Herocasa <onboarding@resend.dev>';
 
-  let notified = false;
-  let notifyError: string | undefined;
-
   if (apiKey && notifyTo) {
     try {
       const resend = new Resend(apiKey);
@@ -87,21 +84,14 @@ export async function POST(req: Request) {
         html: buildEmailHtml(body),
       });
       if (result.error) {
-        notifyError = result.error.message;
         console.error('[valuation-request] Resend returned error', result.error);
-      } else {
-        notified = true;
       }
     } catch (err) {
-      notifyError = err instanceof Error ? err.message : String(err);
       console.error('[valuation-request] Resend send failed', err);
     }
   } else {
-    notifyError = 'RESEND_API_KEY or LEAD_NOTIFY_EMAIL not set on the server';
-    console.warn('[valuation-request]', notifyError);
+    console.warn('[valuation-request] RESEND_API_KEY or LEAD_NOTIFY_EMAIL not set — no notification sent');
   }
 
-  // TEMP DIAGNOSTIC: notified/notifyError surfaced in the response while we
-  // debug why lead emails aren't arriving. Remove once confirmed working.
-  return NextResponse.json({ ok: true, notified, notifyError });
+  return NextResponse.json({ ok: true });
 }
