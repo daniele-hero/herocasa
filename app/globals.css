@@ -113,7 +113,6 @@ img { max-width: 100%; display: block; }
   border-top: 1px solid currentColor;
   border-right: 1px solid currentColor;
   transform: translateY(-50%) rotate(45deg);
-  transform-origin: right center;
 }
 .btn-arrow:hover .arrow { width: 36px; }
 
