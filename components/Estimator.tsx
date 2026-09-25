@@ -5,8 +5,9 @@ import { useTranslations } from 'next-intl';
 import { AnimatePresence, motion } from 'motion/react';
 import Reveal from './Reveal';
 import { trackLead } from './CookieBanner';
+import { calculateEstimateRange, type EstimateRange } from '@/lib/estimator-form';
 
-type ResultRange = { min: number; max: number } | null;
+type ResultState = (EstimateRange & { comune: string }) | null;
 
 const ZONES = [
   'Peschiera del Garda',
@@ -32,7 +33,7 @@ export default function Estimator() {
   };
 
   const [features, setFeatures] = useState<Set<string>>(new Set());
-  const [range, setRange] = useState<ResultRange>(null);
+  const [range, setRange] = useState<ResultState>(null);
 
   const toggleFeature = (f: string) =>
     setFeatures((prev) => {
@@ -44,23 +45,13 @@ export default function Estimator() {
   const onSubmit = async (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     const data = new FormData(e.currentTarget);
-    // POST to /api/valuation-request in production. Here we compute a plausible
-    // preview range so the user immediately sees a meaningful answer.
-    const rooms = parseInt((data.get('rooms') as string) || '2', 10) || 2;
+    const rooms = (data.get('rooms') as string) || '';
     const type = (data.get('type') as string) || '';
     const zone = (data.get('zone') as string) || '';
+    const featureList = [...features];
 
-    let base = 12000 + rooms * 6000;
-    if (type === 'Villa') base *= 1.5;
-    else if (type === 'Casa indipendente' || type === 'Detached house' || type === 'Einfamilienhaus') base *= 1.25;
-    if (['Sirmione', 'Bardolino'].includes(zone)) base *= 1.15;
-    base += features.size * 2500;
-    if ([...features].some((f) => /piscin|pool/i.test(f))) base *= 1.12;
-    if ([...features].some((f) => /vista|view|blick/i.test(f))) base *= 1.1;
-
-    const min = Math.round((base * 0.85) / 1000) * 1000;
-    const max = Math.round((base * 1.2) / 1000) * 1000;
-    setRange({ min, max });
+    const { min, max } = calculateEstimateRange({ rooms, type, zone, features: featureList });
+    setRange({ min, max, comune: zone });
     // Also POST the lead to the backend
     try {
       await fetch('/api/valuation-request', {
@@ -74,7 +65,7 @@ export default function Estimator() {
           zone,
           type,
           rooms,
-          features: [...features],
+          features: featureList,
           notes: data.get('notes'),
           estimatedRange: { min, max },
         }),
@@ -187,6 +178,9 @@ export default function Estimator() {
                       <span className="text-[0.4em] ml-2" style={{ color: 'var(--paper-70)' }}>{result.suffix}</span>
                     </div>
                     <p className="mt-3.5 text-[14px] max-w-[60ch] leading-[1.55]" style={{ color: 'var(--paper-70)' }}>{result.explanation}</p>
+                    <p className="mt-2.5 text-[14px] max-w-[60ch] leading-[1.55] font-medium" style={{ color: 'var(--paper)' }}>
+                      {t('result.confirmation', { comune: range.comune })}
+                    </p>
                   </motion.div>
                 )}
               </AnimatePresence>

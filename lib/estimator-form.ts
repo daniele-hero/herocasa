@@ -58,3 +58,35 @@ export async function postValuationLead(lead: ValuationLead): Promise<void> {
     // The endpoint is idempotent-safe to retry server-side if needed.
   }
 }
+
+export type EstimateRange = { min: number; max: number };
+
+/**
+ * Heuristic preview estimate — same formula used by both the Hero cascade
+ * form and the full Estimator section, so a visitor sees a consistent
+ * number regardless of which form they use. This is an on-screen teaser
+ * only; the real figure is worked out by the team and sent within 48h.
+ */
+export function calculateEstimateRange(input: {
+  rooms: string;
+  type: string;
+  zone: string;
+  features: string[];
+}): EstimateRange {
+  const roomsNum = parseInt(input.rooms, 10) || 2;
+  let base = 12000 + roomsNum * 6000;
+
+  if (input.type === 'Villa') base *= 1.5;
+  else if (['Casa indipendente', 'Detached house', 'Einfamilienhaus'].includes(input.type)) base *= 1.25;
+
+  if (['Sirmione', 'Bardolino'].includes(input.zone)) base *= 1.15;
+
+  base += input.features.length * 2500;
+  if (input.features.some((f) => /piscin|pool/i.test(f))) base *= 1.12;
+  if (input.features.some((f) => /vista|view|blick/i.test(f))) base *= 1.1;
+
+  return {
+    min: Math.round((base * 0.85) / 1000) * 1000,
+    max: Math.round((base * 1.2) / 1000) * 1000,
+  };
+}

@@ -267,7 +267,8 @@
     "result": {
       "label": "Orientierende Schätzung · Erste Analyse",
       "suffix": "/Jahr",
-      "explanation": "Geschätzte Netto-Erträge pro Jahr für eine Immobilie mit diesen Merkmalen in der angegebenen Gemeinde. Die vollständige Bewertung (mit Vergleichsobjekten, erwarteter Auslastung und Kosten) erhalten Sie per E-Mail innerhalb von 48 Stunden."
+      "explanation": "Geschätzte Netto-Erträge pro Jahr für eine Immobilie mit diesen Merkmalen in der angegebenen Gemeinde. Die vollständige Bewertung (mit Vergleichsobjekten, erwarteter Auslastung und Kosten) erhalten Sie per E-Mail innerhalb von 48 Stunden.",
+      "confirmation": "Wir haben Ihre Anfrage erhalten. Wir kontaktieren Sie innerhalb von 48 Stunden mit der Bewertung für Ihre Immobilie in {comune}."
     },
     "side": {
       "eyebrow": "Was Sie erhalten",
@@ -381,7 +382,6 @@
     "preferencesLink": "Cookie-Einstellungen"
   },
   "heroForm": {
-    "successTitle": "Perfekt{name}.",
-    "successBody": "Wir haben Ihre Anfrage erhalten. Wir melden uns innerhalb von 48 Stunden mit der Bewertung für Ihre Immobilie in {comune}."
+    "successTitle": "Perfekt{name}."
   }
 }

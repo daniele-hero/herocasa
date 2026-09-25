@@ -267,7 +267,8 @@
     "result": {
       "label": "Stima orientativa · Prima analisi",
       "suffix": "/anno",
-      "explanation": "Range di ricavi netti annui stimati per un immobile con queste caratteristiche nella zona indicata. La valutazione completa (con analisi comparabili, occupazione attesa e costi) arriva via email entro 48 ore."
+      "explanation": "Range di ricavi netti annui stimati per un immobile con queste caratteristiche nella zona indicata. La valutazione completa (con analisi comparabili, occupazione attesa e costi) arriva via email entro 48 ore.",
+      "confirmation": "Abbiamo ricevuto la tua richiesta. Ti contatteremo entro 48h con la stima per il tuo immobile a {comune}."
     },
     "side": {
       "eyebrow": "Cosa riceverete",
@@ -381,7 +382,6 @@
     "preferencesLink": "Preferenze cookie"
   },
   "heroForm": {
-    "successTitle": "Perfetto{name}.",
-    "successBody": "Abbiamo ricevuto la richiesta. Ti scriviamo entro 48h con la stima per il tuo immobile a {comune}."
+    "successTitle": "Perfetto{name}."
   }
 }

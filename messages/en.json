@@ -267,7 +267,8 @@
     "result": {
       "label": "Indicative estimate · First analysis",
       "suffix": "/year",
-      "explanation": "Estimated net revenue range for a property with these features in the selected area. The full valuation (with comparables, expected occupancy and costs) arrives by email within 48 hours."
+      "explanation": "Estimated net revenue range for a property with these features in the selected area. The full valuation (with comparables, expected occupancy and costs) arrives by email within 48 hours.",
+      "confirmation": "We've received your request. We'll contact you within 48h with the valuation for your property in {comune}."
     },
     "side": {
       "eyebrow": "What you'll receive",
@@ -381,7 +382,6 @@
     "preferencesLink": "Cookie preferences"
   },
   "heroForm": {
-    "successTitle": "Perfect{name}.",
-    "successBody": "We've received your request. We'll write to you within 48h with the valuation for your property in {comune}."
+    "successTitle": "Perfect{name}."
   }
 }

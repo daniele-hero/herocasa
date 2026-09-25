@@ -3,7 +3,7 @@
 import { FormEvent, useState } from 'react';
 import { useTranslations } from 'next-intl';
 import { AnimatePresence, motion, useReducedMotion } from 'motion/react';
-import { ZONES, postValuationLead, type EstimatorFormCopy } from '@/lib/estimator-form';
+import { ZONES, postValuationLead, calculateEstimateRange, type EstimatorFormCopy, type EstimateRange } from '@/lib/estimator-form';
 import { trackLead } from './CookieBanner';
 
 const EASE = [0.2, 0.7, 0.2, 1] as const;
@@ -18,11 +18,12 @@ export default function HeroForm() {
   const tHero = useTranslations('hero');
   const tEst = useTranslations('estimator');
   const tForm = useTranslations('heroForm');
+  const tResult = useTranslations('estimator.result');
   const form = tEst.raw('form') as EstimatorFormCopy;
   const reduced = useReducedMotion();
 
   const [expanded, setExpanded] = useState(false);
-  const [submitted, setSubmitted] = useState<{ name: string; comune: string } | null>(null);
+  const [submitted, setSubmitted] = useState<{ name: string; comune: string; range: EstimateRange } | null>(null);
   const [features, setFeatures] = useState<Set<string>>(new Set());
 
   const toggleFeature = (f: string) =>
@@ -43,6 +44,11 @@ export default function HeroForm() {
     const data = new FormData(e.currentTarget);
     const name = (data.get('name') as string) || '';
     const comune = (data.get('zone') as string) || '';
+    const type = (data.get('type') as string) || '';
+    const rooms = (data.get('rooms') as string) || '';
+    const featureList = [...features];
+
+    const range = calculateEstimateRange({ rooms, type, zone: comune, features: featureList });
 
     await postValuationLead({
       source: 'hero-form-full',
@@ -50,15 +56,15 @@ export default function HeroForm() {
       email: (data.get('email') as string) || '',
       phone: (data.get('phone') as string) || '',
       zone: comune,
-      type: (data.get('type') as string) || '',
-      rooms: (data.get('rooms') as string) || '',
-      features: [...features],
+      type,
+      rooms,
+      features: featureList,
       notes: (data.get('notes') as string) || '',
       submittedAt: new Date().toISOString(),
     });
 
-    trackLead('hero-form-full', { comune });
-    setSubmitted({ name: name.split(' ')[0] || name, comune });
+    trackLead('hero-form-full', { comune, value: (range.min + range.max) / 2, currency: 'EUR' });
+    setSubmitted({ name: name.split(' ')[0] || name, comune, range });
   };
 
   return (
@@ -237,12 +243,17 @@ export default function HeroForm() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, ease: EASE }}
           >
-            <p className="serif text-[20px] leading-[1.4] text-[var(--olive)]">
-              <strong className="text-[var(--gold-dark)] font-medium">
-                {tForm('successTitle', { name: submitted.name ? `, ${submitted.name}` : '' })}
-              </strong>
-              <br />
-              {tForm('successBody', { comune: submitted.comune })}
+            <p className="serif text-[18px] text-[var(--olive)] mb-3">
+              {tForm('successTitle', { name: submitted.name ? `, ${submitted.name}` : '' })}
+            </p>
+            <div className="text-[11px] tracking-[0.16em] uppercase text-[var(--gold-dark)] mb-2">{tResult('label')}</div>
+            <div className="serif text-[var(--olive)]" style={{ fontSize: 'clamp(30px, 3.4vw, 44px)', lineHeight: 1 }}>
+              €<em className="gold-italic">{submitted.range.min.toLocaleString('it-IT')}</em> – €
+              <em className="gold-italic">{submitted.range.max.toLocaleString('it-IT')}</em>
+              <span className="text-[0.4em] ml-2 text-[var(--stone)]">{tResult('suffix')}</span>
+            </div>
+            <p className="mt-3.5 text-[14px] leading-[1.55] text-[var(--olive-70)]">
+              {tResult('confirmation', { comune: submitted.comune })}
             </p>
           </motion.div>
         )}
