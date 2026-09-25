@@ -1,0 +1,387 @@
+{
+  "meta": {
+    "title": "Herocasa — Verwaltung von Zweitwohnsitzen am Gardasee",
+    "description": "Property Management für Eigentümer von Zweitwohnsitzen am Gardasee. Wir übernehmen Bürokratie, Gäste, Reinigung und Preise. Transparente Monatsberichte, totale Sorglosigkeit."
+  },
+  "nav": {
+    "services": "Leistungen",
+    "process": "Wie es funktioniert",
+    "properties": "Objekte",
+    "zones": "Gebiete",
+    "faq": "FAQ",
+    "cta": "Immobilie bewerten",
+    "contact": "Kontakt"
+  },
+  "hero": {
+    "eyebrow": "Kurzzeitvermietung · Gardasee",
+    "lineOne": "Ihr Zweitwohnsitz",
+    "lineTwo": "am Gardasee,",
+    "lineThree": "ohne Sorgen.",
+    "body": "Wir kümmern uns um alles: Bürokratie, Gäste, Reinigung, Preise, Instandhaltung. Sie erhalten den Monatsbericht — und Ihr Haus, wann immer Sie es brauchen.",
+    "primaryCta": "Kostenlose Bewertung anfordern",
+    "secondaryCta": "Wie es funktioniert",
+    "trust": "Keine Aktivierungsgebühr · Keine Bindung · Antwort innerhalb von 48 Stunden",
+    "statLabel": "Durchschnittsrendite 2025",
+    "statValue": "+24%",
+    "statMeta": "bei Portfolios, die zu unserer Verwaltung wechselten, gegenüber Eigenverwaltung im Vorjahr."
+  },
+  "trustBar": [
+    {
+      "value": "6+",
+      "label": "Jahre am Gardasee"
+    },
+    {
+      "value": "74",
+      "label": "verwaltete Objekte"
+    },
+    {
+      "value": "97%",
+      "label": "zufriedene Gäste"
+    },
+    {
+      "value": "€3,2M",
+      "label": "erwirtschafteter Umsatz 2025"
+    }
+  ],
+  "manifesto": {
+    "eyebrow": "Über uns",
+    "paragraphOne": "Herocasa entstand am Gardasee aus der direkten Erfahrung von Menschen, die einen Zweitwohnsitz besitzen und wissen, wie komplex es ist, ihn in eine Einnahmequelle zu verwandeln, <em>ohne die eigene Zeit aufzugeben</em>.",
+    "paragraphTwo": "Wir sind kein Portal, kein OTA. Wir sind ein lokales Team, das ans Telefon geht, Ihre Gäste persönlich empfängt und in jeder Gemeinde am See den Handwerker des Vertrauens kennt — und Ihnen das Haus so zurückgibt, wie Sie es uns anvertraut haben.",
+    "signature": "Team Herocasa · Gardasee"
+  },
+  "services": {
+    "eyebrow": "Leistungen für Eigentümer",
+    "titleOne": "Alles was Sie brauchen,",
+    "titleTwo": "nichts worum Sie sich kümmern müssen.",
+    "intro": "Sechs Arbeitsbereiche, ein Ansprechpartner. Die Verwaltung Ihres Hauses ist eine Leistung, nicht eine Serie von Angeboten.",
+    "list": [
+      {
+        "title": "Vollständige Bürokratie-Verwaltung",
+        "body": "CIN-Registrierung, SUAP-Meldungen, Meldung an die Questura, ISTAT, Kurtaxe, Cedolare Secca. Alles rechtskonform, ohne dass Sie sich je wieder darum kümmern müssen.",
+        "link": "Was wir übernehmen"
+      },
+      {
+        "title": "Dynamisches Multi-Channel-Pricing",
+        "body": "Airbnb, Booking, VRBO, Direktkanal. Preise täglich angepasst nach Saison, Events und lokaler Nachfrage — für maximale Netto-Rendite.",
+        "link": "So funktioniert es"
+      },
+      {
+        "title": "Persönlicher 24/7 Check-in",
+        "body": "Ein echter Ansprechpartner empfängt Ihre Gäste zu jeder Uhrzeit. Schlüsselübergabe, Haustour, lokale Tipps. Kein anonymer Schlüsseltresor.",
+        "link": "Unser Standard"
+      },
+      {
+        "title": "Professionelle Reinigung & Wäsche",
+        "body": "Intern geschultes Reinigungsteam, gemietete Leinenwäsche, Qualitätskontrolle nach jedem Check-out. Das Haus ist immer bereit.",
+        "link": "Reinigungsstandards"
+      },
+      {
+        "title": "Instandhaltung & kleine Reparaturen",
+        "body": "Netzwerk vertrauter Handwerker in jeder Gemeinde am See. Koordination, transparente Angebote, Genehmigung oberhalb Schwelle.",
+        "link": "Handwerker-Netzwerk"
+      },
+      {
+        "title": "Transparente Monatsberichte",
+        "body": "Eigentümer-Dashboard mit Auslastung, Bruttoumsatz, Kosten, Netto. Herunterladbarer Kontoauszug monatlich. Ehrliches Reporting.",
+        "link": "Beispiel ansehen"
+      }
+    ]
+  },
+  "process": {
+    "eyebrow": "Wie es funktioniert",
+    "titleOne": "Vier Schritte,",
+    "titleTwo": "keine Überraschungen.",
+    "intro": "Vom ersten Kontakt zum ersten Gast in wenigen Wochen. Jede Phase mit Ihnen abgestimmt, jeder Kostenpunkt im Voraus offengelegt.",
+    "steps": [
+      {
+        "title": "Gespräch & Besichtigung",
+        "body": "Sie erzählen uns von der Immobilie, Ihren Zielen, der Eigennutzung. Wir vereinbaren eine kostenlose Besichtigung, unverbindlich.",
+        "duration": "Dauer: 1 Woche"
+      },
+      {
+        "title": "Analyse & Ertragsplan",
+        "body": "Wir liefern eine realistische Prognose zu Auslastung, Preisen, erwarteten Netto-Erträgen. Mit historischen Daten und lokalen Vergleichsobjekten.",
+        "duration": "Dauer: 1 Woche"
+      },
+      {
+        "title": "Onboarding & Veröffentlichung",
+        "body": "Transparenter Vertrag, professionelle Fotos, Einrichtung, Kanaleröffnung. Nichts zu tun auf Ihrer Seite.",
+        "duration": "Dauer: 2-3 Wochen"
+      },
+      {
+        "title": "Verwaltung & Reporting",
+        "body": "Ab hier: Ruhe. Jeden Monat kommen Bericht und Überweisung. Sie kehren in Ihr Haus zurück, wann immer Sie wollen.",
+        "duration": "Laufend, immer."
+      }
+    ]
+  },
+  "testimonials": [
+    {
+      "quote": "Vorher habe ich selbst verwaltet. Nach sechs Monaten mit Herocasa hat das Haus 30% mehr abgeworfen — vor allem aber bekam ich keine Anrufe mehr um elf Uhr abends wegen eines defekten Rollladens.",
+      "author": "Marco V.",
+      "role": "Eigentümer einer Villa in Bardolino"
+    },
+    {
+      "quote": "Ich war an klassische Langzeitmiete mit langen Verträgen gewöhnt, aber zwischen Mietausfällen und unerwarteten Kosten lebte ich ständig in Sorge. Der Wechsel zu Herocasa war die Wende: pünktlichste Zahlungen jeden Monat, null Risiko und eine deutlich höhere Rendite.",
+      "author": "Stefano R.",
+      "role": "Eigentümer einer Wohnung in Lazise"
+    },
+    {
+      "quote": "Anfangs war ich skeptisch, weil ich eine Agentur suchte, die mein Haus wie ihr eigenes behandelt. Ich habe ein Team junger, hochprofessioneller und energiegeladener Menschen gefunden. Sie denken wirklich an jedes Detail, von makelloser Reinigung bis zum Empfang der Gäste.",
+      "author": "Elena C.",
+      "role": "Eigentümerin einer Zwei-Zimmer-Wohnung in Peschiera del Garda"
+    },
+    {
+      "quote": "Bei klassischer Vermietung nutzte sich das Haus ab und die Einnahmen waren blockiert. Mit Herocasa haben wir die Preise optimiert. Sie kümmern sich um die laufende Instandhaltung und überweisen die Erträge mit schweizerischer Pünktlichkeit.",
+      "author": "Andrea P.",
+      "role": "Eigentümer eines Reihenhauses in Castelnuovo del Garda"
+    },
+    {
+      "quote": "Man merkt sofort, dass diese Agentur eine Klasse für sich ist. Sie kümmern sich bis ins kleinste Detail um die Immobilie, von Dokumenten und Bürokratie bis zu kleinen Reparaturen im Haus. Die Ruhe, pünktliche Zahlungen und ein stets perfektes Haus zu haben, ist unbezahlbar.",
+      "author": "Giulia B.",
+      "role": "Eigentümerin einer Suite in Sirmione"
+    },
+    {
+      "quote": "Bei klassischer Vermietung riskierte ich, die Miete monatelang nicht zu erhalten. Mit Herocasa bekomme ich nicht nur pünktlichste Zahlungen, ich verdiene auch deutlich mehr, und mein Haus wird stets gepflegt und kontrolliert. Eine junge, aber äußerst professionelle Agentur.",
+      "author": "Matteo T.",
+      "role": "Eigentümer eines Penthouses in Desenzano del Garda"
+    }
+  ],
+  "properties": {
+    "eyebrow": "Verwaltete Objekte",
+    "titleOne": "Einige der Objekte,",
+    "titleTwo": "die wir heute verwalten.",
+    "seeAll": "Gesamtportfolio",
+    "list": [
+      {
+        "name": "Villa in Soiano del Lago",
+        "meta": "5 Zimmer · Pool · Großer Garten",
+        "metric": "+34%",
+        "metricLabel": "Rendite ggü. 2024"
+      },
+      {
+        "name": "Wohnung in Sirmione",
+        "meta": "Drei-Zimmer-Wohnung · Altstadt",
+        "metric": "92%",
+        "metricLabel": "Auslastung 2025"
+      },
+      {
+        "name": "Haus in Bardolino",
+        "meta": "4 Zimmer · Dampfbad · Pool",
+        "metric": "4.9/5",
+        "metricLabel": "Gäste-Bewertung"
+      },
+      {
+        "name": "Villa in Lazise",
+        "meta": "6 Zimmer · Whirlpool · Privatgarten",
+        "metric": "€62k",
+        "metricLabel": "Netto-Erträge 2025"
+      }
+    ]
+  },
+  "zones": {
+    "eyebrow": "Abgedeckte Gebiete",
+    "titleOne": "Wir sind",
+    "titleTwo": "lokal verankert.",
+    "intro": "Wir arbeiten ausschließlich am Veronesischen und Brescianer Ufer des Gardasees. Lokale Kenntnis ist für uns nicht verhandelbar.",
+    "list": [
+      {
+        "name": "Peschiera del Garda",
+        "count": "15 Objekte verwaltet"
+      },
+      {
+        "name": "Lazise",
+        "count": "8 Objekte verwaltet"
+      },
+      {
+        "name": "Castelnuovo del Garda",
+        "count": "5 Objekte verwaltet"
+      },
+      {
+        "name": "Bardolino",
+        "count": "12 Objekte verwaltet"
+      },
+      {
+        "name": "Sirmione",
+        "count": "18 Objekte verwaltet"
+      },
+      {
+        "name": "Desenzano del Garda",
+        "count": "10 Objekte verwaltet"
+      },
+      {
+        "name": "Padenghe sul Garda",
+        "count": "6 Objekte verwaltet"
+      },
+      {
+        "name": "Ihr Gebiet?",
+        "count": "Besichtigung anfragen",
+        "highlight": true
+      }
+    ]
+  },
+  "estimator": {
+    "eyebrow": "Kostenlose Bewertung",
+    "titleOne": "Was könnte Ihr Haus",
+    "titleTwo": "am Gardasee erwirtschaften?",
+    "intro": "Füllen Sie das Formular aus: Wir analysieren Gemeinde, Typ, Potenzial — und senden Ihnen eine begründete Schätzung innerhalb von 48 Stunden. Keine Bindung, kein Kaltakquise-Anruf.",
+    "form": {
+      "name": "Vor- und Nachname",
+      "email": "E-Mail",
+      "phone": "Telefon",
+      "zone": "Gemeinde",
+      "zonePlaceholder": "Auswählen",
+      "type": "Immobilientyp",
+      "typePlaceholder": "Auswählen",
+      "types": [
+        "Villa",
+        "Wohnung",
+        "Einfamilienhaus",
+        "Ein-Zimmer-Wohnung",
+        "Studio"
+      ],
+      "rooms": "Schlafzimmer",
+      "roomsOptions": [
+        "1",
+        "2",
+        "3",
+        "4",
+        "5",
+        "6+"
+      ],
+      "features": "Ausstattung (optional)",
+      "featuresList": [
+        "Pool",
+        "Garten",
+        "Seeblick",
+        "Parkplatz",
+        "Klimaanlage",
+        "Haustiere erlaubt"
+      ],
+      "notes": "Anmerkungen (optional)",
+      "notesPlaceholder": "Quadratmeter, Besonderheiten, Rendite-Ziele, geplante Eigennutzung...",
+      "submit": "Bewertung anfordern",
+      "legal": "DSGVO-konform · Keine Bindung · Kostenlos",
+      "otherZone": "Andere Gemeinde am See"
+    },
+    "result": {
+      "label": "Orientierende Schätzung · Erste Analyse",
+      "suffix": "/Jahr",
+      "explanation": "Geschätzte Netto-Erträge pro Jahr für eine Immobilie mit diesen Merkmalen in der angegebenen Gemeinde. Die vollständige Bewertung (mit Vergleichsobjekten, erwarteter Auslastung und Kosten) erhalten Sie per E-Mail innerhalb von 48 Stunden."
+    },
+    "side": {
+      "eyebrow": "Was Sie erhalten",
+      "titleOne": "Ein vollständiger Bericht,",
+      "titleTwo": "kein Kostenvoranschlag.",
+      "items": [
+        {
+          "title": "Geschätzte Netto-Jahreserträge",
+          "body": "Basierend auf echten Auslastungs- und Preisdaten der Region, nicht auf Versprechen."
+        },
+        {
+          "title": "Vergleichsobjekt-Analyse",
+          "body": "Drei ähnliche, bereits verwaltete Immobilien mit ihrer Performance des letzten Jahres."
+        },
+        {
+          "title": "Positionierungsplan",
+          "body": "Empfohlene Kanäle, empfohlener Durchschnittspreis, Maßnahmen zur Renditesteigerung."
+        },
+        {
+          "title": "Transparentes Angebot",
+          "body": "Kein Kleingedrucktes. Wenn Sie fortfahren möchten, wissen Sie bereits alles."
+        }
+      ]
+    }
+  },
+  "faq": {
+    "eyebrow": "Häufige Fragen",
+    "titleOne": "Was sich lohnt,",
+    "titleTwo": "sofort zu klären.",
+    "list": [
+      {
+        "q": "Wie viel werde ich mit Herocasa verdienen?",
+        "a": "Es hängt von Gemeinde, Typ, Saison und Zustand der Immobilie ab. Im Durchschnitt sehen Eigentümer, die von selbstverwalteten Portalen zu uns wechseln, <em>eine Steigerung der Netto-Rendite um 20-35% im ersten Jahr</em>. Die kostenlose Bewertung liefert eine begründete Schätzung basierend auf Ihren realen Eckdaten."
+      },
+      {
+        "q": "Wie hoch sind Ihre Gebühren?",
+        "a": "Wir berechnen einen Prozentsatz des Bruttoumsatzes, ohne Aktivierungskosten, ohne Monatsabonnement, ohne versteckte Gebühren. Der genaue Prozentsatz hängt von der gewählten Servicestufe ab und wird im Angebot vor der Unterzeichnung mitgeteilt."
+      },
+      {
+        "q": "Wer kümmert sich um die Bürokratie?",
+        "a": "Wir. Vollständig. CIN-Registrierung, SUAP-Meldungen, tägliche Meldungen an die Questura, ISTAT-Meldungen, Zahlung der Kurtaxe an die Gemeinde. Sie erhalten eine Zusammenfassung. Falls Sie eine MwSt.-Nummer haben, koordinieren wir mit Ihrem Steuerberater."
+      },
+      {
+        "q": "Kann ich mein Haus nutzen wann ich will?",
+        "a": "Immer. Es ist Ihr Haus. Melden Sie einfach die Eigennutzungs-Daten in unserem Kalender (per E-Mail oder Dashboard) und wir blockieren sie. Wir empfehlen einige Wochen Vorlauf, um keine bestätigten Buchungen zu stornieren, aber es ist keine Pflicht."
+      },
+      {
+        "q": "Was passiert wenn ein Gast etwas beschädigt?",
+        "a": "Wir prüfen die Immobilie nach jedem Check-out. Kleine Schäden werden aus der Kaution ersetzt. Größere Schäden aktivieren die Airbnb-AirCover-Versicherung oder unsere Zusatzpolice für Direktbuchungen. In jedem Fall <em>erhalten Sie das Haus im Zustand zurück, in dem Sie es anvertraut haben</em>, oder eine entsprechende Rückerstattung."
+      },
+      {
+        "q": "Auf welchen Portalen veröffentlichen Sie?",
+        "a": "Airbnb, Booking.com, VRBO, Expedia und den Direktkanal auf der Herocasa-Seite. Der Kalender ist in Echtzeit synchronisiert, um Doppelbuchungen zu vermeiden. Die Multi-Channel-Verteilung ist der Schlüssel zur maximalen Auslastung ohne Preissenkung."
+      },
+      {
+        "q": "Wer bezahlt Nebenkosten und Instandhaltung?",
+        "a": "Die Nebenkosten bleiben auf den Eigentümer laufen und werden im Monatsbericht nach tatsächlichem Verbrauch abgerechnet. Die laufende Instandhaltung (kleine Eingriffe unter einer vereinbarten Schwelle) wird von uns vorgestreckt und im Bericht ausgewiesen. Eingriffe über der Schwelle werden immer im Voraus autorisiert."
+      },
+      {
+        "q": "Wie funktioniert der Monatsbericht?",
+        "a": "Jeden Monat, bis zum 10., erhalten Sie per E-Mail einen PDF-Bericht mit: Buchungen des Vormonats, Auslastungsquote, Bruttoumsatz pro Kanal, Kosten (Reinigung, Wäsche, Portalprovisionen, Kurtaxe), Netto-Überweisung auf Ihr Konto. Die Überweisung kommt gleichzeitig. Volle Transparenz."
+      }
+    ]
+  },
+  "contact": {
+    "eyebrow": "Kontakt",
+    "titleOne": "Reden wir",
+    "titleTwo": "in Ruhe.",
+    "body": "Wenn Sie den direkten Kontakt ohne Formular bevorzugen: Wir sind auf klassischen Wegen erreichbar. Wir antworten innerhalb eines Werktages.",
+    "emailLabel": "Schreiben Sie uns",
+    "phoneLabel": "Rufen Sie uns an",
+    "hoursLabel": "Öffnungszeiten",
+    "hours": "Mo-Fr 9:00-18:00\nSa nach Vereinbarung",
+    "callCta": {
+      "eyebrow": "Kennenlerngespräch",
+      "title": "Dreißig Minuten, um zu sehen ob wir zusammenpassen.",
+      "body": "Noch vor der Besichtigung schlagen wir ein dreißigminütiges Gespräch vor, um Ihr Objekt, Ihre Ziele zu verstehen und zu prüfen, ob Herocasa der richtige Partner ist. Wenn nicht, sagen wir es.",
+      "bullets": [
+        "Keine Kosten, keine Verpflichtung",
+        "Geführt von einem Senior, nicht einem Vertriebler",
+        "Termine in den nächsten fünf Tagen verfügbar"
+      ],
+      "cta": "Gespräch buchen",
+      "orWrite": "Oder schreiben Sie an"
+    },
+    "whatsappCta": "Schreiben Sie uns auf WhatsApp"
+  },
+  "footer": {
+    "tagline": "Property Management für Eigentümer von Zweitwohnsitzen am Gardasee.",
+    "servicesTitle": "Leistungen",
+    "infoTitle": "Info",
+    "contactTitle": "Kontakt",
+    "legal": "© 2026 Herocasa — USt-ID 02668020205",
+    "privacy": "Datenschutz",
+    "cookies": "Cookies",
+    "terms": "AGB"
+  },
+  "cookieBanner": {
+    "title": "Cookies & Datenschutz",
+    "description": "Wir verwenden technische Cookies, die für den Betrieb der Website notwendig sind, sowie — mit Ihrer Zustimmung — Analyse- und Marketing-Cookies, um die Seite zu verbessern und unsere Kampagnen zu messen. Keine invasive Profilbildung. Sie können Ihre Wahl unten anpassen oder unsere <a href=\"/{locale}/cookie\">Cookie-Richtlinie</a> lesen.",
+    "necessaryTitle": "Technisch",
+    "necessaryBadge": "immer aktiv",
+    "necessaryDesc": "Notwendig für den Betrieb der Website und zum Speichern Ihrer Einstellungen.",
+    "analyticsTitle": "Anonyme Analyse",
+    "analyticsDesc": "Aggregierte Verkehrsstatistiken, ohne Profilbildung.",
+    "marketingTitle": "Marketing",
+    "marketingDesc": "Messung der Wirksamkeit unserer Werbekampagnen.",
+    "reject": "Ablehnen",
+    "acceptSelected": "Auswahl akzeptieren",
+    "acceptAll": "Alle akzeptieren",
+    "preferencesLink": "Cookie-Einstellungen"
+  },
+  "heroForm": {
+    "successTitle": "Perfekt{name}.",
+    "successBody": "Wir haben Ihre Anfrage erhalten. Wir melden uns innerhalb von 48 Stunden mit der Bewertung für Ihre Immobilie in {comune}."
+  }
+}

@@ -1,0 +1,387 @@
+{
+  "meta": {
+    "title": "Herocasa — Property management for second homes on Lake Garda",
+    "description": "Full-service property management for owners of second homes on Lake Garda. We handle bureaucracy, guests, cleaning, pricing. Transparent monthly reports, total peace of mind."
+  },
+  "nav": {
+    "services": "Services",
+    "process": "How it works",
+    "properties": "Homes",
+    "zones": "Areas",
+    "faq": "FAQ",
+    "cta": "Value my property",
+    "contact": "Contact"
+  },
+  "hero": {
+    "eyebrow": "Short-Term Rental Management · Lake Garda",
+    "lineOne": "Your second home",
+    "lineTwo": "on Lake Garda,",
+    "lineThree": "without the worry.",
+    "body": "We handle everything: bureaucracy, guests, cleaning, pricing, maintenance. You get the monthly statement — and your home whenever you want it.",
+    "primaryCta": "Get a free valuation",
+    "secondaryCta": "How it works",
+    "trust": "No setup fee · No commitment · Reply within 48 hours",
+    "statLabel": "Average yield 2025",
+    "statValue": "+24%",
+    "statMeta": "for portfolios moved to our management, vs. self-management the year before."
+  },
+  "trustBar": [
+    {
+      "value": "6+",
+      "label": "Years on Lake Garda"
+    },
+    {
+      "value": "74",
+      "label": "Homes under management"
+    },
+    {
+      "value": "97%",
+      "label": "Guest satisfaction"
+    },
+    {
+      "value": "€3.2M",
+      "label": "Revenue generated in 2025"
+    }
+  ],
+  "manifesto": {
+    "eyebrow": "Who we are",
+    "paragraphOne": "Herocasa was born on Lake Garda from the direct experience of people who own a second home and know how complex it is to turn it into revenue <em>without giving up their time</em>.",
+    "paragraphTwo": "We are not a portal, not an OTA. We are a local team that answers the phone, meets your guests, knows the trusted plumber in every town on the lake — and leaves the house exactly as you handed it over.",
+    "signature": "Team Herocasa · Lake Garda"
+  },
+  "services": {
+    "eyebrow": "Services for owners",
+    "titleOne": "Everything you need,",
+    "titleTwo": "nothing to worry about.",
+    "intro": "Six work streams, one point of contact. Managing your home is one service, not a series of quotes.",
+    "list": [
+      {
+        "title": "Full bureaucracy management",
+        "body": "CIN registration, SUAP filings, police notifications, ISTAT, tourist tax, flat-rate tax. All compliant, so you never have to think about it again.",
+        "link": "What we manage"
+      },
+      {
+        "title": "Multi-channel dynamic pricing",
+        "body": "Airbnb, Booking, VRBO, direct channel. Prices revised every day based on seasonality, events, and local demand — to maximize net yield.",
+        "link": "How pricing works"
+      },
+      {
+        "title": "Personal 24/7 check-in",
+        "body": "A real person welcomes your guests at any hour. Keys, house tour, local recommendations. No anonymous lockbox.",
+        "link": "Our standard"
+      },
+      {
+        "title": "Professional cleaning & linen",
+        "body": "In-house trained cleaning team, rented linen sheets, quality check after every check-out. The house is always ready.",
+        "link": "Cleaning standards"
+      },
+      {
+        "title": "Maintenance & small repairs",
+        "body": "Network of trusted craftsmen in every town on the lake. Coordination, transparent quotes, approval above threshold.",
+        "link": "Craftsman network"
+      },
+      {
+        "title": "Transparent monthly reports",
+        "body": "Owner dashboard with occupancy, gross revenue, costs, net. Downloadable statement every month. Honest reporting on your asset.",
+        "link": "See an example"
+      }
+    ]
+  },
+  "process": {
+    "eyebrow": "How it works",
+    "titleOne": "Four steps,",
+    "titleTwo": "no surprises.",
+    "intro": "From first contact to first guest in a few weeks. Every phase agreed with you, every cost declared up front.",
+    "steps": [
+      {
+        "title": "Call & site visit",
+        "body": "You tell us about the house, your goals, personal-use constraints. We book a free site visit, no commitment.",
+        "duration": "Duration: 1 week"
+      },
+      {
+        "title": "Analysis & yield plan",
+        "body": "We give you a realistic projection of occupancy, prices, expected net income. With historical data and local comparables.",
+        "duration": "Duration: 1 week"
+      },
+      {
+        "title": "Onboarding & listing",
+        "body": "Transparent contract, professional photos, staging, channel opening. Nothing to do on your side.",
+        "duration": "Duration: 2-3 weeks"
+      },
+      {
+        "title": "Management & reporting",
+        "body": "From here on, silence. Every month a report and a bank transfer. You come back to your house whenever you want.",
+        "duration": "Ongoing, always."
+      }
+    ]
+  },
+  "testimonials": [
+    {
+      "quote": "I used to manage on my own. Six months with Herocasa and I found the house yielded 30% more — but mostly, I stopped getting phone calls at 11 pm about a broken shutter.",
+      "author": "Marco V.",
+      "role": "Owner of a villa in Bardolino"
+    },
+    {
+      "quote": "I was used to traditional long-term leases, but between late payments and unexpected costs I lived in constant anxiety. Switching to Herocasa was the turning point: payments arrive like clockwork every month, zero risk, and a noticeably higher return.",
+      "author": "Stefano R.",
+      "role": "Owner of an apartment in Lazise"
+    },
+    {
+      "quote": "At first I was skeptical — I was looking for an agency that would treat my home as if it were their own. I found a team of young, highly prepared people full of energy. They really think of every last detail, from spotless cleaning to how they welcome guests.",
+      "author": "Elena C.",
+      "role": "Owner of a two-room flat in Peschiera del Garda"
+    },
+    {
+      "quote": "With a traditional rental the house wore down and the income was locked in. With Herocasa we optimized the pricing. They handle ongoing maintenance and pay out earnings with Swiss-like punctuality.",
+      "author": "Andrea P.",
+      "role": "Owner of a townhouse in Castelnuovo del Garda"
+    },
+    {
+      "quote": "You can tell right away this is an agency with something extra. They take care of the property down to the smallest detail, from paperwork and bureaucracy to minor repairs around the house. The peace of mind of on-time payments and a home that's always perfect is priceless.",
+      "author": "Giulia B.",
+      "role": "Owner of a suite in Sirmione"
+    },
+    {
+      "quote": "With a traditional rental I risked not seeing the rent paid for months. With Herocasa I not only get paid right on time, I earn a lot more, and my home is always looked after and monitored. A young but extremely professional agency.",
+      "author": "Matteo T.",
+      "role": "Owner of a penthouse in Desenzano del Garda"
+    }
+  ],
+  "properties": {
+    "eyebrow": "Homes under management",
+    "titleOne": "Some of the properties",
+    "titleTwo": "we manage today.",
+    "seeAll": "Full portfolio",
+    "list": [
+      {
+        "name": "Villa in Soiano del Lago",
+        "meta": "5 bedrooms · Pool · Large garden",
+        "metric": "+34%",
+        "metricLabel": "yield vs 2024"
+      },
+      {
+        "name": "Apartment in Sirmione",
+        "meta": "Three-room · Old town",
+        "metric": "92%",
+        "metricLabel": "occupancy 2025"
+      },
+      {
+        "name": "Home in Bardolino",
+        "meta": "4 bedrooms · Turkish bath · Pool",
+        "metric": "4.9/5",
+        "metricLabel": "average guest rating"
+      },
+      {
+        "name": "Villa in Lazise",
+        "meta": "6 bedrooms · Hot tub · Private garden",
+        "metric": "€62k",
+        "metricLabel": "net income 2025"
+      }
+    ]
+  },
+  "zones": {
+    "eyebrow": "Areas we cover",
+    "titleOne": "We are",
+    "titleTwo": "local.",
+    "intro": "We only operate on the Veronese and Brescia shores of Lake Garda. Local knowledge is non-negotiable for us.",
+    "list": [
+      {
+        "name": "Peschiera del Garda",
+        "count": "15 homes managed"
+      },
+      {
+        "name": "Lazise",
+        "count": "8 homes managed"
+      },
+      {
+        "name": "Castelnuovo del Garda",
+        "count": "5 homes managed"
+      },
+      {
+        "name": "Bardolino",
+        "count": "12 homes managed"
+      },
+      {
+        "name": "Sirmione",
+        "count": "18 homes managed"
+      },
+      {
+        "name": "Desenzano del Garda",
+        "count": "10 homes managed"
+      },
+      {
+        "name": "Padenghe sul Garda",
+        "count": "6 homes managed"
+      },
+      {
+        "name": "Your area?",
+        "count": "ask for a site visit",
+        "highlight": true
+      }
+    ]
+  },
+  "estimator": {
+    "eyebrow": "Free valuation",
+    "titleOne": "What could your home",
+    "titleTwo": "on Lake Garda earn?",
+    "intro": "Fill in the form: we analyse town, property type, potential — and send you a reasoned estimate within 48 hours. No commitment, no cold call.",
+    "form": {
+      "name": "Full name",
+      "email": "Email",
+      "phone": "Phone",
+      "zone": "Town",
+      "zonePlaceholder": "Select",
+      "type": "Property type",
+      "typePlaceholder": "Select",
+      "types": [
+        "Villa",
+        "Apartment",
+        "Detached house",
+        "One-bedroom",
+        "Studio"
+      ],
+      "rooms": "Bedrooms",
+      "roomsOptions": [
+        "1",
+        "2",
+        "3",
+        "4",
+        "5",
+        "6+"
+      ],
+      "features": "Features (optional)",
+      "featuresList": [
+        "Pool",
+        "Garden",
+        "Lake view",
+        "Parking",
+        "Air conditioning",
+        "Pet-friendly"
+      ],
+      "notes": "Notes (optional)",
+      "notesPlaceholder": "Square meters, particulars, yield targets, personal use plans...",
+      "submit": "Request valuation",
+      "legal": "GDPR compliant · No commitment · Free",
+      "otherZone": "Other town on the lake"
+    },
+    "result": {
+      "label": "Indicative estimate · First analysis",
+      "suffix": "/year",
+      "explanation": "Estimated net revenue range for a property with these features in the selected area. The full valuation (with comparables, expected occupancy and costs) arrives by email within 48 hours."
+    },
+    "side": {
+      "eyebrow": "What you'll receive",
+      "titleOne": "A full report,",
+      "titleTwo": "not a quote.",
+      "items": [
+        {
+          "title": "Estimated net annual revenue",
+          "body": "Based on real occupancy and price data from the area, not promises."
+        },
+        {
+          "title": "Comparables analysis",
+          "body": "Three similar homes we already manage, with their last-year performance."
+        },
+        {
+          "title": "Positioning plan",
+          "body": "Recommended channels, average price, actions to grow yield."
+        },
+        {
+          "title": "Transparent quote",
+          "body": "No small print. If you decide to proceed, you already know everything."
+        }
+      ]
+    }
+  },
+  "faq": {
+    "eyebrow": "Frequently asked",
+    "titleOne": "What is worth",
+    "titleTwo": "clearing up right away.",
+    "list": [
+      {
+        "q": "How much will I earn with Herocasa?",
+        "a": "It depends on town, type, seasonality and state of the property. On average, owners moving from self-managed listings see <em>net yield grow 20-35% in the first year</em>. The free valuation will give you a reasoned estimate based on your real coordinates."
+      },
+      {
+        "q": "What are your fees?",
+        "a": "We charge a percentage of gross revenue, with no setup cost, no monthly subscription, no hidden fees. The exact percentage depends on the service tier (base or full concierge) and we tell you in the quote, before signing."
+      },
+      {
+        "q": "Who handles the bureaucracy?",
+        "a": "We do. Fully. CIN registration, SUAP filings, daily police notifications, ISTAT, payment of tourist tax to the town. You receive a summary. If you already have a VAT number, we coordinate with your accountant."
+      },
+      {
+        "q": "Can I use my home whenever I want?",
+        "a": "Always. It is your house. Just flag the personal-use dates in our calendar (email or dashboard) and we block them. We recommend a few weeks' notice to avoid cancelling confirmed bookings, but it is not required."
+      },
+      {
+        "q": "What if a guest damages something?",
+        "a": "We inspect the property after every check-out. Small damage is refunded from the deposit. Bigger damage triggers Airbnb AirCover or our supplementary insurance for direct bookings. Either way, <em>you get the house back in the state you handed it to us</em>, or the equivalent refund."
+      },
+      {
+        "q": "Which portals do you publish on?",
+        "a": "Airbnb, Booking.com, VRBO, Expedia, and direct on the Herocasa site. The calendar is synced in real time to avoid double bookings. Multi-channel distribution is what maximises occupancy without dropping prices."
+      },
+      {
+        "q": "Who pays utilities and routine maintenance?",
+        "a": "Utilities remain in the owner's name and are settled in the monthly report based on actual consumption. Routine maintenance (small work under an agreed threshold) is advanced by us and itemised in the report. Anything above threshold is always approved in advance."
+      },
+      {
+        "q": "How does the monthly report work?",
+        "a": "Every month, by the 10th, you receive a PDF report by email with: last month's bookings, occupancy rates, gross revenue per channel, costs (cleaning, linen, portal commissions, tourist tax), net transferred to your account. The transfer arrives at the same time. Total transparency."
+      }
+    ]
+  },
+  "contact": {
+    "eyebrow": "Contact",
+    "titleOne": "Let's talk,",
+    "titleTwo": "at your pace.",
+    "body": "If you prefer direct contact without filling out a form, we are reachable in traditional ways. We reply within one business day.",
+    "emailLabel": "Write to us",
+    "phoneLabel": "Call us",
+    "hoursLabel": "Hours",
+    "hours": "Mon-Fri 9:00-18:00\nSat by appointment",
+    "callCta": {
+      "eyebrow": "Discovery call",
+      "title": "Thirty minutes to see if we can help.",
+      "body": "Before the site visit, we suggest a thirty-minute call to understand your property, your goals, whether Herocasa is the right partner. If we're not, we'll say so.",
+      "bullets": [
+        "No cost, no commitment",
+        "Led by a senior lead, not a sales rep",
+        "Slots available in the next five days"
+      ],
+      "cta": "Book a call",
+      "orWrite": "Or write to"
+    },
+    "whatsappCta": "Message us on WhatsApp"
+  },
+  "footer": {
+    "tagline": "Property management for owners of second homes on Lake Garda.",
+    "servicesTitle": "Services",
+    "infoTitle": "Info",
+    "contactTitle": "Contact",
+    "legal": "© 2026 Herocasa — VAT 02668020205",
+    "privacy": "Privacy",
+    "cookies": "Cookies",
+    "terms": "Terms"
+  },
+  "cookieBanner": {
+    "title": "Cookies & privacy",
+    "description": "We use technical cookies, necessary for the site to work, and — with your consent — analytics and marketing cookies to understand how to improve it and measure our campaigns. No invasive profiling. You can customise your choices below or read our <a href=\"/{locale}/cookie\">Cookie Policy</a>.",
+    "necessaryTitle": "Necessary",
+    "necessaryBadge": "always on",
+    "necessaryDesc": "Required for the site to work and to remember your preferences.",
+    "analyticsTitle": "Anonymous analytics",
+    "analyticsDesc": "Aggregate traffic statistics, no profiling.",
+    "marketingTitle": "Marketing",
+    "marketingDesc": "Measuring the effectiveness of our advertising campaigns.",
+    "reject": "Reject",
+    "acceptSelected": "Accept selected",
+    "acceptAll": "Accept all",
+    "preferencesLink": "Cookie preferences"
+  },
+  "heroForm": {
+    "successTitle": "Perfect{name}.",
+    "successBody": "We've received your request. We'll write to you within 48h with the valuation for your property in {comune}."
+  }
+}

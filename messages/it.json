@@ -1,0 +1,387 @@
+{
+  "meta": {
+    "title": "Herocasa — Gestione seconde case sul Lago di Garda",
+    "description": "Property management per proprietari di seconde case sul Lago di Garda. Gestione completa: burocrazia, ospiti, pulizie, prezzi. Rendiconti trasparenti, tranquillità totale."
+  },
+  "nav": {
+    "services": "Servizi",
+    "process": "Come funziona",
+    "properties": "Immobili",
+    "zones": "Zone",
+    "faq": "FAQ",
+    "cta": "Valuta il tuo immobile",
+    "contact": "Contatti"
+  },
+  "hero": {
+    "eyebrow": "Gestione Affitti Brevi · Lago di Garda",
+    "lineOne": "La tua seconda casa",
+    "lineTwo": "sul Garda,",
+    "lineThree": "senza pensieri.",
+    "body": "Ci occupiamo di tutto: burocrazia, ospiti, pulizie, prezzi, manutenzione. Tu ricevi il rendiconto mensile — e la tua casa quando ti serve.",
+    "primaryCta": "Valuta il tuo immobile · gratis",
+    "secondaryCta": "Come funziona",
+    "trust": "Nessun costo di attivazione · Nessun vincolo · Risposta entro 48 ore",
+    "statLabel": "Rendimento medio 2026",
+    "statValue": "+24%",
+    "statMeta": "sugli immobili passati alla nostra gestione, contro la gestione autonoma dell'anno precedente."
+  },
+  "trustBar": [
+    {
+      "value": "6+",
+      "label": "Anni sul Lago di Garda"
+    },
+    {
+      "value": "74",
+      "label": "Immobili in gestione"
+    },
+    {
+      "value": "97%",
+      "label": "Ospiti soddisfatti"
+    },
+    {
+      "value": "€3.2M",
+      "label": "Ricavi generati nel 2025"
+    }
+  ],
+  "manifesto": {
+    "eyebrow": "Chi siamo",
+    "paragraphOne": "Herocasa nasce sul Lago di Garda dall'esperienza diretta di chi possiede una seconda casa e sa quanto sia complesso trasformarla in una rendita <em>senza rinunciare al proprio tempo</em>.",
+    "paragraphTwo": "Non siamo un portale, non siamo un'OTA. Siamo un team locale che risponde al telefono, incontra i vostri ospiti, conosce l'idraulico di fiducia in ogni comune del lago — e vi lascia la casa esattamente come l'avete affidata.",
+    "signature": "Team Herocasa · Lago di Garda"
+  },
+  "services": {
+    "eyebrow": "Servizi ai proprietari",
+    "titleOne": "Tutto ciò che serve,",
+    "titleTwo": "nulla di cui occuparsi.",
+    "intro": "Sei aree di lavoro, un solo referente. La gestione della vostra casa è un servizio unico, non una serie di preventivi.",
+    "list": [
+      {
+        "title": "Gestione burocratica completa",
+        "body": "CIN, pratiche SUAP, comunicazioni alla Questura, ISTAT, tasse di soggiorno, cedolare secca. Tutto in regola, senza che ve ne dobbiate mai più preoccupare.",
+        "link": "Cosa gestiamo"
+      },
+      {
+        "title": "Pricing dinamico multi-canale",
+        "body": "Airbnb, Booking, VRBO, canale diretto. Prezzi rivisti ogni giorno in base a stagionalità, eventi e domanda locale, per massimizzare il rendimento netto.",
+        "link": "Come funziona il pricing"
+      },
+      {
+        "title": "Check-in personalizzato 24/7",
+        "body": "Un referente in carne e ossa accoglie i vostri ospiti a qualsiasi ora. Consegna chiavi, tour della casa, consigli sul territorio. Nessuna cassetta di sicurezza anonima.",
+        "link": "Il nostro standard"
+      },
+      {
+        "title": "Pulizie e biancheria professionali",
+        "body": "Team di pulizia formato internamente, biancheria a noleggio, controllo qualità dopo ogni check-out. La casa è sempre pronta come la prima volta.",
+        "link": "Standard di pulizia"
+      },
+      {
+        "title": "Manutenzione e piccoli interventi",
+        "body": "Rete di artigiani di fiducia in ogni comune del lago. Coordinamento, preventivi trasparenti, e massima serietà.",
+        "link": "La rete di artigiani"
+      },
+      {
+        "title": "Rendiconti mensili trasparenti",
+        "body": "Dashboard proprietario con occupazione, ricavi lordi, costi, netto. Estratto conto scaricabile ogni mese. Un rapporto onesto sul vostro bene.",
+        "link": "Vedi un esempio"
+      }
+    ]
+  },
+  "process": {
+    "eyebrow": "Come funziona",
+    "titleOne": "Quattro step,",
+    "titleTwo": "nessuna sorpresa.",
+    "intro": "Dal primo contatto al primo ospite in poche settimane.\nOgni fase concordata con voi, ogni costo dichiarato in anticipo.",
+    "steps": [
+      {
+        "title": "Chiamata e sopralluogo",
+        "body": "Ci raccontate la casa, i vostri obiettivi, i vincoli d'uso personale. Fissiamo un sopralluogo gratuito, senza impegno.",
+        "duration": "Durata: 1 settimana"
+      },
+      {
+        "title": "Analisi e piano di rendimento",
+        "body": "Vi consegniamo una proiezione realistica di occupazione, prezzi, ricavi netti attesi. Con dati storici e comparabili della zona.",
+        "duration": "Durata: 1 settimana"
+      },
+      {
+        "title": "Onboarding e pubblicazione",
+        "body": "Contratto trasparente, foto professionali, allestimento, apertura canali. Nulla da fare da parte vostra.",
+        "duration": "Durata: 2-3 settimane"
+      },
+      {
+        "title": "Gestione e rendiconto",
+        "body": "Da qui in poi, relax. Ogni mese arriva il rendiconto e il bonifico.\nVoi tornate nella vostra casa quando volete.",
+        "duration": "In corso, sempre."
+      }
+    ]
+  },
+  "testimonials": [
+    {
+      "quote": "Prima gestivo da solo. Sei mesi con Herocasa e ho scoperto che la casa rendeva il 30% in più, ma soprattutto non mi arrivavano più telefonate alle undici di sera per un problema con il Wi-Fi.",
+      "author": "Marco V.",
+      "role": "Proprietario di una villa a Bardolino"
+    },
+    {
+      "quote": "Ero abituato all'affitto tradizionale con contratti lunghi, ma tra morosità e spese impreviste vivevo nell'ansia. Passare a Herocasa è stata la svolta: pagamenti puntualissimi ogni mese, zero rischi e un rendimento decisamente più alto.",
+      "author": "Stefano R.",
+      "role": "Proprietario di un appartamento a Lazise"
+    },
+    {
+      "quote": "All'inizio ero scettica perché cercavo un'agenzia che trattasse la mia casa come se fosse la loro. Ho trovato un team di persone giovani, iper-preparati e pieni di energia. Pensano davvero a ogni minimo dettaglio, dalle pulizie impeccabili all'accoglienza degli ospiti.",
+      "author": "Elena C.",
+      "role": "Proprietaria di un bilocale a Peschiera del Garda"
+    },
+    {
+      "quote": "Con l'affitto classico la casa si usurava e gli incassi erano bloccati. Con Herocasa abbiamo ottimizzato i prezzi. Gestiscono la manutenzione costante dell'immobile e mi accreditano i guadagni con una puntualità svizzera.",
+      "author": "Andrea P.",
+      "role": "Proprietario di una villetta a Castelnuovo del Garda"
+    },
+    {
+      "quote": "Si vede subito che è un'agenzia con una marcia in più. Curano la proprietà nei minimi particolari, dalla gestione dei documenti e burocrazia fino ai piccoli interventi in casa. La tranquillità di avere pagamenti puntuali e la casa sempre perfetta non ha prezzo.",
+      "author": "Giulia B.",
+      "role": "Proprietaria di una suite a Sirmione"
+    },
+    {
+      "quote": "Con l'affitto tradizionale rischiavo di non veder pagato il canone per mesi. Con Herocasa non solo incasso puntualissimo, ma guadagno molto di più e la mia casa è sempre custodita e controllata. Un'agenzia giovane ma estremamente professionale.",
+      "author": "Matteo T.",
+      "role": "Proprietario di un attico a Desenzano del Garda"
+    }
+  ],
+  "properties": {
+    "eyebrow": "Immobili in gestione",
+    "titleOne": "Alcuni degli immobili",
+    "titleTwo": "che gestiamo oggi.",
+    "seeAll": "Portfolio completo",
+    "list": [
+      {
+        "name": "Villa a Soiano del Lago",
+        "meta": "5 camere · Piscina · Grande giardino",
+        "metric": "+34%",
+        "metricLabel": "rendimento vs 2024"
+      },
+      {
+        "name": "Appartamento a Sirmione",
+        "meta": "Trilocale · Centro storico",
+        "metric": "92%",
+        "metricLabel": "occupazione 2025"
+      },
+      {
+        "name": "Casa a Bardolino",
+        "meta": "4 camere · Bagno turco · Piscina",
+        "metric": "4.9/5",
+        "metricLabel": "rating medio ospiti"
+      },
+      {
+        "name": "Villa a Lazise",
+        "meta": "6 camere · Idromassaggio · Giardino privato",
+        "metric": "€62k",
+        "metricLabel": "ricavi netti 2025"
+      }
+    ]
+  },
+  "zones": {
+    "eyebrow": "Zone coperte",
+    "titleOne": "Siamo",
+    "titleTwo": "della zona.",
+    "intro": "Operiamo esclusivamente sulla sponda veronese e bresciana del Garda. La conoscenza locale, per noi, non è negoziabile.",
+    "list": [
+      {
+        "name": "Peschiera del Garda",
+        "count": "15 immobili gestiti"
+      },
+      {
+        "name": "Lazise",
+        "count": "8 immobili gestiti"
+      },
+      {
+        "name": "Castelnuovo del Garda",
+        "count": "5 immobili gestiti"
+      },
+      {
+        "name": "Bardolino",
+        "count": "12 immobili gestiti"
+      },
+      {
+        "name": "Sirmione",
+        "count": "18 immobili gestiti"
+      },
+      {
+        "name": "Desenzano del Garda",
+        "count": "10 immobili gestiti"
+      },
+      {
+        "name": "Padenghe sul Garda",
+        "count": "6 immobili gestiti"
+      },
+      {
+        "name": "La vostra zona?",
+        "count": "chiedete un sopralluogo",
+        "highlight": true
+      }
+    ]
+  },
+  "estimator": {
+    "eyebrow": "Valutazione gratuita",
+    "titleOne": "Quanto potrebbe rendere",
+    "titleTwo": "la vostra casa sul Garda?",
+    "intro": "Compilate il modulo: analizziamo comune, tipologia, potenziale del vostro immobile e vi mandiamo una stima motivata entro 48 ore — senza impegno.",
+    "form": {
+      "name": "Nome e cognome",
+      "email": "Email",
+      "phone": "Telefono",
+      "zone": "Comune",
+      "zonePlaceholder": "Selezionate",
+      "type": "Tipologia immobile",
+      "typePlaceholder": "Selezionate",
+      "types": [
+        "Villa",
+        "Appartamento",
+        "Casa indipendente",
+        "Bilocale",
+        "Monolocale"
+      ],
+      "rooms": "Camere da letto",
+      "roomsOptions": [
+        "1",
+        "2",
+        "3",
+        "4",
+        "5",
+        "6+"
+      ],
+      "features": "Servizi presenti (opzionale)",
+      "featuresList": [
+        "Piscina",
+        "Giardino",
+        "Vista lago",
+        "Parcheggio",
+        "Aria condizionata",
+        "Pet-friendly"
+      ],
+      "notes": "Note (opzionale)",
+      "notesPlaceholder": "Metratura, particolarità, obiettivi di rendimento, uso personale previsto...",
+      "submit": "Richiedi la valutazione",
+      "legal": "GDPR compliant · Nessun impegno · Nessun costo",
+      "otherZone": "Altro comune sul lago"
+    },
+    "result": {
+      "label": "Stima orientativa · Prima analisi",
+      "suffix": "/anno",
+      "explanation": "Range di ricavi netti annui stimati per un immobile con queste caratteristiche nella zona indicata. La valutazione completa (con analisi comparabili, occupazione attesa e costi) arriva via email entro 48 ore."
+    },
+    "side": {
+      "eyebrow": "Cosa riceverete",
+      "titleOne": "Una relazione completa,",
+      "titleTwo": "non un preventivo.",
+      "items": [
+        {
+          "title": "Stima ricavi netti annuali",
+          "body": "Basata su dati reali di occupazione e prezzo medio della zona, non su promesse."
+        },
+        {
+          "title": "Analisi comparabili",
+          "body": "Tre immobili simili già gestiti, con la loro performance dell'ultimo anno."
+        },
+        {
+          "title": "Piano di posizionamento",
+          "body": "Canali consigliati, prezzo medio consigliato, azioni per aumentare il rendimento."
+        },
+        {
+          "title": "Preventivo trasparente",
+          "body": "Nessuna riga in piccolo. Se decidete di procedere, sapete già tutto."
+        }
+      ]
+    }
+  },
+  "faq": {
+    "eyebrow": "Domande frequenti",
+    "titleOne": "Ciò che vale la pena",
+    "titleTwo": "chiarire subito.",
+    "list": [
+      {
+        "q": "Quanto guadagnerò con Herocasa?",
+        "a": "Dipende da comune, tipologia, stagionalità e stato dell'immobile. In media, i proprietari che ci affidano una casa già pubblicata su portali autogestiti registrano <em>un aumento del rendimento netto del 20-35% nel primo anno</em>. La valutazione gratuita vi darà una stima motivata sulle vostre coordinate reali."
+      },
+      {
+        "q": "Quali sono le vostre commissioni?",
+        "a": "Applichiamo una percentuale sul ricavo lordo, senza costi di attivazione, senza abbonamenti mensili, senza fee nascoste. La percentuale esatta dipende dal servizio scelto (base o full concierge) e ve la comunichiamo in fase di preventivo, prima della firma."
+      },
+      {
+        "q": "Chi si occupa della burocrazia?",
+        "a": "Noi. In totale autonomia. Ci occupiamo di CIN, pratiche SUAP, comunicazioni giornaliere alla Questura, adempimenti ISTAT, versamento della tassa di soggiorno al Comune. Voi ricevete un report riassuntivo. Se avete già aperto la partita IVA, la coordiniamo con il vostro commercialista."
+      },
+      {
+        "q": "Posso usare la mia casa quando voglio?",
+        "a": "Sempre. La casa è vostra. Basta segnalare le date di uso personale nel nostro calendario (via email o dashboard) e le blocchiamo. Consigliamo di darcele con qualche settimana di anticipo per non rinunciare a prenotazioni già confermate, ma non è un obbligo."
+      },
+      {
+        "q": "Cosa succede se un ospite danneggia qualcosa?",
+        "a": "Verifichiamo l'immobile dopo ogni check-out. Piccoli danni li rifondiamo trattenendo la cauzione. Danni maggiori attivano la copertura assicurativa dei portali OTA. In ogni caso, <em>voi ricevete la casa nello stato in cui l'avete affidata</em>."
+      },
+      {
+        "q": "Su quali portali pubblicate?",
+        "a": "Airbnb, Booking.com, VRBO, Expedia, e canale diretto sul sito Herocasa. Il calendario è sincronizzato in tempo reale per evitare doppie prenotazioni. La distribuzione multi-canale è ciò che consente di massimizzare l'occupazione senza abbassare i prezzi."
+      },
+      {
+        "q": "Chi paga le utenze e la manutenzione ordinaria?",
+        "a": "Le utenze rimangono intestate e in capo al proprietario. Noi ci occupiamo dell'assistenza sul posto e della piccola manutenzione ordinaria, rendicontandola ogni mese. Per i lavori di importo superiore alla soglia stabilita, chiediamo sempre un'autorizzazione prima di procedere."
+      },
+      {
+        "q": "Come funziona il rendiconto mensile?",
+        "a": "Ogni mese, entro il 10, ricevete via email un rendiconto in PDF con: prenotazioni del mese precedente, tassi di occupazione, ricavi lordi per canale, costi (pulizie, biancheria, commissioni portali, tasse di soggiorno), netto trasferito al vostro conto. Il bonifico arriva contestualmente. Trasparenza totale."
+      }
+    ]
+  },
+  "contact": {
+    "eyebrow": "Contatti",
+    "titleOne": "Parliamone",
+    "titleTwo": "con calma.",
+    "body": "Se preferite un contatto diretto senza compilare moduli, siamo raggiungibili nei modi tradizionali. Rispondiamo entro 2-4 ore.",
+    "emailLabel": "Scriveteci",
+    "phoneLabel": "Chiamateci",
+    "hoursLabel": "Orari",
+    "hours": "Lun-Ven 9:00-18:00\nSab 9:00-17:00",
+    "callCta": {
+      "eyebrow": "Chiamata conoscitiva",
+      "title": "Trenta minuti per capire se possiamo aiutarvi.",
+      "body": "Prima ancora del sopralluogo, vi proponiamo una chiamata di trenta minuti per capire il vostro immobile, i vostri obiettivi, e se Herocasa è il partner giusto. Se non lo siamo, ve lo diciamo.",
+      "bullets": [
+        "Nessun costo, nessun impegno",
+        "La conduce un responsabile senior, non un commerciale",
+        "Slot disponibili nei prossimi cinque giorni"
+      ],
+      "cta": "Prenota una chiamata",
+      "orWrite": "Scrivete a"
+    },
+    "whatsappCta": "Scriveteci su WhatsApp"
+  },
+  "footer": {
+    "tagline": "Agenzia per affitti brevi lago di Garda.",
+    "servicesTitle": "Servizi",
+    "infoTitle": "Info",
+    "contactTitle": "Contatti",
+    "legal": "© 2026 Herocasa — P.IVA 02668020205",
+    "privacy": "Privacy",
+    "cookies": "Cookie",
+    "terms": "Termini"
+  },
+  "cookieBanner": {
+    "title": "Cookie & privacy",
+    "description": "Usiamo cookie tecnici, necessari al funzionamento del sito, e — con il vostro consenso — cookie analitici e di marketing per capire come migliorarlo e misurare le nostre campagne. Nessuna profilazione invasiva. Potete personalizzare le scelte qui sotto o consultare la <a href=\"/{locale}/cookie\">Cookie Policy</a>.",
+    "necessaryTitle": "Tecnici",
+    "necessaryBadge": "sempre attivi",
+    "necessaryDesc": "Necessari per il funzionamento del sito e per ricordare le vostre preferenze.",
+    "analyticsTitle": "Analitici anonimi",
+    "analyticsDesc": "Statistiche di traffico aggregate, senza profilazione.",
+    "marketingTitle": "Marketing",
+    "marketingDesc": "Misurazione dell'efficacia delle campagne pubblicitarie.",
+    "reject": "Rifiuta",
+    "acceptSelected": "Accetta selezionati",
+    "acceptAll": "Accetta tutti",
+    "preferencesLink": "Preferenze cookie"
+  },
+  "heroForm": {
+    "successTitle": "Perfetto{name}.",
+    "successBody": "Abbiamo ricevuto la richiesta. Ti scriviamo entro 48h con la stima per il tuo immobile a {comune}."
+  }
+}

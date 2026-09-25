@@ -1,0 +1,26 @@
+node_modules
+.next
+out
+build
+dist
+.DS_Store
+.env
+.env.local
+.env.*.local
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+next-env.d.ts
+*.tsbuildinfo
+.vercel
+
+# Standalone preview artifacts — mockups used during design review, not part
+# of the Next.js app itself. The real pages live under app/[locale]/.
+/preview.html
+/privacy.html
+/cookie.html
+/termini.html
+/immobili/
+/immobili-web/
+/immobili.zip
