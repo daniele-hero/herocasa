@@ -4,6 +4,13 @@
 [build.environment]
   # @netlify/plugin-nextjs (Next.js Runtime v5) requires Node 22+.
   NODE_VERSION = "22"
+  # These two aren't secrets: LEAD_NOTIFY_EMAIL is the same public contact
+  # address already shown in the footer/contact/privacy pages, and
+  # RESEND_FROM_EMAIL's default matches a literal fallback in route.ts.
+  # Without this, Netlify's secrets scanner flags their expected presence
+  # in the build output and fails the build. RESEND_API_KEY is NOT listed
+  # here, so it stays fully scanned.
+  SECRETS_SCAN_OMIT_KEYS = "LEAD_NOTIFY_EMAIL,RESEND_FROM_EMAIL"
 
 # Official Next.js runtime for Netlify — handles SSR, the next-intl
 # middleware (via Netlify Edge Functions), image optimization and static
