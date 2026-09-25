@@ -2,7 +2,8 @@
   command = "npm run build"
 
 [build.environment]
-  NODE_VERSION = "20"
+  # @netlify/plugin-nextjs (Next.js Runtime v5) requires Node 22+.
+  NODE_VERSION = "22"
 
 # Official Next.js runtime for Netlify — handles SSR, the next-intl
 # middleware (via Netlify Edge Functions), image optimization and static
