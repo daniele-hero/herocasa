@@ -49,6 +49,7 @@ export default function HeroForm() {
     const featureList = [...features];
 
     const range = calculateEstimateRange({ rooms, type, zone: comune, features: featureList });
+    const eventId = crypto.randomUUID();
 
     await postValuationLead({
       source: 'hero-form-full',
@@ -61,9 +62,10 @@ export default function HeroForm() {
       features: featureList,
       notes: (data.get('notes') as string) || '',
       submittedAt: new Date().toISOString(),
+      eventId,
     });
 
-    trackLead('hero-form-full', { comune, value: (range.min + range.max) / 2, currency: 'EUR' });
+    trackLead('hero-form-full', { comune, value: (range.min + range.max) / 2, currency: 'EUR' }, eventId);
     setSubmitted({ name: name.split(' ')[0] || name, comune, range });
   };
 

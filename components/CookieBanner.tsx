@@ -58,12 +58,22 @@ function initMetaPixel() {
   (window as any).fbq('track', 'PageView');
 }
 
-/** Fires a Meta Pixel Lead event — call from form submit handlers after consent is possibly granted. */
-export function trackLead(sourceLabel: string, extra?: Record<string, unknown>) {
+/**
+ * Fires a Meta Pixel Lead event — call from form submit handlers after consent
+ * is possibly granted. Pass the same `eventId` given to `postValuationLead` so
+ * Meta can dedupe this browser-side delivery against the server-side
+ * Conversions API delivery of the identical event.
+ */
+export function trackLead(sourceLabel: string, extra?: Record<string, unknown>, eventId?: string) {
   if (typeof window === 'undefined') return;
   const fbq = (window as any).fbq;
   if (typeof fbq === 'function') {
-    fbq('track', 'Lead', { content_category: sourceLabel, content_name: 'Valutazione immobile', ...extra });
+    fbq(
+      'track',
+      'Lead',
+      { content_category: sourceLabel, content_name: 'Valutazione immobile', ...extra },
+      eventId ? { eventID: eventId } : undefined
+    );
   }
 }
 

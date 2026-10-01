@@ -52,6 +52,7 @@ export default function Estimator() {
 
     const { min, max } = calculateEstimateRange({ rooms, type, zone, features: featureList });
     setRange({ min, max, comune: zone });
+    const eventId = crypto.randomUUID();
     // Also POST the lead to the backend
     try {
       await fetch('/api/valuation-request', {
@@ -68,6 +69,7 @@ export default function Estimator() {
           features: featureList,
           notes: data.get('notes'),
           estimatedRange: { min, max },
+          eventId,
         }),
       });
     } catch {
@@ -75,7 +77,7 @@ export default function Estimator() {
     }
 
     // Meta Pixel: Lead event (fires only if the visitor consented to marketing cookies)
-    trackLead('estimator-form', { comune: zone, type, rooms, value: (min + max) / 2, currency: 'EUR' });
+    trackLead('estimator-form', { comune: zone, type, rooms, value: (min + max) / 2, currency: 'EUR' }, eventId);
   };
 
   return (

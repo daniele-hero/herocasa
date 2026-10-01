@@ -1,14 +1,20 @@
 import { NextResponse } from 'next/server';
 import { Resend } from 'resend';
+import { createHash } from 'crypto';
 
 /**
  * POST /api/valuation-request
  *
  * Receives leads from both the Hero cascade form and the full Estimator
- * section (distinguished by `source`) and emails them to the Herocasa team
- * inbox via Resend. Requires RESEND_API_KEY and LEAD_NOTIFY_EMAIL to be set
- * (Netlify site settings → Environment variables); without them the lead is
- * still logged server-side but no notification goes out.
+ * section (distinguished by `source`), emails them to the Herocasa team
+ * inbox via Resend, and reports the same Lead event to Meta's Conversions
+ * API server-side (in addition to the browser-side pixel in
+ * CookieBanner.tsx) so iOS/ad-blocker-affected visits still get credited.
+ *
+ * Requires RESEND_API_KEY and LEAD_NOTIFY_EMAIL for the email notification,
+ * and META_CONVERSIONS_API_TOKEN for the server-side Meta event (Netlify
+ * site settings → Environment variables); each integration is skipped
+ * independently if its env vars are missing, the lead is still logged.
  */
 
 type ValuationBody = {
@@ -23,7 +29,67 @@ type ValuationBody = {
   notes?: string;
   estimatedRange?: { min: number; max: number };
   submittedAt?: string;
+  /** Shared with the browser-side fbq('track', 'Lead', ..., {eventID}) call so Meta dedupes the two deliveries. */
+  eventId?: string;
 };
+
+const META_PIXEL_ID = process.env.NEXT_PUBLIC_META_PIXEL_ID || '2304401749914019';
+
+function sha256(value: string): string {
+  return createHash('sha256').update(value.trim().toLowerCase()).digest('hex');
+}
+
+/** E.164-ish digits-only normalization Meta expects for hashed phone numbers. */
+function normalizePhone(value: string): string {
+  const digits = value.replace(/\D/g, '');
+  // Assume Italian numbers given without a country code (the form has no country selector).
+  return digits.startsWith('39') || digits.length <= 6 ? digits : `39${digits}`;
+}
+
+async function sendMetaConversionEvent(body: ValuationBody, req: Request): Promise<void> {
+  const token = process.env.META_CONVERSIONS_API_TOKEN;
+  if (!token || !body.eventId) return;
+
+  const ip = req.headers.get('x-forwarded-for')?.split(',')[0]?.trim();
+  const userAgent = req.headers.get('user-agent') ?? undefined;
+
+  const userData: Record<string, unknown> = {};
+  if (body.email) userData.em = [sha256(body.email)];
+  if (body.phone) userData.ph = [sha256(normalizePhone(body.phone))];
+  if (ip) userData.client_ip_address = ip;
+  if (userAgent) userData.client_user_agent = userAgent;
+
+  const payload = {
+    data: [
+      {
+        event_name: 'Lead',
+        event_time: Math.floor(Date.now() / 1000),
+        event_id: body.eventId,
+        event_source_url: 'https://herocasa.it/',
+        action_source: 'website',
+        user_data: userData,
+        custom_data: {
+          content_category: body.source,
+          content_name: 'Valutazione immobile',
+          ...(body.zone ? { zone: body.zone } : {}),
+        },
+      },
+    ],
+  };
+
+  try {
+    const res = await fetch(`https://graph.facebook.com/v21.0/${META_PIXEL_ID}/events?access_token=${token}`, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify(payload),
+    });
+    if (!res.ok) {
+      console.error('[valuation-request] Meta Conversions API error', await res.text());
+    }
+  } catch (err) {
+    console.error('[valuation-request] Meta Conversions API request failed', err);
+  }
+}
 
 function escapeHtml(value: string): string {
   return value.replace(/[&<>"']/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' })[c]!);
@@ -92,6 +158,8 @@ export async function POST(req: Request) {
   } else {
     console.warn('[valuation-request] RESEND_API_KEY or LEAD_NOTIFY_EMAIL not set — no notification sent');
   }
+
+  await sendMetaConversionEvent(body, req);
 
   return NextResponse.json({ ok: true });
 }

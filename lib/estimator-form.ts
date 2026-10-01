@@ -44,6 +44,8 @@ export type ValuationLead = {
   features: string[];
   notes: string;
   submittedAt: string;
+  /** Shared with the client-side pixel's `fbq('track', 'Lead', ..., {eventID})` call so Meta dedupes the two deliveries. */
+  eventId: string;
 };
 
 export async function postValuationLead(lead: ValuationLead): Promise<void> {
