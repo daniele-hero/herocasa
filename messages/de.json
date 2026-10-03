@@ -352,7 +352,8 @@
         "Termine in den nächsten fünf Tagen verfügbar"
       ],
       "cta": "Gespräch buchen",
-      "orWrite": "Oder schreiben Sie an"
+      "orWrite": "Oder schreiben Sie an",
+      "success": "Wir haben Ihre Anfrage erhalten. Wir melden uns in Kürze, um den Anruf zu vereinbaren."
     },
     "whatsappCta": "Schreiben Sie uns auf WhatsApp"
   },

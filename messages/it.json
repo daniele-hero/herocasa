@@ -352,7 +352,8 @@
         "Slot disponibili nei prossimi cinque giorni"
       ],
       "cta": "Prenota una chiamata",
-      "orWrite": "Scrivete a"
+      "orWrite": "Scrivete a",
+      "success": "Abbiamo ricevuto la tua richiesta. Ti contatteremo a breve per fissare la chiamata."
     },
     "whatsappCta": "Scriveteci su WhatsApp"
   },

@@ -1,10 +1,15 @@
 'use client';
 
+import { FormEvent, useState } from 'react';
 import { useTranslations } from 'next-intl';
 import Reveal from './Reveal';
+import { trackLead } from './CookieBanner';
+import { ZONES, postValuationLead, type EstimatorFormCopy } from '@/lib/estimator-form';
 
 export default function Contact() {
   const t = useTranslations('contact');
+  const tEst = useTranslations('estimator');
+  const form = tEst.raw('form') as EstimatorFormCopy;
   const callCta = t.raw('callCta') as {
     eyebrow: string;
     title: string;
@@ -12,6 +17,36 @@ export default function Contact() {
     bullets: string[];
     cta: string;
     orWrite: string;
+    success: string;
+  };
+
+  const [sending, setSending] = useState(false);
+  const [sent, setSent] = useState(false);
+
+  const onSubmit = async (e: FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+    if (sending) return;
+    setSending(true);
+    const data = new FormData(e.currentTarget);
+    const zone = (data.get('zone') as string) || '';
+    const eventId = crypto.randomUUID();
+
+    await postValuationLead({
+      source: 'call-booking-form',
+      name: (data.get('name') as string) || '',
+      email: (data.get('email') as string) || '',
+      phone: '',
+      zone,
+      type: '',
+      rooms: '',
+      features: [],
+      notes: '',
+      submittedAt: new Date().toISOString(),
+      eventId,
+    });
+
+    trackLead('call-booking-form', { comune: zone }, eventId);
+    setSent(true);
   };
 
   return (
@@ -65,7 +100,36 @@ export default function Contact() {
                 </li>
               ))}
             </ul>
-            <a href="#valutazione" className="btn w-full justify-center py-4" style={{ background: 'var(--gold)', borderColor: 'var(--gold)', color: 'var(--olive)' }}>{callCta.cta}</a>
+            {sent ? (
+              <p role="status" className="serif text-[22px] leading-[1.35] text-[var(--paper)]">{callCta.success}</p>
+            ) : (
+              <form onSubmit={onSubmit} className="flex flex-col gap-6">
+                <label className="block">
+                  <span className="block text-[11px] tracking-[0.16em] uppercase mb-2.5" style={{ color: 'var(--paper-70)' }}>{form.name}</span>
+                  <input name="name" type="text" required autoComplete="name" className="est-input" />
+                </label>
+                <label className="block">
+                  <span className="block text-[11px] tracking-[0.16em] uppercase mb-2.5" style={{ color: 'var(--paper-70)' }}>{form.email}</span>
+                  <input name="email" type="email" required autoComplete="email" className="est-input" />
+                </label>
+                <label className="block">
+                  <span className="block text-[11px] tracking-[0.16em] uppercase mb-2.5" style={{ color: 'var(--paper-70)' }}>{form.zone}</span>
+                  <select name="zone" required defaultValue="" className="est-input appearance-none">
+                    <option value="" disabled>{form.zonePlaceholder}</option>
+                    {ZONES.map((z) => <option key={z}>{z}</option>)}
+                    <option>{form.otherZone}</option>
+                  </select>
+                </label>
+                <button
+                  type="submit"
+                  disabled={sending}
+                  className="btn w-full justify-center py-4 disabled:opacity-60"
+                  style={{ background: 'var(--gold)', borderColor: 'var(--gold)', color: 'var(--olive)' }}
+                >
+                  {callCta.cta}
+                </button>
+              </form>
+            )}
             <div className="text-center mt-6 text-[13px]" style={{ color: 'var(--paper-70)' }}>
               {callCta.orWrite}{' '}
               <a href="mailto:info@herocasa.it" style={{ color: 'var(--gold)' }} className="transition-colors hover:text-[var(--paper)]">info@herocasa.it</a>

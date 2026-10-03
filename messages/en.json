@@ -352,7 +352,8 @@
         "Slots available in the next five days"
       ],
       "cta": "Book a call",
-      "orWrite": "Or write to"
+      "orWrite": "Or write to",
+      "success": "We've received your request. We'll contact you shortly to schedule the call."
     },
     "whatsappCta": "Message us on WhatsApp"
   },

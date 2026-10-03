@@ -97,15 +97,15 @@ function escapeHtml(value: string): string {
 
 function buildEmailHtml(body: ValuationBody): string {
   const rows: Array<[string, string]> = [
-    ['Provenienza', body.source ?? '—'],
-    ['Nome', body.name ?? '—'],
-    ['Email', body.email ?? '—'],
-    ['Telefono', body.phone ?? '—'],
-    ['Comune', body.zone ?? '—'],
-    ['Tipo immobile', body.type ?? '—'],
-    ['Camere', String(body.rooms ?? '—')],
+    ['Provenienza', body.source || '—'],
+    ['Nome', body.name || '—'],
+    ['Email', body.email || '—'],
+    ['Telefono', body.phone || '—'],
+    ['Comune', body.zone || '—'],
+    ['Tipo immobile', body.type || '—'],
+    ['Camere', String(body.rooms || '—')],
     ['Dotazioni', (body.features ?? []).join(', ') || '—'],
-    ['Note', body.notes ?? '—'],
+    ['Note', body.notes || '—'],
     ['Stima mostrata', body.estimatedRange ? `€${body.estimatedRange.min.toLocaleString('it-IT')} – €${body.estimatedRange.max.toLocaleString('it-IT')}` : '—'],
     ['Ricevuto il', body.submittedAt ?? new Date().toISOString()],
   ];
@@ -146,7 +146,7 @@ export async function POST(req: Request) {
         from,
         to: notifyTo,
         replyTo: body.email,
-        subject: `Nuovo lead: ${body.name || 'proprietario'} — ${body.zone || 'zona non specificata'}`,
+        subject: `${body.source === 'call-booking-form' ? 'Richiesta chiamata' : 'Nuovo lead'}: ${body.name || 'proprietario'} — ${body.zone || 'zona non specificata'}`,
         html: buildEmailHtml(body),
       });
       if (result.error) {
