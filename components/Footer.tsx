@@ -7,6 +7,7 @@ import { openCookieBanner } from './CookieBanner';
 export default function Footer() {
   const t = useTranslations('footer');
   const n = useTranslations('nav');
+  const c = useTranslations('contact');
   const locale = useLocale();
   const s = useTranslations('services');
   const svc = s.raw('list') as Array<{ title: string }>;
@@ -60,7 +61,7 @@ export default function Footer() {
                 WhatsApp ↗
               </a>
             </li>
-            <li>Lun-Ven 9:00-18:00</li>
+            <li className="whitespace-pre-line">{c('hours')}</li>
           </ul>
         </div>
       </div>
