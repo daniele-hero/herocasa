@@ -1,0 +1,4 @@
+# Locale-less legal pages (the old middleware added the prefix)
+/privacy /it/privacy 302
+/cookie /it/cookie 302
+/termini /it/termini 302
