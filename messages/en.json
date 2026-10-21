@@ -708,6 +708,312 @@
             "body": "Sirmione, Desenzano and Peschiera are very close."
           }
         ]
+      },
+      "brenzone-sul-garda": {
+        "intro1": "Brenzone sul Garda is a string of small lakeside villages between Torri and Malcesine, with Monte Baldo behind: quiet beaches, small harbours and trails attract guests, many from northern Europe, looking for calm and nature.",
+        "highlights": [
+          {
+            "title": "Villages on the water",
+            "body": "Small harbours and secluded beaches: the authentic feel many guests look for and mention in reviews."
+          },
+          {
+            "title": "Nature and trails",
+            "body": "Monte Baldo is right there: hikers and cyclists stretch the season."
+          },
+          {
+            "title": "Loyal guests",
+            "body": "German and Austrian guests come back year after year and book early."
+          }
+        ]
+      },
+      "costermano-sul-garda": {
+        "intro1": "Costermano sul Garda sits on the hills above Garda: villas and homes with lake views, olive groves and golf courses attract guests who want space and quiet a few minutes from the beaches.",
+        "highlights": [
+          {
+            "title": "Lake views from the hills",
+            "body": "Wide views over the Bay of Garda: value you see at once in photos and prices."
+          },
+          {
+            "title": "Golf and relaxation",
+            "body": "The golf courses nearby bring discerning guests in spring and autumn too."
+          },
+          {
+            "title": "Close to the lake",
+            "body": "Garda, Bardolino and the beaches are a few minutes' drive away."
+          }
+        ]
+      },
+      "cavaion-veronese": {
+        "intro1": "Cavaion Veronese is Bardolino's hinterland of vineyards and hills: homes with gardens at more accessible purchase prices, a few minutes from the lake, with tourist demand growing every year.",
+        "highlights": [
+          {
+            "title": "Bardolino wine country",
+            "body": "Vineyards and wineries bring wine-loving guests."
+          },
+          {
+            "title": "Space at a good price",
+            "body": "Homes and villas with gardens earn well on a smaller investment."
+          },
+          {
+            "title": "Close to the lake",
+            "body": "Bardolino, Garda and Lazise are minutes away."
+          }
+        ]
+      },
+      "affi": {
+        "intro1": "Affi is the gateway to the lake for anyone arriving from the Brenner: the motorway exit, services and closeness to Bardolino and Garda make it a convenient base for families and groups.",
+        "highlights": [
+          {
+            "title": "Easy to reach",
+            "body": "The Affi exit on the Brenner motorway brings guests from Germany and Austria in minutes."
+          },
+          {
+            "title": "Base for the whole lake",
+            "body": "Bardolino, Garda, Lazise and Monte Baldo are close by."
+          },
+          {
+            "title": "Spacious homes",
+            "body": "Villas and houses with gardens host families and groups who stay longer."
+          }
+        ]
+      },
+      "caprino-veronese": {
+        "intro1": "Caprino Veronese lies at the foot of Monte Baldo, among woods, pastures and villages: agriturismi, farmhouses and homes with views attract guests looking for nature, sport and fresh air near the lake.",
+        "highlights": [
+          {
+            "title": "Nature and mountains",
+            "body": "Trails, mountain biking and paragliding on Monte Baldo bring active guests for much of the year."
+          },
+          {
+            "title": "Farmhouses and agriturismi",
+            "body": "Country houses and restored farmhouses are much in demand among families and groups."
+          },
+          {
+            "title": "The lake close by",
+            "body": "Garda and Torri del Benaco are a few minutes' drive away."
+          }
+        ]
+      },
+      "san-zeno-di-montagna": {
+        "intro1": "San Zeno di Montagna is a plateau high above the lake, over Torri and Garda: spectacular views, cool summer air and chestnut woods attract guests looking for scenery and quiet.",
+        "highlights": [
+          {
+            "title": "The balcony over the lake",
+            "body": "Some of the finest views on Lake Garda: homes with a view are the most photographed and booked."
+          },
+          {
+            "title": "Cool in summer",
+            "body": "While the lake is hot, the plateau stays cool: a strong selling point in peak months."
+          },
+          {
+            "title": "Nature all year",
+            "body": "Hiking, cycling and the chestnut season stretch the calendar into autumn."
+          }
+        ]
+      },
+      "pastrengo": {
+        "intro1": "Pastrengo, on the morainic hills between Lazise and the Adige valley, combines quiet and location: villas and homes with gardens a few minutes from the lake, Gardaland and the area's parks.",
+        "highlights": [
+          {
+            "title": "Hills and quiet",
+            "body": "A relaxed alternative to the lakeside towns, with more space and less traffic."
+          },
+          {
+            "title": "Close to the parks",
+            "body": "Gardaland and the other parks nearby bring families all season."
+          },
+          {
+            "title": "Villas with gardens",
+            "body": "Homes with outdoor space are the most requested for multi-night stays."
+          }
+        ]
+      },
+      "sommacampagna": {
+        "intro1": "Sommacampagna, between Verona and the lake, is Custoza wine country and minutes from the airport: a location that brings tourists, Verona visitors and business travellers, with demand all year.",
+        "highlights": [
+          {
+            "title": "Between Verona and the lake",
+            "body": "Guests combine the city, the Arena and the lake in one stay."
+          },
+          {
+            "title": "Not just holidays",
+            "body": "Verona's trade fairs and companies bring business stays outside the season too."
+          },
+          {
+            "title": "Near the airport",
+            "body": "Verona airport and the motorway are minutes away: easy arrivals even for a weekend."
+          }
+        ]
+      },
+      "san-felice-del-benaco": {
+        "intro1": "San Felice del Benaco, facing the Isola del Garda, is one of the most elegant places in the Valtènesi: beaches, small harbours and fine villas attract high-end guests.",
+        "highlights": [
+          {
+            "title": "The Isola del Garda",
+            "body": "Views of the island and the beaches are a strong draw in photos and listings."
+          },
+          {
+            "title": "Fine villas",
+            "body": "Villas with pool and garden command some of the highest prices on the Brescia shore."
+          },
+          {
+            "title": "Heart of the Valtènesi",
+            "body": "Wineries, olive groves and nearby villages stretch the season."
+          }
+        ]
+      },
+      "puegnago-del-garda": {
+        "intro1": "Puegnago del Garda overlooks the Valtènesi from its hills: vineyards, olive groves and homes with pools and lake views attract couples and families looking for relaxation and good wine.",
+        "highlights": [
+          {
+            "title": "Lake views among the vines",
+            "body": "Views over the hills and lake that make a difference in reviews."
+          },
+          {
+            "title": "Homes with pools",
+            "body": "A pool and garden are the most sought-after features and allow longer stays."
+          },
+          {
+            "title": "Wine tourism",
+            "body": "Valtènesi wineries bring guests late in the season too."
+          }
+        ]
+      },
+      "polpenazze-del-garda": {
+        "intro1": "Polpenazze del Garda is a Valtènesi hill village with a castle and vineyards: quiet, minutes from the beaches, ideal for guests looking for countryside and peace near the lake.",
+        "highlights": [
+          {
+            "title": "Village and castle",
+            "body": "The historic hilltop centre is an authentic alternative to the lakeside towns."
+          },
+          {
+            "title": "Wine country",
+            "body": "Chiaretto vineyards and wineries attract wine lovers and couples."
+          },
+          {
+            "title": "Space and quiet",
+            "body": "Farmhouses and villas with gardens suit families and groups."
+          }
+        ]
+      },
+      "gardone-riviera": {
+        "intro1": "Gardone Riviera is the most refined stretch of the lake: the Vittoriale, the botanical garden and historic villas attract high-end guests interested in culture, elegance and impeccable service.",
+        "highlights": [
+          {
+            "title": "The Vittoriale",
+            "body": "D'Annunzio's estate draws visitors all year, out of season too."
+          },
+          {
+            "title": "High-end guests",
+            "body": "Guests who choose Gardone expect well-kept homes and matching hospitality, and pay accordingly."
+          },
+          {
+            "title": "Mild climate",
+            "body": "The sheltered riviera favours stays in spring and autumn as well."
+          }
+        ]
+      },
+      "toscolano-maderno": {
+        "intro1": "Toscolano-Maderno combines a lakefront, wide beaches and the Valley of the Paper Mills: with the ferry to Torri del Benaco it is a convenient base for families who want to explore both shores.",
+        "highlights": [
+          {
+            "title": "Beaches and lakefront",
+            "body": "Wide beaches and lakeside walks are perfect for families with children."
+          },
+          {
+            "title": "Linked to both shores",
+            "body": "The ferry to Torri del Benaco reaches the Verona shore in minutes."
+          },
+          {
+            "title": "Nature behind",
+            "body": "The Valley of the Paper Mills and inland trails round off the stay."
+          }
+        ]
+      },
+      "gargnano": {
+        "intro1": "Gargnano is a fishing village on the Brescia shore, loved by sailors and anyone seeking quiet: a small harbour, historic villas and the Alto Garda park behind it attract guests from northern Europe.",
+        "highlights": [
+          {
+            "title": "Sailing and the lake",
+            "body": "Regattas and steady winds draw sailors from all over Europe."
+          },
+          {
+            "title": "A quiet village",
+            "body": "Away from traffic, it is the choice for silence and authenticity."
+          },
+          {
+            "title": "Nature and trails",
+            "body": "The Alto Garda Bresciano park offers hikes a few steps from the lake."
+          }
+        ]
+      },
+      "tignale": {
+        "intro1": "Tignale is a panoramic plateau on the Brescia shore, with the Montecastello sanctuary perched above the lake: nature, trails and spectacular views attract hikers and anyone seeking peace.",
+        "highlights": [
+          {
+            "title": "Unique views",
+            "body": "The views from the plateau are among the most spectacular on the lake."
+          },
+          {
+            "title": "Hiking and nature",
+            "body": "Trails and cycling routes bring active guests from spring to autumn."
+          },
+          {
+            "title": "Peace and quiet",
+            "body": "Ideal for guests who want to switch off, away from the crowds."
+          }
+        ]
+      },
+      "tremosine-sul-garda": {
+        "intro1": "Tremosine sul Garda, with the Strada della Forra and its viewing terrace over the lake, is for lovers of nature and sport: plateau villages, trails and scenic roads draw active guests.",
+        "highlights": [
+          {
+            "title": "Scenic roads",
+            "body": "The Strada della Forra and the lake terraces are among the most photographed experiences on Lake Garda."
+          },
+          {
+            "title": "Outdoor sport",
+            "body": "Hiking, cycling and climbing bring guests over a long season."
+          },
+          {
+            "title": "Plateau villages",
+            "body": "Homes with views and quiet a few minutes from the lake."
+          }
+        ]
+      },
+      "limone-sul-garda": {
+        "intro1": "Limone sul Garda is one of the best-known places on the northern lake: the lemon houses, the harbour village and the cycle path suspended over the water draw guests from around the world over a long season.",
+        "highlights": [
+          {
+            "title": "International fame",
+            "body": "A name known abroad: guests search for it before they even leave."
+          },
+          {
+            "title": "The cycle path over the lake",
+            "body": "The cantilevered path over the water is an attraction that brings visitors all season."
+          },
+          {
+            "title": "High demand",
+            "body": "Few homes are available compared with demand: prices and occupancy stay high."
+          }
+        ]
+      },
+      "calvagese-della-riviera": {
+        "intro1": "Calvagese della Riviera, inland between Lonato and Desenzano, combines hills, golf and spacious farmhouses: a choice for those who want quiet and greenery a short drive from the lake.",
+        "highlights": [
+          {
+            "title": "Golf and hills",
+            "body": "The golf course nearby brings discerning guests outside summer too."
+          },
+          {
+            "title": "Spacious farmhouses",
+            "body": "Country houses and villas with gardens suit families and groups."
+          },
+          {
+            "title": "Close to Desenzano",
+            "body": "The lake, station and motorway are a few minutes' drive away."
+          }
+        ]
       }
     }
   }

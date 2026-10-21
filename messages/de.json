@@ -708,6 +708,312 @@
             "body": "Sirmione, Desenzano und Peschiera liegen ganz in der Nähe."
           }
         ]
+      },
+      "brenzone-sul-garda": {
+        "intro1": "Brenzone sul Garda ist eine Reihe kleiner Orte am See zwischen Torri und Malcesine, mit dem Monte Baldo im Rücken: ruhige Strände, kleine Häfen und Wanderwege ziehen Gäste an, viele aus Nordeuropa, die Ruhe und Natur suchen.",
+        "highlights": [
+          {
+            "title": "Orte am Wasser",
+            "body": "Kleine Häfen und abgelegene Strände: die ursprüngliche Atmosphäre, die viele Gäste suchen und in Bewertungen loben."
+          },
+          {
+            "title": "Natur und Wanderwege",
+            "body": "Der Monte Baldo ist ganz nah: Wanderer und Radfahrer verlängern die Saison."
+          },
+          {
+            "title": "Treue Gäste",
+            "body": "Deutsche und österreichische Gäste kommen Jahr für Jahr wieder und buchen früh."
+          }
+        ]
+      },
+      "costermano-sul-garda": {
+        "intro1": "Costermano sul Garda liegt auf den Hügeln über Garda: Villen und Häuser mit Seeblick, Olivenhaine und Golfplätze ziehen Gäste an, die Platz und Ruhe wenige Minuten von den Stränden suchen.",
+        "highlights": [
+          {
+            "title": "Seeblick von den Hügeln",
+            "body": "Weite Ausblicke über die Bucht von Garda: ein Wert, den man auf Fotos und in den Preisen sofort sieht."
+          },
+          {
+            "title": "Golf und Erholung",
+            "body": "Die Golfplätze der Umgebung bringen anspruchsvolle Gäste auch im Frühling und Herbst."
+          },
+          {
+            "title": "Nah am See",
+            "body": "Garda, Bardolino und die Strände sind wenige Autominuten entfernt."
+          }
+        ]
+      },
+      "cavaion-veronese": {
+        "intro1": "Cavaion Veronese ist das Hinterland von Bardolino zwischen Weinbergen und Hügeln: Häuser mit Garten zu günstigeren Kaufpreisen, wenige Minuten vom See, mit jedes Jahr wachsender touristischer Nachfrage.",
+        "highlights": [
+          {
+            "title": "Land des Bardolino",
+            "body": "Weinberge und Weingüter bringen weinbegeisterte Gäste."
+          },
+          {
+            "title": "Platz zu gutem Preis",
+            "body": "Häuser und Villen mit Garten erzielen gute Erträge bei geringerer Investition."
+          },
+          {
+            "title": "Nah am See",
+            "body": "Bardolino, Garda und Lazise sind in wenigen Minuten erreichbar."
+          }
+        ]
+      },
+      "affi": {
+        "intro1": "Affi ist das Tor zum See für alle, die vom Brenner kommen: Autobahnausfahrt, Infrastruktur und die Nähe zu Bardolino und Garda machen den Ort zu einer bequemen Basis für Familien und Gruppen.",
+        "highlights": [
+          {
+            "title": "Gut erreichbar",
+            "body": "Die Ausfahrt Affi an der Brennerautobahn bringt Gäste aus Deutschland und Österreich in wenigen Minuten."
+          },
+          {
+            "title": "Basis für den ganzen See",
+            "body": "Bardolino, Garda, Lazise und der Monte Baldo liegen in der Nähe."
+          },
+          {
+            "title": "Geräumige Häuser",
+            "body": "Villen und Häuser mit Garten beherbergen Familien und Gruppen, die länger bleiben."
+          }
+        ]
+      },
+      "caprino-veronese": {
+        "intro1": "Caprino Veronese liegt am Fuß des Monte Baldo zwischen Wäldern, Weiden und Dörfern: Agriturismi, Landhäuser und Häuser mit Aussicht ziehen Gäste an, die Natur, Sport und frische Luft nahe am See suchen.",
+        "highlights": [
+          {
+            "title": "Natur und Berge",
+            "body": "Wanderwege, Mountainbiken und Gleitschirmfliegen am Baldo bringen einen Großteil des Jahres aktive Gäste."
+          },
+          {
+            "title": "Landhäuser und Agriturismi",
+            "body": "Landhäuser und renovierte Bauernhäuser sind bei Familien und Gruppen sehr gefragt."
+          },
+          {
+            "title": "Der See ganz nah",
+            "body": "Garda und Torri del Benaco sind wenige Autominuten entfernt."
+          }
+        ]
+      },
+      "san-zeno-di-montagna": {
+        "intro1": "San Zeno di Montagna ist eine Hochebene hoch über dem See, oberhalb von Torri und Garda: spektakuläre Ausblicke, frische Sommerluft und Kastanienwälder ziehen Gäste an, die Panorama und Ruhe suchen.",
+        "highlights": [
+          {
+            "title": "Der Balkon über dem See",
+            "body": "Einige der schönsten Ausblicke am Gardasee: Häuser mit Aussicht werden am meisten fotografiert und gebucht."
+          },
+          {
+            "title": "Kühl im Sommer",
+            "body": "Während es am See heiß ist, bleibt die Hochebene kühl: ein starkes Argument in den Spitzenmonaten."
+          },
+          {
+            "title": "Natur das ganze Jahr",
+            "body": "Wandern, Radfahren und die Kastaniensaison verlängern den Kalender bis in den Herbst."
+          }
+        ]
+      },
+      "pastrengo": {
+        "intro1": "Pastrengo auf den Moränenhügeln zwischen Lazise und dem Etschtal verbindet Ruhe und Lage: Villen und Häuser mit Garten wenige Minuten vom See, von Gardaland und den Parks der Umgebung.",
+        "highlights": [
+          {
+            "title": "Hügel und Ruhe",
+            "body": "Eine entspannte Alternative zu den Orten am See, mit mehr Platz und weniger Verkehr."
+          },
+          {
+            "title": "Nah an den Parks",
+            "body": "Gardaland und die anderen Parks der Umgebung bringen die ganze Saison über Familien."
+          },
+          {
+            "title": "Villen mit Garten",
+            "body": "Häuser mit Außenbereich sind für mehrtägige Aufenthalte am gefragtesten."
+          }
+        ]
+      },
+      "sommacampagna": {
+        "intro1": "Sommacampagna zwischen Verona und dem See ist Custoza-Land und wenige Minuten vom Flughafen entfernt: eine Lage, die Urlauber, Verona-Besucher und Geschäftsreisende anzieht, mit Nachfrage das ganze Jahr.",
+        "highlights": [
+          {
+            "title": "Zwischen Verona und dem See",
+            "body": "Gäste verbinden Stadt, Arena und See in einem Aufenthalt."
+          },
+          {
+            "title": "Nicht nur Urlaub",
+            "body": "Messen und Unternehmen in Verona bringen Geschäftsreisende auch außerhalb der Saison."
+          },
+          {
+            "title": "Nah am Flughafen",
+            "body": "Flughafen Verona und Autobahn sind wenige Minuten entfernt: einfache Anreise auch fürs Wochenende."
+          }
+        ]
+      },
+      "san-felice-del-benaco": {
+        "intro1": "San Felice del Benaco mit Blick auf die Isola del Garda gehört zu den elegantesten Orten der Valtènesi: Strände, kleine Häfen und hochwertige Villen ziehen Gäste des gehobenen Segments an.",
+        "highlights": [
+          {
+            "title": "Die Isola del Garda",
+            "body": "Der Blick auf die Insel und die Strände sind auf Fotos und in Inseraten ein starker Anziehungspunkt."
+          },
+          {
+            "title": "Hochwertige Villen",
+            "body": "Villen mit Pool und Garten erzielen einige der höchsten Preise am Brescianer Ufer."
+          },
+          {
+            "title": "Herz der Valtènesi",
+            "body": "Weingüter, Olivenhaine und Nachbarorte verlängern die Saison."
+          }
+        ]
+      },
+      "puegnago-del-garda": {
+        "intro1": "Puegnago del Garda überblickt die Valtènesi von seinen Hügeln: Weinberge, Olivenhaine und Häuser mit Pool und Seeblick ziehen Paare und Familien an, die Erholung und guten Wein suchen.",
+        "highlights": [
+          {
+            "title": "Seeblick zwischen den Reben",
+            "body": "Ausblicke über Hügel und See, die in Bewertungen den Unterschied machen."
+          },
+          {
+            "title": "Häuser mit Pool",
+            "body": "Pool und Garten sind die gefragtesten Merkmale und ermöglichen längere Aufenthalte."
+          },
+          {
+            "title": "Weintourismus",
+            "body": "Die Weingüter der Valtènesi bringen auch am Saisonende Gäste."
+          }
+        ]
+      },
+      "polpenazze-del-garda": {
+        "intro1": "Polpenazze del Garda ist ein Hügeldorf der Valtènesi mit Burg und Weinbergen: ruhig, wenige Minuten von den Stränden, ideal für Gäste, die Land und Stille nahe am See suchen.",
+        "highlights": [
+          {
+            "title": "Ort und Burg",
+            "body": "Die historische Altstadt auf dem Hügel ist eine ursprüngliche Alternative zu den Orten am See."
+          },
+          {
+            "title": "Weinland",
+            "body": "Chiaretto-Weinberge und Weingüter ziehen Weinliebhaber und Paare an."
+          },
+          {
+            "title": "Platz und Ruhe",
+            "body": "Landhäuser und Villen mit Garten sind ideal für Familien und Gruppen."
+          }
+        ]
+      },
+      "gardone-riviera": {
+        "intro1": "Gardone Riviera ist die eleganteste Riviera des Sees: das Vittoriale, der botanische Garten und historische Villen ziehen Gäste des gehobenen Segments an, die Kultur, Eleganz und tadellosen Service schätzen.",
+        "highlights": [
+          {
+            "title": "Das Vittoriale",
+            "body": "Das Anwesen von D'Annunzio zieht das ganze Jahr Besucher an, auch außerhalb der Saison."
+          },
+          {
+            "title": "Gehobene Gäste",
+            "body": "Wer Gardone wählt, erwartet gepflegte Häuser und passende Gastfreundschaft – und zahlt entsprechend."
+          },
+          {
+            "title": "Mildes Klima",
+            "body": "Die geschützte Riviera begünstigt Aufenthalte auch im Frühling und Herbst."
+          }
+        ]
+      },
+      "toscolano-maderno": {
+        "intro1": "Toscolano-Maderno verbindet Seepromenade, breite Strände und das Tal der Papiermühlen: Mit der Fähre nach Torri del Benaco ist es eine bequeme Basis für Familien, die beide Ufer erkunden möchten.",
+        "highlights": [
+          {
+            "title": "Strände und Promenade",
+            "body": "Breite Strände und Spaziergänge am See sind ideal für Familien mit Kindern."
+          },
+          {
+            "title": "Verbunden mit beiden Ufern",
+            "body": "Die Fähre nach Torri del Benaco erreicht das Veroneser Ufer in wenigen Minuten."
+          },
+          {
+            "title": "Natur im Rücken",
+            "body": "Das Tal der Papiermühlen und die Wege im Hinterland runden den Aufenthalt ab."
+          }
+        ]
+      },
+      "gargnano": {
+        "intro1": "Gargnano ist ein Fischerdorf am Brescianer Ufer, beliebt bei Seglern und allen, die Ruhe suchen: kleiner Hafen, historische Villen und der Park Alto Garda im Rücken ziehen Gäste aus Nordeuropa an.",
+        "highlights": [
+          {
+            "title": "Segeln und See",
+            "body": "Regatten und beständiger Wind locken Segler aus ganz Europa."
+          },
+          {
+            "title": "Ein ruhiger Ort",
+            "body": "Abseits des Verkehrs ist es die Wahl für Stille und Ursprünglichkeit."
+          },
+          {
+            "title": "Natur und Wanderwege",
+            "body": "Der Park Alto Garda Bresciano bietet Wanderungen wenige Schritte vom See."
+          }
+        ]
+      },
+      "tignale": {
+        "intro1": "Tignale ist eine Panorama-Hochebene am Brescianer Ufer, mit der Wallfahrtskirche Montecastello hoch über dem See: Natur, Wanderwege und spektakuläre Ausblicke ziehen Wanderer und Ruhesuchende an.",
+        "highlights": [
+          {
+            "title": "Einzigartige Ausblicke",
+            "body": "Die Aussicht von der Hochebene gehört zu den spektakulärsten am See."
+          },
+          {
+            "title": "Wandern und Natur",
+            "body": "Wege und Radrouten bringen von Frühling bis Herbst aktive Gäste."
+          },
+          {
+            "title": "Ruhe und Stille",
+            "body": "Ideal für Gäste, die abschalten möchten, fern vom Trubel."
+          }
+        ]
+      },
+      "tremosine-sul-garda": {
+        "intro1": "Tremosine sul Garda mit der Strada della Forra und der Aussichtsterrasse über dem See ist ein Ziel für Natur- und Sportliebhaber: Dörfer auf der Hochebene, Wanderwege und Panoramastraßen locken aktive Gäste.",
+        "highlights": [
+          {
+            "title": "Panoramastraßen",
+            "body": "Die Strada della Forra und die Terrassen über dem See gehören zu den meistfotografierten Erlebnissen am Gardasee."
+          },
+          {
+            "title": "Sport im Freien",
+            "body": "Wandern, Radfahren und Klettern bringen Gäste über eine lange Saison."
+          },
+          {
+            "title": "Dörfer auf der Hochebene",
+            "body": "Häuser mit Aussicht und Ruhe wenige Minuten vom See."
+          }
+        ]
+      },
+      "limone-sul-garda": {
+        "intro1": "Limone sul Garda gehört zu den bekanntesten Orten am nördlichen See: die Zitronengärten, das Hafenstädtchen und der über dem Wasser schwebende Radweg ziehen über eine lange Saison Gäste aus aller Welt an.",
+        "highlights": [
+          {
+            "title": "Internationaler Ruf",
+            "body": "Ein Name, den man im Ausland kennt: Gäste suchen ihn schon vor der Reise."
+          },
+          {
+            "title": "Der Radweg über dem See",
+            "body": "Der Radweg über dem Wasser ist eine Attraktion, die die ganze Saison Besucher bringt."
+          },
+          {
+            "title": "Hohe Nachfrage",
+            "body": "Im Verhältnis zur Nachfrage gibt es wenige Häuser: Preise und Auslastung bleiben hoch."
+          }
+        ]
+      },
+      "calvagese-della-riviera": {
+        "intro1": "Calvagese della Riviera im Hinterland zwischen Lonato und Desenzano verbindet Hügel, Golf und geräumige Landhäuser: die Wahl für alle, die Ruhe und Grün nahe am See suchen.",
+        "highlights": [
+          {
+            "title": "Golf und Hügel",
+            "body": "Der Golfplatz der Umgebung bringt anspruchsvolle Gäste auch außerhalb des Sommers."
+          },
+          {
+            "title": "Geräumige Landhäuser",
+            "body": "Landhäuser und Villen mit Garten sind ideal für Familien und Gruppen."
+          },
+          {
+            "title": "Nah an Desenzano",
+            "body": "See, Bahnhof und Autobahn sind wenige Autominuten entfernt."
+          }
+        ]
       }
     }
   }

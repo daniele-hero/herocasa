@@ -708,6 +708,312 @@
             "body": "Sirmione, Desenzano e Peschiera sono vicinissimi."
           }
         ]
+      },
+      "brenzone-sul-garda": {
+        "intro1": "Brenzone sul Garda è una collana di piccoli borghi affacciati sul lago tra Torri e Malcesine, con il Monte Baldo alle spalle: spiagge tranquille, porticcioli e sentieri richiamano ospiti, molti dal Nord Europa, che cercano calma e natura.",
+        "highlights": [
+          {
+            "title": "Borghi sull’acqua",
+            "body": "Porticcioli e spiagge raccolte: l'atmosfera autentica che molti ospiti cercano e raccontano nelle recensioni."
+          },
+          {
+            "title": "Natura e sentieri",
+            "body": "Il Monte Baldo è a portata di mano: escursionisti e ciclisti allungano la stagione."
+          },
+          {
+            "title": "Ospiti fedeli",
+            "body": "Il pubblico tedesco e austriaco torna anno dopo anno e prenota con anticipo."
+          }
+        ]
+      },
+      "costermano-sul-garda": {
+        "intro1": "Costermano sul Garda si trova sulle colline sopra Garda: ville e case con vista lago, uliveti e campi da golf attirano ospiti che vogliono spazio e tranquillità a pochi minuti dalle spiagge.",
+        "highlights": [
+          {
+            "title": "Vista lago dalla collina",
+            "body": "Panorami ampi sul golfo di Garda: un valore che si vede subito nelle foto e nei prezzi."
+          },
+          {
+            "title": "Golf e relax",
+            "body": "I campi da golf della zona portano ospiti esigenti anche in primavera e autunno."
+          },
+          {
+            "title": "A due passi dal lago",
+            "body": "Garda, Bardolino e le spiagge sono a pochi minuti d'auto."
+          }
+        ]
+      },
+      "cavaion-veronese": {
+        "intro1": "Cavaion Veronese è l'entroterra di Bardolino, tra vigneti e colline: case con giardino a prezzi d'acquisto più accessibili, a pochi minuti dal lago, con una domanda turistica che cresce ogni anno.",
+        "highlights": [
+          {
+            "title": "Terra del Bardolino",
+            "body": "Vigneti e cantine portano ospiti appassionati di vino ed enoturismo."
+          },
+          {
+            "title": "Spazio a buon prezzo",
+            "body": "Case e ville con giardino rendono bene a fronte di un investimento più contenuto."
+          },
+          {
+            "title": "Vicino al lago",
+            "body": "Bardolino, Garda e Lazise sono raggiungibili in pochi minuti."
+          }
+        ]
+      },
+      "affi": {
+        "intro1": "Affi è la porta d'ingresso al lago per chi arriva dal Brennero: il casello autostradale, i servizi e la vicinanza a Bardolino e Garda la rendono una base comoda per famiglie e gruppi.",
+        "highlights": [
+          {
+            "title": "Comoda da raggiungere",
+            "body": "Il casello di Affi sull'autostrada del Brennero porta ospiti da Germania e Austria in pochi minuti."
+          },
+          {
+            "title": "Base per tutto il lago",
+            "body": "Bardolino, Garda, Lazise e il Monte Baldo sono vicini."
+          },
+          {
+            "title": "Case spaziose",
+            "body": "Ville e case con giardino ospitano famiglie e gruppi che restano più notti."
+          }
+        ]
+      },
+      "caprino-veronese": {
+        "intro1": "Caprino Veronese si stende ai piedi del Monte Baldo, tra boschi, pascoli e borghi: agriturismi, casali e case con vista attirano ospiti che cercano natura, sport e aria fresca, a breve distanza dal lago.",
+        "highlights": [
+          {
+            "title": "Natura e montagna",
+            "body": "Sentieri, mountain bike e parapendio sul Baldo portano ospiti attivi per gran parte dell'anno."
+          },
+          {
+            "title": "Casali e agriturismi",
+            "body": "Case di campagna e casali ristrutturati sono molto richiesti da famiglie e gruppi."
+          },
+          {
+            "title": "Lago a portata di mano",
+            "body": "Garda e Torri del Benaco sono a pochi minuti d'auto."
+          }
+        ]
+      },
+      "san-zeno-di-montagna": {
+        "intro1": "San Zeno di Montagna è un altopiano a picco sul lago, sopra Torri e Garda: viste spettacolari, aria fresca d'estate e castagneti attirano ospiti che cercano panorami e tranquillità.",
+        "highlights": [
+          {
+            "title": "Il balcone sul lago",
+            "body": "Panorami tra i più belli del Garda: le case con vista sono le più fotografate e prenotate."
+          },
+          {
+            "title": "Fresco d’estate",
+            "body": "Mentre il lago è caldo, l'altopiano resta fresco: un argomento forte nei mesi di punta."
+          },
+          {
+            "title": "Natura tutto l’anno",
+            "body": "Escursioni, bici e la stagione delle castagne allungano il calendario in autunno."
+          }
+        ]
+      },
+      "pastrengo": {
+        "intro1": "Pastrengo, sulle colline moreniche tra Lazise e la Valdadige, unisce tranquillità e posizione: ville e case con giardino a pochi minuti dal lago, da Gardaland e dai parchi della zona.",
+        "highlights": [
+          {
+            "title": "Colline e tranquillità",
+            "body": "Un'alternativa rilassata ai centri sul lago, con più spazio e meno traffico."
+          },
+          {
+            "title": "Vicino ai parchi",
+            "body": "Gardaland e gli altri parchi della zona portano famiglie per tutta la stagione."
+          },
+          {
+            "title": "Ville con giardino",
+            "body": "Le case con spazi esterni sono le più richieste per soggiorni di più notti."
+          }
+        ]
+      },
+      "sommacampagna": {
+        "intro1": "Sommacampagna, tra Verona e il lago, è terra di Custoza e a pochi minuti dall'aeroporto: una posizione che unisce turisti, chi visita Verona e chi viaggia per lavoro, con una domanda attiva tutto l'anno.",
+        "highlights": [
+          {
+            "title": "Tra Verona e il lago",
+            "body": "Gli ospiti combinano città, Arena e lago nello stesso soggiorno."
+          },
+          {
+            "title": "Non solo vacanze",
+            "body": "Fiere e aziende di Verona portano soggiorni per lavoro anche fuori stagione."
+          },
+          {
+            "title": "Vicino all’aeroporto",
+            "body": "L'aeroporto di Verona e l'autostrada sono a pochi minuti: arrivi facili anche per un weekend."
+          }
+        ]
+      },
+      "san-felice-del-benaco": {
+        "intro1": "San Felice del Benaco, affacciato sull'Isola del Garda, è una delle località più eleganti della Valtènesi: spiagge, porticcioli e ville di pregio attirano ospiti di fascia alta.",
+        "highlights": [
+          {
+            "title": "L’Isola del Garda",
+            "body": "La vista sull'isola e le spiagge sono un richiamo forte nelle foto e negli annunci."
+          },
+          {
+            "title": "Ville di pregio",
+            "body": "Ville con piscina e giardino raggiungono prezzi tra i più alti della sponda bresciana."
+          },
+          {
+            "title": "Cuore della Valtènesi",
+            "body": "Cantine, uliveti e borghi vicini allungano la stagione."
+          }
+        ]
+      },
+      "puegnago-del-garda": {
+        "intro1": "Puegnago del Garda domina la Valtènesi dalle colline: vigneti, uliveti e case con piscina e vista lago attirano coppie e famiglie che cercano relax e buon vino.",
+        "highlights": [
+          {
+            "title": "Vista lago tra i vigneti",
+            "body": "Panorami sulle colline e sul lago che fanno la differenza nelle recensioni."
+          },
+          {
+            "title": "Case con piscina",
+            "body": "Piscina e giardino sono le dotazioni più cercate e permettono soggiorni più lunghi."
+          },
+          {
+            "title": "Enoturismo",
+            "body": "Le cantine della Valtènesi portano ospiti anche a fine stagione."
+          }
+        ]
+      },
+      "polpenazze-del-garda": {
+        "intro1": "Polpenazze del Garda è un borgo collinare della Valtènesi con castello e vigneti: tranquillo, a pochi minuti dalle spiagge, ideale per ospiti che cercano campagna e silenzio vicino al lago.",
+        "highlights": [
+          {
+            "title": "Borgo e castello",
+            "body": "Il centro storico in collina è un'alternativa autentica ai paesi sul lago."
+          },
+          {
+            "title": "Terra di vino",
+            "body": "Vigneti e cantine del Chiaretto attirano appassionati e coppie."
+          },
+          {
+            "title": "Spazio e silenzio",
+            "body": "Casali e ville con giardino sono ideali per famiglie e gruppi."
+          }
+        ]
+      },
+      "gardone-riviera": {
+        "intro1": "Gardone Riviera è la riviera più raffinata del lago: il Vittoriale, il giardino botanico e le ville storiche attirano ospiti di fascia alta, interessati a cultura, eleganza e servizi impeccabili.",
+        "highlights": [
+          {
+            "title": "Il Vittoriale",
+            "body": "La casa di D'Annunzio richiama visitatori tutto l'anno, anche fuori stagione."
+          },
+          {
+            "title": "Ospiti di fascia alta",
+            "body": "Chi sceglie Gardone si aspetta case curate e accoglienza all'altezza, e paga di conseguenza."
+          },
+          {
+            "title": "Clima mite",
+            "body": "La riviera protetta favorisce soggiorni anche in primavera e autunno."
+          }
+        ]
+      },
+      "toscolano-maderno": {
+        "intro1": "Toscolano-Maderno unisce lungolago, spiagge ampie e la Valle delle Cartiere: con il traghetto per Torri del Benaco è una base comoda per famiglie che vogliono esplorare entrambe le sponde.",
+        "highlights": [
+          {
+            "title": "Spiagge e lungolago",
+            "body": "Spiagge ampie e passeggiate sul lago sono perfette per famiglie con bambini."
+          },
+          {
+            "title": "Collegata alle due sponde",
+            "body": "Il traghetto per Torri del Benaco porta in pochi minuti sulla sponda veronese."
+          },
+          {
+            "title": "Natura alle spalle",
+            "body": "La Valle delle Cartiere e i sentieri dell'entroterra arricchiscono il soggiorno."
+          }
+        ]
+      },
+      "gargnano": {
+        "intro1": "Gargnano è un borgo di pescatori sulla sponda bresciana, amato dai velisti e da chi cerca tranquillità: porticciolo, ville storiche e il parco dell'Alto Garda alle spalle attirano ospiti dal Nord Europa.",
+        "highlights": [
+          {
+            "title": "Vela e lago",
+            "body": "Regate e venti costanti richiamano velisti da tutta Europa."
+          },
+          {
+            "title": "Borgo tranquillo",
+            "body": "Lontano dal traffico, è la scelta di chi vuole silenzio e autenticità."
+          },
+          {
+            "title": "Natura e sentieri",
+            "body": "Il parco dell'Alto Garda Bresciano offre escursioni a pochi passi dal lago."
+          }
+        ]
+      },
+      "tignale": {
+        "intro1": "Tignale è un altopiano panoramico sulla sponda bresciana, con il santuario di Montecastello a picco sul lago: natura, sentieri e viste spettacolari attirano escursionisti e chi cerca quiete.",
+        "highlights": [
+          {
+            "title": "Panorami unici",
+            "body": "Le viste dall'altopiano sono tra le più spettacolari del lago."
+          },
+          {
+            "title": "Escursioni e natura",
+            "body": "Sentieri e percorsi in bici portano ospiti attivi da primavera ad autunno."
+          },
+          {
+            "title": "Pace e silenzio",
+            "body": "Ideale per ospiti che vogliono staccare, lontano dalla folla."
+          }
+        ]
+      },
+      "tremosine-sul-garda": {
+        "intro1": "Tremosine sul Garda, con la Strada della Forra e la terrazza panoramica sul lago, è una meta per chi ama natura e sport: borghi sull'altopiano, sentieri e strade panoramiche richiamano ospiti attivi.",
+        "highlights": [
+          {
+            "title": "Strade panoramiche",
+            "body": "La Strada della Forra e le terrazze sul lago sono tra le esperienze più fotografate del Garda."
+          },
+          {
+            "title": "Sport all’aria aperta",
+            "body": "Escursioni, bici e arrampicata portano ospiti per una stagione lunga."
+          },
+          {
+            "title": "Borghi sull’altopiano",
+            "body": "Case con vista e tranquillità a pochi minuti dal lago."
+          }
+        ]
+      },
+      "limone-sul-garda": {
+        "intro1": "Limone sul Garda è una delle mete più famose dell'alto lago: le limonaie, il borgo sul porto e la ciclabile sospesa sull'acqua richiamano ospiti da tutto il mondo per una stagione lunga.",
+        "highlights": [
+          {
+            "title": "Fama internazionale",
+            "body": "Un nome conosciuto all'estero: gli ospiti lo cercano già prima di partire."
+          },
+          {
+            "title": "La ciclabile sul lago",
+            "body": "Il percorso a sbalzo sull'acqua è un'attrazione che porta visitatori tutta la stagione."
+          },
+          {
+            "title": "Domanda alta",
+            "body": "Le case disponibili sono poche rispetto alla richiesta: prezzi e occupazione si mantengono alti."
+          }
+        ]
+      },
+      "calvagese-della-riviera": {
+        "intro1": "Calvagese della Riviera, nell'entroterra tra Lonato e Desenzano, unisce colline, golf e casali con spazio: una scelta per chi cerca tranquillità e verde a breve distanza dal lago.",
+        "highlights": [
+          {
+            "title": "Golf e colline",
+            "body": "Il golf della zona porta ospiti esigenti anche fuori dall'estate."
+          },
+          {
+            "title": "Casali con spazio",
+            "body": "Case di campagna e ville con giardino sono ideali per famiglie e gruppi."
+          },
+          {
+            "title": "Vicino a Desenzano",
+            "body": "Lago, stazione e autostrada sono a pochi minuti d'auto."
+          }
+        ]
       }
     }
   }
