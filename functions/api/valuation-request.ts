@@ -7,7 +7,7 @@
  * Conversions API (deduplicated against the browser pixel via eventId).
  *
  * Env vars (Cloudflare Pages → Settings → Variables and Secrets):
- * RESEND_API_KEY, LEAD_NOTIFY_EMAIL, RESEND_FROM_EMAIL (optional),
+ * RESEND_API_KEY, LEAD_NOTIFY_EMAIL (one or more, comma-separated), RESEND_FROM_EMAIL (optional),
  * META_CONVERSIONS_API_TOKEN, META_PIXEL_ID (optional). Each integration is
  * skipped independently when its vars are missing.
  */
@@ -88,7 +88,8 @@ async function sendLeadEmail(body: ValuationBody, env: Env): Promise<void> {
     headers: { Authorization: `Bearer ${env.RESEND_API_KEY}`, 'Content-Type': 'application/json' },
     body: JSON.stringify({
       from: env.RESEND_FROM_EMAIL || 'Herocasa <onboarding@resend.dev>',
-      to: env.LEAD_NOTIFY_EMAIL,
+      // Comma-separated list, so a lead still lands in a backup inbox if one recipient bounces.
+      to: env.LEAD_NOTIFY_EMAIL.split(',').map((s) => s.trim()).filter(Boolean),
       reply_to: body.email,
       subject: `${kind}: ${body.name || 'proprietario'} — ${body.zone || 'zona non specificata'}`,
       html: buildEmailHtml(body),
