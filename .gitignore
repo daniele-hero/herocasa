@@ -27,3 +27,6 @@ next-env.d.ts
 
 # Any other .env variant (typos, backups) must never reach GitHub
 .env.*
+
+# Local Cloudflare simulator state (wrangler pages dev)
+.wrangler/
