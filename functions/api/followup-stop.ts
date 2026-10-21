@@ -9,10 +9,10 @@ interface Env {
   RESEND_API_KEY?: string;
 }
 
-const COPY: Record<string, { done: string; body: string; bad: string; back: string }> = {
-  it: { done: 'Fatto.', body: 'Non riceverai altre email automatiche su questa richiesta.', bad: 'Link non valido o scaduto.', back: 'Torna al sito' },
-  en: { done: 'Done.', body: 'You will not receive further automatic emails about this request.', bad: 'Invalid or expired link.', back: 'Back to the website' },
-  de: { done: 'Erledigt.', body: 'Sie erhalten keine weiteren automatischen E-Mails zu dieser Anfrage.', bad: 'Ungültiger oder abgelaufener Link.', back: 'Zur Website' },
+const COPY: Record<string, { done: string; body: string; bad: string; failed: string; failedBody: string; back: string }> = {
+  it: { done: 'Fatto.', body: 'Non riceverai altre email automatiche su questa richiesta.', bad: 'Link non valido o scaduto.', failed: 'Qualcosa non ha funzionato.', failedBody: 'Non siamo riusciti a fermare le email: scrivici a info@herocasa.it e lo facciamo noi.', back: 'Torna al sito' },
+  en: { done: 'Done.', body: 'You will not receive further automatic emails about this request.', bad: 'Invalid or expired link.', failed: 'Something went wrong.', failedBody: 'We could not stop the emails: write to info@herocasa.it and we will do it for you.', back: 'Back to the website' },
+  de: { done: 'Erledigt.', body: 'Sie erhalten keine weiteren automatischen E-Mails zu dieser Anfrage.', bad: 'Ungültiger oder abgelaufener Link.', failed: 'Etwas ist schiefgelaufen.', failedBody: 'Wir konnten die E-Mails nicht stoppen: Schreiben Sie an info@herocasa.it, wir erledigen das für Sie.', back: 'Zur Website' },
 };
 
 async function hmacHex(key: string, message: string): Promise<string> {
@@ -42,13 +42,24 @@ export const onRequestGet = async ({ request, env }: { request: Request; env: En
   const expected = await hmacHex(`followup:${env.RESEND_API_KEY}`, ids);
   if (expected !== sig) return page(locale, c.bad, '');
 
-  // Already-sent or already-cancelled emails just return an error here; that's fine.
+  // Already-sent or already-cancelled emails answer 4xx (not 401/403/429): nothing left to stop, that's fine.
+  let failed = false;
   for (const id of ids.split(',').filter((x) => /^[0-9a-f-]{36}$/i.test(x))) {
-    const res = await fetch(`https://api.resend.com/emails/${id}/cancel`, {
-      method: 'POST',
-      headers: { Authorization: `Bearer ${env.RESEND_API_KEY}` },
-    });
-    if (!res.ok && res.status !== 404) console.warn('[followup-stop] cancel', id, res.status, await res.text());
+    for (let attempt = 0; attempt < 3; attempt++) {
+      const res = await fetch(`https://api.resend.com/emails/${id}/cancel`, {
+        method: 'POST',
+        headers: { Authorization: `Bearer ${env.RESEND_API_KEY}` },
+      });
+      if (res.status === 429) {
+        await new Promise((r) => setTimeout(r, 700));
+        continue;
+      }
+      if (res.status === 401 || res.status === 403 || res.status >= 500) {
+        failed = true;
+        console.error('[followup-stop] cancel failed', id, res.status, await res.text());
+      }
+      break;
+    }
   }
-  return page(locale, c.done, c.body);
+  return failed ? page(locale, c.failed, c.failedBody) : page(locale, c.done, c.body);
 };
