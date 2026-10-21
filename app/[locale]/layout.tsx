@@ -108,7 +108,7 @@ export default async function LocaleLayout({
     priceRange: '€€€',
     areaServed: Object.values(COMUNI).map((c) => ({ '@type': 'City', name: c.name })),
     geo: { '@type': 'GeoCoordinates', latitude: 45.5636, longitude: 10.6417 },
-    sameAs: [],
+    sameAs: ['https://www.instagram.com/herocasa_affitti/', 'https://www.facebook.com/p/Herocasa-Affitti-Brevi-61556602923760/'],
   };
 
   return (

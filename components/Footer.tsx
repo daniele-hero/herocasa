@@ -62,6 +62,11 @@ export default function Footer() {
                 WhatsApp ↗
               </a>
             </li>
+            <li>
+              <a href="https://www.instagram.com/herocasa_affitti/" target="_blank" rel="noopener noreferrer" className="transition-colors hover:text-[var(--gold)]">Instagram ↗</a>
+              {' · '}
+              <a href="https://www.facebook.com/p/Herocasa-Affitti-Brevi-61556602923760/" target="_blank" rel="noopener noreferrer" className="transition-colors hover:text-[var(--gold)]">Facebook ↗</a>
+            </li>
             <li className="whitespace-pre-line">{c('hours')}</li>
           </ul>
         </div>
