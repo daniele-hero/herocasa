@@ -153,3 +153,11 @@ img { max-width: 100%; display: block; }
   html { scroll-behavior: auto; }
   * { animation-duration: 0.001ms !important; transition-duration: 0.001ms !important; }
 }
+
+/* Owner guides (/it/guide/...) */
+.article-body h2 { font-family: var(--font-serif); font-weight: 500; font-size: clamp(26px, 2.6vw, 32px); line-height: 1.15; color: var(--olive); margin: 48px 0 16px; }
+.article-body p { color: var(--olive-90); font-size: 17px; line-height: 1.7; margin-bottom: 18px; }
+.article-body ul { list-style: none; padding-left: 0; margin: 8px 0 22px; }
+.article-body li { color: var(--olive-90); font-size: 17px; line-height: 1.6; padding-left: 22px; position: relative; margin-bottom: 10px; }
+.article-body li::before { content: "·"; color: var(--gold); position: absolute; left: 2px; top: -6px; font-size: 28px; }
+.article-body strong { color: var(--olive); font-weight: 600; }

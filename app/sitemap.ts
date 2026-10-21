@@ -1,6 +1,7 @@
 import type { MetadataRoute } from 'next';
 import { routing } from '@/lib/routing';
 import { COMUNE_SLUGS, comunePath } from '@/lib/comuni';
+import { ARTICLES } from '@/lib/articles';
 
 const SITE_URL = 'https://herocasa.it';
 
@@ -22,6 +23,8 @@ export default function sitemap(): MetadataRoute.Sitemap {
   const pages: Page[] = [
     { path: (l) => `/${l}`, locales: all, changeFrequency: 'weekly', priority: 1 },
     ...COMUNE_SLUGS.map((s): Page => ({ path: (l) => comunePath(l, s), locales: all, changeFrequency: 'monthly', priority: 0.8 })),
+    // Draft guides stay out of the sitemap until approved (published: true).
+    ...ARTICLES.filter((a) => a.published).map((a): Page => ({ path: () => `/it/guide/${a.slug}`, locales: ['it'], changeFrequency: 'monthly', priority: 0.7 })),
     ...['privacy', 'cookie', 'termini'].map((p): Page => ({ path: (l) => `/${l}/${p}`, locales: all, changeFrequency: 'yearly', priority: 0.3 })),
   ];
 

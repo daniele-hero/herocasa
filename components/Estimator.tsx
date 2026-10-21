@@ -28,7 +28,7 @@ export default function Estimator({ presetZone, sectionNumber = 'vi.' }: { prese
       <div className="container-x section-y relative z-10">
         <Reveal>
           <div className="max-w-[780px] mb-16">
-            <div className="eyebrow" style={{ color: 'var(--gold)' }}>{t('eyebrow')} · {sectionNumber}</div>
+            <div className="eyebrow" style={{ color: 'var(--gold)' }}>{t('eyebrow')}{sectionNumber ? ` · ${sectionNumber}` : ''}</div>
             <h2 className="serif mt-4 text-[var(--paper)]" style={{ fontSize: 'clamp(34px, 5vw, 60px)', lineHeight: 1.08 }}>
               {t('titleOne')}<br />
               <em style={{ color: 'var(--gold)', fontStyle: 'italic' }}>{t('titleTwo')}</em>
