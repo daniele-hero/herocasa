@@ -1014,6 +1014,57 @@
             "body": "See, Bahnhof und Autobahn sind wenige Autominuten entfernt."
           }
         ]
+      },
+      "castiglione-delle-stiviere": {
+        "intro1": "Castiglione delle Stiviere auf den Moränenhügeln südlich des Sees ist die Stadt, in der die Idee des Roten Kreuzes entstand: wenige Minuten von Desenzano und Sirmione, mit günstigeren Kaufpreisen und Gästen, die für Urlaub, Arbeit und Veranstaltungen kommen.",
+        "highlights": [
+          {
+            "title": "Nah am See, günstige Preise",
+            "body": "Desenzano, Sirmione und die Strände sind eine Viertelstunde entfernt: attraktive Erträge bei geringerer Investition."
+          },
+          {
+            "title": "Geschichte und Hügel",
+            "body": "Das Rotkreuzmuseum, Solferino und die Moränenhügel bringen Besucher auch außerhalb der Saison."
+          },
+          {
+            "title": "Nicht nur Urlaub",
+            "body": "Unternehmen und Einrichtungen der Umgebung bringen das ganze Jahr Geschäftsreisende."
+          }
+        ]
+      },
+      "carpenedolo": {
+        "intro1": "Carpenedolo in der Ebene zwischen Lonato, Montichiari und Castiglione bietet geräumige, ruhige Häuser nahe am See und am Flughafen: eine bequeme Basis für Familien, Gruppen und Geschäftsreisende.",
+        "highlights": [
+          {
+            "title": "Platz und Ruhe",
+            "body": "Einfamilienhäuser und Villen mit Garten beherbergen Familien und Gruppen, die länger bleiben."
+          },
+          {
+            "title": "Strategische Lage",
+            "body": "Gardasee, Brescia und der Flughafen Montichiari sind wenige Autominuten entfernt."
+          },
+          {
+            "title": "Nachfrage das ganze Jahr",
+            "body": "Messen, Unternehmen und Veranstaltungen füllen den Kalender auch außerhalb der Saison."
+          }
+        ]
+      },
+      "montichiari": {
+        "intro1": "Montichiari mit Flughafen, dem Centro Fiera del Garda und der Burg Bonoris verbindet Tourismus und Geschäft: wenige Minuten von Desenzano und dem See, zieht es das ganze Jahr Urlauber, Aussteller und Messebesucher an.",
+        "highlights": [
+          {
+            "title": "Messen und Veranstaltungen",
+            "body": "Das Centro Fiera del Garda bringt in vielen Wochen des Jahres Aussteller und Besucher."
+          },
+          {
+            "title": "Flughafen und Anbindung",
+            "body": "Flughafen und Autobahn in der Nähe machen die Anreise leicht, auch fürs Wochenende."
+          },
+          {
+            "title": "Der See ganz nah",
+            "body": "Desenzano und das Südufer sind etwa eine Viertelstunde mit dem Auto entfernt."
+          }
+        ]
       }
     }
   }

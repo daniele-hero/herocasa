@@ -1014,6 +1014,57 @@
             "body": "The lake, station and motorway are a few minutes' drive away."
           }
         ]
+      },
+      "castiglione-delle-stiviere": {
+        "intro1": "Castiglione delle Stiviere, on the morainic hills south of the lake, is the town where the idea of the Red Cross was born: minutes from Desenzano and Sirmione, with more accessible purchase prices and guests coming for tourism, work and events.",
+        "highlights": [
+          {
+            "title": "Close to the lake, accessible prices",
+            "body": "Desenzano, Sirmione and the beaches are a quarter of an hour away: attractive returns on a smaller investment."
+          },
+          {
+            "title": "History and hills",
+            "body": "The Red Cross museum, Solferino and the morainic hills bring visitors outside the season too."
+          },
+          {
+            "title": "Not just holidays",
+            "body": "Local companies and services bring business stays all year."
+          }
+        ]
+      },
+      "carpenedolo": {
+        "intro1": "Carpenedolo, on the plain between Lonato, Montichiari and Castiglione, offers spacious, quiet homes a short drive from the lake and the airport: a convenient base for families, groups and business travellers.",
+        "highlights": [
+          {
+            "title": "Space and quiet",
+            "body": "Detached houses and villas with gardens host families and groups who stay longer."
+          },
+          {
+            "title": "Strategic location",
+            "body": "Lake Garda, Brescia and Montichiari airport are a few minutes' drive away."
+          },
+          {
+            "title": "Demand all year",
+            "body": "Trade fairs, companies and local events fill the calendar outside the season too."
+          }
+        ]
+      },
+      "montichiari": {
+        "intro1": "Montichiari, with its airport, the Centro Fiera del Garda and Bonoris Castle, combines tourism and business: minutes from Desenzano and the lake, it draws holidaymakers, exhibitors and trade-fair visitors all year.",
+        "highlights": [
+          {
+            "title": "Trade fairs and events",
+            "body": "The Centro Fiera del Garda brings exhibitors and visitors in many weeks of the year."
+          },
+          {
+            "title": "Airport and connections",
+            "body": "The nearby airport and motorway make arrivals easy, even for a weekend."
+          },
+          {
+            "title": "The lake close by",
+            "body": "Desenzano and the southern shore are about a quarter of an hour's drive away."
+          }
+        ]
       }
     }
   }

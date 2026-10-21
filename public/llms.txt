@@ -53,6 +53,9 @@
 - [Tremosine sul Garda](https://herocasa.it/it/gestione-affitti-brevi/tremosine-sul-garda): gestione affitti brevi a Tremosine sul Garda
 - [Limone sul Garda](https://herocasa.it/it/gestione-affitti-brevi/limone-sul-garda): gestione affitti brevi a Limone sul Garda
 - [Calvagese della Riviera](https://herocasa.it/it/gestione-affitti-brevi/calvagese-della-riviera): gestione affitti brevi a Calvagese della Riviera
+- [Castiglione delle Stiviere](https://herocasa.it/it/gestione-affitti-brevi/castiglione-delle-stiviere): gestione affitti brevi a Castiglione delle Stiviere
+- [Carpenedolo](https://herocasa.it/it/gestione-affitti-brevi/carpenedolo): gestione affitti brevi a Carpenedolo
+- [Montichiari](https://herocasa.it/it/gestione-affitti-brevi/montichiari): gestione affitti brevi a Montichiari
 
 ## Pagine in tedesco (Ferienhaus-Verwaltung am Gardasee)
 - [Peschiera del Garda](https://herocasa.it/de/ferienhaus-verwaltung/peschiera-del-garda)
@@ -90,6 +93,9 @@
 - [Tremosine sul Garda](https://herocasa.it/de/ferienhaus-verwaltung/tremosine-sul-garda)
 - [Limone sul Garda](https://herocasa.it/de/ferienhaus-verwaltung/limone-sul-garda)
 - [Calvagese della Riviera](https://herocasa.it/de/ferienhaus-verwaltung/calvagese-della-riviera)
+- [Castiglione delle Stiviere](https://herocasa.it/de/ferienhaus-verwaltung/castiglione-delle-stiviere)
+- [Carpenedolo](https://herocasa.it/de/ferienhaus-verwaltung/carpenedolo)
+- [Montichiari](https://herocasa.it/de/ferienhaus-verwaltung/montichiari)
 
 ## Pagine principali
 - [Home](https://herocasa.it/it): servizi, processo, immobili gestiti, zone, domande frequenti, contatti

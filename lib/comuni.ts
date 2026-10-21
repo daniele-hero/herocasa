@@ -37,6 +37,9 @@ export const COMUNI = {
   'tremosine-sul-garda': { name: 'Tremosine sul Garda', photo: '/immobili/interno-soggiorno.jpg' },
   'limone-sul-garda': { name: 'Limone sul Garda', photo: '/immobili/villa-aerea-tetto.jpg' },
   'calvagese-della-riviera': { name: 'Calvagese della Riviera', photo: '/immobili/villa-giardino.jpg' },
+  'castiglione-delle-stiviere': { name: 'Castiglione delle Stiviere', photo: '/immobili/vista-aerea-piscina.jpg' },
+  carpenedolo: { name: 'Carpenedolo', photo: '/immobili/villa-aerea-tetto.jpg' },
+  montichiari: { name: 'Montichiari', photo: '/immobili/interno-soggiorno.jpg' },
 } as const;
 
 export type ComuneSlug = keyof typeof COMUNI;

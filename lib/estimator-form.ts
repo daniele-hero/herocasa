@@ -66,6 +66,9 @@ export const ZONES = [
   'Tremosine sul Garda',
   'Limone sul Garda',
   'Calvagese della Riviera',
+  'Castiglione delle Stiviere',
+  'Carpenedolo',
+  'Montichiari',
 ] as const;
 
 export type ValuationLead = {

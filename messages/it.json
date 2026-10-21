@@ -1014,6 +1014,57 @@
             "body": "Lago, stazione e autostrada sono a pochi minuti d'auto."
           }
         ]
+      },
+      "castiglione-delle-stiviere": {
+        "intro1": "Castiglione delle Stiviere, sulle colline moreniche a sud del lago, è la città dove nacque l'idea della Croce Rossa: a pochi minuti da Desenzano e Sirmione, con prezzi d'acquisto più accessibili e ospiti che arrivano per turismo, lavoro ed eventi.",
+        "highlights": [
+          {
+            "title": "Vicino al lago, prezzi accessibili",
+            "body": "Desenzano, Sirmione e le spiagge sono a un quarto d'ora: rendimenti interessanti su un investimento più contenuto."
+          },
+          {
+            "title": "Storia e colline",
+            "body": "Il museo della Croce Rossa, Solferino e le colline moreniche portano visitatori anche fuori stagione."
+          },
+          {
+            "title": "Non solo vacanze",
+            "body": "Aziende e servizi della zona portano soggiorni per lavoro durante tutto l'anno."
+          }
+        ]
+      },
+      "carpenedolo": {
+        "intro1": "Carpenedolo, nella pianura tra Lonato, Montichiari e Castiglione, offre case spaziose e tranquille a breve distanza dal lago e dall'aeroporto: una base comoda per famiglie, gruppi e chi viaggia per lavoro.",
+        "highlights": [
+          {
+            "title": "Spazio e tranquillità",
+            "body": "Case indipendenti e ville con giardino ospitano famiglie e gruppi che restano più notti."
+          },
+          {
+            "title": "Posizione strategica",
+            "body": "Lago di Garda, Brescia e l'aeroporto di Montichiari sono a pochi minuti d'auto."
+          },
+          {
+            "title": "Domanda tutto l’anno",
+            "body": "Fiere, aziende ed eventi della zona riempiono il calendario anche fuori stagione."
+          }
+        ]
+      },
+      "montichiari": {
+        "intro1": "Montichiari, con l'aeroporto, il Centro Fiera del Garda e il castello Bonoris, unisce turismo e lavoro: a pochi minuti da Desenzano e dal lago, attira ospiti in vacanza, espositori e visitatori delle fiere tutto l'anno.",
+        "highlights": [
+          {
+            "title": "Fiere ed eventi",
+            "body": "Il Centro Fiera del Garda porta espositori e visitatori in molte settimane dell'anno."
+          },
+          {
+            "title": "Aeroporto e collegamenti",
+            "body": "Aeroporto e autostrada vicini rendono facili gli arrivi, anche per un weekend."
+          },
+          {
+            "title": "Il lago a un passo",
+            "body": "Desenzano e la sponda sud sono a circa un quarto d'ora d'auto."
+          }
+        ]
       }
     }
   }
