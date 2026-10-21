@@ -21,6 +21,7 @@ export default function PolicyLayout({
   children,
 }: PolicyLayoutProps) {
   const backLabel = { it: '← Torna al sito', en: '← Back to site', de: '← Zurück zur Website' }[locale] ?? '← Back';
+  const updatedLabel = { it: 'Ultimo aggiornamento', en: 'Last updated', de: 'Zuletzt aktualisiert' }[locale] ?? 'Last updated';
 
   return (
     <>
@@ -42,19 +43,14 @@ export default function PolicyLayout({
           {title}
         </h1>
 
-        <div
-          className="border-l-[3px] border-[var(--gold)] mb-10 p-4 text-[13px]"
-          style={{ background: 'rgba(184, 146, 90, 0.10)', color: 'var(--olive-70)' }}
-        >
-          <strong className="text-[var(--gold-dark)]">Nota:</strong> questo testo è un <em>placeholder legale</em> generato in fase di sviluppo. Prima del go-live va rivisto e integrato con il vostro DPO / consulente legale.
-        </div>
 
-        <p className="text-[19px] max-w-[60ch] mb-15" style={{ color: 'var(--olive-90)' }}>{lede}</p>
+
+        <p className="text-[19px] max-w-[60ch] mb-15 mt-10" style={{ color: 'var(--olive-90)' }}>{lede}</p>
 
         <div className="policy-body">{children}</div>
 
         <div className="inline-block text-[12px] tracking-[0.14em] uppercase text-[var(--stone)] border-t border-[var(--olive-15)] pt-3 mt-15">
-          Ultimo aggiornamento: {lastUpdated}
+          {updatedLabel}: {lastUpdated}
         </div>
       </main>
 

@@ -3,6 +3,7 @@
 import { useEffect, useState } from 'react';
 import { useLocale, useTranslations } from 'next-intl';
 import Link from 'next/link';
+import { usePathname } from 'next/navigation';
 import Image from 'next/image';
 import { AnimatePresence, motion } from 'motion/react';
 
@@ -12,6 +13,9 @@ const SECTIONS = ['servizi', 'processo', 'immobili', 'zone', 'faq', 'contatti'] 
 export default function Nav() {
   const t = useTranslations('nav');
   const locale = useLocale();
+  const pathname = usePathname() ?? `/${locale}`;
+  // Language switch keeps the current page (home or a comune page), only the locale segment changes.
+  const localeHref = (l: string) => pathname.replace(/^\/(it|en|de)(?=\/|$)/, `/${l}`) || `/${l}`;
   const [scrolled, setScrolled] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
 
@@ -63,11 +67,11 @@ export default function Nav() {
         </Link>
 
         <div className="hidden lg:flex gap-8 items-center mx-auto">
-          <a href="#servizi" className="text-[13px] transition-colors hover:text-[var(--gold-dark)]">{t('services')}</a>
-          <a href="#processo" className="text-[13px] transition-colors hover:text-[var(--gold-dark)]">{t('process')}</a>
-          <a href="#immobili" className="text-[13px] transition-colors hover:text-[var(--gold-dark)]">{t('properties')}</a>
-          <a href="#zone" className="text-[13px] transition-colors hover:text-[var(--gold-dark)]">{t('zones')}</a>
-          <a href="#faq" className="text-[13px] transition-colors hover:text-[var(--gold-dark)]">{t('faq')}</a>
+          <a href={`/${locale}#servizi`} className="text-[13px] transition-colors hover:text-[var(--gold-dark)]">{t('services')}</a>
+          <a href={`/${locale}#processo`} className="text-[13px] transition-colors hover:text-[var(--gold-dark)]">{t('process')}</a>
+          <a href={`/${locale}#immobili`} className="text-[13px] transition-colors hover:text-[var(--gold-dark)]">{t('properties')}</a>
+          <a href={`/${locale}#zone`} className="text-[13px] transition-colors hover:text-[var(--gold-dark)]">{t('zones')}</a>
+          <a href={`/${locale}#faq`} className="text-[13px] transition-colors hover:text-[var(--gold-dark)]">{t('faq')}</a>
         </div>
 
         <div className="flex items-center gap-5">
@@ -75,7 +79,7 @@ export default function Nav() {
             {LOCALES.map((l, i) => (
               <span key={l} className="flex items-center gap-2">
                 <Link
-                  href={`/${l}`}
+                  href={localeHref(l)}
                   className={`text-[11px] font-medium tracking-[0.16em] uppercase py-1 px-0.5 transition-colors ${
                     l === locale ? 'text-[var(--olive)] border-b border-[var(--gold)]' : 'text-[var(--stone)] hover:text-[var(--olive)]'
                   }`}
@@ -129,7 +133,7 @@ export default function Nav() {
               {SECTIONS.map((id, i) => (
                 <a
                   key={id}
-                  href={`#${id}`}
+                  href={`/${locale}#${id}`}
                   onClick={closeMenu}
                   className="py-[18px] flex items-baseline gap-5 border-b border-[var(--paper-40)] font-serif text-[32px] leading-none text-[var(--paper)] transition-colors hover:text-[var(--gold)]"
                 >
@@ -144,7 +148,7 @@ export default function Nav() {
                 {LOCALES.map((l, i) => (
                   <span key={l} className="flex items-center gap-3">
                     <Link
-                      href={`/${l}`}
+                      href={localeHref(l)}
                       onClick={closeMenu}
                       className={l === locale ? 'text-[var(--paper)] border-b border-[var(--gold)] py-1' : 'text-[var(--paper-70)] py-1'}
                     >

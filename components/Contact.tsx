@@ -1,13 +1,14 @@
 'use client';
 
 import { FormEvent, useState } from 'react';
-import { useTranslations } from 'next-intl';
+import { useLocale, useTranslations } from 'next-intl';
 import Reveal from './Reveal';
-import { trackLead } from './CookieBanner';
+import { hasMarketingConsent, trackLead } from './CookieBanner';
 import { ZONES, postValuationLead, type EstimatorFormCopy } from '@/lib/estimator-form';
 
 export default function Contact() {
   const t = useTranslations('contact');
+  const locale = useLocale();
   const tEst = useTranslations('estimator');
   const form = tEst.raw('form') as EstimatorFormCopy;
   const callCta = t.raw('callCta') as {
@@ -34,8 +35,8 @@ export default function Contact() {
     await postValuationLead({
       source: 'call-booking-form',
       name: (data.get('name') as string) || '',
-      email: (data.get('email') as string) || '',
-      phone: '',
+      email: ((data.get('email') as string) || '').trim(),
+      phone: ((data.get('phone') as string) || '').trim(),
       zone,
       type: '',
       rooms: '',
@@ -43,6 +44,8 @@ export default function Contact() {
       notes: '',
       submittedAt: new Date().toISOString(),
       eventId,
+      locale,
+      marketingConsent: hasMarketingConsent(),
     });
 
     trackLead('call-booking-form', { comune: zone }, eventId);
@@ -109,8 +112,12 @@ export default function Contact() {
                   <input name="name" type="text" required autoComplete="name" className="est-input" />
                 </label>
                 <label className="block">
-                  <span className="block text-[11px] tracking-[0.16em] uppercase mb-2.5" style={{ color: 'var(--paper-70)' }}>{form.email}</span>
-                  <input name="email" type="email" required autoComplete="email" className="est-input" />
+                  <span className="block text-[11px] tracking-[0.16em] uppercase mb-2.5" style={{ color: 'var(--paper-70)' }}>{form.phone}</span>
+                  <input name="phone" type="tel" required autoComplete="tel" inputMode="tel" className="est-input" />
+                </label>
+                <label className="block">
+                  <span className="block text-[11px] tracking-[0.16em] uppercase mb-2.5" style={{ color: 'var(--paper-70)' }}>{form.emailOptional}</span>
+                  <input name="email" type="email" autoComplete="email" className="est-input" />
                 </label>
                 <label className="block">
                   <span className="block text-[11px] tracking-[0.16em] uppercase mb-2.5" style={{ color: 'var(--paper-70)' }}>{form.zone}</span>

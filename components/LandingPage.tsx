@@ -15,6 +15,7 @@ import Contact from './Contact';
 import Footer from './Footer';
 import CookieBanner from './CookieBanner';
 import WhatsAppFloat from './WhatsAppFloat';
+import MobileCtaBar from './MobileCtaBar';
 
 export default function LandingPage() {
   return (
@@ -34,6 +35,7 @@ export default function LandingPage() {
         <Contact />
       </main>
       <Footer />
+      <MobileCtaBar />
       <WhatsAppFloat />
       <CookieBanner />
     </>

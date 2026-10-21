@@ -3,7 +3,9 @@
 import { useEffect, useState, useCallback } from 'react';
 import { useTranslations, useLocale } from 'next-intl';
 
-const STORAGE_KEY = 'herocasa_cookie_consent_v2';
+// v3: consent is no longer pre-ticked, so choices stored under v2 (given with
+// pre-ticked toggles) are not valid consent and everyone is asked again once.
+const STORAGE_KEY = 'herocasa_cookie_consent_v3';
 const META_PIXEL_ID = process.env.NEXT_PUBLIC_META_PIXEL_ID ?? '2304401749914019';
 
 type Consent = {
@@ -12,7 +14,7 @@ type Consent = {
   marketing: boolean;
   action: 'accept' | 'reject' | 'selected';
   at: string;
-  version: 2;
+  version: 3;
 };
 
 function loadConsent(): Consent | null {
@@ -30,6 +32,11 @@ function saveConsent(consent: Consent) {
   } catch {
     /* storage unavailable (private mode) — consent simply won't persist */
   }
+}
+
+/** True only when the visitor explicitly allowed marketing cookies. */
+export function hasMarketingConsent(): boolean {
+  return loadConsent()?.marketing === true;
 }
 
 let pixelLoaded = false;
@@ -58,31 +65,38 @@ function initMetaPixel() {
   (window as any).fbq('track', 'PageView');
 }
 
+function fbq(...args: unknown[]) {
+  if (typeof window === 'undefined') return;
+  const f = (window as any).fbq;
+  if (typeof f === 'function') f(...args);
+}
+
 /**
- * Fires a Meta Pixel Lead event — call from form submit handlers after consent
- * is possibly granted. Pass the same `eventId` given to `postValuationLead` so
- * Meta can dedupe this browser-side delivery against the server-side
- * Conversions API delivery of the identical event.
+ * Meta Pixel Lead event — only for a real submission with contact details.
+ * Pass the same `eventId` given to `postValuationLead` so Meta dedupes this
+ * browser-side delivery against the server-side Conversions API one.
  */
 export function trackLead(sourceLabel: string, extra?: Record<string, unknown>, eventId?: string) {
-  if (typeof window === 'undefined') return;
-  const fbq = (window as any).fbq;
-  if (typeof fbq === 'function') {
-    fbq(
-      'track',
-      'Lead',
-      { content_category: sourceLabel, content_name: 'Valutazione immobile', ...extra },
-      eventId ? { eventID: eventId } : undefined
-    );
-  }
+  fbq('track', 'Lead', { content_category: sourceLabel, content_name: 'Valutazione immobile', ...extra }, eventId ? { eventID: eventId } : undefined);
+}
+
+/** Meta standard Contact event (WhatsApp / phone clicks): intent, not a lead. */
+export function trackContact(sourceLabel: string) {
+  fbq('track', 'Contact', { content_category: sourceLabel });
+}
+
+/** Custom funnel step (e.g. form opened, step 1 completed) — kept out of Lead so campaigns optimise on real leads. */
+export function trackStep(name: string, params?: Record<string, unknown>) {
+  fbq('trackCustom', name, params);
 }
 
 export default function CookieBanner() {
   const t = useTranslations('cookieBanner');
   const locale = useLocale();
   const [visible, setVisible] = useState(false);
-  const [analytics, setAnalytics] = useState(true);
-  const [marketing, setMarketing] = useState(true);
+  const [customizing, setCustomizing] = useState(false);
+  const [analytics, setAnalytics] = useState(false);
+  const [marketing, setMarketing] = useState(false);
 
   useEffect(() => {
     const existing = loadConsent();
@@ -99,22 +113,24 @@ export default function CookieBanner() {
     (action: 'accept' | 'reject' | 'selected') => {
       const finalAnalytics = action === 'accept' ? true : action === 'reject' ? false : analytics;
       const finalMarketing = action === 'accept' ? true : action === 'reject' ? false : marketing;
-      const consent: Consent = {
+      saveConsent({
         necessary: true,
         analytics: finalAnalytics,
         marketing: finalMarketing,
         action,
         at: new Date().toISOString(),
-        version: 2,
-      };
-      saveConsent(consent);
+        version: 3,
+      });
+      setAnalytics(finalAnalytics);
+      setMarketing(finalMarketing);
       setVisible(false);
+      setCustomizing(false);
       if (finalMarketing) initMetaPixel();
     },
     [analytics, marketing],
   );
 
-  // Expose a way for the Footer "cookie preferences" link to reopen this banner.
+  // The Footer "cookie preferences" link reopens the banner straight on the choices.
   useEffect(() => {
     const handler = () => {
       const existing = loadConsent();
@@ -122,16 +138,20 @@ export default function CookieBanner() {
         setAnalytics(existing.analytics);
         setMarketing(existing.marketing);
       }
+      setCustomizing(true);
       setVisible(true);
     };
     window.addEventListener('herocasa:open-cookie-banner', handler);
     return () => window.removeEventListener('herocasa:open-cookie-banner', handler);
   }, []);
 
-  // The translation string embeds a literal `{locale}` placeholder inside an
-  // href (e.g. `<a href="/{locale}/cookie">`) — swap it for the real locale
-  // segment so the Cookie Policy link resolves correctly.
+  // The translation embeds a literal `{locale}` inside an href — swap in the real segment.
   const description = (t.raw('description') as string).replaceAll('{locale}', locale);
+
+  const secondary =
+    'px-4 py-2.5 text-[12px] font-semibold tracking-[0.08em] uppercase bg-transparent text-[var(--olive)] cursor-pointer transition-colors hover:bg-[var(--marble)]';
+  const primary =
+    'px-7 py-3 text-[13px] font-semibold tracking-[0.08em] uppercase border border-[var(--gold)] bg-[var(--gold)] text-[var(--paper)] cursor-pointer transition-colors hover:bg-[var(--gold-dark)] hover:border-[var(--gold-dark)] shadow-[0_6px_18px_rgba(184,146,90,0.35)]';
 
   return (
     <div
@@ -157,61 +177,57 @@ export default function CookieBanner() {
         />
       </div>
 
-      <div className="flex flex-col gap-3 py-4 my-4 border-t border-b border-[var(--olive-15)]">
-        <label className="grid grid-cols-[20px_1fr] gap-x-3.5 gap-y-0.5 cursor-not-allowed">
-          <input type="checkbox" checked disabled className="row-span-2 w-[18px] h-[18px] mt-1 accent-[var(--gold)]" aria-label={t('necessaryTitle')} />
-          <span className="text-[13px] font-semibold text-[var(--olive)] tracking-[0.02em]">
-            {t('necessaryTitle')}
-            <em className="not-italic text-[var(--stone)] font-normal ml-1.5 text-[11px] tracking-[0.08em] uppercase">{t('necessaryBadge')}</em>
-          </span>
-          <span className="text-[11px] text-[var(--stone)] leading-[1.4] opacity-75">{t('necessaryDesc')}</span>
-        </label>
+      {customizing && (
+        <div className="flex flex-col gap-3 py-4 mt-4 border-t border-[var(--olive-15)]">
+          <label className="grid grid-cols-[20px_1fr] gap-x-3.5 gap-y-0.5 cursor-not-allowed">
+            <input type="checkbox" checked disabled className="row-span-2 w-[18px] h-[18px] mt-1 accent-[var(--gold)]" aria-label={t('necessaryTitle')} />
+            <span className="text-[13px] font-semibold text-[var(--olive)] tracking-[0.02em]">
+              {t('necessaryTitle')}
+              <em className="not-italic text-[var(--stone)] font-normal ml-1.5 text-[11px] tracking-[0.08em] uppercase">{t('necessaryBadge')}</em>
+            </span>
+            <span className="text-[11px] text-[var(--stone)] leading-[1.4] opacity-75">{t('necessaryDesc')}</span>
+          </label>
 
-        <label className="grid grid-cols-[20px_1fr] gap-x-3.5 gap-y-0.5 cursor-pointer">
-          <input
-            type="checkbox"
-            checked={analytics}
-            onChange={(e) => setAnalytics(e.target.checked)}
-            className="row-span-2 w-[18px] h-[18px] mt-1 accent-[var(--gold)] cursor-pointer"
-            aria-label={t('analyticsTitle')}
-          />
-          <span className="text-[13px] font-semibold text-[var(--olive)] tracking-[0.02em]">{t('analyticsTitle')}</span>
-          <span className="text-[11px] text-[var(--stone)] leading-[1.4] opacity-75">{t('analyticsDesc')}</span>
-        </label>
+          <label className="grid grid-cols-[20px_1fr] gap-x-3.5 gap-y-0.5 cursor-pointer">
+            <input
+              type="checkbox"
+              checked={analytics}
+              onChange={(e) => setAnalytics(e.target.checked)}
+              className="row-span-2 w-[18px] h-[18px] mt-1 accent-[var(--gold)] cursor-pointer"
+              aria-label={t('analyticsTitle')}
+            />
+            <span className="text-[13px] font-semibold text-[var(--olive)] tracking-[0.02em]">{t('analyticsTitle')}</span>
+            <span className="text-[11px] text-[var(--stone)] leading-[1.4] opacity-75">{t('analyticsDesc')}</span>
+          </label>
 
-        <label className="grid grid-cols-[20px_1fr] gap-x-3.5 gap-y-0.5 cursor-pointer">
-          <input
-            type="checkbox"
-            checked={marketing}
-            onChange={(e) => setMarketing(e.target.checked)}
-            className="row-span-2 w-[18px] h-[18px] mt-1 accent-[var(--gold)] cursor-pointer"
-            aria-label={t('marketingTitle')}
-          />
-          <span className="text-[13px] font-semibold text-[var(--olive)] tracking-[0.02em]">{t('marketingTitle')}</span>
-          <span className="text-[11px] text-[var(--stone)] leading-[1.4] opacity-75">{t('marketingDesc')}</span>
-        </label>
-      </div>
+          <label className="grid grid-cols-[20px_1fr] gap-x-3.5 gap-y-0.5 cursor-pointer">
+            <input
+              type="checkbox"
+              checked={marketing}
+              onChange={(e) => setMarketing(e.target.checked)}
+              className="row-span-2 w-[18px] h-[18px] mt-1 accent-[var(--gold)] cursor-pointer"
+              aria-label={t('marketingTitle')}
+            />
+            <span className="text-[13px] font-semibold text-[var(--olive)] tracking-[0.02em]">{t('marketingTitle')}</span>
+            <span className="text-[11px] text-[var(--stone)] leading-[1.4] opacity-75">{t('marketingDesc')}</span>
+          </label>
+        </div>
+      )}
 
-      <div className="flex gap-2.5 flex-wrap justify-end sm:flex-nowrap">
-        <button
-          type="button"
-          onClick={() => choose('reject')}
-          className="flex-1 sm:flex-none px-5 py-2.5 text-[12px] font-semibold tracking-[0.08em] uppercase border border-[var(--olive-40)] bg-transparent text-[var(--olive)] cursor-pointer transition-colors hover:bg-[var(--marble)] hover:border-[var(--olive)]"
-        >
+      <div className="flex flex-wrap items-center justify-end gap-x-2 gap-y-3 pt-4 mt-4 border-t border-[var(--olive-15)]">
+        <button type="button" onClick={() => choose('reject')} className={`${secondary} underline underline-offset-4 decoration-[var(--olive-40)]`}>
           {t('reject')}
         </button>
-        <button
-          type="button"
-          onClick={() => choose('selected')}
-          className="flex-1 sm:flex-none px-5 py-2.5 text-[12px] font-semibold tracking-[0.08em] uppercase border border-[var(--olive)] bg-transparent text-[var(--olive)] cursor-pointer transition-colors hover:bg-[var(--marble)]"
-        >
-          {t('acceptSelected')}
-        </button>
-        <button
-          type="button"
-          onClick={() => choose('accept')}
-          className="flex-1 sm:flex-none px-5 py-2.5 text-[12px] font-semibold tracking-[0.08em] uppercase border border-[var(--gold)] bg-[var(--gold)] text-[var(--paper)] cursor-pointer transition-colors hover:bg-[var(--gold-dark)] hover:border-[var(--gold-dark)]"
-        >
+        {customizing ? (
+          <button type="button" onClick={() => choose('selected')} className={`${secondary} border border-[var(--olive-40)]`}>
+            {t('acceptSelected')}
+          </button>
+        ) : (
+          <button type="button" onClick={() => setCustomizing(true)} className={`${secondary} border border-[var(--olive-40)]`}>
+            {t('customize')}
+          </button>
+        )}
+        <button type="button" onClick={() => choose('accept')} className={`${primary} w-full sm:w-auto`}>
           {t('acceptAll')}
         </button>
       </div>

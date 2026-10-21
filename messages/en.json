@@ -23,7 +23,8 @@
     "trust": "No setup fee · No commitment · Reply within 48 hours",
     "statLabel": "Average yield 2025",
     "statValue": "+24%",
-    "statMeta": "for portfolios moved to our management, vs. self-management the year before."
+    "statMeta": "for portfolios moved to our management, vs. self-management the year before.",
+    "closeForm": "Close"
   },
   "trustBar": [
     {
@@ -187,31 +188,38 @@
     "list": [
       {
         "name": "Peschiera del Garda",
-        "count": "15 homes managed"
+        "count": "15 homes managed",
+        "slug": "peschiera-del-garda"
       },
       {
         "name": "Lazise",
-        "count": "8 homes managed"
+        "count": "8 homes managed",
+        "slug": "lazise"
       },
       {
         "name": "Castelnuovo del Garda",
-        "count": "5 homes managed"
+        "count": "5 homes managed",
+        "slug": "castelnuovo-del-garda"
       },
       {
         "name": "Bardolino",
-        "count": "12 homes managed"
+        "count": "12 homes managed",
+        "slug": "bardolino"
       },
       {
         "name": "Sirmione",
-        "count": "18 homes managed"
+        "count": "18 homes managed",
+        "slug": "sirmione"
       },
       {
         "name": "Desenzano del Garda",
-        "count": "10 homes managed"
+        "count": "10 homes managed",
+        "slug": "desenzano-del-garda"
       },
       {
         "name": "Padenghe sul Garda",
-        "count": "6 homes managed"
+        "count": "6 homes managed",
+        "slug": "padenghe-sul-garda"
       },
       {
         "name": "Your area?",
@@ -262,12 +270,17 @@
       "notesPlaceholder": "Square meters, particulars, yield targets, personal use plans...",
       "submit": "Request valuation",
       "legal": "GDPR compliant · No commitment · Free",
-      "otherZone": "Other town on the lake"
+      "otherZone": "Other town on the lake",
+      "stepOne": "The property",
+      "stepTwo": "Who to call",
+      "next": "Continue",
+      "back": "Back",
+      "emailOptional": "Email (optional)"
     },
     "result": {
       "label": "Indicative estimate · First analysis",
       "suffix": "/year",
-      "explanation": "Estimated net revenue range for a property with these features in the selected area. The full valuation (with comparables, expected occupancy and costs) arrives by email within 48 hours.",
+      "explanation": "A conservative, indicative estimate of yearly net revenue for a property with these features in the selected area: the real figure depends on the condition of the home, its exact location and your own periods of use. We present the full valuation — with similar properties, expected occupancy and costs — within 48 hours.",
       "confirmation": "We've received your request. We'll contact you within 48h with the valuation for your property in {comune}."
     },
     "side": {
@@ -369,7 +382,7 @@
   },
   "cookieBanner": {
     "title": "Cookies & privacy",
-    "description": "We use technical cookies, necessary for the site to work, and — with your consent — analytics and marketing cookies to understand how to improve it and measure our campaigns. No invasive profiling. You can customise your choices below or read our <a href=\"/{locale}/cookie\">Cookie Policy</a>.",
+    "description": "We use technical cookies, necessary for the site to work, and — only with your consent — analytics and marketing cookies to understand how to improve it and measure our campaigns. No invasive profiling. Choose which ones to allow with “Customise” or read our <a href=\"/{locale}/cookie\">Cookie Policy</a>.",
     "necessaryTitle": "Necessary",
     "necessaryBadge": "always on",
     "necessaryDesc": "Required for the site to work and to remember your preferences.",
@@ -378,11 +391,150 @@
     "marketingTitle": "Marketing",
     "marketingDesc": "Measuring the effectiveness of our advertising campaigns.",
     "reject": "Reject",
-    "acceptSelected": "Accept selected",
+    "acceptSelected": "Save my choices",
     "acceptAll": "Accept all",
-    "preferencesLink": "Cookie preferences"
+    "preferencesLink": "Cookie preferences",
+    "customize": "Customise"
   },
   "heroForm": {
     "successTitle": "Perfect{name}."
+  },
+  "mobileBar": {
+    "valuate": "Free valuation",
+    "whatsapp": "WhatsApp"
+  },
+  "zonePages": {
+    "breadcrumbHome": "Home",
+    "eyebrow": "Short-term rental management",
+    "h1": "Short-term rental management in {name}",
+    "intro2": "In {name} we take care of everything: permits and paperwork, prices updated daily, guest welcome, cleaning and maintenance. You receive a monthly statement and payment, and the house is still yours whenever you want to use it.",
+    "highlightsEyebrow": "The local market",
+    "highlightsTitle": "Why rent out in {name}",
+    "testimonialEyebrow": "An owner in {name}",
+    "otherZonesTitle": "We also manage homes in",
+    "imageAlt": "A property managed by Herocasa on Lake Garda",
+    "metaTitle": "Short-term rental management in {name} | Herocasa",
+    "metaDescription": "Own a second home in {name}? Herocasa manages your short-term rentals: paperwork, pricing, guests, cleaning. Free valuation within 48 hours.",
+    "list": {
+      "peschiera-del-garda": {
+        "intro1": "Peschiera del Garda is the lake's gateway: the station on the Milan–Venice line, the motorway exit and the theme parks a few minutes away bring guests for much of the year, not just in high season.",
+        "highlights": [
+          {
+            "title": "Easy arrivals all year",
+            "body": "Station, motorway and Verona airport close by: guests arrive easily, even for short stays."
+          },
+          {
+            "title": "A UNESCO historic centre",
+            "body": "The Venetian fortress and the old town between the canals draw visitors out of season too."
+          },
+          {
+            "title": "Families and theme parks",
+            "body": "Gardaland and the other parks nearby bring families looking for apartments and homes with several bedrooms."
+          }
+        ]
+      },
+      "lazise": {
+        "intro1": "Lazise combines a walled medieval village and its lakefront with a strategic spot on the Verona shore, minutes from the theme parks: a mix that fills the calendar with both couples and families.",
+        "highlights": [
+          {
+            "title": "Village and lakefront",
+            "body": "The walls, the Scaliger castle and the lakeside promenade make Lazise one of the most sought-after places on the Verona shore."
+          },
+          {
+            "title": "Demand from families",
+            "body": "Being close to Gardaland and the water parks brings family bookings, often for several nights."
+          },
+          {
+            "title": "A long season",
+            "body": "Markets, events and the lively lakefront keep bookings coming from spring to autumn."
+          }
+        ]
+      },
+      "castelnuovo-del-garda": {
+        "intro1": "Castelnuovo del Garda is home to Gardaland, a stone's throw from the lake and the motorway: houses and villas with gardens inland are much in demand among families and groups looking for space and quiet minutes from the beaches.",
+        "highlights": [
+          {
+            "title": "Home of Gardaland",
+            "body": "Italy's best-known theme park brings guests all season long, weekends outside summer included."
+          },
+          {
+            "title": "Space and gardens",
+            "body": "Detached houses and villas with gardens suit families and groups, who stay longer."
+          },
+          {
+            "title": "Close to the whole lake",
+            "body": "Peschiera, Lazise and Sirmione are a few minutes' drive away."
+          }
+        ]
+      },
+      "bardolino": {
+        "intro1": "Bardolino is the lake of wine: the lakefront, the cycle path and the Bardolino DOC wineries attract couples and wine lovers, with a season that stretches into the autumn harvest.",
+        "highlights": [
+          {
+            "title": "Wine tourism",
+            "body": "Wineries and wine events such as the Festa dell'Uva bring guests in September and October too."
+          },
+          {
+            "title": "Lakefront and cycle path",
+            "body": "The promenade and the cycle path towards Garda and Lazise are among the most loved on the lake."
+          },
+          {
+            "title": "Guests who come back",
+            "body": "Couples and friends who choose Bardolino tend to return: reviews and a well-kept home make the difference."
+          }
+        ]
+      },
+      "sirmione": {
+        "intro1": "Sirmione is one of the best-known places on Lake Garda: the Scaliger castle, the Grottoes of Catullus and the spa draw international guests all year round, with average prices among the highest on the lake.",
+        "highlights": [
+          {
+            "title": "Tourism all year",
+            "body": "The spa and the old town keep demand alive outside summer, not just in peak months."
+          },
+          {
+            "title": "International guests",
+            "body": "Most guests come from abroad: well-written listings in several languages and quick replies are decisive."
+          },
+          {
+            "title": "High prices, high expectations",
+            "body": "In Sirmione guests pay more and expect more: cleaning, welcome and details keep the rating high."
+          }
+        ]
+      },
+      "desenzano-del-garda": {
+        "intro1": "Desenzano is the largest town on the southern lake: station, harbour, restaurants and nightlife keep it lively all year, with demand that mixes holidays, weekends and business stays.",
+        "highlights": [
+          {
+            "title": "Well connected",
+            "body": "Station, motorway and the Verona and Brescia airports nearby: easy to reach even for a weekend."
+          },
+          {
+            "title": "A town alive all year",
+            "body": "Restaurants, shops and events keep demand going in low season too."
+          },
+          {
+            "title": "Not just holidays",
+            "body": "Besides tourists, Desenzano attracts business travellers: frequent short stays and a fuller calendar."
+          }
+        ]
+      },
+      "padenghe-sul-garda": {
+        "intro1": "Padenghe sul Garda, in the heart of the Valtènesi, is for those who want peace and quiet: the castle, the hills of olive groves and vineyards and the villas with pools attract guests looking to relax away from the crowds.",
+        "highlights": [
+          {
+            "title": "Relaxation and nature",
+            "body": "The hills, olive groves and vineyards of the Valtènesi: guests look for peace and open space, and are willing to pay for it."
+          },
+          {
+            "title": "Villas with pools",
+            "body": "Homes with a pool and garden are the most requested and allow longer stays."
+          },
+          {
+            "title": "Close to everything",
+            "body": "Desenzano, Salò and the beaches of the southern lake are a few minutes' drive away."
+          }
+        ]
+      }
+    }
   }
 }

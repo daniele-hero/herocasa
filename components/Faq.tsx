@@ -7,7 +7,7 @@ import Reveal from './Reveal';
 
 type QA = { q: string; a: string };
 
-export default function Faq() {
+export default function Faq({ numeral = 'vii.' }: { numeral?: string } = {}) {
   const t = useTranslations('faq');
   const list = t.raw('list') as QA[];
   const [open, setOpen] = useState<number | null>(0);
@@ -33,7 +33,7 @@ export default function Faq() {
       <Reveal>
         <div className="flex justify-between items-end gap-6 mb-12 flex-wrap">
           <div>
-            <div className="eyebrow">{t('eyebrow')} · vii.</div>
+            <div className="eyebrow">{t('eyebrow')} · {numeral}</div>
             <h2 className="serif mt-3.5" style={{ fontSize: 'clamp(34px, 5vw, 60px)', lineHeight: 1.08 }}>
               {t('titleOne')}<br />
               <em className="gold-italic">{t('titleTwo')}</em>

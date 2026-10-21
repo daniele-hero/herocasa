@@ -6,7 +6,7 @@ import Reveal from './Reveal';
 type ServiceItem = { title: string; body: string; link: string };
 const LETTERS = ['a', 'b', 'c', 'd', 'e', 'f'];
 
-export default function Services() {
+export default function Services({ numeral = 'ii.' }: { numeral?: string } = {}) {
   const t = useTranslations('services');
   const list = t.raw('list') as ServiceItem[];
 
@@ -15,7 +15,7 @@ export default function Services() {
       <Reveal>
         <div className="flex justify-between items-end gap-6 mb-16 flex-wrap">
           <div>
-            <div className="eyebrow">{t('eyebrow')} · ii.</div>
+            <div className="eyebrow">{t('eyebrow')} · {numeral}</div>
             <h2 className="serif mt-3.5" style={{ fontSize: 'clamp(34px, 5vw, 60px)', lineHeight: 1.08 }}>
               {t('titleOne')}<br />
               <em className="gold-italic">{t('titleTwo')}</em>

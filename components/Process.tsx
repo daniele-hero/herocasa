@@ -5,7 +5,7 @@ import Reveal from './Reveal';
 
 type Step = { title: string; body: string; duration: string };
 
-export default function Process() {
+export default function Process({ numeral = 'iii.' }: { numeral?: string } = {}) {
   const t = useTranslations('process');
   const steps = t.raw('steps') as Step[];
 
@@ -14,7 +14,7 @@ export default function Process() {
       <div className="container-x section-y">
         <Reveal>
           <div className="max-w-[640px] mb-20">
-            <div className="eyebrow" style={{ color: 'var(--sage)' }}>{t('eyebrow')} · iii.</div>
+            <div className="eyebrow" style={{ color: 'var(--sage)' }}>{t('eyebrow')} · {numeral}</div>
             <h2 className="serif mt-4 text-[var(--paper)]" style={{ fontSize: 'clamp(34px, 5vw, 60px)', lineHeight: 1.08 }}>
               {t('titleOne')}<br />
               <em style={{ color: 'var(--gold)', fontStyle: 'italic' }}>{t('titleTwo')}</em>

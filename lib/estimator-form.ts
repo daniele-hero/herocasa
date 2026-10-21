@@ -21,6 +21,11 @@ export interface EstimatorFormCopy {
   submit: string;
   legal: string;
   otherZone: string;
+  stepOne: string;
+  stepTwo: string;
+  next: string;
+  back: string;
+  emailOptional: string;
 }
 
 export const ZONES = [
@@ -46,6 +51,11 @@ export type ValuationLead = {
   submittedAt: string;
   /** Shared with the client-side pixel's `fbq('track', 'Lead', ..., {eventID})` call so Meta dedupes the two deliveries. */
   eventId: string;
+  /** Visitor's site language — picks the language of the confirmation email sent to the lead. */
+  locale: string;
+  /** Marketing-cookie consent: the server only forwards the lead to Meta's Conversions API when true. */
+  marketingConsent: boolean;
+  estimatedRange?: EstimateRange;
 };
 
 export async function postValuationLead(lead: ValuationLead): Promise<void> {
@@ -87,8 +97,11 @@ export function calculateEstimateRange(input: {
   if (input.features.some((f) => /piscin|pool/i.test(f))) base *= 1.12;
   if (input.features.some((f) => /vista|view|blick/i.test(f))) base *= 1.1;
 
+  // Deliberately conservative (~30% below the original teaser): an online
+  // figure the real valuation can't match costs more trust than it earns.
+  const prudent = base * 0.8;
   return {
-    min: Math.round((base * 0.85) / 1000) * 1000,
-    max: Math.round((base * 1.2) / 1000) * 1000,
+    min: Math.round((prudent * 0.8) / 1000) * 1000,
+    max: Math.round((prudent * 1.05) / 1000) * 1000,
   };
 }

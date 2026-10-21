@@ -1,16 +1,18 @@
 import type { MetadataRoute } from 'next';
 import { routing } from '@/lib/routing';
+import { COMUNE_SLUGS } from '@/lib/comuni';
 
 const SITE_URL = 'https://herocasa.it';
 
 /**
  * Next.js App Router native sitemap — served at /sitemap.xml.
- * Covers the home page and the three legal pages for every locale, with
+ * Covers the home page, the comune landing pages and the legal pages for every locale, with
  * hreflang alternates so Google understands the it/en/de relationship
  * instead of treating them as duplicate content.
  */
 export default function sitemap(): MetadataRoute.Sitemap {
-  const routes = ['', '/privacy', '/cookie', '/termini'];
+  const comuneRoutes = COMUNE_SLUGS.map((s) => `/gestione-affitti-brevi/${s}`);
+  const routes = ['', ...comuneRoutes, '/privacy', '/cookie', '/termini'];
   const now = new Date();
 
   const entries: MetadataRoute.Sitemap = [];
@@ -25,8 +27,8 @@ export default function sitemap(): MetadataRoute.Sitemap {
       entries.push({
         url: `${SITE_URL}/${locale}${route}`,
         lastModified: now,
-        changeFrequency: route === '' ? 'weekly' : 'yearly',
-        priority: route === '' ? 1 : 0.3,
+        changeFrequency: route === '' ? 'weekly' : comuneRoutes.includes(route) ? 'monthly' : 'yearly',
+        priority: route === '' ? 1 : comuneRoutes.includes(route) ? 0.8 : 0.3,
         alternates: { languages },
       });
     }

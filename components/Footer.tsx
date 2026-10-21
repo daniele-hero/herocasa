@@ -8,6 +8,7 @@ export default function Footer() {
   const t = useTranslations('footer');
   const n = useTranslations('nav');
   const c = useTranslations('contact');
+  const cb = useTranslations('cookieBanner');
   const locale = useLocale();
   const s = useTranslations('services');
   const svc = s.raw('list') as Array<{ title: string }>;
@@ -32,18 +33,18 @@ export default function Footer() {
           <h4 className="serif font-medium text-[20px] text-[var(--paper)] mb-4">{t('servicesTitle')}</h4>
           <ul className="list-none flex flex-col gap-2">
             {svc.slice(0, 5).map((it, i) => (
-              <li key={i}><a href="#servizi" className="transition-colors hover:text-[var(--gold)]">{it.title}</a></li>
+              <li key={i}><a href={`/${locale}#servizi`} className="transition-colors hover:text-[var(--gold)]">{it.title}</a></li>
             ))}
           </ul>
         </div>
         <div>
           <h4 className="serif font-medium text-[20px] text-[var(--paper)] mb-4">{t('infoTitle')}</h4>
           <ul className="list-none flex flex-col gap-2">
-            <li><a href="#processo" className="transition-colors hover:text-[var(--gold)]">{n('process')}</a></li>
-            <li><a href="#immobili" className="transition-colors hover:text-[var(--gold)]">{n('properties')}</a></li>
-            <li><a href="#zone" className="transition-colors hover:text-[var(--gold)]">{n('zones')}</a></li>
-            <li><a href="#faq" className="transition-colors hover:text-[var(--gold)]">{n('faq')}</a></li>
-            <li><a href="#contatti" className="transition-colors hover:text-[var(--gold)]">{n('contact')}</a></li>
+            <li><a href={`/${locale}#processo`} className="transition-colors hover:text-[var(--gold)]">{n('process')}</a></li>
+            <li><a href={`/${locale}#immobili`} className="transition-colors hover:text-[var(--gold)]">{n('properties')}</a></li>
+            <li><a href={`/${locale}#zone`} className="transition-colors hover:text-[var(--gold)]">{n('zones')}</a></li>
+            <li><a href={`/${locale}#faq`} className="transition-colors hover:text-[var(--gold)]">{n('faq')}</a></li>
+            <li><a href={`/${locale}#contatti`} className="transition-colors hover:text-[var(--gold)]">{n('contact')}</a></li>
           </ul>
         </div>
         <div>
@@ -70,7 +71,7 @@ export default function Footer() {
         <div>
           <Link href={`/${locale}/privacy`} className="transition-colors hover:text-[var(--gold)]">{t('privacy')}</Link> · <Link href={`/${locale}/cookie`} className="transition-colors hover:text-[var(--gold)]">{t('cookies')}</Link> · <Link href={`/${locale}/termini`} className="transition-colors hover:text-[var(--gold)]">{t('terms')}</Link> ·{' '}
           <button type="button" onClick={openCookieBanner} className="transition-colors hover:text-[var(--gold)] underline-offset-2">
-            Preferenze cookie
+            {cb('preferencesLink')}
           </button>
         </div>
       </div>

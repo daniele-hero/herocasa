@@ -23,7 +23,8 @@
     "trust": "Nessun costo di attivazione · Nessun vincolo · Risposta entro 48 ore",
     "statLabel": "Rendimento medio 2026",
     "statValue": "+24%",
-    "statMeta": "sugli immobili passati alla nostra gestione, contro la gestione autonoma dell'anno precedente."
+    "statMeta": "sugli immobili passati alla nostra gestione, contro la gestione autonoma dell'anno precedente.",
+    "closeForm": "Chiudi"
   },
   "trustBar": [
     {
@@ -187,31 +188,38 @@
     "list": [
       {
         "name": "Peschiera del Garda",
-        "count": "15 immobili gestiti"
+        "count": "15 immobili gestiti",
+        "slug": "peschiera-del-garda"
       },
       {
         "name": "Lazise",
-        "count": "8 immobili gestiti"
+        "count": "8 immobili gestiti",
+        "slug": "lazise"
       },
       {
         "name": "Castelnuovo del Garda",
-        "count": "5 immobili gestiti"
+        "count": "5 immobili gestiti",
+        "slug": "castelnuovo-del-garda"
       },
       {
         "name": "Bardolino",
-        "count": "12 immobili gestiti"
+        "count": "12 immobili gestiti",
+        "slug": "bardolino"
       },
       {
         "name": "Sirmione",
-        "count": "18 immobili gestiti"
+        "count": "18 immobili gestiti",
+        "slug": "sirmione"
       },
       {
         "name": "Desenzano del Garda",
-        "count": "10 immobili gestiti"
+        "count": "10 immobili gestiti",
+        "slug": "desenzano-del-garda"
       },
       {
         "name": "Padenghe sul Garda",
-        "count": "6 immobili gestiti"
+        "count": "6 immobili gestiti",
+        "slug": "padenghe-sul-garda"
       },
       {
         "name": "La vostra zona?",
@@ -262,12 +270,17 @@
       "notesPlaceholder": "Metratura, particolarità, obiettivi di rendimento, uso personale previsto...",
       "submit": "Richiedi la valutazione",
       "legal": "GDPR compliant · Nessun impegno · Nessun costo",
-      "otherZone": "Altro comune sul lago"
+      "otherZone": "Altro comune sul lago",
+      "stepOne": "L'immobile",
+      "stepTwo": "Chi ricontattare",
+      "next": "Continua",
+      "back": "Indietro",
+      "emailOptional": "Email (facoltativa)"
     },
     "result": {
       "label": "Stima orientativa · Prima analisi",
       "suffix": "/anno",
-      "explanation": "Range di ricavi netti annui stimati per un immobile con queste caratteristiche nella zona indicata. La valutazione completa (con analisi comparabili, occupazione attesa e costi) arriva via email entro 48 ore.",
+      "explanation": "Stima prudenziale e indicativa dei ricavi netti annui per un immobile con queste caratteristiche nella zona indicata: il risultato reale dipende da stato della casa, posizione esatta e periodi di uso personale. La valutazione completa, con dati di immobili simili, occupazione attesa e costi, te la presentiamo entro 48 ore.",
       "confirmation": "Abbiamo ricevuto la tua richiesta. Ti contatteremo entro 48h con la stima per il tuo immobile a {comune}."
     },
     "side": {
@@ -369,7 +382,7 @@
   },
   "cookieBanner": {
     "title": "Cookie & privacy",
-    "description": "Usiamo cookie tecnici, necessari al funzionamento del sito, e — con il vostro consenso — cookie analitici e di marketing per capire come migliorarlo e misurare le nostre campagne. Nessuna profilazione invasiva. Potete personalizzare le scelte qui sotto o consultare la <a href=\"/{locale}/cookie\">Cookie Policy</a>.",
+    "description": "Usiamo cookie tecnici, necessari al funzionamento del sito, e — solo con il vostro consenso — cookie analitici e di marketing per capire come migliorarlo e misurare le nostre campagne. Nessuna profilazione invasiva. Potete scegliere quali attivare con «Personalizza» o leggere la <a href=\"/{locale}/cookie\">Cookie Policy</a>.",
     "necessaryTitle": "Tecnici",
     "necessaryBadge": "sempre attivi",
     "necessaryDesc": "Necessari per il funzionamento del sito e per ricordare le vostre preferenze.",
@@ -378,11 +391,150 @@
     "marketingTitle": "Marketing",
     "marketingDesc": "Misurazione dell'efficacia delle campagne pubblicitarie.",
     "reject": "Rifiuta",
-    "acceptSelected": "Accetta selezionati",
+    "acceptSelected": "Salva le mie scelte",
     "acceptAll": "Accetta tutti",
-    "preferencesLink": "Preferenze cookie"
+    "preferencesLink": "Preferenze cookie",
+    "customize": "Personalizza"
   },
   "heroForm": {
     "successTitle": "Perfetto{name}."
+  },
+  "mobileBar": {
+    "valuate": "Valuta gratis",
+    "whatsapp": "WhatsApp"
+  },
+  "zonePages": {
+    "breadcrumbHome": "Home",
+    "eyebrow": "Gestione affitti brevi",
+    "h1": "Gestione affitti brevi a {name}",
+    "intro2": "A {name} ci occupiamo di tutto: pratiche e burocrazia, prezzi aggiornati ogni giorno, accoglienza degli ospiti, pulizie e manutenzione. Tu ricevi ogni mese il rendiconto e il bonifico, e la casa resta tua quando vuoi usarla.",
+    "highlightsEyebrow": "Il mercato locale",
+    "highlightsTitle": "Perché affittare a {name}",
+    "testimonialEyebrow": "Un proprietario a {name}",
+    "otherZonesTitle": "Gestiamo anche a",
+    "imageAlt": "Un immobile gestito da Herocasa sul Lago di Garda",
+    "metaTitle": "Gestione affitti brevi a {name} | Herocasa",
+    "metaDescription": "Hai una seconda casa a {name}? Herocasa gestisce i tuoi affitti brevi: burocrazia, prezzi, ospiti, pulizie. Valutazione gratuita entro 48 ore.",
+    "list": {
+      "peschiera-del-garda": {
+        "intro1": "Peschiera del Garda è la porta d'ingresso del lago: la stazione sulla linea Milano–Venezia, il casello autostradale e i parchi a tema a pochi minuti portano ospiti per buona parte dell'anno, non solo in alta stagione.",
+        "highlights": [
+          {
+            "title": "Arrivi comodi tutto l’anno",
+            "body": "Stazione, autostrada e aeroporto di Verona vicini: gli ospiti arrivano facilmente anche per soggiorni brevi."
+          },
+          {
+            "title": "Centro storico patrimonio UNESCO",
+            "body": "La fortezza veneziana e il centro tra i canali attirano visitatori anche fuori stagione."
+          },
+          {
+            "title": "Famiglie e parchi a tema",
+            "body": "Gardaland e gli altri parchi della zona portano famiglie che cercano appartamenti e case con più camere."
+          }
+        ]
+      },
+      "lazise": {
+        "intro1": "Lazise unisce il borgo medievale cinto dalle mura e il lungolago a una posizione strategica sulla sponda veronese, a pochi minuti dai parchi a tema: un mix che riempie il calendario sia di coppie sia di famiglie.",
+        "highlights": [
+          {
+            "title": "Borgo e lungolago",
+            "body": "Le mura, il castello scaligero e la passeggiata sul lago rendono Lazise una delle mete più richieste della sponda veronese."
+          },
+          {
+            "title": "Domanda delle famiglie",
+            "body": "La vicinanza a Gardaland e ai parchi acquatici porta prenotazioni di famiglie, spesso per più notti."
+          },
+          {
+            "title": "Stagione lunga",
+            "body": "Mercati, eventi e il lungolago animato tengono vive le prenotazioni dalla primavera all'autunno."
+          }
+        ]
+      },
+      "castelnuovo-del-garda": {
+        "intro1": "Castelnuovo del Garda è il comune di Gardaland, a due passi dal lago e dall'autostrada: case e ville con giardino nell'entroterra sono molto richieste da famiglie e gruppi che cercano spazio e tranquillità a pochi minuti dalle spiagge.",
+        "highlights": [
+          {
+            "title": "Il comune di Gardaland",
+            "body": "Il parco divertimenti più famoso d'Italia porta ospiti per tutta la stagione, anche nei weekend fuori dall'estate."
+          },
+          {
+            "title": "Spazio e giardino",
+            "body": "Case indipendenti e ville con giardino sono ideali per famiglie e gruppi, che restano più notti."
+          },
+          {
+            "title": "Comodo per tutto il lago",
+            "body": "Dall'entroterra si raggiungono in pochi minuti Peschiera, Lazise e Sirmione."
+          }
+        ]
+      },
+      "bardolino": {
+        "intro1": "Bardolino è il lago del vino: il lungolago, la ciclabile e le cantine del Bardolino DOC attirano coppie e appassionati di enoturismo, con una stagione che si allunga fino all'autunno della vendemmia.",
+        "highlights": [
+          {
+            "title": "Enoturismo",
+            "body": "Le cantine e gli eventi legati al vino, come la Festa dell'Uva, portano ospiti anche a settembre e ottobre."
+          },
+          {
+            "title": "Lungolago e ciclabile",
+            "body": "La passeggiata e la pista ciclabile verso Garda e Lazise sono tra le più amate del lago."
+          },
+          {
+            "title": "Ospiti che tornano",
+            "body": "Coppie e gruppi di amici che scelgono Bardolino tendono a tornare: recensioni e cura della casa fanno la differenza."
+          }
+        ]
+      },
+      "sirmione": {
+        "intro1": "Sirmione è una delle località più conosciute del Garda: il castello scaligero, le Grotte di Catullo e le terme richiamano ospiti internazionali tutto l'anno, con prezzi medi tra i più alti del lago.",
+        "highlights": [
+          {
+            "title": "Turismo tutto l’anno",
+            "body": "Le terme e il centro storico tengono viva la domanda anche fuori dall'estate, non solo nei mesi di punta."
+          },
+          {
+            "title": "Ospiti internazionali",
+            "body": "Gran parte degli ospiti arriva dall'estero: annunci curati in più lingue e risposte rapide sono decisivi."
+          },
+          {
+            "title": "Prezzi alti, aspettative alte",
+            "body": "A Sirmione gli ospiti pagano di più e si aspettano di più: pulizie, accoglienza e dettagli tengono alto il rating."
+          }
+        ]
+      },
+      "desenzano-del-garda": {
+        "intro1": "Desenzano è la cittadina più grande del basso lago: stazione, porto, locali e vita serale la rendono vivace tutto l'anno, con una domanda che unisce vacanze, weekend e soggiorni per lavoro.",
+        "highlights": [
+          {
+            "title": "Ben collegata",
+            "body": "Stazione, autostrada e aeroporti di Verona e Brescia a breve distanza: arrivare è facile anche per un weekend."
+          },
+          {
+            "title": "Città viva tutto l’anno",
+            "body": "Ristoranti, negozi ed eventi tengono attiva la domanda anche in bassa stagione."
+          },
+          {
+            "title": "Non solo vacanze",
+            "body": "Oltre ai turisti, Desenzano attira chi viaggia per lavoro: soggiorni brevi frequenti e calendario più pieno."
+          }
+        ]
+      },
+      "padenghe-sul-garda": {
+        "intro1": "Padenghe sul Garda, nel cuore della Valtènesi, è la scelta di chi cerca tranquillità: il castello, le colline di ulivi e vigneti e le ville con piscina attirano ospiti che vogliono relax lontano dalla folla.",
+        "highlights": [
+          {
+            "title": "Relax e natura",
+            "body": "Colline, ulivi e vigneti della Valtènesi: gli ospiti cercano pace e spazi aperti, e sono disposti a pagarli."
+          },
+          {
+            "title": "Ville con piscina",
+            "body": "Le case con piscina e giardino sono le più richieste e permettono soggiorni più lunghi."
+          },
+          {
+            "title": "Vicino a tutto",
+            "body": "Desenzano, Salò e le spiagge del basso lago sono a pochi minuti di auto."
+          }
+        ]
+      }
+    }
   }
 }

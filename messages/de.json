@@ -23,7 +23,8 @@
     "trust": "Keine Aktivierungsgebühr · Keine Bindung · Antwort innerhalb von 48 Stunden",
     "statLabel": "Durchschnittsrendite 2025",
     "statValue": "+24%",
-    "statMeta": "bei Portfolios, die zu unserer Verwaltung wechselten, gegenüber Eigenverwaltung im Vorjahr."
+    "statMeta": "bei Portfolios, die zu unserer Verwaltung wechselten, gegenüber Eigenverwaltung im Vorjahr.",
+    "closeForm": "Schließen"
   },
   "trustBar": [
     {
@@ -187,31 +188,38 @@
     "list": [
       {
         "name": "Peschiera del Garda",
-        "count": "15 Objekte verwaltet"
+        "count": "15 Objekte verwaltet",
+        "slug": "peschiera-del-garda"
       },
       {
         "name": "Lazise",
-        "count": "8 Objekte verwaltet"
+        "count": "8 Objekte verwaltet",
+        "slug": "lazise"
       },
       {
         "name": "Castelnuovo del Garda",
-        "count": "5 Objekte verwaltet"
+        "count": "5 Objekte verwaltet",
+        "slug": "castelnuovo-del-garda"
       },
       {
         "name": "Bardolino",
-        "count": "12 Objekte verwaltet"
+        "count": "12 Objekte verwaltet",
+        "slug": "bardolino"
       },
       {
         "name": "Sirmione",
-        "count": "18 Objekte verwaltet"
+        "count": "18 Objekte verwaltet",
+        "slug": "sirmione"
       },
       {
         "name": "Desenzano del Garda",
-        "count": "10 Objekte verwaltet"
+        "count": "10 Objekte verwaltet",
+        "slug": "desenzano-del-garda"
       },
       {
         "name": "Padenghe sul Garda",
-        "count": "6 Objekte verwaltet"
+        "count": "6 Objekte verwaltet",
+        "slug": "padenghe-sul-garda"
       },
       {
         "name": "Ihr Gebiet?",
@@ -262,12 +270,17 @@
       "notesPlaceholder": "Quadratmeter, Besonderheiten, Rendite-Ziele, geplante Eigennutzung...",
       "submit": "Bewertung anfordern",
       "legal": "DSGVO-konform · Keine Bindung · Kostenlos",
-      "otherZone": "Andere Gemeinde am See"
+      "otherZone": "Andere Gemeinde am See",
+      "stepOne": "Die Immobilie",
+      "stepTwo": "Ihr Kontakt",
+      "next": "Weiter",
+      "back": "Zurück",
+      "emailOptional": "E-Mail (optional)"
     },
     "result": {
       "label": "Orientierende Schätzung · Erste Analyse",
       "suffix": "/Jahr",
-      "explanation": "Geschätzte Netto-Erträge pro Jahr für eine Immobilie mit diesen Merkmalen in der angegebenen Gemeinde. Die vollständige Bewertung (mit Vergleichsobjekten, erwarteter Auslastung und Kosten) erhalten Sie per E-Mail innerhalb von 48 Stunden.",
+      "explanation": "Eine vorsichtige, unverbindliche Schätzung der jährlichen Netto-Erträge für eine Immobilie mit diesen Merkmalen in der angegebenen Gemeinde: Das tatsächliche Ergebnis hängt vom Zustand des Hauses, der genauen Lage und Ihren eigenen Nutzungszeiten ab. Die vollständige Bewertung mit Vergleichsobjekten, erwarteter Auslastung und Kosten erhalten Sie innerhalb von 48 Stunden.",
       "confirmation": "Wir haben Ihre Anfrage erhalten. Wir kontaktieren Sie innerhalb von 48 Stunden mit der Bewertung für Ihre Immobilie in {comune}."
     },
     "side": {
@@ -369,7 +382,7 @@
   },
   "cookieBanner": {
     "title": "Cookies & Datenschutz",
-    "description": "Wir verwenden technische Cookies, die für den Betrieb der Website notwendig sind, sowie — mit Ihrer Zustimmung — Analyse- und Marketing-Cookies, um die Seite zu verbessern und unsere Kampagnen zu messen. Keine invasive Profilbildung. Sie können Ihre Wahl unten anpassen oder unsere <a href=\"/{locale}/cookie\">Cookie-Richtlinie</a> lesen.",
+    "description": "Wir verwenden technische Cookies, die für den Betrieb der Website notwendig sind, sowie — nur mit Ihrer Zustimmung — Analyse- und Marketing-Cookies, um die Seite zu verbessern und unsere Kampagnen zu messen. Keine invasive Profilbildung. Über „Anpassen“ wählen Sie selbst aus, oder lesen Sie unsere <a href=\"/{locale}/cookie\">Cookie-Richtlinie</a>.",
     "necessaryTitle": "Technisch",
     "necessaryBadge": "immer aktiv",
     "necessaryDesc": "Notwendig für den Betrieb der Website und zum Speichern Ihrer Einstellungen.",
@@ -378,11 +391,150 @@
     "marketingTitle": "Marketing",
     "marketingDesc": "Messung der Wirksamkeit unserer Werbekampagnen.",
     "reject": "Ablehnen",
-    "acceptSelected": "Auswahl akzeptieren",
+    "acceptSelected": "Auswahl speichern",
     "acceptAll": "Alle akzeptieren",
-    "preferencesLink": "Cookie-Einstellungen"
+    "preferencesLink": "Cookie-Einstellungen",
+    "customize": "Anpassen"
   },
   "heroForm": {
     "successTitle": "Perfekt{name}."
+  },
+  "mobileBar": {
+    "valuate": "Kostenlose Bewertung",
+    "whatsapp": "WhatsApp"
+  },
+  "zonePages": {
+    "breadcrumbHome": "Startseite",
+    "eyebrow": "Ferienvermietung am Gardasee",
+    "h1": "Ferienhaus-Verwaltung in {name}",
+    "intro2": "In {name} kümmern wir uns um alles: Genehmigungen und Bürokratie, täglich angepasste Preise, Gästeempfang, Reinigung und Instandhaltung. Sie erhalten jeden Monat eine Abrechnung und die Überweisung – und Ihr Haus bleibt Ihres, wann immer Sie es nutzen möchten.",
+    "highlightsEyebrow": "Der lokale Markt",
+    "highlightsTitle": "Warum in {name} vermieten",
+    "testimonialEyebrow": "Ein Eigentümer in {name}",
+    "otherZonesTitle": "Wir verwalten auch in",
+    "imageAlt": "Eine von Herocasa verwaltete Immobilie am Gardasee",
+    "metaTitle": "Ferienhaus-Verwaltung in {name} | Herocasa",
+    "metaDescription": "Sie besitzen ein Ferienhaus in {name}? Herocasa übernimmt die Vermietung: Bürokratie, Preise, Gäste, Reinigung. Kostenlose Bewertung innerhalb von 48 Stunden.",
+    "list": {
+      "peschiera-del-garda": {
+        "intro1": "Peschiera del Garda ist das Tor zum See: Der Bahnhof an der Strecke Mailand–Venedig, die Autobahnausfahrt und die Freizeitparks in wenigen Minuten bringen einen Großteil des Jahres Gäste – nicht nur in der Hochsaison.",
+        "highlights": [
+          {
+            "title": "Bequeme Anreise das ganze Jahr",
+            "body": "Bahnhof, Autobahn und Flughafen Verona in der Nähe: Gäste reisen auch für Kurzaufenthalte leicht an."
+          },
+          {
+            "title": "Altstadt als UNESCO-Welterbe",
+            "body": "Die venezianische Festung und die Altstadt zwischen den Kanälen ziehen auch außerhalb der Saison Besucher an."
+          },
+          {
+            "title": "Familien und Freizeitparks",
+            "body": "Gardaland und die anderen Parks der Umgebung bringen Familien, die Wohnungen und Häuser mit mehreren Schlafzimmern suchen."
+          }
+        ]
+      },
+      "lazise": {
+        "intro1": "Lazise verbindet das mittelalterliche, ummauerte Städtchen und die Seepromenade mit einer strategischen Lage am Veroneser Ufer, wenige Minuten von den Freizeitparks entfernt: eine Mischung, die den Kalender mit Paaren und Familien füllt.",
+        "highlights": [
+          {
+            "title": "Altstadt und Seepromenade",
+            "body": "Die Stadtmauern, die Skaligerburg und die Promenade machen Lazise zu einem der gefragtesten Orte am Veroneser Ufer."
+          },
+          {
+            "title": "Nachfrage von Familien",
+            "body": "Die Nähe zu Gardaland und den Wasserparks bringt Familienbuchungen, oft für mehrere Nächte."
+          },
+          {
+            "title": "Lange Saison",
+            "body": "Märkte, Veranstaltungen und die belebte Promenade sorgen von Frühling bis Herbst für Buchungen."
+          }
+        ]
+      },
+      "castelnuovo-del-garda": {
+        "intro1": "Castelnuovo del Garda ist die Heimat von Gardaland, nur einen Katzensprung vom See und von der Autobahn entfernt: Häuser und Villen mit Garten im Hinterland sind bei Familien und Gruppen sehr gefragt, die Platz und Ruhe wenige Minuten von den Stränden suchen.",
+        "highlights": [
+          {
+            "title": "Die Gemeinde von Gardaland",
+            "body": "Italiens bekanntester Freizeitpark bringt die ganze Saison über Gäste, auch an Wochenenden außerhalb des Sommers."
+          },
+          {
+            "title": "Platz und Garten",
+            "body": "Einfamilienhäuser und Villen mit Garten sind ideal für Familien und Gruppen, die länger bleiben."
+          },
+          {
+            "title": "Nah am ganzen See",
+            "body": "Peschiera, Lazise und Sirmione erreicht man in wenigen Autominuten."
+          }
+        ]
+      },
+      "bardolino": {
+        "intro1": "Bardolino ist der See des Weins: Die Seepromenade, der Radweg und die Weingüter des Bardolino DOC ziehen Paare und Weinliebhaber an – mit einer Saison, die bis in den Herbst der Weinlese reicht.",
+        "highlights": [
+          {
+            "title": "Weintourismus",
+            "body": "Weingüter und Weinfeste wie die Festa dell'Uva bringen auch im September und Oktober Gäste."
+          },
+          {
+            "title": "Promenade und Radweg",
+            "body": "Die Promenade und der Radweg Richtung Garda und Lazise gehören zu den beliebtesten am See."
+          },
+          {
+            "title": "Gäste, die wiederkommen",
+            "body": "Paare und Freundesgruppen, die Bardolino wählen, kommen gern wieder: Bewertungen und ein gepflegtes Haus machen den Unterschied."
+          }
+        ]
+      },
+      "sirmione": {
+        "intro1": "Sirmione gehört zu den bekanntesten Orten am Gardasee: Die Skaligerburg, die Grotten des Catull und die Thermen ziehen das ganze Jahr über internationale Gäste an – mit Durchschnittspreisen unter den höchsten am See.",
+        "highlights": [
+          {
+            "title": "Tourismus das ganze Jahr",
+            "body": "Thermen und Altstadt halten die Nachfrage auch außerhalb des Sommers hoch, nicht nur in den Spitzenmonaten."
+          },
+          {
+            "title": "Internationale Gäste",
+            "body": "Die meisten Gäste kommen aus dem Ausland: gepflegte Inserate in mehreren Sprachen und schnelle Antworten sind entscheidend."
+          },
+          {
+            "title": "Hohe Preise, hohe Erwartungen",
+            "body": "In Sirmione zahlen Gäste mehr und erwarten mehr: Reinigung, Empfang und Details halten die Bewertung hoch."
+          }
+        ]
+      },
+      "desenzano-del-garda": {
+        "intro1": "Desenzano ist die größte Stadt am südlichen Gardasee: Bahnhof, Hafen, Restaurants und Nachtleben machen sie das ganze Jahr lebendig – mit einer Nachfrage aus Urlaub, Wochenenden und Geschäftsreisen.",
+        "highlights": [
+          {
+            "title": "Gut angebunden",
+            "body": "Bahnhof, Autobahn und die Flughäfen Verona und Brescia in der Nähe: auch für ein Wochenende leicht erreichbar."
+          },
+          {
+            "title": "Lebendig das ganze Jahr",
+            "body": "Restaurants, Geschäfte und Veranstaltungen halten die Nachfrage auch in der Nebensaison aufrecht."
+          },
+          {
+            "title": "Nicht nur Urlaub",
+            "body": "Neben Touristen kommen auch Geschäftsreisende nach Desenzano: häufige Kurzaufenthalte und ein vollerer Kalender."
+          }
+        ]
+      },
+      "padenghe-sul-garda": {
+        "intro1": "Padenghe sul Garda im Herzen der Valtènesi ist die Wahl für alle, die Ruhe suchen: die Burg, die Hügel mit Olivenhainen und Weinbergen und die Villen mit Pool ziehen Gäste an, die abseits des Trubels entspannen möchten.",
+        "highlights": [
+          {
+            "title": "Erholung und Natur",
+            "body": "Hügel, Olivenhaine und Weinberge der Valtènesi: Gäste suchen Ruhe und Weite – und zahlen gern dafür."
+          },
+          {
+            "title": "Villen mit Pool",
+            "body": "Häuser mit Pool und Garten sind am gefragtesten und ermöglichen längere Aufenthalte."
+          },
+          {
+            "title": "Nah an allem",
+            "body": "Desenzano, Salò und die Strände des südlichen Sees sind nur wenige Autominuten entfernt."
+          }
+        ]
+      }
+    }
   }
 }
