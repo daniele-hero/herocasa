@@ -70,7 +70,9 @@ export default function Hero() {
         initial={reduced ? undefined : { opacity: 0, clipPath: 'inset(0 0 100% 0)' }}
         animate={{ opacity: 1, clipPath: 'inset(0 0 0 0)' }}
         transition={{ duration: 1.2, delay: 0.35, ease: EASE }}
-        className="relative self-stretch min-h-[60vh]"
+        // Cap + sticky: when the HeroForm expands the left column grows ~450px; without
+        // the cap the photo stretched with it into a huge crop and the layout jumped.
+        className="relative self-stretch min-h-[60vh] md:max-h-[max(900px,calc(100dvh-204px))] md:sticky md:top-28"
       >
         <div className="relative h-full min-h-[68vh] overflow-hidden bg-[var(--marble)]">
           <motion.div style={{ y: reduced ? 0 : imgY }} className="h-full w-full">
