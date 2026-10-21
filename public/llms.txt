@@ -1,0 +1,60 @@
+# Herocasa
+
+> Herocasa è un'agenzia di gestione affitti brevi sul Lago di Garda per proprietari di seconde case. Si occupa di burocrazia (CIN, SUAP, comunicazioni alla Questura, ISTAT, tassa di soggiorno), prezzi dinamici, pubblicazione su Airbnb, Booking e altri portali, check-in, pulizie e manutenzione; il proprietario riceve ogni mese rendiconto e bonifico e può usare la casa quando vuole.
+> Herocasa is a short-term rental management agency on Lake Garda (Italy) for second-home owners, also serving German- and English-speaking owners.
+
+## Chi siamo e contatti
+- Sito: https://herocasa.it (italiano), https://herocasa.it/en (English), https://herocasa.it/de (Deutsch)
+- Email: info@herocasa.it
+- Telefono e WhatsApp: +39 366 369 5252
+- Orari: lunedì-venerdì 9:00-18:00, sabato 9:00-17:00
+- P.IVA: 02668020205
+
+## Come funziona
+- Valutazione gratuita e senza impegno: il proprietario indica comune, tipologia e camere sul sito e viene ricontattato entro 48 ore.
+- Chiamata conoscitiva di 30 minuti prima del sopralluogo.
+- Compenso a percentuale sui ricavi, senza costi di attivazione né abbonamenti.
+
+## Zone servite
+- [Peschiera del Garda](https://herocasa.it/it/gestione-affitti-brevi/peschiera-del-garda): gestione affitti brevi a Peschiera del Garda
+- [Lazise](https://herocasa.it/it/gestione-affitti-brevi/lazise): gestione affitti brevi a Lazise
+- [Castelnuovo del Garda](https://herocasa.it/it/gestione-affitti-brevi/castelnuovo-del-garda): gestione affitti brevi a Castelnuovo del Garda
+- [Bardolino](https://herocasa.it/it/gestione-affitti-brevi/bardolino): gestione affitti brevi a Bardolino
+- [Sirmione](https://herocasa.it/it/gestione-affitti-brevi/sirmione): gestione affitti brevi a Sirmione
+- [Desenzano del Garda](https://herocasa.it/it/gestione-affitti-brevi/desenzano-del-garda): gestione affitti brevi a Desenzano del Garda
+- [Padenghe sul Garda](https://herocasa.it/it/gestione-affitti-brevi/padenghe-sul-garda): gestione affitti brevi a Padenghe sul Garda
+- [Garda](https://herocasa.it/it/gestione-affitti-brevi/garda): gestione affitti brevi a Garda
+- [Torri del Benaco](https://herocasa.it/it/gestione-affitti-brevi/torri-del-benaco): gestione affitti brevi a Torri del Benaco
+- [Malcesine](https://herocasa.it/it/gestione-affitti-brevi/malcesine): gestione affitti brevi a Malcesine
+- [Salò](https://herocasa.it/it/gestione-affitti-brevi/salo): gestione affitti brevi a Salò
+- [Manerba del Garda](https://herocasa.it/it/gestione-affitti-brevi/manerba-del-garda): gestione affitti brevi a Manerba del Garda
+- [Moniga del Garda](https://herocasa.it/it/gestione-affitti-brevi/moniga-del-garda): gestione affitti brevi a Moniga del Garda
+- [Soiano del Lago](https://herocasa.it/it/gestione-affitti-brevi/soiano-del-lago): gestione affitti brevi a Soiano del Lago
+- [Lonato del Garda](https://herocasa.it/it/gestione-affitti-brevi/lonato-del-garda): gestione affitti brevi a Lonato del Garda
+- [Valeggio sul Mincio](https://herocasa.it/it/gestione-affitti-brevi/valeggio-sul-mincio): gestione affitti brevi a Valeggio sul Mincio
+- [Pozzolengo](https://herocasa.it/it/gestione-affitti-brevi/pozzolengo): gestione affitti brevi a Pozzolengo
+
+## Pagine in tedesco (Ferienhaus-Verwaltung am Gardasee)
+- [Peschiera del Garda](https://herocasa.it/de/ferienhaus-verwaltung/peschiera-del-garda)
+- [Lazise](https://herocasa.it/de/ferienhaus-verwaltung/lazise)
+- [Castelnuovo del Garda](https://herocasa.it/de/ferienhaus-verwaltung/castelnuovo-del-garda)
+- [Bardolino](https://herocasa.it/de/ferienhaus-verwaltung/bardolino)
+- [Sirmione](https://herocasa.it/de/ferienhaus-verwaltung/sirmione)
+- [Desenzano del Garda](https://herocasa.it/de/ferienhaus-verwaltung/desenzano-del-garda)
+- [Padenghe sul Garda](https://herocasa.it/de/ferienhaus-verwaltung/padenghe-sul-garda)
+- [Garda](https://herocasa.it/de/ferienhaus-verwaltung/garda)
+- [Torri del Benaco](https://herocasa.it/de/ferienhaus-verwaltung/torri-del-benaco)
+- [Malcesine](https://herocasa.it/de/ferienhaus-verwaltung/malcesine)
+- [Salò](https://herocasa.it/de/ferienhaus-verwaltung/salo)
+- [Manerba del Garda](https://herocasa.it/de/ferienhaus-verwaltung/manerba-del-garda)
+- [Moniga del Garda](https://herocasa.it/de/ferienhaus-verwaltung/moniga-del-garda)
+- [Soiano del Lago](https://herocasa.it/de/ferienhaus-verwaltung/soiano-del-lago)
+- [Lonato del Garda](https://herocasa.it/de/ferienhaus-verwaltung/lonato-del-garda)
+- [Valeggio sul Mincio](https://herocasa.it/de/ferienhaus-verwaltung/valeggio-sul-mincio)
+- [Pozzolengo](https://herocasa.it/de/ferienhaus-verwaltung/pozzolengo)
+
+## Pagine principali
+- [Home](https://herocasa.it/it): servizi, processo, immobili gestiti, zone, domande frequenti, contatti
+- [Privacy](https://herocasa.it/it/privacy)
+- [Cookie policy](https://herocasa.it/it/cookie)
+- [Termini](https://herocasa.it/it/termini)

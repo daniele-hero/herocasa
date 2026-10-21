@@ -38,6 +38,16 @@ export const ZONES = [
   'Sirmione',
   'Desenzano del Garda',
   'Padenghe sul Garda',
+  'Garda',
+  'Torri del Benaco',
+  'Malcesine',
+  'Salò',
+  'Manerba del Garda',
+  'Moniga del Garda',
+  'Soiano del Lago',
+  'Lonato del Garda',
+  'Valeggio sul Mincio',
+  'Pozzolengo',
 ] as const;
 
 export type ValuationLead = {
@@ -93,7 +103,7 @@ export function calculateEstimateRange(input: {
   if (input.type === 'Villa') base *= 1.5;
   else if (['Casa indipendente', 'Detached house', 'Einfamilienhaus'].includes(input.type)) base *= 1.25;
 
-  if (['Sirmione', 'Bardolino'].includes(input.zone)) base *= 1.15;
+  if (['Sirmione', 'Bardolino', 'Garda', 'Malcesine', 'Salò'].includes(input.zone)) base *= 1.15;
 
   base += input.features.length * 2500;
   if (input.features.some((f) => /piscin|pool/i.test(f))) base *= 1.12;

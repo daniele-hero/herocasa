@@ -3,7 +3,7 @@ import { notFound } from 'next/navigation';
 import { getTranslations, setRequestLocale } from 'next-intl/server';
 import ComunePage from '@/components/ComunePage';
 import { routing } from '@/lib/routing';
-import { COMUNI, COMUNE_SLUGS, isComuneSlug } from '@/lib/comuni';
+import { COMUNI, comuneParams, comunePath, isComuneSlug } from '@/lib/comuni';
 
 const SITE_URL = 'https://herocasa.it';
 const LOCALE_OG: Record<string, string> = { it: 'it_IT', en: 'en_US', de: 'de_DE' };
@@ -11,7 +11,7 @@ const LOCALE_OG: Record<string, string> = { it: 'it_IT', en: 'en_US', de: 'de_DE
 type Params = { params: Promise<{ locale: string; comune: string }> };
 
 export function generateStaticParams() {
-  return routing.locales.flatMap((locale) => COMUNE_SLUGS.map((comune) => ({ locale, comune })));
+  return comuneParams('gestione-affitti-brevi');
 }
 
 export async function generateMetadata({ params }: Params): Promise<Metadata> {
@@ -19,21 +19,20 @@ export async function generateMetadata({ params }: Params): Promise<Metadata> {
   if (!isComuneSlug(comune)) notFound();
   const t = await getTranslations({ locale, namespace: 'zonePages' });
   const { name } = COMUNI[comune];
-  const path = `/gestione-affitti-brevi/${comune}`;
-
   const languages: Record<string, string> = {};
-  for (const l of routing.locales) languages[l] = `${SITE_URL}/${l}${path}`;
-  languages['x-default'] = `${SITE_URL}/${routing.defaultLocale}${path}`;
+  for (const l of routing.locales) languages[l] = `${SITE_URL}${comunePath(l, comune)}`;
+  languages['x-default'] = `${SITE_URL}${comunePath(routing.defaultLocale, comune)}`;
+  const url = `${SITE_URL}${comunePath(locale, comune)}`;
 
   const title = t('metaTitle', { name });
   const description = t('metaDescription', { name });
   return {
     title,
     description,
-    alternates: { canonical: `${SITE_URL}/${locale}${path}`, languages },
+    alternates: { canonical: url, languages },
     openGraph: {
       type: 'website',
-      url: `${SITE_URL}/${locale}${path}`,
+      url,
       title,
       description,
       siteName: 'Herocasa',
@@ -50,7 +49,7 @@ export default async function Page({ params }: Params) {
   setRequestLocale(locale);
   const t = await getTranslations({ locale, namespace: 'zonePages' });
   const { name } = COMUNI[comune];
-  const url = `${SITE_URL}/${locale}/gestione-affitti-brevi/${comune}`;
+  const url = `${SITE_URL}${comunePath(locale, comune)}`;
 
   const jsonLd = [
     {

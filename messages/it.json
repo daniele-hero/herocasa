@@ -226,7 +226,8 @@
         "count": "chiedete un sopralluogo",
         "highlight": true
       }
-    ]
+    ],
+    "alsoServe": "Serviamo anche"
   },
   "estimator": {
     "eyebrow": "Valutazione gratuita",
@@ -535,6 +536,176 @@
           {
             "title": "Vicino a tutto",
             "body": "Desenzano, Salò e le spiagge del basso lago sono a pochi minuti di auto."
+          }
+        ]
+      },
+      "garda": {
+        "intro1": "Garda dà il nome al lago ed è uno dei borghi più amati della sponda veronese: il lungolago sul golfo, Punta San Vigilio e la vicinanza a Bardolino richiamano ospiti, molti dalla Germania, per tutta la stagione.",
+        "highlights": [
+          {
+            "title": "Il borgo che dà il nome al lago",
+            "body": "Lungolago, centro storico e golfo protetto: un nome che gli ospiti cercano già prima di partire."
+          },
+          {
+            "title": "Ospiti internazionali",
+            "body": "Una quota alta di ospiti arriva da Germania e Austria: annunci in più lingue e risposte rapide fanno la differenza."
+          },
+          {
+            "title": "Tra Bardolino e Punta San Vigilio",
+            "body": "Ciclabile, spiagge e locali a pochi passi: ideale per soggiorni da una settimana."
+          }
+        ]
+      },
+      "torri-del-benaco": {
+        "intro1": "Torri del Benaco, con il castello scaligero affacciato sul porto e il traghetto per la sponda bresciana, è la scelta di chi cerca un borgo autentico e tranquillo, con il Monte Baldo alle spalle.",
+        "highlights": [
+          {
+            "title": "Un borgo autentico",
+            "body": "Porto, castello e vicoli: gli ospiti cercano atmosfera e silenzio, e prenotano soggiorni lunghi."
+          },
+          {
+            "title": "Collegato alle due sponde",
+            "body": "Il traghetto per Maderno e la Gardesana portano facilmente a Garda, Malcesine e alla sponda bresciana."
+          },
+          {
+            "title": "Viste sul lago",
+            "body": "Case con terrazza o vista lago sono tra le più richieste e reggono prezzi più alti."
+          }
+        ]
+      },
+      "malcesine": {
+        "intro1": "Malcesine unisce il castello scaligero sull'acqua alla funivia del Monte Baldo: vela, windsurf, bici e trekking portano ospiti attivi dalla primavera all'autunno, molti da Germania, Austria e Paesi Bassi.",
+        "highlights": [
+          {
+            "title": "Sport e natura",
+            "body": "Vento costante per vela e windsurf, sentieri e piste sul Baldo: una domanda che va oltre l'estate."
+          },
+          {
+            "title": "Stagione lunga",
+            "body": "Primavera e autunno sono mesi forti grazie agli sportivi: più notti vendute durante l'anno."
+          },
+          {
+            "title": "Ospiti dal Nord Europa",
+            "body": "Il pubblico tedesco e olandese è fedele e prenota con largo anticipo."
+          }
+        ]
+      },
+      "salo": {
+        "intro1": "Salò ha uno dei lungolaghi più eleganti del Garda e un centro vivo tutto l'anno: negozi, ristoranti, eventi e la vicinanza al Vittoriale attirano ospiti che cercano qualità e comodità.",
+        "highlights": [
+          {
+            "title": "Un centro vivo tutto l’anno",
+            "body": "Negozi, ristoranti ed eventi tengono attiva la domanda anche fuori stagione."
+          },
+          {
+            "title": "Ospiti esigenti",
+            "body": "Chi sceglie Salò cerca case curate e servizi puntuali, e paga di conseguenza."
+          },
+          {
+            "title": "Base per la riviera bresciana",
+            "body": "Gardone, il Vittoriale e la Valtènesi sono a pochi minuti."
+          }
+        ]
+      },
+      "manerba-del-garda": {
+        "intro1": "Manerba del Garda, con la Rocca e le spiagge della Valtènesi, è una meta classica per famiglie e amanti della natura: ville con giardino e case vicino al lago sono richieste per soggiorni di una o due settimane.",
+        "highlights": [
+          {
+            "title": "Rocca e spiagge",
+            "body": "Il parco della Rocca di Manerba e le spiagge del basso lago sono il richiamo principale."
+          },
+          {
+            "title": "Famiglie e soggiorni lunghi",
+            "body": "Le famiglie prenotano case con giardino e più camere, spesso per una settimana o più."
+          },
+          {
+            "title": "Cuore della Valtènesi",
+            "body": "Cantine, ulivi e borghi vicini allungano la stagione verso l'autunno."
+          }
+        ]
+      },
+      "moniga-del-garda": {
+        "intro1": "Moniga del Garda è un piccolo borgo con castello e porto, nel cuore della Valtènesi e del Chiaretto: spiagge tranquille e paesaggi di vigneti attirano coppie e famiglie in cerca di relax.",
+        "highlights": [
+          {
+            "title": "Borgo tranquillo",
+            "body": "Castello, porto e spiagge raccolte: un'alternativa rilassata ai centri più affollati."
+          },
+          {
+            "title": "Terra del Chiaretto",
+            "body": "Vigneti e cantine della Valtènesi portano ospiti appassionati di vino, anche a fine stagione."
+          },
+          {
+            "title": "Ville e case con giardino",
+            "body": "Le case con spazi esterni sono le più richieste e permettono prezzi più alti."
+          }
+        ]
+      },
+      "soiano-del-lago": {
+        "intro1": "Soiano del Lago guarda il golfo dall'alto: un borgo collinare con castello, ulivi e ville con piscina, perfetto per ospiti che cercano vista lago e tranquillità a pochi minuti dalle spiagge.",
+        "highlights": [
+          {
+            "title": "Vista sul golfo",
+            "body": "Le colline sopra il lago regalano panorami che fanno la differenza nelle foto e nelle recensioni."
+          },
+          {
+            "title": "Ville con piscina",
+            "body": "Piscina e giardino sono le dotazioni più cercate e permettono soggiorni più lunghi."
+          },
+          {
+            "title": "Vicino a tutto",
+            "body": "Padenghe, Manerba e Desenzano sono a pochi minuti di auto."
+          }
+        ]
+      },
+      "lonato-del-garda": {
+        "intro1": "Lonato del Garda unisce la Rocca e il centro storico al Lido sul lago, a due passi da Desenzano e dall'autostrada: case spaziose a prezzi d'acquisto più accessibili con una domanda turistica solida.",
+        "highlights": [
+          {
+            "title": "Rocca e Lido",
+            "body": "Il borgo storico e l'accesso al lago offrono due tipi di ospiti nella stessa zona."
+          },
+          {
+            "title": "Comoda da raggiungere",
+            "body": "Autostrada, stazione di Desenzano e aeroporti vicini: arrivi facili anche per weekend."
+          },
+          {
+            "title": "Spazio per famiglie e gruppi",
+            "body": "Case e ville con giardino ospitano famiglie e gruppi che restano più notti."
+          }
+        ]
+      },
+      "valeggio-sul-mincio": {
+        "intro1": "Valeggio sul Mincio, con Borghetto e il Parco Giardino Sigurtà, è una delle mete più fotografate dell'entroterra gardesano: a pochi minuti da Peschiera e dai parchi a tema, attira coppie, famiglie e cicloturisti.",
+        "highlights": [
+          {
+            "title": "Borghetto e Sigurtà",
+            "body": "Il borgo sul Mincio e il parco giardino portano visitatori da primavera all'autunno."
+          },
+          {
+            "title": "Ciclabile del Mincio",
+            "body": "La pista ciclabile Peschiera–Mantova porta cicloturisti che cercano soste di qualche notte."
+          },
+          {
+            "title": "Vicino al lago e ai parchi",
+            "body": "Peschiera, Gardaland e il basso lago sono a un quarto d'ora."
+          }
+        ]
+      },
+      "pozzolengo": {
+        "intro1": "Pozzolengo, sulle colline moreniche tra Desenzano e Peschiera, è terra di Lugana e di golf: casali, ville e agriturismi attirano ospiti che cercano spazio e tranquillità a pochi minuti da Sirmione.",
+        "highlights": [
+          {
+            "title": "Colline del Lugana",
+            "body": "Vigneti e cantine del Lugana richiamano ospiti appassionati di vino ed enoturismo."
+          },
+          {
+            "title": "Spazio e tranquillità",
+            "body": "Casali e ville con giardino sono ideali per famiglie e gruppi che restano più a lungo."
+          },
+          {
+            "title": "A pochi minuti dal lago",
+            "body": "Sirmione, Desenzano e Peschiera sono vicinissimi."
           }
         ]
       }

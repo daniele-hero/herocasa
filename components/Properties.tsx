@@ -1,7 +1,7 @@
 'use client';
 
 import { useTranslations } from 'next-intl';
-import Image from 'next/image';
+import Photo from './Photo';
 import Reveal from './Reveal';
 
 type Property = { name: string; meta: string; metric: string; metricLabel: string };
@@ -52,11 +52,9 @@ export default function Properties() {
                 className="relative overflow-hidden bg-[var(--marble)]"
                 style={{ aspectRatio: i === 0 || i === 3 ? '4 / 3' : '3 / 4' }}
               >
-                <Image
+                <Photo
                   src={IMAGES[i]}
                   alt={p.name}
-                  fill
-                  sizes="(min-width: 1100px) 40vw, (min-width: 700px) 50vw, 100vw"
                   className="object-cover transition-transform duration-[900ms] ease-[cubic-bezier(0.2,0.7,0.2,1)] group-hover:scale-105"
                 />
               </div>

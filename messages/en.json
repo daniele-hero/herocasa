@@ -226,7 +226,8 @@
         "count": "ask for a site visit",
         "highlight": true
       }
-    ]
+    ],
+    "alsoServe": "We also cover"
   },
   "estimator": {
     "eyebrow": "Free valuation",
@@ -535,6 +536,176 @@
           {
             "title": "Close to everything",
             "body": "Desenzano, Salò and the beaches of the southern lake are a few minutes' drive away."
+          }
+        ]
+      },
+      "garda": {
+        "intro1": "Garda gives the lake its name and is one of the best-loved villages on the Verona shore: the lakefront on its bay, Punta San Vigilio and nearby Bardolino draw guests, many from Germany, all season long.",
+        "highlights": [
+          {
+            "title": "The village that named the lake",
+            "body": "Lakefront, old town and a sheltered bay: a name guests are already searching for before they leave home."
+          },
+          {
+            "title": "International guests",
+            "body": "A large share of guests come from Germany and Austria: listings in several languages and quick replies make the difference."
+          },
+          {
+            "title": "Between Bardolino and Punta San Vigilio",
+            "body": "Cycle path, beaches and restaurants nearby: ideal for week-long stays."
+          }
+        ]
+      },
+      "torri-del-benaco": {
+        "intro1": "Torri del Benaco, with its Scaliger castle on the harbour and the ferry to the Brescia shore, is for guests who want an authentic, quiet village with Monte Baldo behind it.",
+        "highlights": [
+          {
+            "title": "An authentic village",
+            "body": "Harbour, castle and narrow lanes: guests look for atmosphere and quiet, and book longer stays."
+          },
+          {
+            "title": "Linked to both shores",
+            "body": "The ferry to Maderno and the lakeside road make Garda, Malcesine and the Brescia shore easy to reach."
+          },
+          {
+            "title": "Lake views",
+            "body": "Homes with a terrace or lake view are among the most requested and command higher prices."
+          }
+        ]
+      },
+      "malcesine": {
+        "intro1": "Malcesine pairs a Scaliger castle on the water with the Monte Baldo cable car: sailing, windsurfing, cycling and hiking bring active guests from spring to autumn, many from Germany, Austria and the Netherlands.",
+        "highlights": [
+          {
+            "title": "Sport and nature",
+            "body": "Reliable wind for sailing and windsurfing, trails and slopes on Monte Baldo: demand that goes beyond summer."
+          },
+          {
+            "title": "A long season",
+            "body": "Spring and autumn are strong months thanks to sporty guests: more nights sold over the year."
+          },
+          {
+            "title": "Guests from northern Europe",
+            "body": "German and Dutch guests are loyal and book well in advance."
+          }
+        ]
+      },
+      "salo": {
+        "intro1": "Salò has one of the most elegant lakefronts on Lake Garda and a town centre that is lively all year: shops, restaurants, events and the nearby Vittoriale attract guests looking for quality and comfort.",
+        "highlights": [
+          {
+            "title": "A lively town all year",
+            "body": "Shops, restaurants and events keep demand going outside the season too."
+          },
+          {
+            "title": "Discerning guests",
+            "body": "Guests who choose Salò expect well-kept homes and reliable service, and pay accordingly."
+          },
+          {
+            "title": "Base for the Brescia riviera",
+            "body": "Gardone, the Vittoriale and the Valtènesi are minutes away."
+          }
+        ]
+      },
+      "manerba-del-garda": {
+        "intro1": "Manerba del Garda, with its Rocca and the beaches of the Valtènesi, is a classic choice for families and nature lovers: villas with gardens and homes near the lake are booked for one- or two-week stays.",
+        "highlights": [
+          {
+            "title": "Rocca and beaches",
+            "body": "The Rocca di Manerba park and the beaches of the southern lake are the main draw."
+          },
+          {
+            "title": "Families and longer stays",
+            "body": "Families book homes with gardens and several bedrooms, often for a week or more."
+          },
+          {
+            "title": "Heart of the Valtènesi",
+            "body": "Wineries, olive groves and nearby villages stretch the season into autumn."
+          }
+        ]
+      },
+      "moniga-del-garda": {
+        "intro1": "Moniga del Garda is a small village with a castle and harbour in the heart of the Valtènesi, home of Chiaretto wine: quiet beaches and vineyard landscapes attract couples and families looking to relax.",
+        "highlights": [
+          {
+            "title": "A quiet village",
+            "body": "Castle, harbour and small beaches: a relaxed alternative to the busier towns."
+          },
+          {
+            "title": "Land of Chiaretto",
+            "body": "Vineyards and wineries of the Valtènesi bring wine-loving guests, even late in the season."
+          },
+          {
+            "title": "Villas and homes with gardens",
+            "body": "Homes with outdoor space are the most requested and allow higher prices."
+          }
+        ]
+      },
+      "soiano-del-lago": {
+        "intro1": "Soiano del Lago overlooks the bay from above: a hill village with a castle, olive groves and villas with pools, perfect for guests who want lake views and peace a few minutes from the beaches.",
+        "highlights": [
+          {
+            "title": "Views over the bay",
+            "body": "The hills above the lake offer views that make a difference in photos and reviews."
+          },
+          {
+            "title": "Villas with pools",
+            "body": "A pool and garden are the most sought-after features and allow longer stays."
+          },
+          {
+            "title": "Close to everything",
+            "body": "Padenghe, Manerba and Desenzano are a few minutes' drive away."
+          }
+        ]
+      },
+      "lonato-del-garda": {
+        "intro1": "Lonato del Garda combines its Rocca and old town with the Lido on the lake, a stone's throw from Desenzano and the motorway: spacious homes at more accessible purchase prices, with solid tourist demand.",
+        "highlights": [
+          {
+            "title": "Rocca and Lido",
+            "body": "The historic village and lake access bring two kinds of guests to the same area."
+          },
+          {
+            "title": "Easy to reach",
+            "body": "Motorway, Desenzano station and airports nearby: easy arrivals even for a weekend."
+          },
+          {
+            "title": "Room for families and groups",
+            "body": "Houses and villas with gardens host families and groups who stay longer."
+          }
+        ]
+      },
+      "valeggio-sul-mincio": {
+        "intro1": "Valeggio sul Mincio, with Borghetto and the Sigurtà Garden Park, is one of the most photographed places inland from Lake Garda: minutes from Peschiera and the theme parks, it attracts couples, families and cyclists.",
+        "highlights": [
+          {
+            "title": "Borghetto and Sigurtà",
+            "body": "The village on the Mincio and the garden park bring visitors from spring to autumn."
+          },
+          {
+            "title": "The Mincio cycle path",
+            "body": "The Peschiera–Mantua cycle path brings cyclists looking for stays of a few nights."
+          },
+          {
+            "title": "Close to the lake and the parks",
+            "body": "Peschiera, Gardaland and the southern lake are fifteen minutes away."
+          }
+        ]
+      },
+      "pozzolengo": {
+        "intro1": "Pozzolengo, on the morainic hills between Desenzano and Peschiera, is Lugana and golf country: farmhouses, villas and agriturismi attract guests looking for space and quiet a few minutes from Sirmione.",
+        "highlights": [
+          {
+            "title": "The Lugana hills",
+            "body": "Lugana vineyards and wineries draw wine-loving guests."
+          },
+          {
+            "title": "Space and quiet",
+            "body": "Farmhouses and villas with gardens suit families and groups who stay longer."
+          },
+          {
+            "title": "Minutes from the lake",
+            "body": "Sirmione, Desenzano and Peschiera are very close."
           }
         ]
       }

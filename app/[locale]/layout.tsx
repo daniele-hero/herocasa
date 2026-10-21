@@ -3,6 +3,7 @@ import { NextIntlClientProvider, hasLocale } from 'next-intl';
 import { getMessages, getTranslations, setRequestLocale } from 'next-intl/server';
 import { notFound } from 'next/navigation';
 import { routing } from '@/lib/routing';
+import { COMUNI } from '@/lib/comuni';
 import '../globals.css';
 
 const SITE_URL = 'https://herocasa.it';
@@ -105,16 +106,7 @@ export default async function LocaleLayout({
     telephone: '+39 366 369 5252',
     vatID: '02668020205',
     priceRange: '€€€',
-    areaServed: [
-      { '@type': 'City', name: 'Peschiera del Garda' },
-      { '@type': 'City', name: 'Lazise' },
-      { '@type': 'City', name: 'Castelnuovo del Garda' },
-      { '@type': 'City', name: 'Bardolino' },
-      { '@type': 'City', name: 'Sirmione' },
-      { '@type': 'City', name: 'Desenzano del Garda' },
-      { '@type': 'City', name: 'Padenghe sul Garda' },
-      { '@type': 'City', name: 'Soiano del Lago' },
-    ],
+    areaServed: Object.values(COMUNI).map((c) => ({ '@type': 'City', name: c.name })),
     geo: { '@type': 'GeoCoordinates', latitude: 45.5636, longitude: 10.6417 },
     sameAs: [],
   };

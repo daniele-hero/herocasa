@@ -2,3 +2,12 @@
 /privacy /it/privacy 302
 /cookie /it/cookie 302
 /termini /it/termini 302
+
+# DE comune pages moved to a German URL
+/de/gestione-affitti-brevi/:slug /de/ferienhaus-verwaltung/:slug 301
+
+# Pages of the previous herocasa.it site still indexed by Google
+/home /it 301
+/chi-siamo /it 301
+/contatti /it#contatti 301
+/lavori /it#immobili 301

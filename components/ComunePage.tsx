@@ -1,6 +1,6 @@
 'use client';
 
-import Image from 'next/image';
+import Photo from './Photo';
 import Link from 'next/link';
 import { useLocale, useTranslations } from 'next-intl';
 import Nav from './Nav';
@@ -14,7 +14,7 @@ import Footer from './Footer';
 import MobileCtaBar from './MobileCtaBar';
 import WhatsAppFloat from './WhatsAppFloat';
 import CookieBanner from './CookieBanner';
-import { COMUNI, COMUNE_SLUGS, type ComuneSlug } from '@/lib/comuni';
+import { COMUNI, COMUNE_SLUGS, comunePath, type ComuneSlug } from '@/lib/comuni';
 
 type Highlight = { title: string; body: string };
 type Testimonial = { quote: string; author: string; role: string };
@@ -62,7 +62,7 @@ export default function ComunePage({ slug }: { slug: ComuneSlug }) {
 
           <div className="relative md:sticky md:top-28">
             <div className="relative aspect-[4/5] max-h-[78vh] w-full overflow-hidden bg-[var(--marble)]">
-              <Image src={photo} alt={t('imageAlt')} fill priority sizes="(min-width: 768px) 42vw, 100vw" className="object-cover" />
+              <Photo src={photo} alt={t('imageAlt')} priority className="object-cover" />
             </div>
             {count && (
               <div className="absolute bottom-6 left-6 p-5 max-w-[280px]" style={{ background: 'rgba(246, 241, 228, 0.94)' }}>
@@ -118,7 +118,7 @@ export default function ComunePage({ slug }: { slug: ComuneSlug }) {
           <ul className="flex flex-wrap gap-x-6 gap-y-3">
             {COMUNE_SLUGS.filter((s) => s !== slug).map((s) => (
               <li key={s}>
-                <Link href={`/${locale}/gestione-affitti-brevi/${s}`} className="btn-arrow" style={{ fontSize: 12 }}>
+                <Link href={comunePath(locale, s)} className="btn-arrow" style={{ fontSize: 12 }}>
                   {COMUNI[s].name} <span className="arrow" />
                 </Link>
               </li>

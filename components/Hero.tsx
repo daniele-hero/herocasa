@@ -3,7 +3,7 @@
 import { motion, useReducedMotion, useScroll, useTransform } from 'motion/react';
 import { useRef } from 'react';
 import { useTranslations } from 'next-intl';
-import Image from 'next/image';
+import Photo from './Photo';
 import HeroForm from './HeroForm';
 
 const EASE = [0.2, 0.7, 0.2, 1] as const;
@@ -76,12 +76,10 @@ export default function Hero() {
       >
         <div className="relative h-full min-h-[68vh] overflow-hidden bg-[var(--marble)]">
           <motion.div style={{ y: reduced ? 0 : imgY }} className="h-full w-full">
-            <Image
+            <Photo
               src="/immobili/villa-aerea-tetto.jpg"
               alt="Vista aerea di una villa gestita da Herocasa sul Lago di Garda"
-              fill
               priority
-              sizes="(min-width: 960px) 58vw, 100vw"
               className="object-cover scale-[1.08]"
             />
           </motion.div>

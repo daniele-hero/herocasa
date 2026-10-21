@@ -4,6 +4,7 @@ import { useEffect, useState } from 'react';
 import { useLocale, useTranslations } from 'next-intl';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
+import { comunePath } from '@/lib/comuni';
 import Image from 'next/image';
 import { AnimatePresence, motion } from 'motion/react';
 
@@ -15,7 +16,12 @@ export default function Nav() {
   const locale = useLocale();
   const pathname = usePathname() ?? `/${locale}`;
   // Language switch keeps the current page (home or a comune page), only the locale segment changes.
-  const localeHref = (l: string) => pathname.replace(/^\/(it|en|de)(?=\/|$)/, `/${l}`) || `/${l}`;
+  const localeHref = (l: string) => {
+    const comune = pathname.match(/^\/(?:it|en|de)\/(?:gestione-affitti-brevi|ferienhaus-verwaltung)\/([^/]+)/);
+    if (comune) return comunePath(l, comune[1]);
+    if (/^\/(?:it|en|de)\/guide\//.test(pathname) && l !== 'it') return `/${l}`; // guides are Italian-only
+    return pathname.replace(/^\/(it|en|de)(?=\/|$)/, `/${l}`) || `/${l}`;
+  };
   const [scrolled, setScrolled] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
 
