@@ -81,7 +81,7 @@ function buildEmailHtml(body: ValuationBody): string {
   return `<table cellpadding="0" cellspacing="0" style="font-family:sans-serif;border-collapse:collapse">${rowsHtml}</table>`;
 }
 
-async function sendLeadEmail(body: ValuationBody, env: Env): Promise<void> {
+async function sendLeadEmail(body: ValuationBody, env: Env, followUps: string[]): Promise<void> {
   if (!env.RESEND_API_KEY || !env.LEAD_NOTIFY_EMAIL) {
     console.warn('[valuation-request] RESEND_API_KEY or LEAD_NOTIFY_EMAIL not set — no notification sent');
     return;
@@ -96,10 +96,197 @@ async function sendLeadEmail(body: ValuationBody, env: Env): Promise<void> {
       to: env.LEAD_NOTIFY_EMAIL.split(',').map((s) => s.trim()).filter(Boolean),
       ...(body.email ? { reply_to: body.email } : {}),
       subject: `${kind}: ${body.name || 'proprietario'} — ${body.zone || 'zona non specificata'}`,
-      html: buildEmailHtml(body),
+      html:
+        buildEmailHtml(body) +
+        (followUps.length
+          ? `<p style="font-family:sans-serif;font-size:13px;margin-top:20px;color:#6b6b63">Al proprietario partiranno ${followUps.length} email di follow-up nei prossimi giorni. Se diventa cliente o non è interessato: <a href="${await stopLink(followUps, 'it', env)}">ferma i follow-up</a>.</p>`
+          : ''),
     }),
   });
   if (!res.ok) console.error('[valuation-request] Resend error', res.status, await res.text());
+}
+
+const SITE = 'https://herocasa.it';
+const WA = 'https://wa.me/393663695252';
+
+/** Resend REST call; retries on 429 (free plan allows ~2 requests/second). */
+async function resendCall(env: Env, path: string, payload?: unknown): Promise<Response> {
+  for (let attempt = 0; ; attempt++) {
+    const res = await fetch(`https://api.resend.com${path}`, {
+      method: 'POST',
+      headers: { Authorization: `Bearer ${env.RESEND_API_KEY}`, 'Content-Type': 'application/json' },
+      body: payload === undefined ? undefined : JSON.stringify(payload),
+    });
+    if (res.status !== 429 || attempt >= 3) return res;
+    const wait = Number(res.headers.get('retry-after')) * 1000 || 700;
+    await new Promise((r) => setTimeout(r, wait));
+  }
+}
+
+async function hmacHex(key: string, message: string): Promise<string> {
+  const k = await crypto.subtle.importKey('raw', new TextEncoder().encode(key), { name: 'HMAC', hash: 'SHA-256' }, false, ['sign']);
+  const sig = await crypto.subtle.sign('HMAC', k, new TextEncoder().encode(message));
+  return [...new Uint8Array(sig)].map((b) => b.toString(16).padStart(2, '0')).join('');
+}
+
+/** Signed link that cancels the given scheduled follow-ups (verified in functions/api/followup-stop.ts). */
+async function stopLink(ids: string[], locale: string, env: Env): Promise<string> {
+  const joined = ids.join(',');
+  const sig = await hmacHex(`followup:${env.RESEND_API_KEY}`, joined);
+  return `${SITE}/api/followup-stop?ids=${encodeURIComponent(joined)}&l=${locale}&sig=${sig}`;
+}
+
+type FollowUp = { day: number; subject: (name: string) => string; body: (name: string, zone: string) => string };
+
+const p = (t: string) => `<p style="font-family:Arial,sans-serif;font-size:15px;line-height:1.6;margin:0 0 14px">${t}</p>`;
+const btn = (href: string, label: string) =>
+  `<p style="margin:6px 0 18px"><a href="${href}" style="display:inline-block;background:#B8925A;color:#F6F1E4;font-family:Arial,sans-serif;font-size:13px;letter-spacing:.08em;text-transform:uppercase;text-decoration:none;padding:12px 20px">${label}</a></p>`;
+
+/** Nurture sequence for owners who left an email: day 2, 7 and 16. */
+const FOLLOWUPS: Record<string, FollowUp[]> = {
+  it: [
+    {
+      day: 2,
+      subject: (n) => `${n ? `${n}, ` : ''}cosa dicono i proprietari che ci hanno affidato la casa`,
+      body: (n, z) =>
+        p(`Ciao${n ? ` ${n}` : ''},`) +
+        p(`mentre prepariamo la valutazione${z ? ` per la tua casa a ${z}` : ''}, ti lasciamo le parole di un proprietario che ha fatto il tuo stesso passo:`) +
+        `<blockquote style="font-family:Georgia,serif;font-style:italic;font-size:18px;line-height:1.5;margin:0 0 8px;padding-left:16px;border-left:3px solid #B8925A">“Prima gestivo da solo. Sei mesi con Herocasa e ho scoperto che la casa rendeva il 30% in più, ma soprattutto non mi arrivavano più telefonate alle undici di sera per un problema con il Wi-Fi.”</blockquote>` +
+        p('<span style="color:#6B6A5C;font-size:13px">Marco V., proprietario di una villa a Bardolino</span>') +
+        p('Se vuoi parlarne prima della chiamata, scrivici quando preferisci:') +
+        btn(WA, 'Scrivici su WhatsApp'),
+    },
+    {
+      day: 7,
+      subject: () => 'Le 3 domande che ci fanno tutti i proprietari',
+      body: (n) =>
+        p(`Ciao${n ? ` ${n}` : ''}, ecco le domande che ci fanno più spesso, con risposte brevi:`) +
+        p('<strong>Quanto costa?</strong> Una percentuale sui ricavi, senza costi di attivazione né abbonamenti: se la casa non guadagna, non guadagniamo nemmeno noi.') +
+        p('<strong>E la burocrazia?</strong> CIN, pratiche SUAP, comunicazioni alla Questura, ISTAT e tassa di soggiorno le seguiamo noi.') +
+        p('<strong>Posso usare la casa?</strong> Sempre: blocchi le date che ti servono e noi gestiamo il resto del calendario.') +
+        btn(`${SITE}/it#faq`, 'Leggi tutte le risposte'),
+    },
+    {
+      day: 16,
+      subject: (n) => `${n ? `${n}, ` : ''}vuoi ancora la valutazione completa?`,
+      body: (n, z) =>
+        p(`Ciao${n ? ` ${n}` : ''},`) +
+        p(`ti scriviamo un'ultima volta${z ? ` per la tua casa a ${z}` : ''}. Le case che partono prima della stagione arrivano più pronte: foto, annunci e prezzi si preparano con calma.`) +
+        p('Se ti interessa ancora, rispondi a questa email o scrivici su WhatsApp e fissiamo una chiamata di 30 minuti.') +
+        btn(WA, 'Fissiamo una chiamata'),
+    },
+  ],
+  en: [
+    {
+      day: 2,
+      subject: (n) => `${n ? `${n}, ` : ''}what owners who trusted us with their home say`,
+      body: (n, z) =>
+        p(`Hi${n ? ` ${n}` : ''},`) +
+        p(`while we prepare the valuation${z ? ` for your home in ${z}` : ''}, here are the words of an owner who took the same step:`) +
+        `<blockquote style="font-family:Georgia,serif;font-style:italic;font-size:18px;line-height:1.5;margin:0 0 8px;padding-left:16px;border-left:3px solid #B8925A">“I used to manage on my own. Six months with Herocasa and I found the house yielded 30% more — but mostly, I stopped getting phone calls at 11 pm about a Wi-Fi problem.”</blockquote>` +
+        p('<span style="color:#6B6A5C;font-size:13px">Marco V., owner of a villa in Bardolino</span>') +
+        p('If you would like to talk before our call, message us any time:') +
+        btn(WA, 'Message us on WhatsApp'),
+    },
+    {
+      day: 7,
+      subject: () => 'The 3 questions every owner asks us',
+      body: (n) =>
+        p(`Hi${n ? ` ${n}` : ''}, here are the questions we hear most, with short answers:`) +
+        p('<strong>How much does it cost?</strong> A percentage of revenue, with no setup fee or subscription: if the house earns nothing, neither do we.') +
+        p('<strong>What about paperwork?</strong> CIN, SUAP permits, police registration, ISTAT and tourist tax are all handled by us.') +
+        p('<strong>Can I still use the house?</strong> Always: block the dates you need and we manage the rest of the calendar.') +
+        btn(`${SITE}/en#faq`, 'Read all the answers'),
+    },
+    {
+      day: 16,
+      subject: (n) => `${n ? `${n}, ` : ''}would you still like the full valuation?`,
+      body: (n, z) =>
+        p(`Hi${n ? ` ${n}` : ''},`) +
+        p(`this is our last note${z ? ` about your home in ${z}` : ''}. Homes that start before the season arrive better prepared: photos, listings and prices take time to get right.`) +
+        p('If you are still interested, reply to this email or message us on WhatsApp and we will book a 30-minute call.') +
+        btn(WA, 'Book a call'),
+    },
+  ],
+  de: [
+    {
+      day: 2,
+      subject: (n) => `${n ? `${n}, ` : ''}was Eigentümer sagen, die uns ihr Haus anvertraut haben`,
+      body: (n, z) =>
+        p(`Guten Tag${n ? ` ${n}` : ''},`) +
+        p(`während wir die Bewertung${z ? ` für Ihr Haus in ${z}` : ''} vorbereiten, hier die Worte eines Eigentümers, der denselben Schritt gemacht hat:`) +
+        `<blockquote style="font-family:Georgia,serif;font-style:italic;font-size:18px;line-height:1.5;margin:0 0 8px;padding-left:16px;border-left:3px solid #B8925A">„Vorher habe ich selbst verwaltet. Nach sechs Monaten mit Herocasa hat das Haus 30% mehr abgeworfen — vor allem aber bekam ich keine Anrufe mehr um elf Uhr abends wegen eines WLAN-Problems.“</blockquote>` +
+        p('<span style="color:#6B6A5C;font-size:13px">Marco V., Eigentümer einer Villa in Bardolino</span>') +
+        p('Wenn Sie schon vor unserem Gespräch sprechen möchten, schreiben Sie uns jederzeit:') +
+        btn(WA, 'Auf WhatsApp schreiben'),
+    },
+    {
+      day: 7,
+      subject: () => 'Die 3 Fragen, die uns jeder Eigentümer stellt',
+      body: (n) =>
+        p(`Guten Tag${n ? ` ${n}` : ''}, hier die häufigsten Fragen mit kurzen Antworten:`) +
+        p('<strong>Was kostet es?</strong> Ein Prozentsatz der Einnahmen, ohne Einrichtungsgebühr und ohne Abonnement: Wenn das Haus nichts verdient, verdienen auch wir nichts.') +
+        p('<strong>Und die Bürokratie?</strong> CIN, SUAP-Verfahren, Meldung an die Polizei, ISTAT und Kurtaxe übernehmen wir.') +
+        p('<strong>Kann ich das Haus selbst nutzen?</strong> Jederzeit: Sie blockieren Ihre Termine, wir verwalten den Rest des Kalenders.') +
+        btn(`${SITE}/de#faq`, 'Alle Antworten lesen'),
+    },
+    {
+      day: 16,
+      subject: (n) => `${n ? `${n}, ` : ''}möchten Sie die vollständige Bewertung noch erhalten?`,
+      body: (n, z) =>
+        p(`Guten Tag${n ? ` ${n}` : ''},`) +
+        p(`wir schreiben Ihnen ein letztes Mal${z ? ` zu Ihrem Haus in ${z}` : ''}. Häuser, die vor der Saison starten, sind besser vorbereitet: Fotos, Inserate und Preise brauchen Zeit.`) +
+        p('Wenn Sie noch Interesse haben, antworten Sie auf diese E-Mail oder schreiben Sie uns auf WhatsApp, und wir vereinbaren ein 30-minütiges Gespräch.') +
+        btn(WA, 'Gespräch vereinbaren'),
+    },
+  ],
+};
+
+const STOP_LABEL: Record<string, string> = {
+  it: 'Non voglio ricevere altre email su questa richiesta',
+  en: 'I do not want further emails about this request',
+  de: 'Ich möchte keine weiteren E-Mails zu dieser Anfrage',
+};
+
+/** 10:00 Rome time (≈08:00 UTC) `days` from now. */
+function sendDate(days: number): string {
+  const d = new Date(Date.now() + days * 86_400_000);
+  d.setUTCHours(8, 0, 0, 0);
+  return d.toISOString();
+}
+
+/**
+ * Schedules the nurture emails for an owner who left an email and returns their
+ * Resend ids (chronological). Created last-first so each email can carry a stop
+ * link for the ones after it.
+ */
+async function scheduleFollowUps(body: ValuationBody, env: Env): Promise<string[]> {
+  if (!env.RESEND_API_KEY || !body.email) return [];
+  const locale = body.locale && FOLLOWUPS[body.locale] ? body.locale : 'it';
+  const name = escapeHtml((body.name || '').trim().split(/\s+/)[0] || '');
+  const zone = body.zone ? escapeHtml(body.zone) : '';
+  const later: string[] = [];
+  for (const f of [...FOLLOWUPS[locale]].reverse()) {
+    const stop = later.length
+      ? `<p style="font-family:Arial,sans-serif;font-size:11px;color:#6B6A5C;margin:24px 0 0"><a href="${await stopLink(later, locale, env)}" style="color:#6B6A5C">${STOP_LABEL[locale]}</a></p>`
+      : '';
+    const html = `<div style="max-width:560px;margin:0 auto;padding:32px 24px;background:#F6F1E4;color:#1E4D42">${f.body(name, zone)}${p('<span style="font-family:Georgia,serif;font-size:16px">Herocasa</span><br><span style="font-size:13px">+39 366 369 5252 · info@herocasa.it</span>')}${stop}</div>`;
+    const res = await resendCall(env, '/emails', {
+      from: env.RESEND_FROM_EMAIL || 'Herocasa <onboarding@resend.dev>',
+      to: [body.email],
+      reply_to: 'info@herocasa.it',
+      subject: f.subject(name),
+      html,
+      scheduled_at: sendDate(f.day),
+    });
+    if (!res.ok) {
+      console.error('[valuation-request] follow-up scheduling error', res.status, await res.text());
+      return [];
+    }
+    const { id } = (await res.json()) as { id: string };
+    later.unshift(id);
+  }
+  return later;
 }
 
 const CONFIRMATION = {
@@ -142,7 +329,7 @@ const CONFIRMATION = {
 } as const;
 
 /** Confirmation to the owner: they know the request arrived and how to reach us sooner. */
-async function sendOwnerConfirmation(body: ValuationBody, env: Env): Promise<void> {
+async function sendOwnerConfirmation(body: ValuationBody, env: Env, followUps: string[]): Promise<void> {
   if (!env.RESEND_API_KEY || !body.email) return;
   const c = CONFIRMATION[(body.locale as keyof typeof CONFIRMATION) ?? 'it'] ?? CONFIRMATION.it;
   const firstName = escapeHtml((body.name || '').trim().split(/\s+/)[0] || '');
@@ -157,7 +344,9 @@ async function sendOwnerConfirmation(body: ValuationBody, env: Env): Promise<voi
   <p style="margin:0 0 8px"><a href="${wa}" style="display:inline-block;background:#B8925A;color:#F6F1E4;font-family:Arial,sans-serif;font-size:13px;letter-spacing:.08em;text-transform:uppercase;text-decoration:none;padding:12px 20px">${c.whatsapp}</a></p>
   <p style="font-family:Arial,sans-serif;font-size:14px;margin:0 0 24px">+39 366 369 5252 · <a href="mailto:info@herocasa.it" style="color:#8B6F44">info@herocasa.it</a></p>
   <p style="font-size:16px;margin:0 0 28px">${c.signoff}</p>
-  <p style="font-family:Arial,sans-serif;font-size:11px;color:#6B6A5C;margin:0">${c.footer}</p>
+  <p style="font-family:Arial,sans-serif;font-size:11px;color:#6B6A5C;margin:0">${c.footer}${
+    followUps.length ? ` <a href="${await stopLink(followUps, body.locale && FOLLOWUPS[body.locale] ? body.locale : 'it', env)}" style="color:#6B6A5C">${STOP_LABEL[body.locale && FOLLOWUPS[body.locale] ? body.locale : 'it']}</a>` : ''
+  }</p>
 </div>`;
   const res = await fetch('https://api.resend.com/emails', {
     method: 'POST',
@@ -222,9 +411,14 @@ export const onRequestPost = async ({ request, env }: { request: Request; env: E
 
   console.log('[valuation-request]', { at: new Date().toISOString(), ...body });
 
+  // Follow-ups first: the notification and confirmation emails carry their stop links.
+  const followUps = await scheduleFollowUps(body, env).catch((e) => {
+    console.error('[valuation-request] follow-ups failed', e);
+    return [] as string[];
+  });
   const results = await Promise.allSettled([
-    sendLeadEmail(body, env),
-    sendOwnerConfirmation(body, env),
+    sendLeadEmail(body, env, followUps),
+    sendOwnerConfirmation(body, env, followUps),
     sendMetaConversionEvent(body, request, env),
   ]);
   for (const r of results) if (r.status === 'rejected') console.error('[valuation-request]', r.reason);

@@ -33,6 +33,7 @@ const COPY = (locale: string): Copy =>
           <ul>
             <li>ricontattarvi e rispondere alla vostra richiesta di valutazione o di chiamata (misure precontrattuali, art. 6(1)(b) GDPR)</li>
             <li>inviarvi, se avete indicato l&apos;email, una conferma automatica della richiesta (art. 6(1)(b) GDPR)</li>
+            <li>inviarvi, se avete indicato l&apos;email, al massimo tre email di follow-up sulla vostra richiesta nelle settimane successive (interesse legittimo, art. 6(1)(f) GDPR): ogni email contiene il link per non riceverne altre</li>
             <li>gestire il rapporto contrattuale, qualora decidiate di affidarci l&apos;immobile (art. 6(1)(b) GDPR)</li>
             <li>adempiere agli obblighi di legge fiscali e di comunicazione alle autorità (art. 6(1)(c) GDPR)</li>
             <li>
@@ -89,6 +90,7 @@ const COPY = (locale: string): Copy =>
           <ul>
             <li>contacting you and answering your valuation or call request (pre-contractual steps, Art. 6(1)(b) GDPR)</li>
             <li>sending you, if you gave us your email, an automatic confirmation of your request (Art. 6(1)(b) GDPR)</li>
+            <li>sending you, if you gave us your email, up to three follow-up emails about your request over the following weeks (legitimate interest, Art. 6(1)(f) GDPR): each one contains a link to stop further emails</li>
             <li>managing the contract, should you decide to entrust us with your property (Art. 6(1)(b) GDPR)</li>
             <li>complying with tax and reporting obligations (Art. 6(1)(c) GDPR)</li>
             <li>
@@ -145,6 +147,7 @@ const COPY = (locale: string): Copy =>
           <ul>
             <li>Kontaktaufnahme und Beantwortung Ihrer Bewertungs- oder Rückrufanfrage (vorvertragliche Maßnahmen, Art. 6 Abs. 1 lit. b DSGVO)</li>
             <li>automatische Bestätigung Ihrer Anfrage, sofern Sie eine E-Mail-Adresse angegeben haben (Art. 6 Abs. 1 lit. b DSGVO)</li>
+            <li>bis zu drei Folge-E-Mails zu Ihrer Anfrage in den Wochen danach, sofern Sie eine E-Mail-Adresse angegeben haben (berechtigtes Interesse, Art. 6 Abs. 1 lit. f DSGVO): Jede E-Mail enthält einen Link, um keine weiteren zu erhalten</li>
             <li>Abwicklung des Vertrags, falls Sie uns Ihre Immobilie anvertrauen (Art. 6 Abs. 1 lit. b DSGVO)</li>
             <li>Erfüllung steuerlicher und behördlicher Pflichten (Art. 6 Abs. 1 lit. c DSGVO)</li>
             <li>
