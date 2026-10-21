@@ -275,7 +275,9 @@
       "stepTwo": "Ihr Kontakt",
       "next": "Weiter",
       "back": "Zurück",
-      "emailOptional": "E-Mail (optional)"
+      "emailOptional": "E-Mail (optional)",
+      "roomsDecrease": "Ein Schlafzimmer weniger",
+      "roomsIncrease": "Ein Schlafzimmer mehr"
     },
     "result": {
       "label": "Orientierende Schätzung · Erste Analyse",

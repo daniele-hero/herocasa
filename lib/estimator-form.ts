@@ -14,6 +14,8 @@ export interface EstimatorFormCopy {
   types: string[];
   rooms: string;
   roomsOptions: string[];
+  roomsDecrease: string;
+  roomsIncrease: string;
   features: string;
   featuresList: string[];
   notes: string;

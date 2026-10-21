@@ -1,6 +1,6 @@
 'use client';
 
-import { FormEvent, ReactNode, useState } from 'react';
+import { FormEvent, ReactNode, useId, useState } from 'react';
 import { useLocale, useTranslations } from 'next-intl';
 import { AnimatePresence, motion, useReducedMotion } from 'motion/react';
 import { ZONES, calculateEstimateRange, postValuationLead, type EstimateRange, type EstimatorFormCopy } from '@/lib/estimator-form';
@@ -37,7 +37,11 @@ export default function ValuationForm({ variant, source, presetZone }: Valuation
   const [step, setStep] = useState<1 | 2>(1);
   const [zone, setZone] = useState(presetZone && (ZONES as readonly string[]).includes(presetZone) ? presetZone : '');
   const [type, setType] = useState('');
-  const [rooms, setRooms] = useState('');
+  // Stepper over the translated options (1…6+); starts at 2, the most common case.
+  const [roomsIdx, setRoomsIdx] = useState(1);
+  const rooms = form.roomsOptions[roomsIdx] ?? '';
+  const roomsLabelId = useId();
+  const stepRooms = (delta: number) => setRoomsIdx((i) => Math.min(Math.max(i + delta, 0), form.roomsOptions.length - 1));
   const [features, setFeatures] = useState<Set<string>>(new Set());
   const [sending, setSending] = useState(false);
   const [done, setDone] = useState<{ name: string; zone: string; range: EstimateRange } | null>(null);
@@ -90,6 +94,11 @@ export default function ValuationForm({ variant, source, presetZone }: Valuation
   const labelCls = `block text-[11px] tracking-[0.16em] uppercase mb-2 ${dark ? 'text-[var(--paper-70)]' : 'text-[var(--stone)]'}`;
   const fieldCls = dark ? 'est-input' : 'hero-field';
   const selectCls = dark ? 'est-input appearance-none' : 'hero-field hero-select';
+  const stepBtnCls = `w-11 h-11 rounded-full border text-[22px] leading-none flex items-center justify-center transition-colors disabled:opacity-30 disabled:cursor-not-allowed ${
+    dark
+      ? 'border-[var(--paper-40)] text-[var(--paper)] enabled:hover:border-[var(--gold)] enabled:hover:text-[var(--gold)]'
+      : 'border-[var(--olive-15)] text-[var(--olive)] enabled:hover:border-[var(--gold)] enabled:hover:text-[var(--gold-dark)]'
+  }`;
 
   // Plain function, not a component: a component declared inside render would
   // remount its input on every keystroke and steal focus.
@@ -159,10 +168,21 @@ export default function ValuationForm({ variant, source, presetZone }: Valuation
                 <option value="" disabled>{form.typePlaceholder}</option>
                 {form.types.map((t) => <option key={t} value={t}>{t}</option>)}
               </select>))}
-            {field(form.rooms, (<select name="rooms" required value={rooms} onChange={(e) => setRooms(e.target.value)} className={selectCls}>
-                <option value="" disabled>{form.zonePlaceholder}</option>
-                {form.roomsOptions.map((r) => <option key={r} value={r}>{r}</option>)}
-              </select>))}
+            {/* Not wrapped in <label>: clicking a label would trigger its first button (−). */}
+            <div role="group" aria-labelledby={roomsLabelId}>
+              <span id={roomsLabelId} className={labelCls}>{form.rooms}</span>
+              <div className="flex items-center gap-3">
+                <button type="button" onClick={() => stepRooms(-1)} disabled={roomsIdx === 0} aria-label={form.roomsDecrease} className={stepBtnCls}>
+                  −
+                </button>
+                <output aria-live="polite" className={`serif min-w-[2.5ch] text-center text-[28px] leading-none ${dark ? 'text-[var(--paper)]' : 'text-[var(--olive)]'}`}>
+                  {rooms}
+                </output>
+                <button type="button" onClick={() => stepRooms(1)} disabled={roomsIdx === form.roomsOptions.length - 1} aria-label={form.roomsIncrease} className={stepBtnCls}>
+                  +
+                </button>
+              </div>
+            </div>
             <div className="sm:col-span-2">
               <span className={labelCls}>{form.features}</span>
               <div className="flex flex-wrap gap-2">

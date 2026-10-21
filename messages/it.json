@@ -275,7 +275,9 @@
       "stepTwo": "Chi ricontattare",
       "next": "Continua",
       "back": "Indietro",
-      "emailOptional": "Email (facoltativa)"
+      "emailOptional": "Email (facoltativa)",
+      "roomsDecrease": "Una camera in meno",
+      "roomsIncrease": "Una camera in più"
     },
     "result": {
       "label": "Stima orientativa · Prima analisi",

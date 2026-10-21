@@ -275,7 +275,9 @@
       "stepTwo": "Who to call",
       "next": "Continue",
       "back": "Back",
-      "emailOptional": "Email (optional)"
+      "emailOptional": "Email (optional)",
+      "roomsDecrease": "One bedroom fewer",
+      "roomsIncrease": "One bedroom more"
     },
     "result": {
       "label": "Indicative estimate · First analysis",
