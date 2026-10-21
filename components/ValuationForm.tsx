@@ -117,7 +117,8 @@ export default function ValuationForm({ variant, source, presetZone }: Valuation
         </p>
         <div className={`text-[11px] tracking-[0.16em] uppercase mb-2 ${dark ? 'text-[var(--gold)]' : 'text-[var(--gold-ink)]'}`}>{tResult('label')}</div>
         <div className={`serif ${dark ? 'text-[var(--paper)]' : 'text-[var(--olive)]'}`} style={{ fontSize: 'clamp(30px, 3.4vw, 44px)', lineHeight: 1.05 }}>
-          €<em className="gold-italic">{done.range.min.toLocaleString('it-IT')}</em> – €<em className="gold-italic">{done.range.max.toLocaleString('it-IT')}</em>
+          <span className={`text-[0.45em] mr-2 ${dark ? 'text-[var(--paper-70)]' : 'text-[var(--stone)]'}`}>{tResult('upTo')}</span>
+          €<em className="gold-italic">{done.range.max.toLocaleString('it-IT')}</em>
           <span className={`text-[0.4em] ml-2 ${dark ? 'text-[var(--paper-70)]' : 'text-[var(--stone)]'}`}>{tResult('suffix')}</span>
         </div>
         <p className={`mt-3 text-[13px] leading-[1.55] max-w-[60ch] ${dark ? 'text-[var(--paper-70)]' : 'text-[var(--olive-70)]'}`}>{tResult('explanation')}</p>

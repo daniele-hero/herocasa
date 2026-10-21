@@ -97,11 +97,10 @@ export function calculateEstimateRange(input: {
   if (input.features.some((f) => /piscin|pool/i.test(f))) base *= 1.12;
   if (input.features.some((f) => /vista|view|blick/i.test(f))) base *= 1.1;
 
-  // Deliberately conservative (~30% below the original teaser): an online
-  // figure the real valuation can't match costs more trust than it earns.
-  const prudent = base * 0.8;
+  // The site shows only `max`, as an optimistic "up to" figure meant to start
+  // the conversation; the real number is explained on the call.
   return {
-    min: Math.round((prudent * 0.8) / 1000) * 1000,
-    max: Math.round((prudent * 1.05) / 1000) * 1000,
+    min: Math.round((base * 0.85) / 1000) * 1000,
+    max: Math.round((base * 1.2) / 1000) * 1000,
   };
 }

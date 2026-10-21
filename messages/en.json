@@ -280,8 +280,9 @@
     "result": {
       "label": "Indicative estimate · First analysis",
       "suffix": "/year",
-      "explanation": "A conservative, indicative estimate of yearly net revenue for a property with these features in the selected area: the real figure depends on the condition of the home, its exact location and your own periods of use. We present the full valuation — with similar properties, expected occupancy and costs — within 48 hours.",
-      "confirmation": "We've received your request. We'll contact you within 48h with the valuation for your property in {comune}."
+      "explanation": "Estimated potential yearly net revenue for a property with these features in the selected area. It is an indicative figure: on the call we explain what it depends on and what your home can really earn.",
+      "confirmation": "We've received your request. We'll contact you within 48h with the valuation for your property in {comune}.",
+      "upTo": "up to"
     },
     "side": {
       "eyebrow": "What you'll receive",

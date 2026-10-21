@@ -69,7 +69,7 @@ function buildEmailHtml(body: ValuationBody): string {
     ['Camere', String(body.rooms || '—')],
     ['Dotazioni', (body.features ?? []).join(', ') || '—'],
     ['Note', body.notes || '—'],
-    ['Stima mostrata', body.estimatedRange ? `€${body.estimatedRange.min.toLocaleString('it-IT')} – €${body.estimatedRange.max.toLocaleString('it-IT')}` : '—'],
+    ['Stima mostrata', body.estimatedRange ? `fino a €${body.estimatedRange.max.toLocaleString('it-IT')}/anno` : '—'],
     ['Ricevuto il', body.submittedAt ?? new Date().toISOString()],
   ];
   const rowsHtml = rows

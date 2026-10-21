@@ -280,8 +280,9 @@
     "result": {
       "label": "Stima orientativa · Prima analisi",
       "suffix": "/anno",
-      "explanation": "Stima prudenziale e indicativa dei ricavi netti annui per un immobile con queste caratteristiche nella zona indicata: il risultato reale dipende da stato della casa, posizione esatta e periodi di uso personale. La valutazione completa, con dati di immobili simili, occupazione attesa e costi, te la presentiamo entro 48 ore.",
-      "confirmation": "Abbiamo ricevuto la tua richiesta. Ti contatteremo entro 48h con la stima per il tuo immobile a {comune}."
+      "explanation": "Potenziale stimato di ricavi netti annui per un immobile con queste caratteristiche nella zona indicata. È un valore indicativo: in chiamata ti spieghiamo da cosa dipende e quanto può rendere davvero la tua casa.",
+      "confirmation": "Abbiamo ricevuto la tua richiesta. Ti contatteremo entro 48h con la stima per il tuo immobile a {comune}.",
+      "upTo": "fino a"
     },
     "side": {
       "eyebrow": "Cosa riceverete",

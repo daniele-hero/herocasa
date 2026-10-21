@@ -22,7 +22,7 @@ const COPY = (locale: string): Copy =>
           <p>Le presenti condizioni disciplinano l&apos;uso del sito herocasa.it, che presenta i servizi di gestione di affitti brevi offerti da Herocasa ai proprietari di seconde case sul Lago di Garda.</p>
           <p>Il sito non è un servizio di prenotazione turistica. I servizi di gestione, i corrispettivi e le condizioni contrattuali sono disciplinati da accordi scritti tra Herocasa e ciascun proprietario.</p>
           <h2>3. Richiesta di valutazione o di chiamata</h2>
-          <p>La compilazione dei moduli del sito non costituisce un contratto né un impegno reciproco: è una richiesta di essere ricontattati. La stima mostrata sul sito è prudenziale, indicativa e non vincolante; la valutazione completa viene presentata entro 48 ore lavorative.</p>
+          <p>La compilazione dei moduli del sito non costituisce un contratto né un impegno reciproco: è una richiesta di essere ricontattati. La stima mostrata sul sito è indicativa e non vincolante; la valutazione completa viene presentata entro 48 ore lavorative.</p>
           <h2>4. Contenuti del sito</h2>
           <p>I contenuti (testi, immagini, dati numerici, loghi) sono di proprietà di Herocasa o dei rispettivi titolari e sono protetti dalle norme sul diritto d&apos;autore. Non è consentita la riproduzione, anche parziale, senza autorizzazione scritta.</p>
           <p>I dati statistici (occupazione, rendimenti, numero di immobili in gestione) sono indicativi e riferiti al portafoglio Herocasa alla data dell&apos;ultimo aggiornamento del sito. I risultati passati non garantiscono risultati futuri.</p>
@@ -48,7 +48,7 @@ const COPY = (locale: string): Copy =>
           <p>These terms govern the use of herocasa.it, which presents the short-term rental management services Herocasa offers to owners of second homes on Lake Garda.</p>
           <p>The website is not a holiday booking service. Management services, fees and contract terms are governed by written agreements between Herocasa and each owner.</p>
           <h2>3. Valuation or call requests</h2>
-          <p>Filling in the forms on this website is neither a contract nor a mutual commitment: it is a request to be contacted. The estimate shown on the site is conservative, indicative and non-binding; the full valuation is presented within 48 working hours.</p>
+          <p>Filling in the forms on this website is neither a contract nor a mutual commitment: it is a request to be contacted. The estimate shown on the site is indicative and non-binding; the full valuation is presented within 48 working hours.</p>
           <h2>4. Website content</h2>
           <p>The content (texts, images, figures, logos) belongs to Herocasa or the respective owners and is protected by copyright. It may not be reproduced, even in part, without written permission.</p>
           <p>Statistics (occupancy, returns, number of properties managed) are indicative and refer to the Herocasa portfolio at the date of the latest website update. Past results do not guarantee future results.</p>
@@ -74,7 +74,7 @@ const COPY = (locale: string): Copy =>
           <p>Diese Bedingungen regeln die Nutzung von herocasa.it. Die Website stellt die Dienstleistungen zur Verwaltung von Ferienvermietungen vor, die Herocasa Eigentümern von Zweitwohnsitzen am Gardasee anbietet.</p>
           <p>Die Website ist kein Buchungsportal für Urlauber. Verwaltungsleistungen, Vergütung und Vertragsbedingungen werden in schriftlichen Vereinbarungen zwischen Herocasa und dem jeweiligen Eigentümer geregelt.</p>
           <h2>3. Bewertungs- oder Rückrufanfragen</h2>
-          <p>Das Ausfüllen der Formulare ist weder ein Vertrag noch eine gegenseitige Verpflichtung, sondern eine Bitte um Kontaktaufnahme. Die auf der Website angezeigte Schätzung ist vorsichtig, unverbindlich und dient nur der Orientierung; die vollständige Bewertung erhalten Sie innerhalb von 48 Arbeitsstunden.</p>
+          <p>Das Ausfüllen der Formulare ist weder ein Vertrag noch eine gegenseitige Verpflichtung, sondern eine Bitte um Kontaktaufnahme. Die auf der Website angezeigte Schätzung ist unverbindlich und dient nur der Orientierung; die vollständige Bewertung erhalten Sie innerhalb von 48 Arbeitsstunden.</p>
           <h2>4. Inhalte der Website</h2>
           <p>Die Inhalte (Texte, Bilder, Zahlen, Logos) gehören Herocasa oder den jeweiligen Rechteinhabern und sind urheberrechtlich geschützt. Eine auch nur teilweise Vervielfältigung ist ohne schriftliche Genehmigung nicht gestattet.</p>
           <p>Statistische Angaben (Auslastung, Erträge, Anzahl verwalteter Immobilien) sind Richtwerte und beziehen sich auf das Herocasa-Portfolio zum Zeitpunkt der letzten Aktualisierung der Website. Vergangene Ergebnisse garantieren keine künftigen.</p>

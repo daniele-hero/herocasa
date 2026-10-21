@@ -280,8 +280,9 @@
     "result": {
       "label": "Orientierende Schätzung · Erste Analyse",
       "suffix": "/Jahr",
-      "explanation": "Eine vorsichtige, unverbindliche Schätzung der jährlichen Netto-Erträge für eine Immobilie mit diesen Merkmalen in der angegebenen Gemeinde: Das tatsächliche Ergebnis hängt vom Zustand des Hauses, der genauen Lage und Ihren eigenen Nutzungszeiten ab. Die vollständige Bewertung mit Vergleichsobjekten, erwarteter Auslastung und Kosten erhalten Sie innerhalb von 48 Stunden.",
-      "confirmation": "Wir haben Ihre Anfrage erhalten. Wir kontaktieren Sie innerhalb von 48 Stunden mit der Bewertung für Ihre Immobilie in {comune}."
+      "explanation": "Geschätztes Potenzial an jährlichen Netto-Erträgen für eine Immobilie mit diesen Merkmalen in der angegebenen Gemeinde. Ein Richtwert: Im Gespräch erklären wir Ihnen, wovon er abhängt und was Ihr Haus tatsächlich erwirtschaften kann.",
+      "confirmation": "Wir haben Ihre Anfrage erhalten. Wir kontaktieren Sie innerhalb von 48 Stunden mit der Bewertung für Ihre Immobilie in {comune}.",
+      "upTo": "bis zu"
     },
     "side": {
       "eyebrow": "Was Sie erhalten",
