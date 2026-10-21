@@ -35,7 +35,12 @@ export default function ValuationForm({ variant, source, presetZone }: Valuation
   const dark = variant === 'dark';
 
   const [step, setStep] = useState<1 | 2>(1);
-  const [zone, setZone] = useState(presetZone && (ZONES as readonly string[]).includes(presetZone) ? presetZone : '');
+  // Comune pages for towns outside the main list add their own town to the menu.
+  const zoneOptions: readonly string[] = presetZone && !(ZONES as readonly string[]).includes(presetZone) ? [presetZone, ...ZONES] : ZONES;
+  const [zone, setZone] = useState(presetZone ?? '');
+  const [otherZoneName, setOtherZoneName] = useState('');
+  // "Zone limitrofe" asks for the town by name, so the lead (and the confirmation) still say where the house is.
+  const comune = zone === form.otherZone ? otherZoneName.trim() || zone : zone;
   const [type, setType] = useState('');
   // Stepper over the translated options (1…6+); starts at 2, the most common case.
   const [roomsIdx, setRoomsIdx] = useState(1);
@@ -56,7 +61,7 @@ export default function ValuationForm({ variant, source, presetZone }: Valuation
   const goToStepTwo = (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     setStep(2);
-    trackStep('ValuationStep1', { source, comune: zone });
+    trackStep('ValuationStep1', { source, comune });
   };
 
   const submit = async (e: FormEvent<HTMLFormElement>) => {
@@ -66,7 +71,7 @@ export default function ValuationForm({ variant, source, presetZone }: Valuation
     const data = new FormData(e.currentTarget);
     const name = ((data.get('name') as string) || '').trim();
     const featureList = [...features];
-    const range = calculateEstimateRange({ rooms, type, zone, features: featureList });
+    const range = calculateEstimateRange({ rooms, type, zone: comune, features: featureList });
     const eventId = crypto.randomUUID();
 
     await postValuationLead({
@@ -74,7 +79,7 @@ export default function ValuationForm({ variant, source, presetZone }: Valuation
       name,
       email: ((data.get('email') as string) || '').trim(),
       phone: ((data.get('phone') as string) || '').trim(),
-      zone,
+      zone: comune,
       type,
       rooms,
       features: featureList,
@@ -86,8 +91,8 @@ export default function ValuationForm({ variant, source, presetZone }: Valuation
       estimatedRange: range,
     });
 
-    trackLead(source, { comune: zone, value: (range.min + range.max) / 2, currency: 'EUR' }, eventId);
-    setDone({ name: name.split(' ')[0] || name, zone, range });
+    trackLead(source, { comune, value: (range.min + range.max) / 2, currency: 'EUR' }, eventId);
+    setDone({ name: name.split(' ')[0] || name, zone: comune, range });
   };
 
   // ---- presentational helpers (one set of markup, two colour schemes) ----
@@ -161,9 +166,11 @@ export default function ValuationForm({ variant, source, presetZone }: Valuation
           <motion.form key="step1" onSubmit={goToStepTwo} className="grid grid-cols-1 sm:grid-cols-2 gap-x-5 gap-y-5" {...stepMotion}>
             {field(form.zone, (<select name="zone" required value={zone} onChange={(e) => setZone(e.target.value)} className={selectCls}>
                 <option value="" disabled>{form.zonePlaceholder}</option>
-                {ZONES.map((z) => <option key={z} value={z}>{z}</option>)}
+                {zoneOptions.map((z) => <option key={z} value={z}>{z}</option>)}
                 <option value={form.otherZone}>{form.otherZone}</option>
               </select>), true)}
+            {zone === form.otherZone &&
+              field(form.otherZoneName, (<input name="otherZoneName" type="text" required value={otherZoneName} onChange={(e) => setOtherZoneName(e.target.value)} placeholder={form.otherZonePlaceholder} className={fieldCls} />), true)}
             {field(form.type, (<select name="type" required value={type} onChange={(e) => setType(e.target.value)} className={selectCls}>
                 <option value="" disabled>{form.typePlaceholder}</option>
                 {form.types.map((t) => <option key={t} value={t}>{t}</option>)}

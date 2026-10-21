@@ -28,8 +28,11 @@ export interface EstimatorFormCopy {
   next: string;
   back: string;
   emailOptional: string;
+  otherZoneName: string;
+  otherZonePlaceholder: string;
 }
 
+/** Main comuni listed in the form menus; anything else goes through `otherZone` + a free-text comune. */
 export const ZONES = [
   'Peschiera del Garda',
   'Lazise',
@@ -41,34 +44,9 @@ export const ZONES = [
   'Garda',
   'Torri del Benaco',
   'Malcesine',
-  'Salò',
   'Manerba del Garda',
-  'Moniga del Garda',
-  'Soiano del Lago',
-  'Lonato del Garda',
-  'Valeggio sul Mincio',
-  'Pozzolengo',
-  'Brenzone sul Garda',
-  'Costermano sul Garda',
-  'Cavaion Veronese',
-  'Affi',
-  'Caprino Veronese',
-  'San Zeno di Montagna',
-  'Pastrengo',
-  'Sommacampagna',
-  'San Felice del Benaco',
-  'Puegnago del Garda',
-  'Polpenazze del Garda',
-  'Gardone Riviera',
-  'Toscolano-Maderno',
-  'Gargnano',
-  'Tignale',
-  'Tremosine sul Garda',
+  'Salò',
   'Limone sul Garda',
-  'Calvagese della Riviera',
-  'Castiglione delle Stiviere',
-  'Carpenedolo',
-  'Montichiari',
 ] as const;
 
 export type ValuationLead = {

@@ -23,13 +23,14 @@ export default function Contact() {
 
   const [sending, setSending] = useState(false);
   const [sent, setSent] = useState(false);
+  const [zoneChoice, setZoneChoice] = useState('');
 
   const onSubmit = async (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     if (sending) return;
     setSending(true);
     const data = new FormData(e.currentTarget);
-    const zone = (data.get('zone') as string) || '';
+    const zone = ((data.get('otherZoneName') as string) || '').trim() || (data.get('zone') as string) || '';
     const eventId = crypto.randomUUID();
 
     await postValuationLead({
@@ -121,12 +122,18 @@ export default function Contact() {
                 </label>
                 <label className="block">
                   <span className="block text-[11px] tracking-[0.16em] uppercase mb-2.5" style={{ color: 'var(--paper-70)' }}>{form.zone}</span>
-                  <select name="zone" required defaultValue="" className="est-input appearance-none">
+                  <select name="zone" required value={zoneChoice} onChange={(e) => setZoneChoice(e.target.value)} className="est-input appearance-none">
                     <option value="" disabled>{form.zonePlaceholder}</option>
                     {ZONES.map((z) => <option key={z}>{z}</option>)}
                     <option>{form.otherZone}</option>
                   </select>
                 </label>
+                {zoneChoice === form.otherZone && (
+                  <label className="block">
+                    <span className="block text-[11px] tracking-[0.16em] uppercase mb-2.5" style={{ color: 'var(--paper-70)' }}>{form.otherZoneName}</span>
+                    <input name="otherZoneName" type="text" required placeholder={form.otherZonePlaceholder} className="est-input" />
+                  </label>
+                )}
                 <button
                   type="submit"
                   disabled={sending}

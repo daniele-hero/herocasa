@@ -2,7 +2,7 @@
 
 import { useLocale, useTranslations } from 'next-intl';
 import Reveal from './Reveal';
-import { COMUNI, COMUNE_SLUGS, comunePath } from '@/lib/comuni';
+import { COMUNI, MAIN_COMUNI, comunePath } from '@/lib/comuni';
 
 type Zone = { name: string; count: string; highlight?: boolean; slug?: string };
 
@@ -11,7 +11,8 @@ export default function Zones() {
   const locale = useLocale();
   const list = t.raw('list') as Zone[];
   const featured = new Set(list.map((z) => z.slug).filter(Boolean));
-  const more = COMUNE_SLUGS.filter((s) => !featured.has(s));
+  // Only the main comuni are named; the other landing pages are reached via nearby links and the sitemap.
+  const more = MAIN_COMUNI.filter((s) => !featured.has(s));
 
   return (
     <section id="zone" className="bg-[var(--marble)] section-y">
@@ -58,6 +59,7 @@ export default function Zones() {
                   {COMUNI[s].name}
                 </a>
               ))}
+              <span className="serif italic text-[20px] text-[var(--stone)]">{t('nearby')}</span>
             </div>
           </Reveal>
         )}

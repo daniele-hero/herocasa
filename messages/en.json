@@ -227,7 +227,8 @@
         "highlight": true
       }
     ],
-    "alsoServe": "We also cover"
+    "alsoServe": "We also cover",
+    "nearby": "and nearby areas"
   },
   "estimator": {
     "eyebrow": "Free valuation",
@@ -271,14 +272,16 @@
       "notesPlaceholder": "Square meters, particulars, yield targets, personal use plans...",
       "submit": "Request valuation",
       "legal": "GDPR compliant · No commitment · Free",
-      "otherZone": "Other town on the lake",
+      "otherZone": "Nearby areas",
       "stepOne": "The property",
       "stepTwo": "Who to call",
       "next": "Continue",
       "back": "Back",
       "emailOptional": "Email (optional)",
       "roomsDecrease": "One bedroom fewer",
-      "roomsIncrease": "One bedroom more"
+      "roomsIncrease": "One bedroom more",
+      "otherZoneName": "Which town?",
+      "otherZonePlaceholder": "E.g. Montichiari"
     },
     "result": {
       "label": "Indicative estimate · First analysis",

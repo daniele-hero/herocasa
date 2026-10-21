@@ -227,7 +227,8 @@
         "highlight": true
       }
     ],
-    "alsoServe": "Wir sind auch in"
+    "alsoServe": "Wir sind auch in",
+    "nearby": "und Umgebung"
   },
   "estimator": {
     "eyebrow": "Kostenlose Bewertung",
@@ -271,14 +272,16 @@
       "notesPlaceholder": "Quadratmeter, Besonderheiten, Rendite-Ziele, geplante Eigennutzung...",
       "submit": "Bewertung anfordern",
       "legal": "DSGVO-konform · Keine Bindung · Kostenlos",
-      "otherZone": "Andere Gemeinde am See",
+      "otherZone": "Umgebung",
       "stepOne": "Die Immobilie",
       "stepTwo": "Ihr Kontakt",
       "next": "Weiter",
       "back": "Zurück",
       "emailOptional": "E-Mail (optional)",
       "roomsDecrease": "Ein Schlafzimmer weniger",
-      "roomsIncrease": "Ein Schlafzimmer mehr"
+      "roomsIncrease": "Ein Schlafzimmer mehr",
+      "otherZoneName": "Welche Gemeinde?",
+      "otherZonePlaceholder": "z. B. Montichiari"
     },
     "result": {
       "label": "Orientierende Schätzung · Erste Analyse",

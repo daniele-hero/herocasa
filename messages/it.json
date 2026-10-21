@@ -227,7 +227,8 @@
         "highlight": true
       }
     ],
-    "alsoServe": "Serviamo anche"
+    "alsoServe": "Serviamo anche",
+    "nearby": "e zone limitrofe"
   },
   "estimator": {
     "eyebrow": "Valutazione gratuita",
@@ -271,14 +272,16 @@
       "notesPlaceholder": "Metratura, particolarità, obiettivi di rendimento, uso personale previsto...",
       "submit": "Richiedi la valutazione",
       "legal": "GDPR compliant · Nessun impegno · Nessun costo",
-      "otherZone": "Altro comune sul lago",
+      "otherZone": "Zone limitrofe",
       "stepOne": "L'immobile",
       "stepTwo": "Chi ricontattare",
       "next": "Continua",
       "back": "Indietro",
       "emailOptional": "Email (facoltativa)",
       "roomsDecrease": "Una camera in meno",
-      "roomsIncrease": "Una camera in più"
+      "roomsIncrease": "Una camera in più",
+      "otherZoneName": "Quale comune?",
+      "otherZonePlaceholder": "Es. Montichiari"
     },
     "result": {
       "label": "Stima orientativa · Prima analisi",

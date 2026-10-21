@@ -14,7 +14,7 @@ import Footer from './Footer';
 import MobileCtaBar from './MobileCtaBar';
 import WhatsAppFloat from './WhatsAppFloat';
 import CookieBanner from './CookieBanner';
-import { COMUNI, COMUNE_SLUGS, comunePath, type ComuneSlug } from '@/lib/comuni';
+import { COMUNI, comunePath, nearbyComuni, type ComuneSlug } from '@/lib/comuni';
 
 type Highlight = { title: string; body: string };
 type Testimonial = { quote: string; author: string; role: string };
@@ -116,7 +116,7 @@ export default function ComunePage({ slug }: { slug: ComuneSlug }) {
         <section className="container-x pb-20">
           <div className="eyebrow mb-4">{t('otherZonesTitle')}</div>
           <ul className="flex flex-wrap gap-x-6 gap-y-3">
-            {COMUNE_SLUGS.filter((s) => s !== slug).map((s) => (
+            {nearbyComuni(slug).map((s) => (
               <li key={s}>
                 <Link href={comunePath(locale, s)} className="btn-arrow" style={{ fontSize: 12 }}>
                   {COMUNI[s].name} <span className="arrow" />
