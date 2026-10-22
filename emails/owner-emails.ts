@@ -46,10 +46,6 @@ const h1 = (t: string) => `<h1 style="font-family:${SERIF};font-weight:normal;fo
 const h2 = (t: string) => `<h2 style="font-family:${SERIF};font-weight:normal;font-size:21px;line-height:1.3;color:${C.olive};margin:30px 0 12px">${t}</h2>`;
 const p = (t: string, extra = '') => `<p style="font-family:${SANS};font-size:15px;line-height:1.65;color:${C.olive};margin:0 0 14px;${extra}">${t}</p>`;
 const small = (t: string) => `<p style="font-family:${SANS};font-size:12px;line-height:1.6;color:${C.stone};margin:0 0 8px">${t}</p>`;
-// Herocasa green: dark enough that Gmail's dark mode leaves it alone (the gold button
-// turned dull brown with dark text there); white text, 9.6:1.
-const btn = (href: string, label: string) =>
-  `<table role="presentation" cellpadding="0" cellspacing="0" style="margin:8px 0 22px"><tr><td bgcolor="${C.olive}" style="background:${C.olive};border-radius:3px"><a href="${href}" style="display:inline-block;padding:14px 24px;font-family:${SANS};font-size:14px;font-weight:bold;letter-spacing:.06em;text-transform:uppercase;color:#FFFFFF;text-decoration:none">${label}</a></td></tr></table>`;
 const link = (href: string, label: string) => `<a href="${href}" style="color:${C.goldDark};text-decoration:underline">${label}</a>`;
 
 const bullets = (items: string[]) =>
@@ -144,6 +140,22 @@ const COMMON = {
 } as const;
 
 const waHref = (l: EmailLocale) => `https://wa.me/393663695252?text=${encodeURIComponent(COMMON[l].waText)}`;
+
+/**
+ * The WhatsApp button is an image (public/email/whatsapp-<locale>.png, Herocasa green, white
+ * text, made at 2x): Gmail's dark mode inverts every colour in an email, so a coloured
+ * button turned into pale mint with dark text, but it never touches images. The alt text
+ * keeps it a readable link where images are blocked. Re-render the PNGs if the label changes.
+ */
+const WA_BUTTON: Record<EmailLocale, { width: number; height: number }> = {
+  it: { width: 253, height: 50 },
+  en: { width: 291, height: 50 },
+  de: { width: 289, height: 50 },
+};
+const waBtn = (l: EmailLocale) => {
+  const { width, height } = WA_BUTTON[l];
+  return `<p style="margin:8px 0 22px"><a href="${waHref(l)}" style="text-decoration:none;color:${C.olive};font-family:${SANS};font-size:14px;font-weight:bold"><img src="${SITE}/email/whatsapp-${l}.png" width="${width}" height="${height}" alt="${COMMON[l].wa}" style="display:block;border:0;width:${width}px;height:${height}px"></a></p>`;
+};
 
 /** Full email: preheader, logo, body, signature, contacts box, footer with the optional stop link. */
 function layout(l: EmailLocale, preheader: string, body: string, stopHref?: string): string {
@@ -257,7 +269,7 @@ export function confirmationEmail(lead: OwnerLead, stopHref?: string): Email {
     h2(c.nextTitle) +
     steps(c.steps(lead.phone ? esc(lead.phone) : '')) +
     p(c.sooner) +
-    btn(waHref(l), COMMON[l].wa) +
+    waBtn(l) +
     h2(c.readTitle) +
     bullets(GUIDES[l].map(([label, href]) => link(href, label)));
 
@@ -291,7 +303,7 @@ const FOLLOWUPS: Record<EmailLocale, FollowUpCopy[]> = {
         p('Lasciamo rispondere chi ci ha già affidato la propria:') +
         stories(l) +
         p('Ogni casa è diversa, e la tua merita un ragionamento su misura. Per qualsiasi domanda, rispondi a questa email o scrivici su WhatsApp.') +
-        btn(waHref(l), COMMON[l].wa),
+        waBtn(l),
     },
     {
       subject: () => 'Le 5 domande che ci fanno tutti i proprietari',
@@ -306,7 +318,7 @@ const FOLLOWUPS: Record<EmailLocale, FollowUpCopy[]> = {
         qa('E se un ospite rompe qualcosa?', 'Controlliamo la casa dopo ogni partenza. I piccoli danni si coprono con la cauzione, quelli più importanti con le coperture dei portali: la casa torna come l’hai affidata.') +
         qa('Come e quando ricevo i soldi?', 'Ogni mese, entro il 10, ricevi il rendiconto con prenotazioni, ricavi, costi e netto, insieme al bonifico.') +
         p(`Le altre risposte le trovi sul sito, nelle ${link(`${SITE}/it#faq`, 'domande frequenti')}. Per tutto il resto, scrivici:`, 'margin-top:22px') +
-        btn(waHref(l), COMMON[l].wa),
+        waBtn(l),
     },
     {
       subject: (n) => `${n ? `${n}, ` : ''}siamo qui se hai domande`,
@@ -322,7 +334,7 @@ const FOLLOWUPS: Record<EmailLocale, FollowUpCopy[]> = {
           '<strong>La cura della casa</strong>: chi entra, chi controlla, chi interviene se serve.',
         ]) +
         p('Qualunque sia la tua domanda, rispondi a questa email o scrivici su WhatsApp: ti risponde direttamente una persona del nostro team.') +
-        btn(waHref(l), COMMON[l].wa) +
+        waBtn(l) +
         p('Questa è l’ultima email che ti mandiamo in automatico. Se ci siamo già sentiti o hai già deciso, considerala solo un saluto.', `font-size:13px;color:${C.stone}`),
     },
   ],
@@ -337,7 +349,7 @@ const FOLLOWUPS: Record<EmailLocale, FollowUpCopy[]> = {
         p('We will let owners who already trusted us with their homes answer:') +
         stories(l) +
         p('Every home is different, and yours deserves a tailored assessment. For any question, reply to this email or message us on WhatsApp.') +
-        btn(waHref(l), COMMON[l].wa),
+        waBtn(l),
     },
     {
       subject: () => 'The 5 questions every owner asks us',
@@ -352,7 +364,7 @@ const FOLLOWUPS: Record<EmailLocale, FollowUpCopy[]> = {
         qa('What if a guest breaks something?', 'We check the home after every departure. Small damage is covered by the deposit, bigger damage by the platforms’ cover: you get the home back the way you entrusted it to us.') +
         qa('How and when do I get paid?', 'Every month, by the 10th, you receive a statement with bookings, revenue, costs and net amount, together with the bank transfer.') +
         p(`You will find more answers in the ${link(`${SITE}/en#faq`, 'FAQ on our website')}. For anything else, write to us:`, 'margin-top:22px') +
-        btn(waHref(l), COMMON[l].wa),
+        waBtn(l),
     },
     {
       subject: (n) => `${n ? `${n}, ` : ''}we are here if you have questions`,
@@ -368,7 +380,7 @@ const FOLLOWUPS: Record<EmailLocale, FollowUpCopy[]> = {
           '<strong>Care of the home</strong>: who goes in, who checks, who steps in when needed.',
         ]) +
         p('Whatever your question, reply to this email or message us on WhatsApp: a member of our team will answer you directly.') +
-        btn(waHref(l), COMMON[l].wa) +
+        waBtn(l) +
         p('This is the last automatic email we send you. If we have already spoken or you have already decided, please take it simply as a hello.', `font-size:13px;color:${C.stone}`),
     },
   ],
@@ -383,7 +395,7 @@ const FOLLOWUPS: Record<EmailLocale, FollowUpCopy[]> = {
         p('Wir lassen Eigentümer antworten, die uns ihr Haus bereits anvertraut haben:') +
         stories(l) +
         p('Jedes Haus ist anders, und Ihres verdient eine Einschätzung nach Maß. Bei Fragen antworten Sie auf diese E-Mail oder schreiben Sie uns auf WhatsApp.') +
-        btn(waHref(l), COMMON[l].wa),
+        waBtn(l),
     },
     {
       subject: () => 'Die 5 Fragen, die uns jeder Eigentümer stellt',
@@ -398,7 +410,7 @@ const FOLLOWUPS: Record<EmailLocale, FollowUpCopy[]> = {
         qa('Und wenn ein Gast etwas beschädigt?', 'Wir kontrollieren das Haus nach jeder Abreise. Kleine Schäden deckt die Kaution, größere die Absicherung der Portale: Sie erhalten das Haus so zurück, wie Sie es uns anvertraut haben.') +
         qa('Wie und wann bekomme ich mein Geld?', 'Jeden Monat bis zum 10. erhalten Sie die Abrechnung mit Buchungen, Einnahmen, Kosten und Nettobetrag, zusammen mit der Überweisung.') +
         p(`Weitere Antworten finden Sie in den ${link(`${SITE}/de#faq`, 'häufigen Fragen auf unserer Website')}. Für alles andere schreiben Sie uns:`, 'margin-top:22px') +
-        btn(waHref(l), COMMON[l].wa),
+        waBtn(l),
     },
     {
       subject: (n) => `${n ? `${n}, ` : ''}wir sind für Ihre Fragen da`,
@@ -414,7 +426,7 @@ const FOLLOWUPS: Record<EmailLocale, FollowUpCopy[]> = {
           '<strong>Die Pflege des Hauses</strong>: wer hineingeht, wer kontrolliert, wer bei Bedarf eingreift.',
         ]) +
         p('Was auch immer Sie wissen möchten: Antworten Sie auf diese E-Mail oder schreiben Sie uns auf WhatsApp, es antwortet Ihnen direkt jemand aus unserem Team.') +
-        btn(waHref(l), COMMON[l].wa) +
+        waBtn(l) +
         p('Dies ist die letzte automatische E-Mail, die wir Ihnen senden. Wenn wir bereits gesprochen haben oder Sie sich schon entschieden haben, verstehen Sie sie einfach als Gruß.', `font-size:13px;color:${C.stone}`),
     },
   ],
