@@ -29,7 +29,7 @@ export type Email = { subject: string; html: string };
 const SITE = 'https://herocasa.it';
 const PHONE = '+39 366 369 5252';
 const MAIL = 'info@herocasa.it';
-const C = { olive: '#1E4D42', paper: '#F6F1E4', marble: '#EAE3D0', gold: '#B8925A', goldDark: '#8B6F44', stone: '#6B6A5C', line: '#D9D2BE', green: '#147A4A' };
+const C = { olive: '#1E4D42', paper: '#F6F1E4', marble: '#EAE3D0', gold: '#B8925A', goldDark: '#8B6F44', stone: '#6B6A5C', line: '#D9D2BE' };
 const SANS = 'Arial,Helvetica,sans-serif';
 // Single quotes inside: these strings go into style="..." attributes.
 const SERIF = "Georgia,'Times New Roman',serif";
@@ -46,10 +46,10 @@ const h1 = (t: string) => `<h1 style="font-family:${SERIF};font-weight:normal;fo
 const h2 = (t: string) => `<h2 style="font-family:${SERIF};font-weight:normal;font-size:21px;line-height:1.3;color:${C.olive};margin:30px 0 12px">${t}</h2>`;
 const p = (t: string, extra = '') => `<p style="font-family:${SANS};font-size:15px;line-height:1.65;color:${C.olive};margin:0 0 14px;${extra}">${t}</p>`;
 const small = (t: string) => `<p style="font-family:${SANS};font-size:12px;line-height:1.6;color:${C.stone};margin:0 0 8px">${t}</p>`;
-// WhatsApp green, dark enough that Gmail's dark mode leaves it alone (the gold button
-// turned dull brown with dark text there); white text, 5.4:1.
+// Herocasa green: dark enough that Gmail's dark mode leaves it alone (the gold button
+// turned dull brown with dark text there); white text, 9.6:1.
 const btn = (href: string, label: string) =>
-  `<table role="presentation" cellpadding="0" cellspacing="0" style="margin:8px 0 22px"><tr><td bgcolor="${C.green}" style="background:${C.green};border-radius:3px"><a href="${href}" style="display:inline-block;padding:14px 24px;font-family:${SANS};font-size:14px;font-weight:bold;letter-spacing:.06em;text-transform:uppercase;color:#FFFFFF;text-decoration:none">${label}</a></td></tr></table>`;
+  `<table role="presentation" cellpadding="0" cellspacing="0" style="margin:8px 0 22px"><tr><td bgcolor="${C.olive}" style="background:${C.olive};border-radius:3px"><a href="${href}" style="display:inline-block;padding:14px 24px;font-family:${SANS};font-size:14px;font-weight:bold;letter-spacing:.06em;text-transform:uppercase;color:#FFFFFF;text-decoration:none">${label}</a></td></tr></table>`;
 const link = (href: string, label: string) => `<a href="${href}" style="color:${C.goldDark};text-decoration:underline">${label}</a>`;
 
 const bullets = (items: string[]) =>
