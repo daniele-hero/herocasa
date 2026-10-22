@@ -4,6 +4,7 @@ import Nav from './Nav';
 import Hero from './Hero';
 import TrustBar from './TrustBar';
 import Manifesto from './Manifesto';
+import EmptyHomeCost from './EmptyHomeCost';
 import Services from './Services';
 import Process from './Process';
 import Testimonial from './Testimonial';
@@ -24,15 +25,17 @@ export default function LandingPage() {
       <main>
         <Hero />
         <TrustBar />
-        <Manifesto />
-        <Services />
-        <Process />
+        <Manifesto numeral="i." />
+        <Services numeral="ii." />
+        <Process numeral="iii." />
         <Testimonial />
-        <Properties />
-        <Zones />
-        <Estimator />
-        <Faq />
-        <Contact />
+        <Properties numeral="iv." />
+        <Zones numeral="v." />
+        {/* Closing argument right before the valuation form it points to. */}
+        <EmptyHomeCost numeral="vi." />
+        <Estimator sectionNumber="vii." />
+        <Faq numeral="viii." />
+        <Contact numeral="ix." />
       </main>
       <Footer />
       <MobileCtaBar />

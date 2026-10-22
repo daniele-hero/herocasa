@@ -21,7 +21,7 @@ const GRID_STYLES = [
   'lg:col-start-6 lg:col-span-7 lg:mt-10',
 ];
 
-export default function Properties() {
+export default function Properties({ numeral = 'iv.' }: { numeral?: string } = {}) {
   const t = useTranslations('properties');
   const list = t.raw('list') as Property[];
 
@@ -30,7 +30,7 @@ export default function Properties() {
       <Reveal>
         <div className="flex justify-between items-end gap-6 mb-16 flex-wrap">
           <div>
-            <div className="eyebrow">{t('eyebrow')} · iv.</div>
+            <div className="eyebrow">{t('eyebrow')} · {numeral}</div>
             <h2 className="serif mt-3.5" style={{ fontSize: 'clamp(34px, 5vw, 60px)', lineHeight: 1.08 }}>
               {t('titleOne')}<br />
               <em className="gold-italic">{t('titleTwo')}</em>

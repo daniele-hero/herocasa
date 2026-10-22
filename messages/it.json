@@ -1071,5 +1071,27 @@
     "updated": "Aggiornato il {date}",
     "others": "Altre guide",
     "draft": "Bozza in revisione · non indicizzata da Google e non collegata dal sito"
+  },
+  "emptyHome": {
+    "eyebrow": "Il problema",
+    "titleOne": "Una casa chiusa",
+    "titleTwo": "costa comunque.",
+    "intro": "Anche nei mesi in cui nessuno la usa, una seconda casa continua a pesare sul bilancio. E quello che non si vede costa ancora di più.",
+    "items": [
+      {
+        "title": "Spese fisse, dodici mesi l’anno",
+        "body": "Condominio, utenze, assicurazione, giardino e piscina corrono tutto l’anno, che la casa sia abitata o chiusa."
+      },
+      {
+        "title": "Una casa ferma invecchia",
+        "body": "Umidità, impianti fermi, piccoli guasti che nessuno nota per settimane. Una casa vissuta e controllata dopo ogni soggiorno si conserva meglio."
+      },
+      {
+        "title": "Settimane che non tornano",
+        "body": "Ogni settimana libera in stagione è un incasso perso. Sul Garda gli ospiti arrivano da aprile a ottobre, e con i prezzi giusti anche prima e dopo."
+      }
+    ],
+    "closing": "Con una gestione professionale, la stessa casa si paga le spese e inizia a rendere. E resta tua quando vuoi usarla.",
+    "cta": "Scopri quanto può rendere"
   }
 }

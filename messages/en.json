@@ -1071,5 +1071,27 @@
     "updated": "Updated {date}",
     "others": "More guides",
     "draft": "Draft under review · not indexed by Google and not linked from the site"
+  },
+  "emptyHome": {
+    "eyebrow": "The problem",
+    "titleOne": "A closed home",
+    "titleTwo": "still costs money.",
+    "intro": "Even in the months when nobody uses it, a second home keeps weighing on your budget. And what you don’t see costs even more.",
+    "items": [
+      {
+        "title": "Fixed costs, twelve months a year",
+        "body": "Condominium fees, utilities, insurance, garden and pool run all year, whether the home is lived in or closed."
+      },
+      {
+        "title": "An empty home ages faster",
+        "body": "Damp, idle systems, small faults nobody notices for weeks. A home that is lived in and checked after every stay keeps better."
+      },
+      {
+        "title": "Weeks you never get back",
+        "body": "Every free week in season is income lost. On Lake Garda guests arrive from April to October, and with the right prices before and after too."
+      }
+    ],
+    "closing": "With professional management, the same home covers its own costs and starts earning. And it stays yours whenever you want to use it.",
+    "cta": "See what it could earn"
   }
 }

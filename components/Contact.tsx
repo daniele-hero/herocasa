@@ -6,7 +6,7 @@ import Reveal from './Reveal';
 import { hasMarketingConsent, trackLead } from './CookieBanner';
 import { ZONES, postValuationLead, type EstimatorFormCopy } from '@/lib/estimator-form';
 
-export default function Contact() {
+export default function Contact({ numeral = 'viii.' }: { numeral?: string } = {}) {
   const t = useTranslations('contact');
   const locale = useLocale();
   const tEst = useTranslations('estimator');
@@ -58,7 +58,7 @@ export default function Contact() {
       <Reveal>
         <div className="grid gap-15 md:grid-cols-[5fr_6fr] md:gap-24 md:items-start">
           <div>
-            <div className="eyebrow">{t('eyebrow')} · viii.</div>
+            <div className="eyebrow">{t('eyebrow')} · {numeral}</div>
             <h2 className="serif mt-4" style={{ fontSize: 'clamp(34px, 5vw, 60px)', lineHeight: 1.08 }}>
               {t('titleOne')}<br />
               <em className="gold-italic">{t('titleTwo')}</em>

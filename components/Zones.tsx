@@ -7,7 +7,7 @@ import { COMUNI, MAIN_COMUNI, comunePath } from '@/lib/comuni';
 // No per-town property counts on purpose: a small number in an owner's own town reads as a weakness.
 type Zone = { name: string; note?: string; highlight?: boolean; slug?: string };
 
-export default function Zones() {
+export default function Zones({ numeral = 'v.' }: { numeral?: string } = {}) {
   const t = useTranslations('zones');
   const locale = useLocale();
   const list = t.raw('list') as Zone[];
@@ -21,7 +21,7 @@ export default function Zones() {
         <Reveal>
           <div className="flex justify-between items-end gap-6 mb-12 flex-wrap">
             <div>
-              <div className="eyebrow">{t('eyebrow')} · v.</div>
+              <div className="eyebrow">{t('eyebrow')} · {numeral}</div>
               <h2 className="serif mt-3.5" style={{ fontSize: 'clamp(34px, 5vw, 60px)', lineHeight: 1.08 }}>
                 {t('titleOne')} <em className="gold-italic">{t('titleTwo')}</em>
               </h2>

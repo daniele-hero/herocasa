@@ -1071,5 +1071,27 @@
     "updated": "Aktualisiert am {date}",
     "others": "Weitere Ratgeber",
     "draft": "Entwurf in Prüfung · nicht von Google indexiert und nicht verlinkt"
+  },
+  "emptyHome": {
+    "eyebrow": "Das Problem",
+    "titleOne": "Ein leerstehendes Haus",
+    "titleTwo": "kostet trotzdem.",
+    "intro": "Auch in den Monaten, in denen niemand es nutzt, belastet ein Zweitwohnsitz Ihr Budget. Und was man nicht sieht, kostet noch mehr.",
+    "items": [
+      {
+        "title": "Fixkosten, zwölf Monate im Jahr",
+        "body": "Hausgeld, Strom und Wasser, Versicherung, Garten und Pool laufen das ganze Jahr, ob das Haus bewohnt ist oder leer steht."
+      },
+      {
+        "title": "Ein leeres Haus altert schneller",
+        "body": "Feuchtigkeit, stillstehende Anlagen, kleine Schäden, die wochenlang niemand bemerkt. Ein bewohntes und nach jedem Aufenthalt kontrolliertes Haus bleibt besser in Schuss."
+      },
+      {
+        "title": "Wochen, die nicht zurückkommen",
+        "body": "Jede freie Woche in der Saison sind verlorene Einnahmen. Am Gardasee kommen die Gäste von April bis Oktober, mit den richtigen Preisen auch davor und danach."
+      }
+    ],
+    "closing": "Mit professioneller Verwaltung trägt dasselbe Haus seine Kosten selbst und bringt Einnahmen. Und es bleibt Ihres, wann immer Sie es nutzen möchten.",
+    "cta": "Ertrag kostenlos schätzen"
   }
 }

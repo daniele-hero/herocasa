@@ -3,14 +3,14 @@
 import { useTranslations } from 'next-intl';
 import Reveal from './Reveal';
 
-export default function Manifesto() {
+export default function Manifesto({ numeral = 'i.' }: { numeral?: string } = {}) {
   const t = useTranslations('manifesto');
   return (
     <section className="container-x section-y">
       <Reveal>
         <div className="grid gap-10 md:grid-cols-[3fr_8fr] md:gap-[clamp(40px,6vw,96px)]">
           <div className="flex flex-col gap-4">
-            <div className="eyebrow">{t('eyebrow')} · i.</div>
+            <div className="eyebrow">{t('eyebrow')} · {numeral}</div>
           </div>
           <div>
             <p
