@@ -29,7 +29,7 @@ export type Email = { subject: string; html: string };
 const SITE = 'https://herocasa.it';
 const PHONE = '+39 366 369 5252';
 const MAIL = 'info@herocasa.it';
-const C = { olive: '#1E4D42', paper: '#F6F1E4', marble: '#EAE3D0', gold: '#B8925A', goldDark: '#8B6F44', stone: '#6B6A5C', line: '#D9D2BE' };
+const C = { olive: '#1E4D42', paper: '#F6F1E4', marble: '#EAE3D0', gold: '#B8925A', goldDark: '#8B6F44', stone: '#6B6A5C', line: '#D9D2BE', green: '#147A4A' };
 const SANS = 'Arial,Helvetica,sans-serif';
 // Single quotes inside: these strings go into style="..." attributes.
 const SERIF = "Georgia,'Times New Roman',serif";
@@ -46,8 +46,10 @@ const h1 = (t: string) => `<h1 style="font-family:${SERIF};font-weight:normal;fo
 const h2 = (t: string) => `<h2 style="font-family:${SERIF};font-weight:normal;font-size:21px;line-height:1.3;color:${C.olive};margin:30px 0 12px">${t}</h2>`;
 const p = (t: string, extra = '') => `<p style="font-family:${SANS};font-size:15px;line-height:1.65;color:${C.olive};margin:0 0 14px;${extra}">${t}</p>`;
 const small = (t: string) => `<p style="font-family:${SANS};font-size:12px;line-height:1.6;color:${C.stone};margin:0 0 8px">${t}</p>`;
+// WhatsApp green, dark enough that Gmail's dark mode leaves it alone (the gold button
+// turned dull brown with dark text there); white text, 5.4:1.
 const btn = (href: string, label: string) =>
-  `<table role="presentation" cellpadding="0" cellspacing="0" style="margin:8px 0 22px"><tr><td style="background:${C.gold}"><a href="${href}" style="display:inline-block;padding:13px 22px;font-family:${SANS};font-size:13px;letter-spacing:.08em;text-transform:uppercase;color:${C.paper};text-decoration:none">${label}</a></td></tr></table>`;
+  `<table role="presentation" cellpadding="0" cellspacing="0" style="margin:8px 0 22px"><tr><td bgcolor="${C.green}" style="background:${C.green};border-radius:3px"><a href="${href}" style="display:inline-block;padding:14px 24px;font-family:${SANS};font-size:14px;font-weight:bold;letter-spacing:.06em;text-transform:uppercase;color:#FFFFFF;text-decoration:none">${label}</a></td></tr></table>`;
 const link = (href: string, label: string) => `<a href="${href}" style="color:${C.goldDark};text-decoration:underline">${label}</a>`;
 
 const bullets = (items: string[]) =>
@@ -146,7 +148,7 @@ const waHref = (l: EmailLocale) => `https://wa.me/393663695252?text=${encodeURIC
 /** Full email: preheader, logo, body, signature, contacts box, footer with the optional stop link. */
 function layout(l: EmailLocale, preheader: string, body: string, stopHref?: string): string {
   const c = COMMON[l];
-  return `<!doctype html><html lang="${l}"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Herocasa</title></head>
+  return `<!doctype html><html lang="${l}"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="color-scheme" content="light"><meta name="supported-color-schemes" content="light"><title>Herocasa</title></head>
 <body style="margin:0;padding:0;background:${C.marble}">
 <div style="display:none;max-height:0;overflow:hidden;opacity:0">${esc(preheader)}</div>
 <table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="background:${C.marble}"><tr><td align="center" style="padding:28px 12px">
