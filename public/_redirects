@@ -11,3 +11,6 @@
 /chi-siamo /it 301
 /contatti /it#contatti 301
 /lavori /it#immobili 301
+
+# Some crawlers guess a text sitemap
+/sitemap.txt /sitemap.xml 301

@@ -1,5 +1,5 @@
 /**
- * GET / — Cloudflare Pages Function replacing the next-intl middleware that
+ * GET/HEAD / — Cloudflare Pages Function replacing the next-intl middleware that
  * used to redirect the bare domain to a locale (static export has no
  * middleware). Picks it/en/de from Accept-Language, Italian by default.
  */
@@ -13,3 +13,6 @@ export const onRequestGet = ({ request }: { request: Request }): Response => {
   const url = new URL(request.url);
   return Response.redirect(`${url.origin}/${locale}${url.search}`, 307);
 };
+
+// Crawlers and SEO tools often check the homepage with HEAD; without this it answered 404.
+export const onRequestHead = onRequestGet;
