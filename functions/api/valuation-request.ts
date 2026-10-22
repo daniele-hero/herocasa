@@ -175,10 +175,10 @@ const FOLLOWUPS: Record<string, FollowUp[]> = {
       subject: (n) => `${n ? `${n}, ` : ''}cosa dicono i proprietari che ci hanno affidato la casa`,
       body: (n, z) =>
         p(`Ciao${n ? ` ${n}` : ''},`) +
-        p(`mentre prepariamo la valutazione${z ? ` per la tua casa a ${z}` : ''}, ti lasciamo le parole di un proprietario che ha fatto il tuo stesso passo:`) +
+        p(`grazie ancora per averci scritto${z ? ` per la tua casa a ${z}` : ''}. Ti lasciamo le parole di un proprietario che ha fatto il tuo stesso passo:`) +
         `<blockquote style="font-family:Georgia,serif;font-style:italic;font-size:18px;line-height:1.5;margin:0 0 8px;padding-left:16px;border-left:3px solid #B8925A">“Prima gestivo da solo. Sei mesi con Herocasa e ho scoperto che la casa rendeva il 30% in più, ma soprattutto non mi arrivavano più telefonate alle undici di sera per un problema con il Wi-Fi.”</blockquote>` +
         p('<span style="color:#6B6A5C;font-size:13px">Marco V., proprietario di una villa a Bardolino</span>') +
-        p('Se vuoi parlarne prima della chiamata, scrivici quando preferisci:') +
+        p('Per qualsiasi domanda, scrivici quando preferisci:') +
         btn(WA, 'Scrivici su WhatsApp'),
     },
     {
@@ -192,13 +192,15 @@ const FOLLOWUPS: Record<string, FollowUp[]> = {
         btn(`${SITE}/it#faq`, 'Leggi tutte le risposte'),
     },
     {
+      // Generic on purpose: it may land before or after the call, the valuation or a site visit,
+      // and the team doesn't stop follow-ups by hand.
       day: 16,
-      subject: (n) => `${n ? `${n}, ` : ''}vuoi ancora la valutazione completa?`,
+      subject: (n) => `${n ? `${n}, ` : ''}siamo qui se hai domande`,
       body: (n, z) =>
         p(`Ciao${n ? ` ${n}` : ''},`) +
-        p(`ti scriviamo un'ultima volta${z ? ` per la tua casa a ${z}` : ''}. Le case che partono prima della stagione arrivano più pronte: foto, annunci e prezzi si preparano con calma.`) +
-        p('Se ti interessa ancora, rispondi a questa email o scrivici su WhatsApp e fissiamo una chiamata di 30 minuti.') +
-        btn(WA, 'Fissiamo una chiamata'),
+        p(`ti scriviamo per sapere come procede con la tua casa${z ? ` a ${z}` : ''}. Affidare la propria casa è una decisione da prendere con calma, e ogni proprietario ha dubbi diversi: i numeri, il contratto, le settimane in cui usarla.`) +
+        p('Qualunque sia la tua domanda, rispondi a questa email o scrivici su WhatsApp: ti rispondiamo noi, di persona.') +
+        btn(WA, 'Scrivici su WhatsApp'),
     },
   ],
   en: [
@@ -207,10 +209,10 @@ const FOLLOWUPS: Record<string, FollowUp[]> = {
       subject: (n) => `${n ? `${n}, ` : ''}what owners who trusted us with their home say`,
       body: (n, z) =>
         p(`Hi${n ? ` ${n}` : ''},`) +
-        p(`while we prepare the valuation${z ? ` for your home in ${z}` : ''}, here are the words of an owner who took the same step:`) +
+        p(`thank you again for getting in touch${z ? ` about your home in ${z}` : ''}. Here are the words of an owner who took the same step:`) +
         `<blockquote style="font-family:Georgia,serif;font-style:italic;font-size:18px;line-height:1.5;margin:0 0 8px;padding-left:16px;border-left:3px solid #B8925A">“I used to manage on my own. Six months with Herocasa and I found the house yielded 30% more — but mostly, I stopped getting phone calls at 11 pm about a Wi-Fi problem.”</blockquote>` +
         p('<span style="color:#6B6A5C;font-size:13px">Marco V., owner of a villa in Bardolino</span>') +
-        p('If you would like to talk before our call, message us any time:') +
+        p('For any question, message us whenever you like:') +
         btn(WA, 'Message us on WhatsApp'),
     },
     {
@@ -225,12 +227,12 @@ const FOLLOWUPS: Record<string, FollowUp[]> = {
     },
     {
       day: 16,
-      subject: (n) => `${n ? `${n}, ` : ''}would you still like the full valuation?`,
+      subject: (n) => `${n ? `${n}, ` : ''}we are here if you have questions`,
       body: (n, z) =>
         p(`Hi${n ? ` ${n}` : ''},`) +
-        p(`this is our last note${z ? ` about your home in ${z}` : ''}. Homes that start before the season arrive better prepared: photos, listings and prices take time to get right.`) +
-        p('If you are still interested, reply to this email or message us on WhatsApp and we will book a 30-minute call.') +
-        btn(WA, 'Book a call'),
+        p(`we are writing to see how things are going with your home${z ? ` in ${z}` : ''}. Entrusting your home to someone is a decision to take calmly, and every owner has different doubts: the figures, the contract, the weeks you want to use it.`) +
+        p('Whatever your question, reply to this email or message us on WhatsApp: we will answer you personally.') +
+        btn(WA, 'Message us on WhatsApp'),
     },
   ],
   de: [
@@ -239,10 +241,10 @@ const FOLLOWUPS: Record<string, FollowUp[]> = {
       subject: (n) => `${n ? `${n}, ` : ''}was Eigentümer sagen, die uns ihr Haus anvertraut haben`,
       body: (n, z) =>
         p(`Guten Tag${n ? ` ${n}` : ''},`) +
-        p(`während wir die Bewertung${z ? ` für Ihr Haus in ${z}` : ''} vorbereiten, hier die Worte eines Eigentümers, der denselben Schritt gemacht hat:`) +
+        p(`vielen Dank noch einmal für Ihre Anfrage${z ? ` zu Ihrem Haus in ${z}` : ''}. Hier die Worte eines Eigentümers, der denselben Schritt gemacht hat:`) +
         `<blockquote style="font-family:Georgia,serif;font-style:italic;font-size:18px;line-height:1.5;margin:0 0 8px;padding-left:16px;border-left:3px solid #B8925A">„Vorher habe ich selbst verwaltet. Nach sechs Monaten mit Herocasa hat das Haus 30% mehr abgeworfen — vor allem aber bekam ich keine Anrufe mehr um elf Uhr abends wegen eines WLAN-Problems.“</blockquote>` +
         p('<span style="color:#6B6A5C;font-size:13px">Marco V., Eigentümer einer Villa in Bardolino</span>') +
-        p('Wenn Sie schon vor unserem Gespräch sprechen möchten, schreiben Sie uns jederzeit:') +
+        p('Bei Fragen schreiben Sie uns jederzeit:') +
         btn(WA, 'Auf WhatsApp schreiben'),
     },
     {
@@ -257,12 +259,12 @@ const FOLLOWUPS: Record<string, FollowUp[]> = {
     },
     {
       day: 16,
-      subject: (n) => `${n ? `${n}, ` : ''}möchten Sie die vollständige Bewertung noch erhalten?`,
+      subject: (n) => `${n ? `${n}, ` : ''}wir sind für Ihre Fragen da`,
       body: (n, z) =>
         p(`Guten Tag${n ? ` ${n}` : ''},`) +
-        p(`wir schreiben Ihnen ein letztes Mal${z ? ` zu Ihrem Haus in ${z}` : ''}. Häuser, die vor der Saison starten, sind besser vorbereitet: Fotos, Inserate und Preise brauchen Zeit.`) +
-        p('Wenn Sie noch Interesse haben, antworten Sie auf diese E-Mail oder schreiben Sie uns auf WhatsApp, und wir vereinbaren ein 30-minütiges Gespräch.') +
-        btn(WA, 'Gespräch vereinbaren'),
+        p(`wir möchten wissen, wie es mit Ihrem Haus${z ? ` in ${z}` : ''} weitergeht. Sein Haus jemandem anzuvertrauen, entscheidet man in Ruhe, und jeder Eigentümer hat andere Fragen: die Zahlen, den Vertrag, die Wochen der Eigennutzung.`) +
+        p('Was auch immer Sie wissen möchten: Antworten Sie auf diese E-Mail oder schreiben Sie uns auf WhatsApp, wir antworten Ihnen persönlich.') +
+        btn(WA, 'Auf WhatsApp schreiben'),
     },
   ],
 };
@@ -285,7 +287,7 @@ function sendDate(days: number): string {
  * Resend ids (chronological). Created last-first so each email can carry a stop
  * link for the ones after it.
  */
-async function scheduleFollowUps(body: ValuationBody, env: Env): Promise<string[]> {
+async function scheduleFollowUps(body: ValuationBody, env: Env, preview = false): Promise<string[]> {
   if (!env.RESEND_API_KEY || !body.email) return [];
   const locale = body.locale && FOLLOWUPS[body.locale] ? body.locale : 'it';
   const name = escapeHtml((body.name || '').trim().split(/\s+/)[0] || '');
@@ -300,9 +302,10 @@ async function scheduleFollowUps(body: ValuationBody, env: Env): Promise<string[
       from: env.RESEND_FROM_EMAIL || 'Herocasa <onboarding@resend.dev>',
       to: [body.email],
       reply_to: 'info@herocasa.it',
-      subject: f.subject(name),
+      // preview: sent right away, subject tagged with the day it would normally go out.
+      subject: preview ? `[Anteprima · giorno ${f.day}] ${f.subject(name)}` : f.subject(name),
       html,
-      scheduled_at: sendDate(f.day),
+      ...(preview ? {} : { scheduled_at: sendDate(f.day) }),
     });
     if (!res.ok) {
       console.error('[valuation-request] follow-up scheduling error', res.status, await res.text());
@@ -450,3 +453,31 @@ export const onRequestPost = async ({ request, env }: { request: Request; env: E
 
   return json({ ok: true });
 };
+
+/**
+ * Sends every email of the lead flow at once (team notification, owner confirmation,
+ * the three follow-ups) for a sample lead, to `to` only. Used by the temporary
+ * functions/api/email-preview.ts so the team can review the texts in a real inbox.
+ */
+export async function previewAllEmails(env: Env, to: string): Promise<string[]> {
+  const body: ValuationBody = {
+    source: 'hero-form',
+    name: 'Mario Rossi',
+    email: to,
+    phone: '+39 333 000 0000',
+    zone: 'Sirmione',
+    type: 'Villa',
+    rooms: '3',
+    features: ['Piscina', 'Vista lago'],
+    notes: 'Email di prova: nessun lead reale.',
+    estimatedRange: { min: 41000, max: 58000 },
+    submittedAt: new Date().toISOString(),
+    locale: 'it',
+    page: '/it/gestione-affitti-brevi/sirmione',
+    referrer: 'https://www.google.com/',
+  };
+  const followUps = await scheduleFollowUps(body, env, true);
+  await sendLeadEmail(body, { ...env, LEAD_NOTIFY_EMAIL: to }, followUps);
+  await sendOwnerConfirmation(body, env, followUps);
+  return followUps;
+}
