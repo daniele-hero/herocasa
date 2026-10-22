@@ -15,14 +15,17 @@ const Note = ({ children }: { children: ReactNode }) => (
   <p className="!text-[14px] border-l-[3px] border-[var(--gold)] pl-4 !text-[var(--olive-70)]">{children}</p>
 );
 
-/** Italian guides for owners (tax and permit rules are Italian; translations can follow once reviewed). */
+/**
+ * Italian guides for owners (permit rules are Italian; translations can follow once reviewed).
+ * No tax topics on purpose: the owner prefers to cover taxation in person, not on the site.
+ */
 export const ARTICLES: Article[] = [
   {
     slug: 'cin-suap-affitti-brevi',
     title: 'CIN e SUAP per gli affitti brevi: cosa serve davvero',
     description:
       'Codice Identificativo Nazionale, SCIA al SUAP, sicurezza, Questura e tassa di soggiorno: la lista completa degli adempimenti per affittare una casa sul Lago di Garda.',
-    updated: '2026-10-21',
+    updated: '2026-10-22',
     published: false,
     body: (
       <>
@@ -61,9 +64,9 @@ export const ARTICLES: Article[] = [
           eventuali comunicazioni al Comune o al portale regionale e gli adempimenti dei punti successivi.
         </p>
         <p>
-          Se invece l&apos;attività è <strong>imprenditoriale</strong>, serve la <strong>SCIA</strong> (Segnalazione Certificata di Inizio Attività) da presentare al{' '}
-          <strong>SUAP</strong> del Comune. La legge presume l&apos;attività d&apos;impresa oltre un certo numero di immobili affittati: con la Legge di Bilancio 2026
-          la soglia è stata abbassata, e dal terzo immobile in poi conviene verificare con il commercialista se serve la partita IVA.
+          Se invece l&apos;attività è <strong>imprenditoriale</strong>, per esempio con più immobili o con servizi di tipo alberghiero, serve la{' '}
+          <strong>SCIA</strong> (Segnalazione Certificata di Inizio Attività) da presentare al <strong>SUAP</strong> del Comune. Se hai più case da affittare,
+          verifica con il Comune in quale caso rientri prima di pubblicare gli annunci.
         </p>
 
         <h2>4. Gli adempimenti a ogni soggiorno</h2>
@@ -83,12 +86,6 @@ export const ARTICLES: Article[] = [
           </li>
         </ul>
 
-        <h2>5. Le tasse sui ricavi</h2>
-        <p>
-          I ricavi degli affitti brevi si possono tassare con la <strong>cedolare secca</strong>: ne parliamo nel dettaglio nella guida dedicata. In sintesi:
-          aliquota del 21% su un immobile a scelta e del 26% sugli altri.
-        </p>
-
         <h2>Chi se ne occupa?</h2>
         <p>
           Puoi gestire tutto in autonomia, ma richiede tempo e precisione: un errore sulla Questura o sulla tassa di soggiorno si paga caro. Con Herocasa queste
@@ -96,75 +93,74 @@ export const ARTICLES: Article[] = [
         </p>
         <Note>
           Le norme su affitti brevi e locazioni turistiche cambiano spesso e variano da Regione a Regione. Questa guida è informativa: per la tua situazione
-          specifica chiedi conferma al tuo commercialista o al Comune.
+          specifica chiedi conferma al Comune o al tuo consulente.
         </Note>
       </>
     ),
   },
   {
-    slug: 'cedolare-secca-affitti-brevi',
-    title: 'Cedolare secca sugli affitti brevi nel 2026: come funziona',
+    slug: 'gestire-da-soli-o-con-un-gestore',
+    title: 'Affitti brevi sul Garda: gestire da soli o affidarsi a un gestore?',
     description:
-      'Aliquote 21% e 26%, ritenuta dei portali, soglia della partita IVA e confronto con l’IRPEF: la guida aggiornata per i proprietari di case sul Garda.',
-    updated: '2026-10-21',
+      'Quanto lavoro c’è davvero dietro una casa vacanza, cosa fa un gestore professionale e come sceglierlo: una guida per decidere con calma.',
+    updated: '2026-10-22',
     published: false,
     body: (
       <>
         <p>
-          La <strong>cedolare secca</strong> è il modo più usato per tassare i ricavi degli affitti brevi: un&apos;imposta fissa che sostituisce IRPEF e
-          addizionali, senza sommarsi agli altri redditi. Ecco come funziona nel 2026 e quando conviene.
+          Molti proprietari iniziano da soli, con un annuncio su Airbnb e un vicino che consegna le chiavi. Funziona, finché la stagione non si riempie. Ecco
+          cosa comporta davvero ciascuna strada, per scegliere quella giusta per te e per la tua casa.
         </p>
 
-        <h2>Che cosa si intende per affitto breve</h2>
-        <p>
-          Per la legge è breve la locazione di un immobile ad uso abitativo <strong>fino a 30 giorni</strong>, stipulata da persone fisiche fuori dall&apos;attività
-          d&apos;impresa. Può includere servizi come la fornitura di biancheria e la pulizia dei locali, ma non servizi di tipo alberghiero (colazione, reception
-          continua e simili).
-        </p>
-
-        <h2>Le aliquote nel 2026</h2>
+        <h2>Il lavoro dietro ogni soggiorno</h2>
+        <p>Per ogni prenotazione, anche di due notti, c&apos;è una sequenza che si ripete:</p>
         <ul>
+          <li>rispondere a richieste e messaggi, spesso in più lingue e a qualsiasi ora;</li>
           <li>
-            <strong>21%</strong> sui ricavi di <strong>un solo immobile</strong>, scelto dal proprietario;
+            accogliere gli ospiti e registrarli alla Questura entro 24 ore (trovi tutti gli adempimenti nella{' '}
+            <a href="/it/guide/cin-suap-affitti-brevi">guida su CIN e SUAP</a>);
           </li>
-          <li>
-            <strong>26%</strong> sugli altri immobili affittati con contratti brevi.
-          </li>
+          <li>pulizie, cambio della biancheria e controllo della casa tra un ospite e l&apos;altro;</li>
+          <li>gestire gli imprevisti: una caldaia che si ferma, una chiave persa, un arrivo in piena notte;</li>
+          <li>aggiornare prezzi e calendario su ogni portale.</li>
+        </ul>
+        <p>In alta stagione sul Garda i cambi possono essere due o tre a settimana: chi vive lontano dalla casa se ne accorge presto.</p>
+
+        <h2>Gestire da soli: quando ha senso</h2>
+        <ul>
+          <li>abiti vicino alla casa e hai tempo, soprattutto nei weekend;</li>
+          <li>affitti solo poche settimane all&apos;anno;</li>
+          <li>hai una persona di fiducia per pulizie e check-in.</li>
         </ul>
         <p>
-          La Legge di Bilancio 2026 (L. 199/2025) aveva inizialmente previsto il 26% per tutti: nella versione finale la regola del 21% su un immobile è stata
-          mantenuta.
+          Il vantaggio è che tutto il ricavo resta a te. Il costo è il tuo tempo, più quello che si perde senza accorgersene: prezzi fermi tutta la stagione,
+          risposte lente, recensioni non perfette.
         </p>
 
-        <h2>La ritenuta di Airbnb, Booking e delle agenzie</h2>
-        <p>
-          Quando il pagamento passa da un intermediario (un portale o un&apos;agenzia che incassa per conto del proprietario), l&apos;intermediario trattiene una{' '}
-          <strong>ritenuta del 21%</strong> e la versa allo Stato. Questa ritenuta non è un&apos;imposta in più: in dichiarazione si scomputa da quanto dovuto, e se
-          l&apos;aliquota applicabile è il 26% si versa solo la differenza.
-        </p>
+        <h2>Cosa fa un gestore professionale</h2>
+        <ul>
+          <li>annunci curati, con foto professionali e testi in più lingue;</li>
+          <li>prezzi aggiornati ogni giorno in base a stagione, eventi e domanda;</li>
+          <li>pubblicazione su più portali con il calendario sincronizzato;</li>
+          <li>accoglienza degli ospiti, pulizie, biancheria e piccola manutenzione;</li>
+          <li>pratiche e comunicazioni: CIN, Questura, ISTAT, tassa di soggiorno.</li>
+        </ul>
+        <p>Il compenso di solito è una percentuale sui ricavi: il gestore guadagna di più solo se la tua casa rende di più.</p>
 
-        <h2>Quando scatta la partita IVA</h2>
-        <p>
-          Oltre un certo numero di immobili affittati nell&apos;anno, l&apos;attività si presume imprenditoriale: niente più cedolare secca, serve la partita IVA e
-          spesso la SCIA al SUAP. Con la Legge di Bilancio 2026 la soglia è stata abbassata e riguarda chi affitta <strong>dal terzo immobile</strong> in poi.
-        </p>
+        <h2>Come scegliere il gestore giusto</h2>
+        <ul>
+          <li><strong>Trasparenza</strong>: un rendiconto mensile chiaro, con prenotazioni, costi e bonifico;</li>
+          <li><strong>presenza sul posto</strong>: qualcuno che conosce la zona e può intervenire in fretta;</li>
+          <li><strong>nessun vincolo nascosto</strong>: chiedi di costi di attivazione, durata del contratto e preavviso per uscire;</li>
+          <li><strong>uso personale</strong>: devi poter bloccare le settimane in cui vuoi usare la casa;</li>
+          <li><strong>recensioni</strong>: chiedi di vedere gli annunci che gestisce già e i loro punteggi.</li>
+        </ul>
 
-        <h2>Cedolare secca o IRPEF?</h2>
+        <h2>E la tua casa?</h2>
         <p>
-          Con la cedolare secca si paga l&apos;aliquota fissa sull&apos;intero canone, senza deduzioni. Con l&apos;IRPEF ordinaria i ricavi si sommano agli altri
-          redditi e si tassano con l&apos;aliquota del proprio scaglione (dal 23% al 43%, più le addizionali). In generale la cedolare conviene a chi ha già redditi
-          medio-alti; chi ha redditi bassi o costi rilevanti deve fare il calcolo con il commercialista.
+          Se vuoi capire quanto potrebbe rendere con una gestione professionale, parti dalla valutazione gratuita qui sotto: ottieni subito una prima cifra,
+          poi ne parliamo al telefono, senza impegno.
         </p>
-
-        <h2>Un esempio</h2>
-        <p>
-          Ricavi da affitti brevi su un solo immobile: 20.000 euro in un anno. Con la cedolare al 21% l&apos;imposta è di 4.200 euro, già trattenuti in parte dai
-          portali come ritenuta. Lo stesso importo, sommato a un reddito da lavoro di 40.000 euro, con l&apos;IRPEF sarebbe tassato all&apos;aliquota del secondo scaglione
-          (33% dal 2026) più le addizionali.
-        </p>
-        <Note>
-          Esempio semplificato a scopo illustrativo. Le regole fiscali cambiano spesso: prima di decidere verifica la tua situazione con un commercialista.
-        </Note>
       </>
     ),
   },
@@ -173,7 +169,7 @@ export const ARTICLES: Article[] = [
     title: 'Quanto rende una casa sul Lago di Garda con gli affitti brevi',
     description:
       'Da cosa dipendono i ricavi di una casa vacanza sul Garda, quali costi considerare e come stimare quanto può rendere la tua: occupazione, prezzi, stagionalità.',
-    updated: '2026-10-21',
+    updated: '2026-10-22',
     published: false,
     body: (
       <>
@@ -193,11 +189,11 @@ export const ARTICLES: Article[] = [
             primavera e autunno.
           </li>
           <li>
-            <strong>Costi</strong>: commissioni dei portali, pulizie e biancheria, utenze, manutenzione, tasse.
+            <strong>Costi</strong>: commissioni dei portali, pulizie e biancheria, utenze, manutenzione.
           </li>
         </ul>
         <p>
-          Ricavi lordi = prezzo medio × notti occupate. Ricavi netti = lordi meno costi e tasse. Sembra banale, ma la differenza tra una casa gestita bene e una
+          Ricavi lordi = prezzo medio × notti occupate. Al netto si tolgono i costi. Sembra banale, ma la differenza tra una casa gestita bene e una
           gestita male sta quasi tutta in questi tre numeri.
         </p>
 
@@ -210,7 +206,7 @@ export const ARTICLES: Article[] = [
           <li>utenze e piccola manutenzione: circa 2.000 euro</li>
         </ul>
         <p>
-          Prima delle tasse restano circa <strong>12.000 euro</strong>, a cui va tolta la cedolare secca. Con 30 notti in più o 15 euro in più a notte il
+          Al netto di questi costi restano circa <strong>12.000 euro</strong> (prima delle imposte). Con 30 notti in più o 15 euro in più a notte il
           risultato cambia di migliaia di euro: per questo prezzi e calendario contano più di ogni altra cosa.
         </p>
         <Note>Numeri ipotetici a scopo illustrativo: non sono una stima della tua casa.</Note>

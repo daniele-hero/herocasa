@@ -161,6 +161,8 @@ img { max-width: 100%; display: block; }
 .article-body li { color: var(--olive-90); font-size: 17px; line-height: 1.6; padding-left: 22px; position: relative; margin-bottom: 10px; }
 .article-body li::before { content: "·"; color: var(--gold); position: absolute; left: 2px; top: -6px; font-size: 28px; }
 .article-body strong { color: var(--olive); font-weight: 600; }
+.article-body a { color: var(--gold-ink); text-decoration: underline; text-underline-offset: 3px; }
+.article-body a:hover { color: var(--olive); }
 
 /* Hero entrance (components/Hero.tsx): CSS so it runs on first paint, before JS loads. */
 @keyframes hero-rise { from { opacity: 0; transform: translateY(12px); } }
