@@ -33,7 +33,7 @@
   --paper-70: rgba(246, 241, 228, 0.7);
   --paper-40: rgba(246, 241, 228, 0.4);
   --gutter: clamp(20px, 4vw, 56px);
-  --section-y: clamp(80px, 10vw, 160px);
+  --section-y: clamp(56px, 7vw, 112px);
 }
 
 *, *::before, *::after { box-sizing: border-box; }

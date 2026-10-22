@@ -188,47 +188,41 @@
     "list": [
       {
         "name": "Peschiera del Garda",
-        "count": "15 immobili gestiti",
         "slug": "peschiera-del-garda"
       },
       {
         "name": "Lazise",
-        "count": "8 immobili gestiti",
         "slug": "lazise"
       },
       {
         "name": "Castelnuovo del Garda",
-        "count": "5 immobili gestiti",
         "slug": "castelnuovo-del-garda"
       },
       {
         "name": "Bardolino",
-        "count": "12 immobili gestiti",
         "slug": "bardolino"
       },
       {
         "name": "Sirmione",
-        "count": "18 immobili gestiti",
         "slug": "sirmione"
       },
       {
         "name": "Desenzano del Garda",
-        "count": "10 immobili gestiti",
         "slug": "desenzano-del-garda"
       },
       {
         "name": "Padenghe sul Garda",
-        "count": "6 immobili gestiti",
         "slug": "padenghe-sul-garda"
       },
       {
         "name": "La vostra zona?",
-        "count": "chiedete un sopralluogo",
-        "highlight": true
+        "highlight": true,
+        "note": "chiedete un sopralluogo"
       }
     ],
     "alsoServe": "Serviamo anche",
-    "nearby": "e zone limitrofe"
+    "nearby": "e zone limitrofe",
+    "explore": "Scopri la zona"
   },
   "estimator": {
     "eyebrow": "Valutazione gratuita",

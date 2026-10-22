@@ -188,47 +188,41 @@
     "list": [
       {
         "name": "Peschiera del Garda",
-        "count": "15 Objekte verwaltet",
         "slug": "peschiera-del-garda"
       },
       {
         "name": "Lazise",
-        "count": "8 Objekte verwaltet",
         "slug": "lazise"
       },
       {
         "name": "Castelnuovo del Garda",
-        "count": "5 Objekte verwaltet",
         "slug": "castelnuovo-del-garda"
       },
       {
         "name": "Bardolino",
-        "count": "12 Objekte verwaltet",
         "slug": "bardolino"
       },
       {
         "name": "Sirmione",
-        "count": "18 Objekte verwaltet",
         "slug": "sirmione"
       },
       {
         "name": "Desenzano del Garda",
-        "count": "10 Objekte verwaltet",
         "slug": "desenzano-del-garda"
       },
       {
         "name": "Padenghe sul Garda",
-        "count": "6 Objekte verwaltet",
         "slug": "padenghe-sul-garda"
       },
       {
         "name": "Ihr Gebiet?",
-        "count": "Besichtigung anfragen",
-        "highlight": true
+        "highlight": true,
+        "note": "Besichtigung anfragen"
       }
     ],
     "alsoServe": "Wir sind auch in",
-    "nearby": "und Umgebung"
+    "nearby": "und Umgebung",
+    "explore": "Mehr erfahren"
   },
   "estimator": {
     "eyebrow": "Kostenlose Bewertung",

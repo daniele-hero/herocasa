@@ -18,7 +18,6 @@ import { COMUNI, comunePath, nearbyComuni, type ComuneSlug } from '@/lib/comuni'
 
 type Highlight = { title: string; body: string };
 type Testimonial = { quote: string; author: string; role: string };
-type Zone = { name: string; count: string; slug?: string };
 
 /** Landing page for one comune: local intro + highlights, then the shared sections with the town pre-selected in the forms. */
 export default function ComunePage({ slug }: { slug: ComuneSlug }) {
@@ -29,7 +28,6 @@ export default function ComunePage({ slug }: { slug: ComuneSlug }) {
   const { name, photo } = COMUNI[slug];
 
   const highlights = t.raw(`list.${slug}.highlights`) as Highlight[];
-  const count = (tZones.raw('list') as Zone[]).find((z) => z.slug === slug)?.count;
   const testimonial = (tTestimonials.raw('testimonials') as Testimonial[]).find((x) => x.role.includes(name));
 
   return (
@@ -64,12 +62,6 @@ export default function ComunePage({ slug }: { slug: ComuneSlug }) {
             <div className="relative aspect-[4/5] max-h-[78vh] w-full overflow-hidden bg-[var(--marble)]">
               <Photo src={photo} alt={t('imageAlt')} priority className="object-cover" />
             </div>
-            {count && (
-              <div className="absolute bottom-6 left-6 p-5 max-w-[280px]" style={{ background: 'rgba(246, 241, 228, 0.94)' }}>
-                <div className="text-[11px] tracking-[0.16em] uppercase text-[var(--stone)] mb-1">{name}</div>
-                <div className="serif text-[26px] leading-tight text-[var(--olive)]">{count}</div>
-              </div>
-            )}
           </div>
         </header>
 

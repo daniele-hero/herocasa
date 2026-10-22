@@ -4,7 +4,8 @@ import { useLocale, useTranslations } from 'next-intl';
 import Reveal from './Reveal';
 import { COMUNI, MAIN_COMUNI, comunePath } from '@/lib/comuni';
 
-type Zone = { name: string; count: string; highlight?: boolean; slug?: string };
+// No per-town property counts on purpose: a small number in an owner's own town reads as a weakness.
+type Zone = { name: string; note?: string; highlight?: boolean; slug?: string };
 
 export default function Zones() {
   const t = useTranslations('zones');
@@ -44,7 +45,15 @@ export default function Zones() {
                 >
                   {z.name}
                 </div>
-                <div className="text-[12px] tracking-[0.14em] uppercase text-[var(--stone)]">{z.count}</div>
+                <div className="flex items-center gap-2.5 text-[12px] tracking-[0.14em] uppercase text-[var(--stone)]">
+                  {z.slug ? (
+                    <>
+                      {t('explore')} <span aria-hidden="true" className="inline-block h-px w-5 bg-current" />
+                    </>
+                  ) : (
+                    z.note
+                  )}
+                </div>
               </a>
             </Reveal>
           ))}

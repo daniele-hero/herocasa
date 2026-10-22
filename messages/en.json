@@ -188,47 +188,41 @@
     "list": [
       {
         "name": "Peschiera del Garda",
-        "count": "15 homes managed",
         "slug": "peschiera-del-garda"
       },
       {
         "name": "Lazise",
-        "count": "8 homes managed",
         "slug": "lazise"
       },
       {
         "name": "Castelnuovo del Garda",
-        "count": "5 homes managed",
         "slug": "castelnuovo-del-garda"
       },
       {
         "name": "Bardolino",
-        "count": "12 homes managed",
         "slug": "bardolino"
       },
       {
         "name": "Sirmione",
-        "count": "18 homes managed",
         "slug": "sirmione"
       },
       {
         "name": "Desenzano del Garda",
-        "count": "10 homes managed",
         "slug": "desenzano-del-garda"
       },
       {
         "name": "Padenghe sul Garda",
-        "count": "6 homes managed",
         "slug": "padenghe-sul-garda"
       },
       {
         "name": "Your area?",
-        "count": "ask for a site visit",
-        "highlight": true
+        "highlight": true,
+        "note": "ask for a site visit"
       }
     ],
     "alsoServe": "We also cover",
-    "nearby": "and nearby areas"
+    "nearby": "and nearby areas",
+    "explore": "Explore the area"
   },
   "estimator": {
     "eyebrow": "Free valuation",
