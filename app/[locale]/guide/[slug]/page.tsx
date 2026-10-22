@@ -9,12 +9,13 @@ import MobileCtaBar from '@/components/MobileCtaBar';
 import WhatsAppFloat from '@/components/WhatsAppFloat';
 import CookieBanner from '@/components/CookieBanner';
 import { ARTICLES, findArticle } from '@/lib/articles';
+import { GUIDE_LINKS } from '@/lib/guide-links';
 
 const SITE_URL = 'https://herocasa.it';
 
 type Params = { params: Promise<{ locale: string; slug: string }> };
 
-// Guides are Italian-only (Italian tax and permit rules).
+// Guides are Italian-only (Italian permit rules).
 export function generateStaticParams() {
   return ARTICLES.map((a) => ({ locale: 'it', slug: a.slug }));
 }
@@ -77,6 +78,20 @@ export default async function GuidePage({ params }: Params) {
               Aggiornato il {updated} · Herocasa
             </div>
             <div className="article-body mt-10">{a.body}</div>
+            {a.published && GUIDE_LINKS.some((g) => g.slug !== a.slug) && (
+              <nav aria-label="Altre guide" className="mt-14 pt-8 border-t border-[var(--olive-15)]">
+                <div className="eyebrow mb-4">Altre guide</div>
+                <ul className="flex flex-col gap-3">
+                  {GUIDE_LINKS.filter((g) => g.slug !== a.slug).map((g) => (
+                    <li key={g.slug}>
+                      <Link href={`/it/guide/${g.slug}`} className="btn-arrow" style={{ fontSize: 12 }}>
+                        {g.label} <span className="arrow" />
+                      </Link>
+                    </li>
+                  ))}
+                </ul>
+              </nav>
+            )}
           </div>
         </article>
         <Estimator sectionNumber="" />

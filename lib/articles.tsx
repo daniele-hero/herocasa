@@ -1,4 +1,5 @@
 import type { ReactNode } from 'react';
+import { isPublishedGuide } from './guide-links';
 
 export type Article = {
   slug: string;
@@ -6,7 +7,7 @@ export type Article = {
   description: string;
   /** ISO date shown as "aggiornato il". */
   updated: string;
-  /** false = reachable by URL for review, but noindex, out of the sitemap and not linked. */
+  /** Set from lib/guide-links.ts. false = reachable by URL for review, but noindex, out of the sitemap and not linked. */
   published: boolean;
   body: ReactNode;
 };
@@ -19,14 +20,13 @@ const Note = ({ children }: { children: ReactNode }) => (
  * Italian guides for owners (permit rules are Italian; translations can follow once reviewed).
  * No tax topics on purpose: the owner prefers to cover taxation in person, not on the site.
  */
-export const ARTICLES: Article[] = [
+const CONTENT: Omit<Article, 'published'>[] = [
   {
     slug: 'cin-suap-affitti-brevi',
     title: 'CIN e SUAP per gli affitti brevi: cosa serve davvero',
     description:
       'Codice Identificativo Nazionale, SCIA al SUAP, sicurezza, Questura e tassa di soggiorno: la lista completa degli adempimenti per affittare una casa sul Lago di Garda.',
     updated: '2026-10-22',
-    published: false,
     body: (
       <>
         <p>
@@ -42,8 +42,8 @@ export const ARTICLES: Article[] = [
         </p>
         <p>Una volta ottenuto, il CIN va:</p>
         <ul>
-          <li>indicato in <strong>ogni annuncio</strong>, su Airbnb, Booking e qualsiasi altro canale;</li>
-          <li>esposto <strong>all&apos;esterno dell&apos;edificio</strong>, in modo visibile.</li>
+          <li>Indicato in <strong>ogni annuncio</strong>, su Airbnb, Booking e qualsiasi altro canale.</li>
+          <li>Esposto <strong>all&apos;esterno dell&apos;edificio</strong>, in modo visibile.</li>
         </ul>
         <p>
           Le sanzioni sono pesanti: affittare senza CIN può costare da <strong>800 a 8.000 euro</strong>, mentre non esporlo o non indicarlo negli annunci da 500 a
@@ -53,8 +53,8 @@ export const ARTICLES: Article[] = [
         <h2>2. I requisiti di sicurezza</h2>
         <p>Per ottenere e mantenere il CIN la casa deve avere:</p>
         <ul>
-          <li>un <strong>rilevatore di gas combustibili</strong> e di <strong>monossido di carbonio</strong> funzionanti;</li>
-          <li><strong>estintori portatili</strong> a norma, in posizione accessibile e visibile, sottoposti alle verifiche periodiche.</li>
+          <li>Un <strong>rilevatore di gas combustibili</strong> e di <strong>monossido di carbonio</strong> funzionanti.</li>
+          <li><strong>Estintori portatili</strong> a norma, in posizione accessibile e visibile, sottoposti alle verifiche periodiche.</li>
         </ul>
         <p>È una spesa contenuta, ma va fatta prima di pubblicare l&apos;annuncio: la mancanza dei dispositivi è sanzionata a parte.</p>
 
@@ -104,7 +104,6 @@ export const ARTICLES: Article[] = [
     description:
       'Quanto lavoro c’è davvero dietro una casa vacanza, cosa fa un gestore professionale e come sceglierlo: una guida per decidere con calma.',
     updated: '2026-10-22',
-    published: false,
     body: (
       <>
         <p>
@@ -115,22 +114,22 @@ export const ARTICLES: Article[] = [
         <h2>Il lavoro dietro ogni soggiorno</h2>
         <p>Per ogni prenotazione, anche di due notti, c&apos;è una sequenza che si ripete:</p>
         <ul>
-          <li>rispondere a richieste e messaggi, spesso in più lingue e a qualsiasi ora;</li>
+          <li>Rispondere a richieste e messaggi, spesso in più lingue e a qualsiasi ora.</li>
           <li>
-            accogliere gli ospiti e registrarli alla Questura entro 24 ore (trovi tutti gli adempimenti nella{' '}
-            <a href="/it/guide/cin-suap-affitti-brevi">guida su CIN e SUAP</a>);
+            Accogliere gli ospiti e registrarli alla Questura entro 24 ore (trovi tutti gli adempimenti nella{' '}
+            <a href="/it/guide/cin-suap-affitti-brevi">guida su CIN e SUAP</a>).
           </li>
-          <li>pulizie, cambio della biancheria e controllo della casa tra un ospite e l&apos;altro;</li>
-          <li>gestire gli imprevisti: una caldaia che si ferma, una chiave persa, un arrivo in piena notte;</li>
-          <li>aggiornare prezzi e calendario su ogni portale.</li>
+          <li>Pulizie, cambio della biancheria e controllo della casa tra un ospite e l&apos;altro.</li>
+          <li>Gestire gli imprevisti: una caldaia che si ferma, una chiave persa, un arrivo in piena notte.</li>
+          <li>Aggiornare prezzi e calendario su ogni portale.</li>
         </ul>
         <p>In alta stagione sul Garda i cambi possono essere due o tre a settimana: chi vive lontano dalla casa se ne accorge presto.</p>
 
         <h2>Gestire da soli: quando ha senso</h2>
         <ul>
-          <li>abiti vicino alla casa e hai tempo, soprattutto nei weekend;</li>
-          <li>affitti solo poche settimane all&apos;anno;</li>
-          <li>hai una persona di fiducia per pulizie e check-in.</li>
+          <li>Abiti vicino alla casa e hai tempo, soprattutto nei weekend.</li>
+          <li>Affitti solo poche settimane all&apos;anno.</li>
+          <li>Hai una persona di fiducia per pulizie e check-in.</li>
         </ul>
         <p>
           Il vantaggio è che tutto il ricavo resta a te. Il costo è il tuo tempo, più quello che si perde senza accorgersene: prezzi fermi tutta la stagione,
@@ -139,21 +138,21 @@ export const ARTICLES: Article[] = [
 
         <h2>Cosa fa un gestore professionale</h2>
         <ul>
-          <li>annunci curati, con foto professionali e testi in più lingue;</li>
-          <li>prezzi aggiornati ogni giorno in base a stagione, eventi e domanda;</li>
-          <li>pubblicazione su più portali con il calendario sincronizzato;</li>
-          <li>accoglienza degli ospiti, pulizie, biancheria e piccola manutenzione;</li>
-          <li>pratiche e comunicazioni: CIN, Questura, ISTAT, tassa di soggiorno.</li>
+          <li>Annunci curati, con foto professionali e testi in più lingue.</li>
+          <li>Prezzi aggiornati ogni giorno in base a stagione, eventi e domanda.</li>
+          <li>Pubblicazione su più portali con il calendario sincronizzato.</li>
+          <li>Accoglienza degli ospiti, pulizie, biancheria e piccola manutenzione.</li>
+          <li>Pratiche e comunicazioni: CIN, Questura, ISTAT, tassa di soggiorno.</li>
         </ul>
         <p>Il compenso di solito è una percentuale sui ricavi: il gestore guadagna di più solo se la tua casa rende di più.</p>
 
         <h2>Come scegliere il gestore giusto</h2>
         <ul>
-          <li><strong>Trasparenza</strong>: un rendiconto mensile chiaro, con prenotazioni, costi e bonifico;</li>
-          <li><strong>presenza sul posto</strong>: qualcuno che conosce la zona e può intervenire in fretta;</li>
-          <li><strong>nessun vincolo nascosto</strong>: chiedi di costi di attivazione, durata del contratto e preavviso per uscire;</li>
-          <li><strong>uso personale</strong>: devi poter bloccare le settimane in cui vuoi usare la casa;</li>
-          <li><strong>recensioni</strong>: chiedi di vedere gli annunci che gestisce già e i loro punteggi.</li>
+          <li><strong>Trasparenza</strong>: un rendiconto mensile chiaro, con prenotazioni, costi e bonifico.</li>
+          <li><strong>Presenza sul posto</strong>: qualcuno che conosce la zona e può intervenire in fretta.</li>
+          <li><strong>Nessun vincolo nascosto</strong>: chiedi di costi di attivazione, durata del contratto e preavviso per uscire.</li>
+          <li><strong>Uso personale</strong>: devi poter bloccare le settimane in cui vuoi usare la casa.</li>
+          <li><strong>Recensioni</strong>: chiedi di vedere gli annunci che gestisce già e i loro punteggi.</li>
         </ul>
 
         <h2>E la tua casa?</h2>
@@ -170,7 +169,6 @@ export const ARTICLES: Article[] = [
     description:
       'Da cosa dipendono i ricavi di una casa vacanza sul Garda, quali costi considerare e come stimare quanto può rendere la tua: occupazione, prezzi, stagionalità.',
     updated: '2026-10-22',
-    published: false,
     body: (
       <>
         <p>
@@ -201,9 +199,9 @@ export const ARTICLES: Article[] = [
         <p>Prendiamo un bilocale ipotetico vicino al lago, con terrazzo:</p>
         <ul>
           <li>150 notti occupate a un prezzo medio di 130 euro = <strong>19.500 euro lordi</strong></li>
-          <li>commissioni dei portali (intorno al 15%): circa 2.900 euro</li>
-          <li>pulizie e biancheria per circa 40 soggiorni: circa 2.400 euro</li>
-          <li>utenze e piccola manutenzione: circa 2.000 euro</li>
+          <li>Commissioni dei portali (intorno al 15%): circa 2.900 euro</li>
+          <li>Pulizie e biancheria per circa 40 soggiorni: circa 2.400 euro</li>
+          <li>Utenze e piccola manutenzione: circa 2.000 euro</li>
         </ul>
         <p>
           Al netto di questi costi restano circa <strong>12.000 euro</strong> (prima delle imposte). Con 30 notti in più o 15 euro in più a notte il
@@ -213,11 +211,11 @@ export const ARTICLES: Article[] = [
 
         <h2>Cosa fa salire i ricavi</h2>
         <ul>
-          <li><strong>Prezzi aggiornati ogni giorno</strong> in base a stagione, eventi e domanda, invece di una tariffa fissa;</li>
-          <li><strong>più canali</strong> (Airbnb, Booking, VRBO, diretto) con calendario sincronizzato;</li>
-          <li><strong>foto professionali</strong> e annunci in più lingue, perché molti ospiti del Garda arrivano dall&apos;estero;</li>
-          <li><strong>recensioni alte</strong>, che portano più prenotazioni e permettono prezzi più alti;</li>
-          <li><strong>risposte rapide</strong> e check-in senza intoppi.</li>
+          <li><strong>Prezzi aggiornati ogni giorno</strong> in base a stagione, eventi e domanda, invece di una tariffa fissa.</li>
+          <li><strong>Più canali</strong> (Airbnb, Booking, VRBO, diretto) con calendario sincronizzato.</li>
+          <li><strong>Foto professionali</strong> e annunci in più lingue, perché molti ospiti del Garda arrivano dall&apos;estero.</li>
+          <li><strong>Recensioni alte</strong>, che portano più prenotazioni e permettono prezzi più alti.</li>
+          <li><strong>Risposte rapide</strong> e check-in senza intoppi.</li>
         </ul>
 
         <h2>E la tua casa?</h2>
@@ -229,5 +227,7 @@ export const ARTICLES: Article[] = [
     ),
   },
 ];
+
+export const ARTICLES: Article[] = CONTENT.map((a) => ({ ...a, published: isPublishedGuide(a.slug) }));
 
 export const findArticle = (slug: string) => ARTICLES.find((a) => a.slug === slug);

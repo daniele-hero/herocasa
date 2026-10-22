@@ -3,6 +3,7 @@
 import { useTranslations, useLocale } from 'next-intl';
 import Link from 'next/link';
 import { openCookieBanner } from './CookieBanner';
+import { GUIDE_LINKS } from '@/lib/guide-links';
 
 export default function Footer() {
   const t = useTranslations('footer');
@@ -46,6 +47,17 @@ export default function Footer() {
             <li><a href={`/${locale}#faq`} className="transition-colors hover:text-[var(--gold)]">{n('faq')}</a></li>
             <li><a href={`/${locale}#contatti`} className="transition-colors hover:text-[var(--gold)]">{n('contact')}</a></li>
           </ul>
+          {/* The guides are Italian-only. */}
+          {locale === 'it' && GUIDE_LINKS.length > 0 && (
+            <>
+              <h4 className="serif font-medium text-[20px] text-[var(--paper)] mt-8 mb-4">Guide per proprietari</h4>
+              <ul className="list-none flex flex-col gap-2">
+                {GUIDE_LINKS.map((g) => (
+                  <li key={g.slug}><Link href={`/it/guide/${g.slug}`} className="transition-colors hover:text-[var(--gold)]">{g.label}</Link></li>
+                ))}
+              </ul>
+            </>
+          )}
         </div>
         <div>
           <h4 className="serif font-medium text-[20px] text-[var(--paper)] mb-4">{t('contactTitle')}</h4>
