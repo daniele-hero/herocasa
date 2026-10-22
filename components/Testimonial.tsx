@@ -49,7 +49,8 @@ export default function Testimonial() {
       aria-roledescription="carosello testimonianze proprietari"
     >
       <div className="relative min-h-[260px] flex items-center justify-center">
-        <AnimatePresence mode="wait">
+        {/* initial={false}: the first quote is in the HTML and visible before JS loads; later ones animate in. */}
+        <AnimatePresence mode="wait" initial={false}>
           <motion.figure
             key={current}
             className="m-0"

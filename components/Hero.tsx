@@ -1,12 +1,16 @@
 'use client';
 
 import { motion, useReducedMotion, useScroll, useTransform } from 'motion/react';
+import type { CSSProperties } from 'react';
 import { useRef } from 'react';
 import { useTranslations } from 'next-intl';
 import Photo from './Photo';
 import HeroForm from './HeroForm';
 
-const EASE = [0.2, 0.7, 0.2, 1] as const;
+// Entrance animations are CSS (globals.css, .hero-rise/.hero-line/.hero-unveil), not motion:
+// they start on first paint instead of waiting for the JS bundle, so on phones
+// the headline and CTA show up immediately rather than after hydration.
+const delay = (s: number): CSSProperties => ({ animationDelay: `${s}s` });
 
 export default function Hero() {
   const t = useTranslations('hero');
@@ -21,58 +25,36 @@ export default function Hero() {
       style={{ paddingBottom: '60px' }}
     >
       <div className="flex flex-col gap-6 pb-6">
-        <motion.div
-          initial={reduced ? undefined : { opacity: 0, y: 12 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.1, ease: EASE }}
-          className="eyebrow -mb-2"
-        >
-          {t('eyebrow')}
-        </motion.div>
+        <div className="eyebrow -mb-2 hero-rise">{t('eyebrow')}</div>
 
         <h1 className="h-display font-normal" style={{ fontSize: 'clamp(46px, 7.5vw, 112px)', lineHeight: 0.98, letterSpacing: '-0.015em' }}>
           {[t('lineOne'), t('lineTwo'), t('lineThree')].map((line, i) => (
             <span key={i} className="block overflow-hidden">
-              <motion.span
-                className={`inline-block ${i === 1 ? 'gold-italic' : ''}`}
-                initial={reduced ? undefined : { y: '105%' }}
-                animate={{ y: '0%' }}
-                transition={{ duration: 1, delay: 0.15 + i * 0.15, ease: EASE }}
-              >
+              <span className={`inline-block hero-line ${i === 1 ? 'gold-italic' : ''}`} style={delay(0.05 + i * 0.1)}>
                 {line}
-              </motion.span>
+              </span>
             </span>
           ))}
         </h1>
 
-        <motion.p
-          initial={reduced ? undefined : { opacity: 0, y: 12 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.9, delay: 0.8, ease: EASE }}
-          className="max-w-[44ch]"
-          style={{ fontSize: 'clamp(17px, 1.25vw, 20px)', lineHeight: 1.55, color: 'var(--olive-90)' }}
+        <p
+          className="max-w-[44ch] hero-rise"
+          style={{ fontSize: 'clamp(17px, 1.25vw, 20px)', lineHeight: 1.55, color: 'var(--olive-90)', ...delay(0.3) }}
         >
           {t('body')}
-        </motion.p>
+        </p>
 
-        <motion.div
-          initial={reduced ? undefined : { opacity: 0, y: 12 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.9, delay: 1.0, ease: EASE }}
-          className="mt-2"
-        >
+        <div className="mt-2 hero-rise" style={delay(0.4)}>
           <HeroForm />
-        </motion.div>
+        </div>
       </div>
 
-      <motion.div
+      <div
         ref={imgWrapRef}
-        initial={reduced ? undefined : { opacity: 0, clipPath: 'inset(0 0 100% 0)' }}
-        animate={{ opacity: 1, clipPath: 'inset(0 0 0 0)' }}
-        transition={{ duration: 1.2, delay: 0.35, ease: EASE }}
+        style={delay(0.15)}
         // Cap + sticky: when the HeroForm expands the left column grows ~450px; without
         // the cap the photo stretched with it into a huge crop and the layout jumped.
-        className="relative self-stretch min-h-[60vh] md:max-h-[max(900px,calc(100dvh-204px))] md:sticky md:top-28"
+        className="relative self-stretch min-h-[60vh] md:max-h-[max(900px,calc(100dvh-204px))] md:sticky md:top-28 hero-unveil"
       >
         <div className="relative h-full min-h-[68vh] overflow-hidden bg-[var(--marble)]">
           <motion.div style={{ y: reduced ? 0 : imgY }} className="h-full w-full">
@@ -91,7 +73,7 @@ export default function Hero() {
           </div>
           <div className="text-[13px] text-[var(--olive-70)] mt-2 leading-[1.5]">{t('statMeta')}</div>
         </div>
-      </motion.div>
+      </div>
     </header>
   );
 }

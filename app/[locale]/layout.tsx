@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+import { Cormorant_Garamond, Manrope } from 'next/font/google';
 import { NextIntlClientProvider, hasLocale } from 'next-intl';
 import { getMessages, getTranslations, setRequestLocale } from 'next-intl/server';
 import { notFound } from 'next/navigation';
@@ -7,6 +8,11 @@ import { COMUNI } from '@/lib/comuni';
 import '../globals.css';
 
 const SITE_URL = 'https://herocasa.it';
+
+// Downloaded at build time and served from herocasa.it: no render-blocking
+// request to Google on first paint, and no visitor IPs sent to Google.
+const serif = Cormorant_Garamond({ subsets: ['latin'], style: ['normal', 'italic'], display: 'swap', variable: '--font-cormorant' });
+const sans = Manrope({ subsets: ['latin'], display: 'swap', variable: '--font-manrope' });
 
 const LOCALE_OG: Record<string, string> = { it: 'it_IT', en: 'en_US', de: 'de_DE' };
 
@@ -112,14 +118,8 @@ export default async function LocaleLayout({
   };
 
   return (
-    <html lang={locale}>
+    <html lang={locale} className={`${serif.variable} ${sans.variable}`}>
       <head>
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="" />
-        <link
-          href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500&family=Manrope:wght@300;400;500;600;700&display=swap"
-          rel="stylesheet"
-        />
         <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
         <meta name="theme-color" content="#1E4D42" />
         <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(localBusinessSchema) }} />

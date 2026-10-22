@@ -3,6 +3,7 @@
 import { useTranslations } from 'next-intl';
 import { motion, useInView, useMotionValue, useTransform, animate } from 'motion/react';
 import { useEffect, useRef } from 'react';
+import Reveal from './Reveal';
 
 function AnimatedNumber({ value }: { value: string }) {
   // Parse leading number, keep prefix/suffix around it
@@ -43,19 +44,12 @@ export default function TrustBar() {
     >
       <div className="max-w-[1440px] mx-auto grid gap-8 md:grid-cols-4 md:gap-4">
         {items.map((it, i) => (
-          <motion.div
-            key={i}
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true, margin: '-10%' }}
-            transition={{ duration: 0.6, delay: i * 0.1 }}
-            className="flex flex-col gap-1.5"
-          >
+          <Reveal key={i} delay={i * 0.1} y={20} className="flex flex-col gap-1.5">
             <div className="serif text-[var(--olive)] leading-none" style={{ fontSize: 'clamp(32px, 3.6vw, 48px)' }}>
               <AnimatedNumber value={it.value} />
             </div>
             <div className="text-[12px] tracking-[0.14em] uppercase text-[var(--stone)]">{it.label}</div>
-          </motion.div>
+          </Reveal>
         ))}
       </div>
     </section>
