@@ -37,7 +37,28 @@ type ValuationBody = {
   eventId?: string;
   locale?: string;
   marketingConsent?: boolean;
+  /** Path + query of the page the form was sent from (utm_* tags included). */
+  page?: string;
+  referrer?: string;
 };
+
+/** Where the lead came from, for the team email: page, referring site, utm_campaign. */
+function attribution(body: ValuationBody): { page: string; from: string; campaign: string } {
+  const page = typeof body.page === 'string' && body.page.startsWith('/') ? body.page.slice(0, 300) : '';
+  let from = 'accesso diretto';
+  try {
+    if (body.referrer) from = new URL(body.referrer).hostname.replace(/^www\./, '');
+  } catch {
+    // Malformed referrer: keep the default.
+  }
+  let campaign = '';
+  try {
+    campaign = new URL(page || '/', 'https://herocasa.it').searchParams.get('utm_campaign')?.slice(0, 100) ?? '';
+  } catch {
+    // Malformed page: no campaign.
+  }
+  return { page, from, campaign };
+}
 
 const json = (data: unknown, status = 200) =>
   new Response(JSON.stringify(data), { status, headers: { 'Content-Type': 'application/json' } });
@@ -59,8 +80,12 @@ function escapeHtml(value: string): string {
 }
 
 function buildEmailHtml(body: ValuationBody): string {
+  const src = attribution(body);
   const rows: Array<[string, string]> = [
     ['Provenienza', body.source || '—'],
+    ...(src.campaign ? ([['Campagna', src.campaign]] as Array<[string, string]>) : []),
+    ['Pagina', src.page || '—'],
+    ['Arrivato da', src.from],
     ['Nome', body.name || '—'],
     ['Email', body.email || '—'],
     ['Telefono', body.phone || '—'],
@@ -384,7 +409,7 @@ async function sendMetaConversionEvent(body: ValuationBody, request: Request, en
           event_name: 'Lead',
           event_time: Math.floor(Date.now() / 1000),
           event_id: body.eventId,
-          event_source_url: 'https://herocasa.it/',
+          event_source_url: `https://herocasa.it${attribution(body).page.split('?')[0] || '/'}`,
           action_source: 'website',
           user_data: userData,
           custom_data: {

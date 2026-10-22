@@ -74,7 +74,9 @@ export async function postValuationLead(lead: ValuationLead): Promise<void> {
     await fetch('/api/valuation-request', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify(lead),
+      // Page (with any ?utm_ tags, e.g. from the Google Business profiles) and referrer
+      // tell the team where the lead came from. Read at submit time: nothing is stored.
+      body: JSON.stringify({ ...lead, page: location.pathname + location.search, referrer: document.referrer }),
     });
   } catch {
     // Silent — network hiccups shouldn't block the on-screen confirmation.

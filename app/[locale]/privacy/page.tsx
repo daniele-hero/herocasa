@@ -13,7 +13,7 @@ const COPY = (locale: string): Copy =>
       eyebrow: 'Informativa privacy · art. 13 GDPR',
       title: <>Come trattiamo {gold('i vostri dati.')}</>,
       lede: 'In poche parole: raccogliamo solo ciò che serve a ricontattarvi, non lo vendiamo, potete chiedercelo indietro o farlo cancellare quando volete.',
-      updated: '21 ottobre 2026',
+      updated: '22 ottobre 2026',
       body: (
         <>
           <h2>1. Titolare del trattamento</h2>
@@ -26,6 +26,7 @@ const COPY = (locale: string): Copy =>
             <li>numero di telefono</li>
             <li>indirizzo email (facoltativo)</li>
             <li>informazioni sull&apos;immobile (comune, tipologia, camere, servizi, note libere)</li>
+            <li>la pagina del sito da cui inviate il modulo e il sito da cui siete arrivati (per esempio Google), per sapere come ci avete trovato</li>
             <li>eventuali comunicazioni successive che ci inviate via email, telefono o WhatsApp</li>
           </ul>
 
@@ -70,7 +71,7 @@ const COPY = (locale: string): Copy =>
       eyebrow: 'Privacy notice · Art. 13 GDPR',
       title: <>How we handle {gold('your data.')}</>,
       lede: 'In short: we only collect what we need to get back to you, we never sell it, and you can ask for a copy or have it deleted whenever you like.',
-      updated: '21 October 2026',
+      updated: '22 October 2026',
       body: (
         <>
           <h2>1. Data controller</h2>
@@ -83,6 +84,7 @@ const COPY = (locale: string): Copy =>
             <li>phone number</li>
             <li>email address (optional)</li>
             <li>information about the property (town, type, bedrooms, amenities, free notes)</li>
+            <li>the page of this website you send the form from and the site you came from (for example Google), so we know how you found us</li>
             <li>any later messages you send us by email, phone or WhatsApp</li>
           </ul>
 
@@ -127,7 +129,7 @@ const COPY = (locale: string): Copy =>
       eyebrow: 'Datenschutzerklärung · Art. 13 DSGVO',
       title: <>Wie wir mit {gold('Ihren Daten umgehen.')}</>,
       lede: 'Kurz gesagt: Wir erheben nur, was wir brauchen, um Sie zu kontaktieren, wir verkaufen nichts, und Sie können Ihre Daten jederzeit einsehen oder löschen lassen.',
-      updated: '21. Oktober 2026',
+      updated: '22. Oktober 2026',
       body: (
         <>
           <h2>1. Verantwortlicher</h2>
@@ -140,6 +142,7 @@ const COPY = (locale: string): Copy =>
             <li>Telefonnummer</li>
             <li>E-Mail-Adresse (optional)</li>
             <li>Angaben zur Immobilie (Gemeinde, Art, Schlafzimmer, Ausstattung, freie Anmerkungen)</li>
+            <li>die Seite dieser Website, von der Sie das Formular senden, und die Website, über die Sie zu uns gekommen sind (zum Beispiel Google), damit wir wissen, wie Sie uns gefunden haben</li>
             <li>spätere Nachrichten, die Sie uns per E-Mail, Telefon oder WhatsApp senden</li>
           </ul>
 
