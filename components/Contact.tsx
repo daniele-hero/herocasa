@@ -3,8 +3,9 @@
 import { FormEvent, useState } from 'react';
 import { useLocale, useTranslations } from 'next-intl';
 import Reveal from './Reveal';
-import { hasMarketingConsent, trackLead } from './CookieBanner';
-import { ZONES, postValuationLead, type EstimatorFormCopy } from '@/lib/estimator-form';
+import { hasMarketingConsent, trackContact, trackLead } from './CookieBanner';
+import Spinner from './Spinner';
+import { MIN_PHONE_DIGITS, ZONES, leadWhatsappLink, phoneDigits, postValuationLead, type EstimatorFormCopy } from '@/lib/estimator-form';
 
 export default function Contact({ numeral = 'viii.' }: { numeral?: string } = {}) {
   const t = useTranslations('contact');
@@ -22,22 +23,35 @@ export default function Contact({ numeral = 'viii.' }: { numeral?: string } = {}
   };
 
   const [sending, setSending] = useState(false);
-  const [sent, setSent] = useState(false);
+  // After sending: wa.me link to keep talking; on failure: the same with the details, as a fallback.
+  const [sent, setSent] = useState<string | null>(null);
+  const [failed, setFailed] = useState<string | null>(null);
   const [zoneChoice, setZoneChoice] = useState('');
 
   const onSubmit = async (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     if (sending) return;
-    setSending(true);
     const data = new FormData(e.currentTarget);
+    const phone = ((data.get('phone') as string) || '').trim();
+    if (phoneDigits(phone) < MIN_PHONE_DIGITS) {
+      const input = e.currentTarget.elements.namedItem('phone') as HTMLInputElement | null;
+      input?.setCustomValidity(form.phoneInvalid);
+      input?.reportValidity();
+      return;
+    }
+    setSending(true);
+    setFailed(null);
     const zone = ((data.get('otherZoneName') as string) || '').trim() || (data.get('zone') as string) || '';
+    const name = ((data.get('name') as string) || '').trim();
+    const email = ((data.get('email') as string) || '').trim();
     const eventId = crypto.randomUUID();
+    const summary = { name, phone, email, zone };
 
-    await postValuationLead({
+    const ok = await postValuationLead({
       source: 'call-booking-form',
-      name: (data.get('name') as string) || '',
-      email: ((data.get('email') as string) || '').trim(),
-      phone: ((data.get('phone') as string) || '').trim(),
+      name,
+      email,
+      phone,
       zone,
       type: '',
       rooms: '',
@@ -49,8 +63,14 @@ export default function Contact({ numeral = 'viii.' }: { numeral?: string } = {}
       marketingConsent: hasMarketingConsent(),
     });
 
+    if (!ok) {
+      setFailed(leadWhatsappLink(form.waIntroFail, form.waLabels, summary));
+      setSending(false);
+      return;
+    }
+
     trackLead('call-booking-form', { comune: zone }, eventId);
-    setSent(true);
+    setSent(leadWhatsappLink(form.waIntroCall, form.waLabels, summary));
   };
 
   return (
@@ -105,7 +125,13 @@ export default function Contact({ numeral = 'viii.' }: { numeral?: string } = {}
               ))}
             </ul>
             {sent ? (
-              <p role="status" className="serif text-[22px] leading-[1.35] text-[var(--paper)]">{callCta.success}</p>
+              <div role="status">
+                <p className="serif text-[22px] leading-[1.35] text-[var(--paper)]">{callCta.success}</p>
+                <a href={sent} target="_blank" rel="noopener noreferrer" onClick={() => trackContact('whatsapp-after-call-request')} className="btn gold mt-5">
+                  {form.waContinue} →
+                </a>
+                <p className="mt-2 text-[12px] leading-[1.5]" style={{ color: 'var(--paper-70)' }}>{form.waContinueNote}</p>
+              </div>
             ) : (
               <form onSubmit={onSubmit} className="flex flex-col gap-6">
                 <label className="block">
@@ -114,7 +140,16 @@ export default function Contact({ numeral = 'viii.' }: { numeral?: string } = {}
                 </label>
                 <label className="block">
                   <span className="block text-[11px] tracking-[0.16em] uppercase mb-2.5" style={{ color: 'var(--paper-70)' }}>{form.phone}</span>
-                  <input name="phone" type="tel" required autoComplete="tel" inputMode="tel" className="est-input" />
+                  <input
+                    name="phone"
+                    type="tel"
+                    required
+                    autoComplete="tel"
+                    inputMode="tel"
+                    placeholder={form.phonePlaceholder}
+                    onInput={(e) => e.currentTarget.setCustomValidity('')}
+                    className="est-input"
+                  />
                 </label>
                 <label className="block">
                   <span className="block text-[11px] tracking-[0.16em] uppercase mb-2.5" style={{ color: 'var(--paper-70)' }}>{form.emailOptional}</span>
@@ -134,13 +169,29 @@ export default function Contact({ numeral = 'viii.' }: { numeral?: string } = {}
                     <input name="otherZoneName" type="text" required placeholder={form.otherZonePlaceholder} className="est-input" />
                   </label>
                 )}
+                {failed && (
+                  <div role="alert" className="p-4 border border-[var(--paper-40)] text-[var(--paper)]">
+                    <p className="text-[14px] font-semibold mb-1">{form.failTitle}</p>
+                    <p className="text-[13px] leading-[1.55] mb-3" style={{ color: 'var(--paper-70)' }}>{form.failBody}</p>
+                    <a href={failed} target="_blank" rel="noopener noreferrer" onClick={() => trackContact('whatsapp-call-fallback')} className="btn gold sm">
+                      {form.failWhatsapp} →
+                    </a>
+                  </div>
+                )}
                 <button
                   type="submit"
                   disabled={sending}
-                  className="btn w-full justify-center py-4 disabled:opacity-60"
-                  style={{ background: 'var(--gold)', borderColor: 'var(--gold)', color: 'var(--olive)' }}
+                  aria-busy={sending}
+                  className="btn w-full justify-center py-4 disabled:opacity-80 disabled:cursor-wait"
+                  style={{ background: 'var(--cta-bg)', borderColor: 'var(--cta-bg)', color: 'var(--cta-text)' }}
                 >
-                  {callCta.cta}
+                  {sending ? (
+                    <>
+                      <Spinner /> {form.sending}
+                    </>
+                  ) : (
+                    callCta.cta
+                  )}
                 </button>
               </form>
             )}

@@ -1,5 +1,5 @@
 import type { Metadata } from 'next';
-import { Cormorant_Garamond, Manrope } from 'next/font/google';
+import { sans, serif } from '@/lib/fonts';
 import { NextIntlClientProvider, hasLocale } from 'next-intl';
 import { getMessages, getTranslations, setRequestLocale } from 'next-intl/server';
 import { notFound } from 'next/navigation';
@@ -9,10 +9,6 @@ import '../globals.css';
 
 const SITE_URL = 'https://herocasa.it';
 
-// Downloaded at build time and served from herocasa.it: no render-blocking
-// request to Google on first paint, and no visitor IPs sent to Google.
-const serif = Cormorant_Garamond({ subsets: ['latin'], style: ['normal', 'italic'], display: 'swap', variable: '--font-cormorant' });
-const sans = Manrope({ subsets: ['latin'], display: 'swap', variable: '--font-manrope' });
 
 const LOCALE_OG: Record<string, string> = { it: 'it_IT', en: 'en_US', de: 'de_DE' };
 
@@ -112,7 +108,11 @@ export default async function LocaleLayout({
     telephone: '+39 366 369 5252',
     vatID: '02668020205',
     priceRange: '€€€',
-    areaServed: Object.values(COMUNI).map((c) => ({ '@type': 'City', name: c.name })),
+    // The three provinces around the lake, then every comune with a landing page.
+    areaServed: [
+      ...['Provincia di Verona', 'Provincia di Brescia', 'Provincia di Mantova'].map((name) => ({ '@type': 'AdministrativeArea', name })),
+      ...Object.values(COMUNI).map((c) => ({ '@type': 'City', name: c.name })),
+    ],
     geo: { '@type': 'GeoCoordinates', latitude: 45.5636, longitude: 10.6417 },
     sameAs: ['https://www.instagram.com/herocasa_affitti/', 'https://www.facebook.com/p/Herocasa-Affitti-Brevi-61556602923760/'],
   };

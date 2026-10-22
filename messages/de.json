@@ -1,7 +1,7 @@
 {
   "meta": {
-    "title": "Herocasa — Verwaltung von Zweitwohnsitzen am Gardasee",
-    "description": "Property Management für Eigentümer von Zweitwohnsitzen am Gardasee. Wir übernehmen Bürokratie, Gäste, Reinigung und Preise. Transparente Monatsberichte, totale Sorglosigkeit."
+    "title": "Ferienhaus-Verwaltung am Gardasee | Herocasa",
+    "description": "Ferienhaus-Verwaltung am Gardasee in den Provinzen Verona, Brescia und Mantua: Formalitäten, Preise, Gäste, Reinigung. Kostenlose Bewertung Ihrer Immobilie."
   },
   "nav": {
     "services": "Leistungen",
@@ -275,7 +275,29 @@
       "roomsDecrease": "Ein Schlafzimmer weniger",
       "roomsIncrease": "Ein Schlafzimmer mehr",
       "otherZoneName": "Welche Gemeinde?",
-      "otherZonePlaceholder": "z. B. Montichiari"
+      "otherZonePlaceholder": "z. B. Montichiari",
+      "phonePlaceholder": "z. B. +49 151 23456789",
+      "phoneInvalid": "Bitte prüfen Sie die Nummer: Sie braucht mindestens 8 Ziffern (mit Ländervorwahl, z. B. +49).",
+      "sending": "Wird gesendet…",
+      "failTitle": "Ihre Anfrage konnte nicht gesendet werden.",
+      "failBody": "Das kommt selten vor: Senden Sie sie uns per WhatsApp, die Nachricht mit Ihren Angaben ist schon vorbereitet. Oder versuchen Sie es gleich noch einmal.",
+      "failWhatsapp": "Per WhatsApp senden",
+      "waContinue": "Weiter auf WhatsApp",
+      "waContinueNote": "Der Chat mit uns öffnet sich mit der fertigen Zusammenfassung: einfach auf Senden tippen.",
+      "waIntroSent": "Hallo Herocasa, ich habe gerade auf Ihrer Website eine Bewertung angefragt. Hier die Zusammenfassung:",
+      "waIntroFail": "Hallo Herocasa, ich möchte eine Bewertung für mein Haus (das Formular auf der Website hat nicht funktioniert). Hier meine Angaben:",
+      "waIntroCall": "Hallo Herocasa, ich habe gerade auf Ihrer Website einen Rückruf angefragt. Hier meine Angaben:",
+      "waLabels": {
+        "name": "Name",
+        "phone": "Telefon",
+        "email": "E-Mail",
+        "zone": "Gemeinde",
+        "type": "Objektart",
+        "rooms": "Schlafzimmer",
+        "features": "Ausstattung",
+        "estimate": "Schätzung auf der Website",
+        "notes": "Anmerkungen"
+      }
     },
     "result": {
       "label": "Orientierende Schätzung · Erste Analyse",

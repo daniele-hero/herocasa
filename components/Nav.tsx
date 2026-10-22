@@ -67,10 +67,11 @@ export default function Nav() {
       >
         <Link href={`/${locale}`} className="inline-flex items-center" aria-label="Herocasa — Affitti brevi">
           <Image
-            src="/logo.png"
+            // 448px copy of logo.png (6.8 KB instead of 24 KB): it is the page's LCP element on phones.
+            src="/logo-nav.png"
             alt="Herocasa — Affitti brevi"
-            width={1004}
-            height={650}
+            width={448}
+            height={290}
             priority
             className={`w-auto transition-[height] duration-300 ${scrolled ? 'h-[76px]' : 'h-[96px]'} max-[720px]:h-[44px]`}
           />

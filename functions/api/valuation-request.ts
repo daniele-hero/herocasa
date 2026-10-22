@@ -108,29 +108,28 @@ function buildEmailHtml(body: ValuationBody): string {
   return `<table cellpadding="0" cellspacing="0" style="font-family:sans-serif;border-collapse:collapse">${rowsHtml}</table>`;
 }
 
-async function sendLeadEmail(body: ValuationBody, env: Env, followUps: string[]): Promise<void> {
+/** Team notification; true when Resend accepted it. Without it the lead would only exist in the logs. */
+async function sendLeadEmail(body: ValuationBody, env: Env, followUps: string[]): Promise<boolean> {
   if (!env.RESEND_API_KEY || !env.LEAD_NOTIFY_EMAIL) {
     console.warn('[valuation-request] RESEND_API_KEY or LEAD_NOTIFY_EMAIL not set — no notification sent');
-    return;
+    return false;
   }
   const kind = body.source === 'call-booking-form' ? 'Richiesta chiamata' : 'Nuovo lead';
-  const res = await fetch('https://api.resend.com/emails', {
-    method: 'POST',
-    headers: { Authorization: `Bearer ${env.RESEND_API_KEY}`, 'Content-Type': 'application/json' },
-    body: JSON.stringify({
-      from: env.RESEND_FROM_EMAIL || 'Herocasa <onboarding@resend.dev>',
-      // Comma-separated list, so a lead still lands in a backup inbox if one recipient bounces.
-      to: env.LEAD_NOTIFY_EMAIL.split(',').map((s) => s.trim()).filter(Boolean),
-      ...(body.email ? { reply_to: body.email } : {}),
-      subject: `${kind}: ${body.name || 'proprietario'} — ${body.zone || 'zona non specificata'}`,
-      html:
-        buildEmailHtml(body) +
-        (followUps.length
-          ? `<p style="font-family:sans-serif;font-size:13px;margin-top:20px;color:#6b6b63">Al proprietario partiranno ${followUps.length} email di follow-up nei prossimi giorni. Se diventa cliente o non è interessato: <a href="${await stopLink(followUps, 'it', env)}">ferma i follow-up</a>.</p>`
-          : ''),
-    }),
+  // resendCall retries on 429: the follow-ups were just created and the free plan allows ~2 requests/second.
+  const res = await resendCall(env, '/emails', {
+    from: env.RESEND_FROM_EMAIL || 'Herocasa <onboarding@resend.dev>',
+    // Comma-separated list, so a lead still lands in a backup inbox if one recipient bounces.
+    to: env.LEAD_NOTIFY_EMAIL.split(',').map((s) => s.trim()).filter(Boolean),
+    ...(body.email ? { reply_to: body.email } : {}),
+    subject: `${kind}: ${body.name || 'proprietario'} — ${body.zone || 'zona non specificata'}`,
+    html:
+      buildEmailHtml(body) +
+      (followUps.length
+        ? `<p style="font-family:sans-serif;font-size:13px;margin-top:20px;color:#6b6b63">Al proprietario partiranno ${followUps.length} email di follow-up nei prossimi giorni. Se diventa cliente o non è interessato: <a href="${await stopLink(followUps, 'it', env)}">ferma i follow-up</a>.</p>`
+        : ''),
   });
   if (!res.ok) console.error('[valuation-request] Resend error', res.status, await res.text());
+  return res.ok;
 }
 
 const SITE = 'https://herocasa.it';
@@ -276,5 +275,8 @@ export const onRequestPost = async ({ request, env }: { request: Request; env: E
   ]);
   for (const r of results) if (r.status === 'rejected') console.error('[valuation-request]', r.reason);
 
+  // The team never heard of this lead: tell the form, which then offers WhatsApp with the details pre-written.
+  const notified = results[0].status === 'fulfilled' && results[0].value === true;
+  if (!notified) return json({ ok: false, error: 'notify_failed' }, 502);
   return json({ ok: true });
 };

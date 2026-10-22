@@ -20,7 +20,8 @@
   --marble: #EAE3D0;
   --olive: #1E4D42;
   --olive-90: rgba(30, 77, 66, 0.9);
-  --olive-70: rgba(30, 77, 66, 0.7);
+  /* 0.82, not 0.7: body text must reach WCAG AA (4.5:1) on paper and marble. */
+  --olive-70: rgba(30, 77, 66, 0.82);
   --olive-40: rgba(30, 77, 66, 0.4);
   --olive-15: rgba(30, 77, 66, 0.15);
   --shadow: #0F2F27;
@@ -29,9 +30,15 @@
   /* WCAG AA-safe gold for small text (<18px) on --paper: 5.33:1 contrast, vs 2.4:1 for --gold */
   --gold-ink: #7A5F35;
   --sage: #8EB2A4;
-  --stone: #6B6A5C;
+  --stone: #65645A; /* AA on marble too (was #6B6A5C: 4.27:1) */
   --paper-70: rgba(246, 241, 228, 0.7);
-  --paper-40: rgba(246, 241, 228, 0.4);
+  --paper-40: rgba(246, 241, 228, 0.4); /* borders only: too faint for text */
+  --paper-60: rgba(246, 241, 228, 0.6); /* small text on dark backgrounds */
+  /* Gold call-to-action buttons: dark text on gold reaches AA (5:1); cream on gold was 2.55:1. */
+  --cta-bg: var(--gold);
+  --cta-text: var(--shadow);
+  --cta-bg-hover: var(--gold-ink);
+  --cta-text-hover: var(--paper);
   --gutter: clamp(20px, 4vw, 56px);
   --section-y: clamp(56px, 7vw, 112px);
 }
@@ -89,9 +96,9 @@ img { max-width: 100%; display: block; }
   cursor: pointer;
   transition: background 250ms ease, color 250ms ease, border-color 250ms ease;
 }
-.btn:hover { background: var(--gold); border-color: var(--gold); color: var(--paper); }
-.btn.gold { background: var(--gold); border-color: var(--gold); color: var(--paper); }
-.btn.gold:hover { background: var(--gold-dark); border-color: var(--gold-dark); }
+.btn:hover { background: var(--cta-bg); border-color: var(--cta-bg); color: var(--cta-text); }
+.btn.gold { background: var(--cta-bg); border-color: var(--cta-bg); color: var(--cta-text); }
+.btn.gold:hover { background: var(--cta-bg-hover); border-color: var(--cta-bg-hover); color: var(--cta-text-hover); }
 .btn.ghost { background: transparent; color: var(--olive); }
 .btn.ghost:hover { background: var(--olive); color: var(--paper); }
 .btn.sm { padding: 10px 18px; font-size: 12px; }
@@ -138,7 +145,7 @@ img { max-width: 100%; display: block; }
   color: var(--paper);
   transition: all 200ms ease;
 }
-.check-chip.on { background: var(--gold); border-color: var(--gold); color: var(--olive); }
+.check-chip.on { background: var(--cta-bg); border-color: var(--cta-bg); color: var(--cta-text); }
 .check-chip:hover:not(.on) { border-color: var(--gold); }
 
 /* FAQ transitions */

@@ -1,7 +1,7 @@
 {
   "meta": {
-    "title": "Herocasa — Property management for second homes on Lake Garda",
-    "description": "Full-service property management for owners of second homes on Lake Garda. We handle bureaucracy, guests, cleaning, pricing. Transparent monthly reports, total peace of mind."
+    "title": "Short-term rental management on Lake Garda | Herocasa",
+    "description": "Short-term rental management for second homes on Lake Garda, provinces of Verona, Brescia and Mantua: paperwork, pricing, guests, cleaning. Free valuation."
   },
   "nav": {
     "services": "Services",
@@ -275,7 +275,29 @@
       "roomsDecrease": "One bedroom fewer",
       "roomsIncrease": "One bedroom more",
       "otherZoneName": "Which town?",
-      "otherZonePlaceholder": "E.g. Montichiari"
+      "otherZonePlaceholder": "E.g. Montichiari",
+      "phonePlaceholder": "e.g. +44 7700 900123",
+      "phoneInvalid": "Please check the number: it needs at least 8 digits (add the country code, e.g. +44).",
+      "sending": "Sending…",
+      "failTitle": "We could not send your request.",
+      "failBody": "It rarely happens: send it to us on WhatsApp, the message with your details is ready. Or try again in a moment.",
+      "failWhatsapp": "Send on WhatsApp",
+      "waContinue": "Continue on WhatsApp",
+      "waContinueNote": "The chat with us opens with the summary already written: just press send.",
+      "waIntroSent": "Hi Herocasa, I have just requested a valuation on your website. Here is the summary:",
+      "waIntroFail": "Hi Herocasa, I would like a valuation for my home (the website form did not go through). Here are my details:",
+      "waIntroCall": "Hi Herocasa, I have just requested a call on your website. Here are my details:",
+      "waLabels": {
+        "name": "Name",
+        "phone": "Phone",
+        "email": "Email",
+        "zone": "Town",
+        "type": "Property type",
+        "rooms": "Bedrooms",
+        "features": "Features",
+        "estimate": "Estimate on the website",
+        "notes": "Notes"
+      }
     },
     "result": {
       "label": "Indicative estimate · First analysis",

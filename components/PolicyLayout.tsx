@@ -27,7 +27,7 @@ export default function PolicyLayout({
     <>
       <nav className="flex items-center justify-between border-b border-[var(--olive-15)]" style={{ padding: '24px var(--gutter)' }}>
         <Link href={`/${locale}`} aria-label="Herocasa">
-          <Image src="/logo.png" alt="Herocasa — Affitti brevi" width={1004} height={650} className="h-[60px] w-auto block" priority />
+          <Image src="/logo-nav.png" alt="Herocasa — Affitti brevi" width={448} height={290} className="h-[60px] w-auto block" priority />
         </Link>
         <Link
           href={`/${locale}`}

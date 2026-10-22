@@ -151,7 +151,7 @@ export default function CookieBanner() {
   const secondary =
     'px-4 py-2.5 text-[12px] font-semibold tracking-[0.08em] uppercase bg-transparent text-[var(--olive)] cursor-pointer transition-colors hover:bg-[var(--marble)]';
   const primary =
-    'px-7 py-3 text-[13px] font-semibold tracking-[0.08em] uppercase border border-[var(--gold)] bg-[var(--gold)] text-[var(--paper)] cursor-pointer transition-colors hover:bg-[var(--gold-dark)] hover:border-[var(--gold-dark)] shadow-[0_6px_18px_rgba(184,146,90,0.35)]';
+    'px-7 py-3 text-[13px] font-semibold tracking-[0.08em] uppercase border border-[var(--cta-bg)] bg-[var(--cta-bg)] text-[var(--cta-text)] cursor-pointer transition-colors hover:bg-[var(--cta-bg-hover)] hover:border-[var(--cta-bg-hover)] hover:text-[var(--cta-text-hover)] shadow-[0_6px_18px_rgba(184,146,90,0.35)]';
 
   return (
     <div

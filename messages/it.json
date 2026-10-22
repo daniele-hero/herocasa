@@ -1,7 +1,7 @@
 {
   "meta": {
-    "title": "Herocasa — Gestione seconde case sul Lago di Garda",
-    "description": "Property management per proprietari di seconde case sul Lago di Garda. Gestione completa: burocrazia, ospiti, pulizie, prezzi. Rendiconti trasparenti, tranquillità totale."
+    "title": "Gestione affitti brevi sul Lago di Garda | Herocasa",
+    "description": "Gestione affitti brevi per seconde case sul Lago di Garda, province di Verona, Brescia e Mantova: burocrazia, prezzi, ospiti, pulizie. Valutazione gratuita."
   },
   "nav": {
     "services": "Servizi",
@@ -275,7 +275,29 @@
       "roomsDecrease": "Una camera in meno",
       "roomsIncrease": "Una camera in più",
       "otherZoneName": "Quale comune?",
-      "otherZonePlaceholder": "Es. Montichiari"
+      "otherZonePlaceholder": "Es. Montichiari",
+      "phonePlaceholder": "Es. 333 123 4567",
+      "phoneInvalid": "Controlla il numero: servono almeno 8 cifre (per un numero estero aggiungi il prefisso, es. +49).",
+      "sending": "Invio in corso…",
+      "failTitle": "Non siamo riusciti a inviare la richiesta.",
+      "failBody": "Capita di rado: mandacela su WhatsApp, il messaggio con i tuoi dati è già pronto. Oppure riprova tra un momento.",
+      "failWhatsapp": "Invia su WhatsApp",
+      "waContinue": "Continua su WhatsApp",
+      "waContinueNote": "Si apre la chat con noi con il riepilogo già scritto: basta premere invio.",
+      "waIntroSent": "Ciao Herocasa, ho appena chiesto una valutazione dal sito. Ecco il riepilogo:",
+      "waIntroFail": "Ciao Herocasa, vorrei una valutazione per la mia casa (il modulo sul sito non è partito). Ecco i miei dati:",
+      "waIntroCall": "Ciao Herocasa, ho appena chiesto una chiamata dal sito. Ecco i miei dati:",
+      "waLabels": {
+        "name": "Nome",
+        "phone": "Telefono",
+        "email": "Email",
+        "zone": "Comune",
+        "type": "Tipologia",
+        "rooms": "Camere",
+        "features": "Dotazioni",
+        "estimate": "Stima sul sito",
+        "notes": "Note"
+      }
     },
     "result": {
       "label": "Stima orientativa · Prima analisi",

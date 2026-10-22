@@ -18,6 +18,8 @@
 - Compenso a percentuale sui ricavi, senza costi di attivazione né abbonamenti.
 
 ## Zone servite
+Province di Verona, Brescia e Mantova: le località principali del Lago di Garda e i comuni limitrofi.
+
 - [Peschiera del Garda](https://herocasa.it/it/gestione-affitti-brevi/peschiera-del-garda): gestione affitti brevi a Peschiera del Garda
 - [Lazise](https://herocasa.it/it/gestione-affitti-brevi/lazise): gestione affitti brevi a Lazise
 - [Castelnuovo del Garda](https://herocasa.it/it/gestione-affitti-brevi/castelnuovo-del-garda): gestione affitti brevi a Castelnuovo del Garda

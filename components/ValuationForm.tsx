@@ -3,8 +3,18 @@
 import { FormEvent, ReactNode, useId, useState } from 'react';
 import { useLocale, useTranslations } from 'next-intl';
 import { AnimatePresence, motion, useReducedMotion } from 'motion/react';
-import { ZONES, calculateEstimateRange, postValuationLead, type EstimateRange, type EstimatorFormCopy } from '@/lib/estimator-form';
-import { hasMarketingConsent, trackLead, trackStep } from './CookieBanner';
+import {
+  MIN_PHONE_DIGITS,
+  ZONES,
+  calculateEstimateRange,
+  leadWhatsappLink,
+  phoneDigits,
+  postValuationLead,
+  type EstimateRange,
+  type EstimatorFormCopy,
+} from '@/lib/estimator-form';
+import { hasMarketingConsent, trackContact, trackLead, trackStep } from './CookieBanner';
+import Spinner from './Spinner';
 
 const EASE = [0.2, 0.7, 0.2, 1] as const;
 
@@ -49,7 +59,9 @@ export default function ValuationForm({ variant, source, presetZone }: Valuation
   const stepRooms = (delta: number) => setRoomsIdx((i) => Math.min(Math.max(i + delta, 0), form.roomsOptions.length - 1));
   const [features, setFeatures] = useState<Set<string>>(new Set());
   const [sending, setSending] = useState(false);
-  const [done, setDone] = useState<{ name: string; zone: string; range: EstimateRange } | null>(null);
+  // wa.me link with the details pre-written, shown when the server didn't confirm the lead.
+  const [failed, setFailed] = useState<string | null>(null);
+  const [done, setDone] = useState<{ name: string; zone: string; range: EstimateRange; whatsapp: string } | null>(null);
 
   const toggleFeature = (f: string) =>
     setFeatures((prev) => {
@@ -67,32 +79,59 @@ export default function ValuationForm({ variant, source, presetZone }: Valuation
   const submit = async (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     if (sending) return;
-    setSending(true);
     const data = new FormData(e.currentTarget);
+    const phone = ((data.get('phone') as string) || '').trim();
+    // A number we can't dial back is a lost lead: ask to check it before sending.
+    if (phoneDigits(phone) < MIN_PHONE_DIGITS) {
+      const input = e.currentTarget.elements.namedItem('phone') as HTMLInputElement | null;
+      input?.setCustomValidity(form.phoneInvalid);
+      input?.reportValidity();
+      return;
+    }
+    setSending(true);
+    setFailed(null);
     const name = ((data.get('name') as string) || '').trim();
+    const email = ((data.get('email') as string) || '').trim();
+    const notes = ((data.get('notes') as string) || '').trim();
     const featureList = [...features];
     const range = calculateEstimateRange({ rooms, type, zone: comune, features: featureList });
     const eventId = crypto.randomUUID();
-
-    await postValuationLead({
-      source,
+    const summary = {
       name,
-      email: ((data.get('email') as string) || '').trim(),
-      phone: ((data.get('phone') as string) || '').trim(),
+      phone,
+      email,
       zone: comune,
       type,
       rooms,
       features: featureList,
-      notes: (data.get('notes') as string) || '',
+      notes,
+      estimate: `${tResult('upTo')} ${range.max.toLocaleString('it-IT')} €${tResult('suffix')}`,
+    };
+
+    const ok = await postValuationLead({
+      source,
+      name,
+      email,
+      phone,
+      zone: comune,
+      type,
+      rooms,
+      features: featureList,
+      notes,
       submittedAt: new Date().toISOString(),
       eventId,
       locale,
       marketingConsent: hasMarketingConsent(),
       estimatedRange: range,
     });
+    if (!ok) {
+      setFailed(leadWhatsappLink(form.waIntroFail, form.waLabels, summary));
+      setSending(false);
+      return;
+    }
 
     trackLead(source, { comune, value: (range.min + range.max) / 2, currency: 'EUR' }, eventId);
-    setDone({ name: name.split(' ')[0] || name, zone: comune, range });
+    setDone({ name: name.split(' ')[0] || name, zone: comune, range, whatsapp: leadWhatsappLink(form.waIntroSent, form.waLabels, summary) });
   };
 
   // ---- presentational helpers (one set of markup, two colour schemes) ----
@@ -139,6 +178,16 @@ export default function ValuationForm({ variant, source, presetZone }: Valuation
         <p className={`mt-3 text-[14px] leading-[1.55] max-w-[60ch] font-medium ${dark ? 'text-[var(--paper)]' : 'text-[var(--olive)]'}`}>
           {tResult('confirmation', { comune: done.zone })}
         </p>
+        <a
+          href={done.whatsapp}
+          target="_blank"
+          rel="noopener noreferrer"
+          onClick={() => trackContact('whatsapp-after-lead')}
+          className="btn gold mt-5"
+        >
+          {form.waContinue} →
+        </a>
+        <p className={`mt-2 text-[12px] leading-[1.5] ${dark ? 'text-[var(--paper-70)]' : 'text-[var(--stone)]'}`}>{form.waContinueNote}</p>
       </motion.div>
     );
   }
@@ -207,7 +256,7 @@ export default function ValuationForm({ variant, source, presetZone }: Valuation
                       className="px-3 py-1.5 text-[12px] border transition-colors"
                       style={
                         features.has(f)
-                          ? { background: 'var(--gold)', borderColor: 'var(--gold)', color: 'var(--paper)' }
+                          ? { background: 'var(--cta-bg)', borderColor: 'var(--cta-bg)', color: 'var(--cta-text)' }
                           : { background: 'transparent', borderColor: 'var(--olive-15)', color: 'var(--olive)' }
                       }
                     >
@@ -224,9 +273,32 @@ export default function ValuationForm({ variant, source, presetZone }: Valuation
         ) : (
           <motion.form key="step2" onSubmit={submit} className="grid grid-cols-1 sm:grid-cols-2 gap-x-5 gap-y-5" {...stepMotion}>
             {field(form.name, (<input name="name" type="text" required autoComplete="name" className={fieldCls} />), true)}
-            {field(form.phone, (<input name="phone" type="tel" required autoComplete="tel" inputMode="tel" className={fieldCls} />))}
+            {field(form.phone, (
+              <input
+                name="phone"
+                type="tel"
+                required
+                autoComplete="tel"
+                inputMode="tel"
+                placeholder={form.phonePlaceholder}
+                onInput={(e) => e.currentTarget.setCustomValidity('')}
+                className={fieldCls}
+              />
+            ))}
             {field(form.emailOptional, (<input name="email" type="email" autoComplete="email" className={fieldCls} />))}
             {field(form.notes, (<textarea name="notes" rows={2} placeholder={form.notesPlaceholder} className={`${fieldCls} resize-none`} />), true)}
+            {failed && (
+              <div
+                role="alert"
+                className={`sm:col-span-2 p-4 border ${dark ? 'border-[var(--paper-40)] text-[var(--paper)]' : 'border-[var(--olive-15)] bg-[var(--marble)] text-[var(--olive)]'}`}
+              >
+                <p className="text-[14px] font-semibold mb-1">{form.failTitle}</p>
+                <p className={`text-[13px] leading-[1.55] mb-3 ${dark ? 'text-[var(--paper-70)]' : 'text-[var(--olive-70)]'}`}>{form.failBody}</p>
+                <a href={failed} target="_blank" rel="noopener noreferrer" onClick={() => trackContact('whatsapp-form-fallback')} className="btn gold sm">
+                  {form.failWhatsapp} →
+                </a>
+              </div>
+            )}
             <div className="sm:col-span-2 flex justify-between items-center gap-4 flex-wrap">
               <button
                 type="button"
@@ -235,9 +307,17 @@ export default function ValuationForm({ variant, source, presetZone }: Valuation
               >
                 ← {form.back}
               </button>
-              <button type="submit" disabled={sending} className="btn gold disabled:opacity-60">{form.submit} →</button>
+              <button type="submit" disabled={sending} aria-busy={sending} className="btn gold disabled:opacity-80 disabled:cursor-wait">
+                {sending ? (
+                  <>
+                    <Spinner /> {form.sending}
+                  </>
+                ) : (
+                  <>{form.submit} →</>
+                )}
+              </button>
             </div>
-            <p className={`sm:col-span-2 text-[11px] tracking-[0.06em] uppercase ${dark ? 'text-[var(--paper-40)]' : 'text-[var(--stone)]'}`}>{form.legal}</p>
+            <p className={`sm:col-span-2 text-[11px] tracking-[0.06em] uppercase ${dark ? 'text-[var(--paper-60)]' : 'text-[var(--stone)]'}`}>{form.legal}</p>
           </motion.form>
         )}
       </AnimatePresence>

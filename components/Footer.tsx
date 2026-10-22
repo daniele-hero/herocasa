@@ -22,19 +22,20 @@ export default function Footer() {
         {/* Tablet: logo on its own row above the four link columns; desktop: five columns. */}
         <div className="md:col-span-4 lg:col-span-1">
           <div className="inline-flex mb-5">
-            {/* Original transparent PNG — no background wrapper, sits directly on dark footer */}
+            {/* Transparent PNG (448px copy of logo.png) — no background wrapper, sits directly on dark footer */}
             <img
-              src="/logo.png"
+              src="/logo-nav.png"
               alt="Herocasa — Affitti brevi"
-              width={1004}
-              height={650}
+              width={448}
+              height={290}
+              loading="lazy"
               className="h-[96px] w-auto block"
             />
           </div>
           <p className="max-w-[34ch]">{t('tagline')}</p>
         </div>
         <div>
-          <h4 className="serif font-medium text-[20px] text-[var(--paper)] mb-4">{t('servicesTitle')}</h4>
+          <h3 className="serif font-medium text-[20px] text-[var(--paper)] mb-4">{t('servicesTitle')}</h3>
           <ul className="list-none flex flex-col gap-2">
             {svc.slice(0, 5).map((it, i) => (
               <li key={i}><a href={`/${locale}#servizi`} className="transition-colors hover:text-[var(--gold)]">{it.title}</a></li>
@@ -42,7 +43,7 @@ export default function Footer() {
           </ul>
         </div>
         <div>
-          <h4 className="serif font-medium text-[20px] text-[var(--paper)] mb-4">{t('infoTitle')}</h4>
+          <h3 className="serif font-medium text-[20px] text-[var(--paper)] mb-4">{t('infoTitle')}</h3>
           <ul className="list-none flex flex-col gap-2">
             <li><a href={`/${locale}#processo`} className="transition-colors hover:text-[var(--gold)]">{n('process')}</a></li>
             <li><a href={`/${locale}#immobili`} className="transition-colors hover:text-[var(--gold)]">{n('properties')}</a></li>
@@ -53,7 +54,7 @@ export default function Footer() {
         </div>
         {PUBLISHED_GUIDES.length > 0 && (
           <div>
-            <h4 className="serif font-medium text-[20px] text-[var(--paper)] mb-4">{g('title')}</h4>
+            <h3 className="serif font-medium text-[20px] text-[var(--paper)] mb-4">{g('title')}</h3>
             <ul className="list-none flex flex-col gap-2">
               {PUBLISHED_GUIDES.map((guide) => (
                 <li key={guide.id}><Link href={guidePath(locale, guide)} className="transition-colors hover:text-[var(--gold)]">{guide.label[locale]}</Link></li>
@@ -62,7 +63,7 @@ export default function Footer() {
           </div>
         )}
         <div>
-          <h4 className="serif font-medium text-[20px] text-[var(--paper)] mb-4">{t('contactTitle')}</h4>
+          <h3 className="serif font-medium text-[20px] text-[var(--paper)] mb-4">{t('contactTitle')}</h3>
           <ul className="list-none flex flex-col gap-2">
             <li><a href="mailto:info@herocasa.it?subject=Richiesta%20valutazione%20immobile" className="transition-colors hover:text-[var(--gold)]">info@herocasa.it</a></li>
             <li><a href="tel:+393663695252" className="transition-colors hover:text-[var(--gold)]">+39 366 369 5252</a></li>
@@ -85,7 +86,7 @@ export default function Footer() {
           </ul>
         </div>
       </div>
-      <div className="max-w-[1440px] mx-auto mt-6 flex flex-wrap justify-between gap-6 text-[11px] tracking-[0.08em] uppercase" style={{ color: 'var(--paper-40)' }}>
+      <div className="max-w-[1440px] mx-auto mt-6 flex flex-wrap justify-between gap-6 text-[11px] tracking-[0.08em] uppercase" style={{ color: 'var(--paper-60)' }}>
         <div>{t('legal')}</div>
         <div>
           <Link href={`/${locale}/privacy`} className="transition-colors hover:text-[var(--gold)]">{t('privacy')}</Link> · <Link href={`/${locale}/cookie`} className="transition-colors hover:text-[var(--gold)]">{t('cookies')}</Link> · <Link href={`/${locale}/termini`} className="transition-colors hover:text-[var(--gold)]">{t('terms')}</Link> ·{' '}

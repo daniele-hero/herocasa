@@ -30,6 +30,39 @@ export interface EstimatorFormCopy {
   emailOptional: string;
   otherZoneName: string;
   otherZonePlaceholder: string;
+  phonePlaceholder: string;
+  phoneInvalid: string;
+  sending: string;
+  failTitle: string;
+  failBody: string;
+  failWhatsapp: string;
+  waContinue: string;
+  waContinueNote: string;
+  waIntroSent: string;
+  waIntroFail: string;
+  waIntroCall: string;
+  waLabels: WhatsappLabels;
+}
+
+export type WhatsappLabels = Record<'name' | 'phone' | 'email' | 'zone' | 'type' | 'rooms' | 'features' | 'estimate' | 'notes', string>;
+
+/** Digits in a phone number as typed (spaces, dots, dashes and a leading + allowed). */
+export const phoneDigits = (value: string) => (value.match(/\d/g) ?? []).length;
+/** Below this the number can't be dialled back: the forms ask the visitor to check it. */
+export const MIN_PHONE_DIGITS = 8;
+
+/** wa.me link to Herocasa with the visitor's request already written, one detail per line. */
+export function leadWhatsappLink(
+  intro: string,
+  labels: WhatsappLabels,
+  lead: Partial<Record<Exclude<keyof WhatsappLabels, 'features'>, string>> & { features?: string[] },
+): string {
+  const lines = [intro];
+  for (const key of ['name', 'phone', 'email', 'zone', 'type', 'rooms', 'features', 'estimate', 'notes'] as const) {
+    const value = key === 'features' ? lead.features?.join(', ') : lead[key];
+    if (value?.trim()) lines.push(`${labels[key]}: ${value.trim()}`);
+  }
+  return `https://wa.me/393663695252?text=${encodeURIComponent(lines.join('\n'))}`;
 }
 
 /** Main comuni listed in the form menus; anything else goes through `otherZone` + a free-text comune. */
@@ -69,18 +102,22 @@ export type ValuationLead = {
   estimatedRange?: EstimateRange;
 };
 
-export async function postValuationLead(lead: ValuationLead): Promise<void> {
+/**
+ * Sends the lead; true only when the server confirms it (the team notification went out).
+ * On false the forms offer WhatsApp with the details pre-written, so the lead is never lost silently.
+ */
+export async function postValuationLead(lead: ValuationLead): Promise<boolean> {
   try {
-    await fetch('/api/valuation-request', {
+    const res = await fetch('/api/valuation-request', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       // Page (with any ?utm_ tags, e.g. from the Google Business profiles) and referrer
       // tell the team where the lead came from. Read at submit time: nothing is stored.
       body: JSON.stringify({ ...lead, page: location.pathname + location.search, referrer: document.referrer }),
     });
+    return res.ok;
   } catch {
-    // Silent — network hiccups shouldn't block the on-screen confirmation.
-    // The endpoint is idempotent-safe to retry server-side if needed.
+    return false;
   }
 }
 
