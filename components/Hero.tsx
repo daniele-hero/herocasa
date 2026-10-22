@@ -59,19 +59,20 @@ export default function Hero() {
         <div className="relative h-full min-h-[68vh] overflow-hidden bg-[var(--marble)]">
           <motion.div style={{ y: reduced ? 0 : imgY }} className="h-full w-full">
             <Photo
-              src="/immobili/villa-aerea-tetto.jpg"
-              alt="Vista aerea di una villa gestita da Herocasa sul Lago di Garda"
+              src="/immobili/villa-piscina.jpg"
+              alt="Villa con piscina gestita da Herocasa sul Lago di Garda"
               priority
-              className="object-cover scale-[1.08]"
+              className="object-cover object-[38%_center] scale-[1.08]"
             />
           </motion.div>
         </div>
-        <div className="absolute bottom-6 left-6 backdrop-blur-sm p-6 max-w-[320px]" style={{ background: 'rgba(246, 241, 228, 0.94)' }}>
+        {/* Compact on phones (no explanation line) so the card leaves the pool in view. */}
+        <div className="absolute bottom-4 left-4 md:bottom-6 md:left-6 backdrop-blur-sm px-5 py-4 md:p-6 max-w-[320px]" style={{ background: 'rgba(246, 241, 228, 0.94)' }}>
           <div className="text-[11px] tracking-[0.16em] uppercase text-[var(--stone)] mb-1.5">{t('statLabel')}</div>
-          <div className="serif text-[40px] leading-none text-[var(--olive)]">
+          <div className="serif text-[34px] md:text-[40px] leading-none text-[var(--olive)]">
             <span className="gold-italic">{t('statValue')}</span>
           </div>
-          <div className="text-[13px] text-[var(--olive-70)] mt-2 leading-[1.5]">{t('statMeta')}</div>
+          <div className="hidden md:block text-[13px] text-[var(--olive-70)] mt-2 leading-[1.5]">{t('statMeta')}</div>
         </div>
       </div>
     </header>

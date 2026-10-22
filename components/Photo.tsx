@@ -3,8 +3,10 @@ import { PLACEHOLDERS } from '@/lib/photo-placeholders';
 
 // Photos with an AVIF copy in public/immobili/opt/, generated at the same size
 // and checked to be visually identical (PSNR ≥ 42 dB) while weighing less.
+// villa-piscina (hero) was made from a 7952px master: its AVIF is closer to the master
+// than its JPG (34.8 vs 33.5 dB) and 31% lighter.
 // Photos not listed here gained too little (or nothing) and stay JPG only.
-const AVIF = new Set(['dettaglio-bagno-spa', 'interno-soggiorno', 'villa-giardino']);
+const AVIF = new Set(['dettaglio-bagno-spa', 'interno-soggiorno', 'villa-giardino', 'villa-piscina']);
 
 // /immobili/* is served as immutable (public/_headers), so Cloudflare and browsers keep a
 // photo for a year: bump this whenever a file in public/immobili/ is replaced.
