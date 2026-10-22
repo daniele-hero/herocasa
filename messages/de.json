@@ -1064,5 +1064,12 @@
         ]
       }
     }
+  },
+  "guides": {
+    "title": "Ratgeber für Eigentümer",
+    "home": "Startseite",
+    "updated": "Aktualisiert am {date}",
+    "others": "Weitere Ratgeber",
+    "draft": "Entwurf in Prüfung · nicht von Google indexiert und nicht verlinkt"
   }
 }

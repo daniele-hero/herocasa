@@ -1064,5 +1064,12 @@
         ]
       }
     }
+  },
+  "guides": {
+    "title": "Guide per proprietari",
+    "home": "Home",
+    "updated": "Aggiornato il {date}",
+    "others": "Altre guide",
+    "draft": "Bozza in revisione · non indicizzata da Google e non collegata dal sito"
   }
 }

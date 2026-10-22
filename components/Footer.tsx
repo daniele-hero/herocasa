@@ -3,21 +3,24 @@
 import { useTranslations, useLocale } from 'next-intl';
 import Link from 'next/link';
 import { openCookieBanner } from './CookieBanner';
-import { GUIDE_LINKS } from '@/lib/guide-links';
+import { PUBLISHED_GUIDES, guidePath } from '@/lib/guide-links';
+import type { Locale } from '@/lib/routing';
 
 export default function Footer() {
   const t = useTranslations('footer');
   const n = useTranslations('nav');
   const c = useTranslations('contact');
   const cb = useTranslations('cookieBanner');
-  const locale = useLocale();
+  const locale = useLocale() as Locale;
+  const g = useTranslations('guides');
   const s = useTranslations('services');
   const svc = s.raw('list') as Array<{ title: string }>;
 
   return (
     <footer className="bg-[var(--shadow)] pt-15 pb-8" style={{ padding: '60px var(--gutter) 32px', color: 'var(--paper-70)', fontSize: '13px' }}>
-      <div className="max-w-[1440px] mx-auto grid gap-10 pb-10 border-b border-[var(--paper-40)] md:grid-cols-[4fr_3fr_3fr_3fr]">
-        <div>
+      <div className="max-w-[1440px] mx-auto grid gap-10 pb-10 border-b border-[var(--paper-40)] md:grid-cols-4 lg:grid-cols-[4fr_3fr_2fr_3fr_3fr]">
+        {/* Tablet: logo on its own row above the four link columns; desktop: five columns. */}
+        <div className="md:col-span-4 lg:col-span-1">
           <div className="inline-flex mb-5">
             {/* Original transparent PNG — no background wrapper, sits directly on dark footer */}
             <img
@@ -47,18 +50,17 @@ export default function Footer() {
             <li><a href={`/${locale}#faq`} className="transition-colors hover:text-[var(--gold)]">{n('faq')}</a></li>
             <li><a href={`/${locale}#contatti`} className="transition-colors hover:text-[var(--gold)]">{n('contact')}</a></li>
           </ul>
-          {/* The guides are Italian-only. */}
-          {locale === 'it' && GUIDE_LINKS.length > 0 && (
-            <>
-              <h4 className="serif font-medium text-[20px] text-[var(--paper)] mt-8 mb-4">Guide per proprietari</h4>
-              <ul className="list-none flex flex-col gap-2">
-                {GUIDE_LINKS.map((g) => (
-                  <li key={g.slug}><Link href={`/it/guide/${g.slug}`} className="transition-colors hover:text-[var(--gold)]">{g.label}</Link></li>
-                ))}
-              </ul>
-            </>
-          )}
         </div>
+        {PUBLISHED_GUIDES.length > 0 && (
+          <div>
+            <h4 className="serif font-medium text-[20px] text-[var(--paper)] mb-4">{g('title')}</h4>
+            <ul className="list-none flex flex-col gap-2">
+              {PUBLISHED_GUIDES.map((guide) => (
+                <li key={guide.id}><Link href={guidePath(locale, guide)} className="transition-colors hover:text-[var(--gold)]">{guide.label[locale]}</Link></li>
+              ))}
+            </ul>
+          </div>
+        )}
         <div>
           <h4 className="serif font-medium text-[20px] text-[var(--paper)] mb-4">{t('contactTitle')}</h4>
           <ul className="list-none flex flex-col gap-2">

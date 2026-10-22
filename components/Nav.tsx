@@ -5,6 +5,8 @@ import { useLocale, useTranslations } from 'next-intl';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import { comunePath } from '@/lib/comuni';
+import { findGuide, guidePath } from '@/lib/guide-links';
+import type { Locale } from '@/lib/routing';
 import Image from 'next/image';
 import { AnimatePresence, motion } from 'motion/react';
 
@@ -15,11 +17,13 @@ export default function Nav() {
   const t = useTranslations('nav');
   const locale = useLocale();
   const pathname = usePathname() ?? `/${locale}`;
-  // Language switch keeps the current page (home or a comune page), only the locale segment changes.
+  // Language switch keeps the current page (home, comune page or guide), only the language changes.
   const localeHref = (l: string) => {
     const comune = pathname.match(/^\/(?:it|en|de)\/(?:gestione-affitti-brevi|ferienhaus-verwaltung)\/([^/]+)/);
     if (comune) return comunePath(l, comune[1]);
-    if (/^\/(?:it|en|de)\/guide\//.test(pathname) && l !== 'it') return `/${l}`; // guides are Italian-only
+    const guideMatch = pathname.match(/^\/(it|en|de)\/(?:guide|ratgeber)\/([^/]+)/);
+    const guide = guideMatch && findGuide(guideMatch[1], guideMatch[2]);
+    if (guide) return guidePath(l as Locale, guide);
     return pathname.replace(/^\/(it|en|de)(?=\/|$)/, `/${l}`) || `/${l}`;
   };
   const [scrolled, setScrolled] = useState(false);

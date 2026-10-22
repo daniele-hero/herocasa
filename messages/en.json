@@ -1064,5 +1064,12 @@
         ]
       }
     }
+  },
+  "guides": {
+    "title": "Owner guides",
+    "home": "Home",
+    "updated": "Updated {date}",
+    "others": "More guides",
+    "draft": "Draft under review · not indexed by Google and not linked from the site"
   }
 }
