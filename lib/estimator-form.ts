@@ -80,6 +80,7 @@ export const ZONES = [
   'Manerba del Garda',
   'Salò',
   'Limone sul Garda',
+  'Riva del Garda',
 ] as const;
 
 export type ValuationLead = {
@@ -141,7 +142,7 @@ export function calculateEstimateRange(input: {
   if (input.type === 'Villa') base *= 1.5;
   else if (['Casa indipendente', 'Detached house', 'Einfamilienhaus'].includes(input.type)) base *= 1.25;
 
-  if (['Sirmione', 'Bardolino', 'Garda', 'Malcesine', 'Salò', 'Limone sul Garda', 'Gardone Riviera', 'San Felice del Benaco'].includes(input.zone)) base *= 1.15;
+  if (['Sirmione', 'Bardolino', 'Garda', 'Malcesine', 'Salò', 'Limone sul Garda', 'Gardone Riviera', 'San Felice del Benaco', 'Riva del Garda'].includes(input.zone)) base *= 1.15;
 
   base += input.features.length * 2500;
   if (input.features.some((f) => /piscin|pool/i.test(f))) base *= 1.12;

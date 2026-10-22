@@ -40,6 +40,14 @@ export const COMUNI = {
   'castiglione-delle-stiviere': { name: 'Castiglione delle Stiviere', photo: '/immobili/vista-aerea-piscina.jpg', pos: [45.39, 10.488] },
   carpenedolo: { name: 'Carpenedolo', photo: '/immobili/villa-aerea-tetto.jpg', pos: [45.364, 10.432] },
   montichiari: { name: 'Montichiari', photo: '/immobili/interno-soggiorno.jpg', pos: [45.413, 10.393] },
+  // Trentino shore (Alto Garda)
+  'riva-del-garda': { name: 'Riva del Garda', photo: '/immobili/villa-piscina.jpg', pos: [45.886, 10.842] },
+  'nago-torbole': { name: 'Nago-Torbole', photo: '/immobili/vista-aerea-piscina.jpg', pos: [45.871, 10.874] },
+  arco: { name: 'Arco', photo: '/immobili/villa-giardino.jpg', pos: [45.918, 10.886] },
+  tenno: { name: 'Tenno', photo: '/immobili/interno-soggiorno.jpg', pos: [45.917, 10.832] },
+  ledro: { name: 'Ledro', photo: '/immobili/villa-aerea-tetto.jpg', pos: [45.888, 10.733] },
+  dro: { name: 'Dro', photo: '/immobili/dettaglio-bagno-spa.jpg', pos: [45.962, 10.911] },
+  drena: { name: 'Drena', photo: '/immobili/villa-giardino.jpg', pos: [45.968, 10.946] },
 } as const;
 
 export type ComuneSlug = keyof typeof COMUNI;
@@ -64,6 +72,7 @@ export const MAIN_COMUNI: ComuneSlug[] = [
   'manerba-del-garda',
   'salo',
   'limone-sul-garda',
+  'riva-del-garda',
 ];
 
 /** The `count` comuni closest to `slug` (straight-line, good enough at lake scale). */

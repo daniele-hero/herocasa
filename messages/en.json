@@ -1,7 +1,7 @@
 {
   "meta": {
     "title": "Short-term rental management on Lake Garda | Herocasa",
-    "description": "Short-term rental management for second homes on Lake Garda, provinces of Verona, Brescia and Mantua: paperwork, pricing, guests, cleaning. Free valuation."
+    "description": "Short-term rental management for second homes on Lake Garda, provinces of Verona, Brescia, Mantua and Trento: paperwork, pricing, guests, cleaning. Free valuation."
   },
   "nav": {
     "services": "Services",
@@ -184,7 +184,7 @@
     "eyebrow": "Areas we cover",
     "titleOne": "We are",
     "titleTwo": "local.",
-    "intro": "We only operate on the Veronese and Brescia shores of Lake Garda. Local knowledge is non-negotiable for us.",
+    "intro": "We operate all around Lake Garda: the Verona, Brescia and Trentino shores. Local knowledge is non-negotiable for us.",
     "list": [
       {
         "name": "Peschiera del Garda",
@@ -1082,6 +1082,125 @@
           {
             "title": "The lake close by",
             "body": "Desenzano and the southern shore are about a quarter of an hour's drive away."
+          }
+        ]
+      },
+      "riva-del-garda": {
+        "intro1": "Riva del Garda is the heart of the Trentino Alto Garda: a historic centre, the Rocca and a lakefront at the foot of the mountains. Sailing, cycling, climbing and a calendar of trade fairs and congresses bring guests from all over Europe, especially Germany, for much of the year.",
+        "highlights": [
+          {
+            "title": "The heart of the Alto Garda",
+            "body": "Old town, harbour and beaches: one of the best-known places on the lake, searched for before guests even leave."
+          },
+          {
+            "title": "Trade fairs and congresses",
+            "body": "Riva's exhibition centre brings visitors and companies outside the summer too."
+          },
+          {
+            "title": "Sport and nature",
+            "body": "Sailing, mountain biking, trails and nearby crags stretch the season from March to November."
+          }
+        ]
+      },
+      "nago-torbole": {
+        "intro1": "Nago-Torbole is the wind capital of Lake Garda: the Pelèr in the morning and the Ora in the afternoon draw windsurfers and sailors from around the world. Above Torbole's small harbour, Nago looks over the lake from Monte Baldo, among trails and the Giants' Potholes.",
+        "highlights": [
+          {
+            "title": "The wind capital",
+            "body": "Windsurfing, kitesurfing and sailing: Torbole is a name known to enthusiasts all over Europe."
+          },
+          {
+            "title": "Loyal guests",
+            "body": "Surfers, cyclists and climbers come back every year, often in the same weeks."
+          },
+          {
+            "title": "A long season",
+            "body": "Wind and sport bring bookings from spring to autumn, not just in summer."
+          }
+        ]
+      },
+      "arco": {
+        "intro1": "Arco, a few minutes from Riva, is a historic resort town below its castle and today the international capital of rock climbing. Olive groves, period villas and the Sarca valley attract climbers and families looking for a mild climate and quiet.",
+        "highlights": [
+          {
+            "title": "The climbing capital",
+            "body": "World-famous crags and international competitions bring climbers in every season."
+          },
+          {
+            "title": "A historic town",
+            "body": "The castle, the old centre and period villas appeal to guests looking for atmosphere and calm."
+          },
+          {
+            "title": "Close to the lake",
+            "body": "Riva del Garda and the beaches are a few minutes away by bike or car."
+          }
+        ]
+      },
+      "tenno": {
+        "intro1": "Tenno overlooks Riva from the hills: the medieval village of Canale, one of the most beautiful in Italy, the turquoise Lake Tenno and the Varone waterfall. It is the choice for guests who want quiet and views, a few minutes from Lake Garda.",
+        "highlights": [
+          {
+            "title": "Lake Tenno",
+            "body": "Turquoise water and meadows by the shore: an image that makes a difference in listings."
+          },
+          {
+            "title": "Canale di Tenno",
+            "body": "The medieval village is one of Italy's most beautiful and draws visitors all year."
+          },
+          {
+            "title": "Quiet above Riva",
+            "body": "Homes with views and peace, a few minutes from the Alto Garda beaches."
+          }
+        ]
+      },
+      "ledro": {
+        "intro1": "Ledro is the green valley behind Riva del Garda, with its lake and quiet beaches, UNESCO-listed pile dwellings and mountain trails. In summer it is cooler than the lake and draws families and active guests looking for nature.",
+        "highlights": [
+          {
+            "title": "Lake Ledro",
+            "body": "Quiet beaches and clear water: a relaxing alternative to Lake Garda, a quarter of an hour away."
+          },
+          {
+            "title": "UNESCO pile dwellings",
+            "body": "The pile-dwelling museum draws visitors and families all season."
+          },
+          {
+            "title": "Cool air and nature",
+            "body": "Hiking, cycling and a cool summer climate make stays longer."
+          }
+        ]
+      },
+      "dro": {
+        "intro1": "Dro, in the Sarca valley between Arco and the Valle dei Laghi, is known for the Marocche, its climbing walls and PDO plums. Spacious homes at more accessible prices, a few minutes from Arco and the lake.",
+        "highlights": [
+          {
+            "title": "Between Arco and the Valle dei Laghi",
+            "body": "A convenient base to explore the Alto Garda and the Trentino mountains."
+          },
+          {
+            "title": "Climbing and cycling",
+            "body": "Crags and cycle paths bring active guests over a long season."
+          },
+          {
+            "title": "Space at a good price",
+            "body": "Homes and flats with gardens earn well on a smaller investment."
+          }
+        ]
+      },
+      "drena": {
+        "intro1": "Drena is a small village in the Sarca valley below its medieval castle: nature, quiet and trails, a quarter of an hour from Arco and Riva del Garda. Ideal for guests looking for peace and outdoor sport.",
+        "highlights": [
+          {
+            "title": "Drena castle",
+            "body": "The castle and the views over the valley draw visitors and hikers."
+          },
+          {
+            "title": "Nature and quiet",
+            "body": "Woods, crags and trails for those who really want to switch off."
+          },
+          {
+            "title": "Close to the Alto Garda",
+            "body": "Arco and Riva del Garda are a few minutes' drive away."
           }
         ]
       }

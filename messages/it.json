@@ -1,7 +1,7 @@
 {
   "meta": {
     "title": "Gestione affitti brevi sul Lago di Garda | Herocasa",
-    "description": "Gestione affitti brevi per seconde case sul Lago di Garda, province di Verona, Brescia e Mantova: burocrazia, prezzi, ospiti, pulizie. Valutazione gratuita."
+    "description": "Gestione affitti brevi per seconde case sul Lago di Garda, province di Verona, Brescia, Mantova e Trento: burocrazia, prezzi, ospiti, pulizie. Valutazione gratuita."
   },
   "nav": {
     "services": "Servizi",
@@ -184,7 +184,7 @@
     "eyebrow": "Zone coperte",
     "titleOne": "Siamo",
     "titleTwo": "della zona.",
-    "intro": "Operiamo esclusivamente sulla sponda veronese e bresciana del Garda. La conoscenza locale, per noi, non è negoziabile.",
+    "intro": "Operiamo su tutto il Lago di Garda: sponda veronese, bresciana e trentina. La conoscenza locale, per noi, non è negoziabile.",
     "list": [
       {
         "name": "Peschiera del Garda",
@@ -1082,6 +1082,125 @@
           {
             "title": "Il lago a un passo",
             "body": "Desenzano e la sponda sud sono a circa un quarto d'ora d'auto."
+          }
+        ]
+      },
+      "riva-del-garda": {
+        "intro1": "Riva del Garda è il cuore dell'Alto Garda trentino: centro storico, Rocca e lungolago ai piedi delle montagne. Vela, bici, arrampicata e un calendario di fiere e congressi portano ospiti da tutta Europa, soprattutto dalla Germania, per gran parte dell'anno.",
+        "highlights": [
+          {
+            "title": "Il cuore dell’Alto Garda",
+            "body": "Centro storico, porto e spiagge: una delle mete più conosciute del lago, cercata già prima di partire."
+          },
+          {
+            "title": "Fiere e congressi",
+            "body": "Il polo fieristico di Riva porta visitatori e aziende anche fuori dall'estate."
+          },
+          {
+            "title": "Sport e natura",
+            "body": "Vela, mountain bike, sentieri e falesie vicine allungano la stagione da marzo a novembre."
+          }
+        ]
+      },
+      "nago-torbole": {
+        "intro1": "Nago-Torbole è la capitale del vento sul Garda: la mattina il Pelèr, il pomeriggio l'Ora richiamano surfisti e velisti da tutto il mondo. Sopra il porticciolo di Torbole, Nago guarda il lago dal Monte Baldo, tra sentieri e le Marmitte dei Giganti.",
+        "highlights": [
+          {
+            "title": "La capitale del vento",
+            "body": "Windsurf, kitesurf e vela: Torbole è un nome conosciuto da chi pratica questi sport in tutta Europa."
+          },
+          {
+            "title": "Ospiti fedeli",
+            "body": "Surfisti, ciclisti e arrampicatori tornano ogni anno, spesso negli stessi periodi."
+          },
+          {
+            "title": "Stagione lunga",
+            "body": "Il vento e lo sport portano prenotazioni da primavera ad autunno, non solo d'estate."
+          }
+        ]
+      },
+      "arco": {
+        "intro1": "Arco, a pochi minuti da Riva, è una storica località di soggiorno ai piedi del castello, oggi capitale internazionale dell'arrampicata. Uliveti, ville d'epoca e la Valle del Sarca attirano sportivi e famiglie in cerca di un clima mite e di tranquillità.",
+        "highlights": [
+          {
+            "title": "Capitale dell’arrampicata",
+            "body": "Falesie famose in tutto il mondo e gare internazionali portano climber in ogni stagione."
+          },
+          {
+            "title": "Borgo storico",
+            "body": "Il castello, il centro e le ville d'epoca sono un richiamo per chi cerca atmosfera e calma."
+          },
+          {
+            "title": "A due passi dal lago",
+            "body": "Riva del Garda e le spiagge sono a pochi minuti, in bici o in auto."
+          }
+        ]
+      },
+      "tenno": {
+        "intro1": "Tenno si affaccia su Riva dalle colline: il borgo medievale di Canale, tra i più belli d'Italia, il lago di Tenno dalle acque turchesi e la cascata del Varone. È la scelta di chi vuole quiete e panorami, a pochi minuti dal Garda.",
+        "highlights": [
+          {
+            "title": "Il lago di Tenno",
+            "body": "Acque turchesi e prati in riva al lago: un'immagine che fa la differenza negli annunci."
+          },
+          {
+            "title": "Canale di Tenno",
+            "body": "Il borgo medievale è tra i più belli d'Italia e attira visitatori tutto l'anno."
+          },
+          {
+            "title": "Quiete sopra Riva",
+            "body": "Case con vista e tranquillità, a pochi minuti dalle spiagge dell'Alto Garda."
+          }
+        ]
+      },
+      "ledro": {
+        "intro1": "Ledro è la valle verde alle spalle di Riva del Garda, con il suo lago dalle spiagge tranquille, le palafitte patrimonio UNESCO e i sentieri di montagna. D'estate è più fresca del lago e attira famiglie e sportivi in cerca di natura.",
+        "highlights": [
+          {
+            "title": "Il lago di Ledro",
+            "body": "Spiagge tranquille e acqua limpida: un'alternativa rilassante al Garda, a un quarto d'ora di strada."
+          },
+          {
+            "title": "Palafitte UNESCO",
+            "body": "Il museo delle palafitte richiama visitatori e famiglie per tutta la stagione."
+          },
+          {
+            "title": "Fresco e natura",
+            "body": "Escursioni, bici e un clima fresco d'estate allungano i soggiorni."
+          }
+        ]
+      },
+      "dro": {
+        "intro1": "Dro, nella Valle del Sarca tra Arco e la Valle dei Laghi, è conosciuto per le Marocche, le pareti per l'arrampicata e le susine DOP. Case con spazio e prezzi più accessibili, a pochi minuti da Arco e dal lago.",
+        "highlights": [
+          {
+            "title": "Tra Arco e la Valle dei Laghi",
+            "body": "Una posizione comoda per scoprire l'Alto Garda e le montagne del Trentino."
+          },
+          {
+            "title": "Arrampicata e bici",
+            "body": "Falesie e piste ciclabili portano ospiti sportivi per una stagione lunga."
+          },
+          {
+            "title": "Spazio a buon prezzo",
+            "body": "Case e appartamenti con giardino rendono bene a fronte di un investimento più contenuto."
+          }
+        ]
+      },
+      "drena": {
+        "intro1": "Drena è un piccolo borgo della Valle del Sarca dominato dal suo castello medievale: natura, silenzio e sentieri, a un quarto d'ora da Arco e Riva del Garda. Ideale per ospiti che cercano tranquillità e sport all'aria aperta.",
+        "highlights": [
+          {
+            "title": "Castello di Drena",
+            "body": "Il castello e i panorami sulla valle sono un richiamo per visitatori ed escursionisti."
+          },
+          {
+            "title": "Natura e silenzio",
+            "body": "Boschi, falesie e sentieri per chi vuole staccare davvero."
+          },
+          {
+            "title": "Vicino all’Alto Garda",
+            "body": "Arco e Riva del Garda sono a pochi minuti d'auto."
           }
         ]
       }

@@ -1,7 +1,7 @@
 {
   "meta": {
     "title": "Ferienhaus-Verwaltung am Gardasee | Herocasa",
-    "description": "Ferienhaus-Verwaltung am Gardasee in den Provinzen Verona, Brescia und Mantua: Formalitäten, Preise, Gäste, Reinigung. Kostenlose Bewertung Ihrer Immobilie."
+    "description": "Ferienhaus-Verwaltung am Gardasee in den Provinzen Verona, Brescia, Mantua und Trient: Formalitäten, Preise, Gäste, Reinigung. Kostenlose Bewertung Ihrer Immobilie."
   },
   "nav": {
     "services": "Leistungen",
@@ -184,7 +184,7 @@
     "eyebrow": "Abgedeckte Gebiete",
     "titleOne": "Wir sind",
     "titleTwo": "lokal verankert.",
-    "intro": "Wir arbeiten ausschließlich am Veronesischen und Brescianer Ufer des Gardasees. Lokale Kenntnis ist für uns nicht verhandelbar.",
+    "intro": "Wir sind rund um den Gardasee tätig: am Veroneser, Brescianer und Trentiner Ufer. Lokale Kenntnis ist für uns nicht verhandelbar.",
     "list": [
       {
         "name": "Peschiera del Garda",
@@ -1082,6 +1082,125 @@
           {
             "title": "Der See ganz nah",
             "body": "Desenzano und das Südufer sind etwa eine Viertelstunde mit dem Auto entfernt."
+          }
+        ]
+      },
+      "riva-del-garda": {
+        "intro1": "Riva del Garda ist das Herz des Trentiner Alto Garda: Altstadt, Rocca und Seepromenade am Fuß der Berge. Segeln, Radfahren, Klettern und ein Kalender voller Messen und Kongresse bringen Gäste aus ganz Europa, vor allem aus Deutschland, über einen Großteil des Jahres.",
+        "highlights": [
+          {
+            "title": "Das Herz des Alto Garda",
+            "body": "Altstadt, Hafen und Strände: einer der bekanntesten Orte am See, nach dem Gäste schon vor der Reise suchen."
+          },
+          {
+            "title": "Messen und Kongresse",
+            "body": "Das Messezentrum von Riva bringt Besucher und Unternehmen auch außerhalb des Sommers."
+          },
+          {
+            "title": "Sport und Natur",
+            "body": "Segeln, Mountainbiken, Wanderwege und nahe Klettergärten verlängern die Saison von März bis November."
+          }
+        ]
+      },
+      "nago-torbole": {
+        "intro1": "Nago-Torbole ist die Windhauptstadt des Gardasees: morgens der Pelèr, nachmittags die Ora locken Surfer und Segler aus aller Welt. Über dem kleinen Hafen von Torbole blickt Nago vom Monte Baldo auf den See, zwischen Wanderwegen und den Gletschertöpfen.",
+        "highlights": [
+          {
+            "title": "Die Windhauptstadt",
+            "body": "Windsurfen, Kitesurfen und Segeln: Torbole ist ein Name, den Wassersportler in ganz Europa kennen."
+          },
+          {
+            "title": "Treue Gäste",
+            "body": "Surfer, Radfahrer und Kletterer kommen jedes Jahr wieder, oft in denselben Wochen."
+          },
+          {
+            "title": "Lange Saison",
+            "body": "Wind und Sport bringen Buchungen von Frühling bis Herbst, nicht nur im Sommer."
+          }
+        ]
+      },
+      "arco": {
+        "intro1": "Arco, wenige Minuten von Riva entfernt, ist ein historischer Kurort unterhalb seiner Burg und heute die internationale Hauptstadt des Kletterns. Olivenhaine, historische Villen und das Sarcatal ziehen Sportler und Familien an, die mildes Klima und Ruhe suchen.",
+        "highlights": [
+          {
+            "title": "Hauptstadt des Kletterns",
+            "body": "Weltbekannte Klettergärten und internationale Wettkämpfe bringen in jeder Saison Kletterer."
+          },
+          {
+            "title": "Historischer Kurort",
+            "body": "Burg, Altstadt und historische Villen ziehen Gäste an, die Atmosphäre und Ruhe suchen."
+          },
+          {
+            "title": "Nah am See",
+            "body": "Riva del Garda und die Strände sind mit Rad oder Auto in wenigen Minuten erreichbar."
+          }
+        ]
+      },
+      "tenno": {
+        "intro1": "Tenno blickt von den Hügeln auf Riva: das mittelalterliche Dorf Canale, eines der schönsten Italiens, der türkisfarbene Tennosee und der Varone-Wasserfall. Die Wahl für Gäste, die Ruhe und Aussicht suchen, wenige Minuten vom Gardasee.",
+        "highlights": [
+          {
+            "title": "Der Tennosee",
+            "body": "Türkisfarbenes Wasser und Wiesen am Ufer: ein Bild, das in Inseraten den Unterschied macht."
+          },
+          {
+            "title": "Canale di Tenno",
+            "body": "Das mittelalterliche Dorf gehört zu den schönsten Italiens und zieht das ganze Jahr Besucher an."
+          },
+          {
+            "title": "Ruhe über Riva",
+            "body": "Häuser mit Aussicht und Ruhe, wenige Minuten von den Stränden des Alto Garda."
+          }
+        ]
+      },
+      "ledro": {
+        "intro1": "Ledro ist das grüne Tal hinter Riva del Garda, mit seinem See und ruhigen Stränden, den Pfahlbauten des UNESCO-Welterbes und Bergwegen. Im Sommer ist es kühler als am Gardasee und zieht Familien und Aktive an, die Natur suchen.",
+        "highlights": [
+          {
+            "title": "Der Ledrosee",
+            "body": "Ruhige Strände und klares Wasser: eine entspannte Alternative zum Gardasee, eine Viertelstunde entfernt."
+          },
+          {
+            "title": "UNESCO-Pfahlbauten",
+            "body": "Das Pfahlbautenmuseum zieht die ganze Saison Besucher und Familien an."
+          },
+          {
+            "title": "Frische Luft und Natur",
+            "body": "Wandern, Radfahren und ein kühler Sommer verlängern die Aufenthalte."
+          }
+        ]
+      },
+      "dro": {
+        "intro1": "Dro im Sarcatal zwischen Arco und dem Valle dei Laghi ist bekannt für die Marocche, seine Kletterwände und die Pflaumen mit geschützter Ursprungsbezeichnung. Geräumige Häuser zu günstigeren Preisen, wenige Minuten von Arco und dem See.",
+        "highlights": [
+          {
+            "title": "Zwischen Arco und dem Valle dei Laghi",
+            "body": "Eine bequeme Basis, um den Alto Garda und die Trentiner Berge zu entdecken."
+          },
+          {
+            "title": "Klettern und Radfahren",
+            "body": "Klettergärten und Radwege bringen Aktivurlauber über eine lange Saison."
+          },
+          {
+            "title": "Platz zu gutem Preis",
+            "body": "Häuser und Wohnungen mit Garten erzielen gute Erträge bei geringerer Investition."
+          }
+        ]
+      },
+      "drena": {
+        "intro1": "Drena ist ein kleines Dorf im Sarcatal unterhalb seiner mittelalterlichen Burg: Natur, Ruhe und Wanderwege, eine Viertelstunde von Arco und Riva del Garda. Ideal für Gäste, die Ruhe und Sport im Freien suchen.",
+        "highlights": [
+          {
+            "title": "Burg Drena",
+            "body": "Die Burg und die Ausblicke über das Tal ziehen Besucher und Wanderer an."
+          },
+          {
+            "title": "Natur und Ruhe",
+            "body": "Wälder, Klettergärten und Wege für alle, die wirklich abschalten möchten."
+          },
+          {
+            "title": "Nah am Alto Garda",
+            "body": "Arco und Riva del Garda sind wenige Autominuten entfernt."
           }
         ]
       }

@@ -18,7 +18,7 @@
 - Compenso a percentuale sui ricavi, senza costi di attivazione né abbonamenti.
 
 ## Zone servite
-Province di Verona, Brescia e Mantova: le località principali del Lago di Garda e i comuni limitrofi.
+Province di Verona, Brescia, Mantova e Trento (Alto Garda trentino): le località principali del Lago di Garda e i comuni limitrofi.
 
 - [Peschiera del Garda](https://herocasa.it/it/gestione-affitti-brevi/peschiera-del-garda): gestione affitti brevi a Peschiera del Garda
 - [Lazise](https://herocasa.it/it/gestione-affitti-brevi/lazise): gestione affitti brevi a Lazise
@@ -58,6 +58,13 @@ Province di Verona, Brescia e Mantova: le località principali del Lago di Garda
 - [Castiglione delle Stiviere](https://herocasa.it/it/gestione-affitti-brevi/castiglione-delle-stiviere): gestione affitti brevi a Castiglione delle Stiviere
 - [Carpenedolo](https://herocasa.it/it/gestione-affitti-brevi/carpenedolo): gestione affitti brevi a Carpenedolo
 - [Montichiari](https://herocasa.it/it/gestione-affitti-brevi/montichiari): gestione affitti brevi a Montichiari
+- [Riva del Garda](https://herocasa.it/it/gestione-affitti-brevi/riva-del-garda): gestione affitti brevi a Riva del Garda
+- [Nago-Torbole](https://herocasa.it/it/gestione-affitti-brevi/nago-torbole): gestione affitti brevi a Nago-Torbole
+- [Arco](https://herocasa.it/it/gestione-affitti-brevi/arco): gestione affitti brevi a Arco
+- [Tenno](https://herocasa.it/it/gestione-affitti-brevi/tenno): gestione affitti brevi a Tenno
+- [Ledro](https://herocasa.it/it/gestione-affitti-brevi/ledro): gestione affitti brevi a Ledro
+- [Dro](https://herocasa.it/it/gestione-affitti-brevi/dro): gestione affitti brevi a Dro
+- [Drena](https://herocasa.it/it/gestione-affitti-brevi/drena): gestione affitti brevi a Drena
 
 ## Pagine in tedesco (Ferienhaus-Verwaltung am Gardasee)
 - [Peschiera del Garda](https://herocasa.it/de/ferienhaus-verwaltung/peschiera-del-garda)
@@ -98,6 +105,13 @@ Province di Verona, Brescia e Mantova: le località principali del Lago di Garda
 - [Castiglione delle Stiviere](https://herocasa.it/de/ferienhaus-verwaltung/castiglione-delle-stiviere)
 - [Carpenedolo](https://herocasa.it/de/ferienhaus-verwaltung/carpenedolo)
 - [Montichiari](https://herocasa.it/de/ferienhaus-verwaltung/montichiari)
+- [Riva del Garda](https://herocasa.it/de/ferienhaus-verwaltung/riva-del-garda)
+- [Nago-Torbole](https://herocasa.it/de/ferienhaus-verwaltung/nago-torbole)
+- [Arco](https://herocasa.it/de/ferienhaus-verwaltung/arco)
+- [Tenno](https://herocasa.it/de/ferienhaus-verwaltung/tenno)
+- [Ledro](https://herocasa.it/de/ferienhaus-verwaltung/ledro)
+- [Dro](https://herocasa.it/de/ferienhaus-verwaltung/dro)
+- [Drena](https://herocasa.it/de/ferienhaus-verwaltung/drena)
 
 ## Guide per proprietari
 - [Affitti brevi sul Garda: gestire da soli o affidarsi a un gestore?](https://herocasa.it/it/guide/gestire-da-soli-o-con-un-gestore)

@@ -108,9 +108,9 @@ export default async function LocaleLayout({
     telephone: '+39 366 369 5252',
     vatID: '02668020205',
     priceRange: '€€€',
-    // The three provinces around the lake, then every comune with a landing page.
+    // The provinces around the lake, then every comune with a landing page.
     areaServed: [
-      ...['Provincia di Verona', 'Provincia di Brescia', 'Provincia di Mantova'].map((name) => ({ '@type': 'AdministrativeArea', name })),
+      ...['Provincia di Verona', 'Provincia di Brescia', 'Provincia di Mantova', 'Provincia autonoma di Trento'].map((name) => ({ '@type': 'AdministrativeArea', name })),
       ...Object.values(COMUNI).map((c) => ({ '@type': 'City', name: c.name })),
     ],
     geo: { '@type': 'GeoCoordinates', latitude: 45.5636, longitude: 10.6417 },
