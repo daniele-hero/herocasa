@@ -6,6 +6,10 @@ import { PLACEHOLDERS } from '@/lib/photo-placeholders';
 // Photos not listed here gained too little (or nothing) and stay JPG only.
 const AVIF = new Set(['dettaglio-bagno-spa', 'interno-soggiorno', 'villa-giardino']);
 
+// /immobili/* is served as immutable (public/_headers), so Cloudflare and browsers keep a
+// photo for a year: bump this whenever a file in public/immobili/ is replaced.
+const VERSION = '2';
+
 interface PhotoProps {
   /** Original JPG path, e.g. /immobili/villa-giardino.jpg */
   src: string;
@@ -33,9 +37,9 @@ export default function Photo({ src, alt, className = '', priority = false }: Ph
         />
       )}
       <picture className="contents">
-        {AVIF.has(name) && <source type="image/avif" srcSet={`/immobili/opt/${name}.avif`} />}
+        {AVIF.has(name) && <source type="image/avif" srcSet={`/immobili/opt/${name}.avif?v=${VERSION}`} />}
         <img
-          src={src}
+          src={`${src}?v=${VERSION}`}
           alt={alt}
           loading={priority ? 'eager' : 'lazy'}
           fetchPriority={priority ? 'high' : 'auto'}
