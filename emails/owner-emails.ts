@@ -153,9 +153,10 @@ function layout(l: EmailLocale, preheader: string, body: string, stopHref?: stri
 <div style="display:none;max-height:0;overflow:hidden;opacity:0">${esc(preheader)}</div>
 <table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="background:${C.marble}"><tr><td align="center" style="padding:28px 12px">
 <table role="presentation" width="600" cellpadding="0" cellspacing="0" style="width:100%;max-width:600px;background:${C.paper}">
-  <tr><td align="center" style="padding:32px 36px 24px;border-bottom:1px solid ${C.line}">
-    <!-- logo-email.png: 440px logo on a solid paper background, so Gmail's dark mode can't put its green text on black -->
-    <a href="${SITE}/${l}" style="text-decoration:none"><img src="${SITE}/logo-email.png" width="220" height="142" alt="Herocasa — Affitti brevi" style="display:block;margin:0 auto;border:0;width:220px;max-width:70%;height:auto"></a>
+  <tr><td align="center" style="padding:20px 36px 18px;border-bottom:1px solid ${C.line}">
+    <!-- logo-email.png: the logo cropped to its content (460px) on a solid paper background,
+         so Gmail's dark mode can't put its green text on black -->
+    <a href="${SITE}/${l}" style="text-decoration:none"><img src="${SITE}/logo-email.png?v=2" width="230" height="77" alt="Herocasa — Affitti brevi" style="display:block;margin:0 auto;border:0;width:230px;max-width:70%;height:auto"></a>
   </td></tr>
   <tr><td style="padding:32px 36px 12px">
     ${body}
