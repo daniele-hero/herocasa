@@ -1,4 +1,5 @@
 /* eslint-disable @next/next/no-img-element -- static export has no image optimizer; <picture> serves AVIF with the original JPG as fallback */
+import { PLACEHOLDERS } from '@/lib/photo-placeholders';
 
 // Photos with an AVIF copy in public/immobili/opt/, generated at the same size
 // and checked to be visually identical (PSNR ≥ 42 dB) while weighing less.
@@ -14,20 +15,34 @@ interface PhotoProps {
   priority?: boolean;
 }
 
-/** Fills its positioned parent (like next/image `fill`), preferring AVIF where it is lighter. */
+/**
+ * Fills its positioned parent (like next/image `fill`), preferring AVIF where it is lighter.
+ * A 24px inlined preview sits underneath, so the frame is never an empty box while the
+ * photo loads (the JPGs are progressive, the AVIFs arrive all at once).
+ */
 export default function Photo({ src, alt, className = '', priority = false }: PhotoProps) {
   const name = src.split('/').pop()?.replace(/\.jpe?g$/i, '') ?? '';
+  const placeholder = PLACEHOLDERS[name];
   return (
-    <picture className="contents">
-      {AVIF.has(name) && <source type="image/avif" srcSet={`/immobili/opt/${name}.avif`} />}
-      <img
-        src={src}
-        alt={alt}
-        loading={priority ? 'eager' : 'lazy'}
-        fetchPriority={priority ? 'high' : 'auto'}
-        decoding="async"
-        className={`absolute inset-0 h-full w-full ${className}`}
-      />
-    </picture>
+    <>
+      {placeholder && (
+        <span
+          aria-hidden="true"
+          className={`absolute inset-0 bg-cover bg-center ${className}`}
+          style={{ backgroundImage: `url(${placeholder})` }}
+        />
+      )}
+      <picture className="contents">
+        {AVIF.has(name) && <source type="image/avif" srcSet={`/immobili/opt/${name}.avif`} />}
+        <img
+          src={src}
+          alt={alt}
+          loading={priority ? 'eager' : 'lazy'}
+          fetchPriority={priority ? 'high' : 'auto'}
+          decoding="async"
+          className={`absolute inset-0 h-full w-full ${className}`}
+        />
+      </picture>
+    </>
   );
 }

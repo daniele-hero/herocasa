@@ -165,10 +165,11 @@ img { max-width: 100%; display: block; }
 /* Hero entrance (components/Hero.tsx): CSS so it runs on first paint, before JS loads. */
 @keyframes hero-rise { from { opacity: 0; transform: translateY(12px); } }
 @keyframes hero-line { from { transform: translateY(105%); } }
-@keyframes hero-unveil { from { opacity: 0; clip-path: inset(0 0 100% 0); } }
+/* Opacity only: a clip-path reveal repaints the whole photo every frame and stutters on phones. */
+@keyframes hero-unveil { from { opacity: 0; } }
 .hero-rise { animation: hero-rise 0.7s cubic-bezier(0.2, 0.7, 0.2, 1) both; }
 .hero-line { animation: hero-line 0.8s cubic-bezier(0.2, 0.7, 0.2, 1) both; }
-.hero-unveil { animation: hero-unveil 1s cubic-bezier(0.2, 0.7, 0.2, 1) both; }
+.hero-unveil { animation: hero-unveil 0.8s ease-out both; }
 @media (prefers-reduced-motion: reduce) {
   .hero-rise, .hero-line, .hero-unveil { animation: none; }
 }
