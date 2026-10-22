@@ -174,7 +174,7 @@ function sendDate(days: number): string {
  * Resend ids (chronological). Created last-first so each email can carry a stop
  * link for the ones after it.
  */
-async function scheduleFollowUps(body: ValuationBody, env: Env, preview = false): Promise<string[]> {
+async function scheduleFollowUps(body: ValuationBody, env: Env): Promise<string[]> {
   if (!env.RESEND_API_KEY || !body.email) return [];
   const locale = emailLocale(body.locale);
   const later: string[] = [];
@@ -186,10 +186,9 @@ async function scheduleFollowUps(body: ValuationBody, env: Env, preview = false)
       from: env.RESEND_FROM_EMAIL || 'Herocasa <onboarding@resend.dev>',
       to: [body.email],
       reply_to: 'info@herocasa.it',
-      // preview: sent right away, subject tagged with the day it would normally go out.
-      subject: preview ? `[Anteprima · giorno ${day}] ${subject}` : subject,
+      subject,
       html,
-      ...(preview ? {} : { scheduled_at: sendDate(day) }),
+      scheduled_at: sendDate(day),
     });
     if (!res.ok) {
       console.error('[valuation-request] follow-up scheduling error', res.status, await res.text());
@@ -279,31 +278,3 @@ export const onRequestPost = async ({ request, env }: { request: Request; env: E
 
   return json({ ok: true });
 };
-
-/**
- * Sends every email of the lead flow at once (team notification, owner confirmation,
- * the three follow-ups) for a sample lead, to `to` only. Used by the temporary
- * functions/api/email-preview.ts so the team can review the texts in a real inbox.
- */
-export async function previewAllEmails(env: Env, to: string): Promise<string[]> {
-  const body: ValuationBody = {
-    source: 'hero-form',
-    name: 'Mario Rossi',
-    email: to,
-    phone: '+39 333 000 0000',
-    zone: 'Sirmione',
-    type: 'Villa',
-    rooms: '3',
-    features: ['Piscina', 'Vista lago'],
-    notes: 'Email di prova: nessun lead reale.',
-    estimatedRange: { min: 41000, max: 58000 },
-    submittedAt: new Date().toISOString(),
-    locale: 'it',
-    page: '/it/gestione-affitti-brevi/sirmione',
-    referrer: 'https://www.google.com/',
-  };
-  const followUps = await scheduleFollowUps(body, env, true);
-  await sendLeadEmail(body, { ...env, LEAD_NOTIFY_EMAIL: to }, followUps);
-  await sendOwnerConfirmation(body, env, followUps);
-  return followUps;
-}
