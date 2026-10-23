@@ -65,15 +65,22 @@ export default function Nav() {
         }`}
         style={{ paddingLeft: 'var(--gutter)', paddingRight: 'var(--gutter)' }}
       >
-        <Link href={`/${locale}`} className="inline-flex items-center" aria-label="Herocasa — Affitti brevi">
+        {/* Desktop: the link keeps the box of the full logo.png (1004×650) so the bar looks as before.
+            Phones: the box shrinks to the logo itself, which can then be drawn much larger. */}
+        <Link
+          href={`/${locale}`}
+          className={`inline-flex items-center justify-center aspect-[1004/650] transition-[height] duration-300 ${scrolled ? 'h-[76px]' : 'h-[96px]'} max-[720px]:h-auto max-[720px]:aspect-auto`}
+          aria-label="Herocasa — Affitti brevi"
+        >
           <Image
-            // 448px copy of logo.png (6.8 KB instead of 24 KB): it is the page's LCP element on phones.
-            src="/logo-nav.png"
+            // logo.png cropped to its drawing (7 KB, 448px wide): the full file is ~60% empty space,
+            // which made the logo tiny on phones. It is the page's LCP element on phones.
+            src="/logo-header.png"
             alt="Herocasa — Affitti brevi"
             width={448}
-            height={290}
+            height={139}
             priority
-            className={`w-auto transition-[height] duration-300 ${scrolled ? 'h-[76px]' : 'h-[96px]'} max-[720px]:h-[52px]`}
+            className={`w-auto h-[42.3%] transition-[height] duration-300 ${scrolled ? 'max-[720px]:h-[36px]' : 'max-[720px]:h-[42px]'}`}
           />
         </Link>
 
