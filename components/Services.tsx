@@ -30,12 +30,16 @@ export default function Services({ numeral = 'ii.' }: { numeral?: string } = {})
           <Reveal key={i} delay={0.05 * i}>
             <a
               href="#valutazione"
-              className="bg-[var(--paper)] p-10 flex flex-col gap-3.5 h-full transition-colors duration-300 hover:bg-[var(--marble)] group no-underline"
+              className="bg-[var(--paper)] p-5 sm:p-10 flex flex-col gap-2.5 sm:gap-3.5 h-full transition-colors duration-300 hover:bg-[var(--marble)] group no-underline"
             >
-              <div className="serif italic text-[18px] text-[var(--gold-dark)]">{LETTERS[i]}.</div>
-              <h3 className="serif font-medium" style={{ fontSize: 'clamp(20px, 2.2vw, 28px)', lineHeight: 1.2 }}>{s.title}</h3>
+              {/* Phones: the letter sits on the title's line (one row less per card). */}
+              <div className="hidden sm:block serif italic text-[18px] text-[var(--gold-dark)]">{LETTERS[i]}.</div>
+              <h3 className="serif font-medium" style={{ fontSize: 'clamp(20px, 2.2vw, 28px)', lineHeight: 1.2 }}>
+                <span className="sm:hidden serif italic font-normal text-[18px] text-[var(--gold-dark)] mr-2">{LETTERS[i]}.</span>
+                {s.title}
+              </h3>
               <p className="text-[15px] leading-[1.6]" style={{ color: 'var(--olive-70)' }}>{s.body}</p>
-              <div className="mt-auto pt-5 text-[12px] tracking-[0.14em] uppercase text-[var(--stone)] group-hover:text-[var(--gold-ink)] transition-colors flex items-center gap-2">
+              <div className="mt-auto pt-2 sm:pt-5 text-[12px] max-sm:text-[13px] tracking-[0.14em] uppercase text-[var(--stone)] group-hover:text-[var(--gold-ink)] transition-colors flex items-center gap-2">
                 {s.link} →
               </div>
             </a>

@@ -47,18 +47,18 @@
   "manifesto": {
     "eyebrow": "Chi siamo",
     "paragraphOne": "Herocasa nasce sul Lago di Garda dall'esperienza diretta di chi possiede una seconda casa e sa quanto sia complesso trasformarla in una rendita <em>senza rinunciare al proprio tempo</em>.",
-    "paragraphTwo": "Non siamo un portale, non siamo un'OTA. Siamo un team locale che risponde al telefono, incontra i vostri ospiti, conosce l'idraulico di fiducia in ogni comune del lago — e vi lascia la casa esattamente come l'avete affidata.",
+    "paragraphTwo": "Non siamo un portale, non siamo un'OTA. Siamo un team locale che risponde al telefono, incontra i tuoi ospiti, conosce l'idraulico di fiducia in ogni comune del lago — e ti restituisce la casa esattamente come ce l'hai affidata.",
     "signature": "Team Herocasa · Lago di Garda"
   },
   "services": {
     "eyebrow": "Servizi ai proprietari",
     "titleOne": "Tutto ciò che serve,",
     "titleTwo": "nulla di cui occuparsi.",
-    "intro": "Sei aree di lavoro, un solo referente. La gestione della vostra casa è un servizio unico, non una serie di preventivi.",
+    "intro": "Sei aree di lavoro, un solo referente. La gestione della tua casa è un servizio unico, non una serie di preventivi.",
     "list": [
       {
         "title": "Gestione burocratica completa",
-        "body": "CIN, pratiche SUAP, comunicazioni alla Questura, ISTAT, tasse di soggiorno, cedolare secca. Tutto in regola, senza che ve ne dobbiate mai più preoccupare.",
+        "body": "CIN, pratiche SUAP, comunicazioni alla Questura, ISTAT, tasse di soggiorno, cedolare secca. Tutto in regola, senza che tu debba più preoccupartene.",
         "link": "Cosa gestiamo"
       },
       {
@@ -83,7 +83,7 @@
       },
       {
         "title": "Rendiconti mensili trasparenti",
-        "body": "Dashboard proprietario con occupazione, ricavi lordi, costi, netto. Estratto conto scaricabile ogni mese. Un rapporto onesto sul vostro bene.",
+        "body": "Dashboard proprietario con occupazione, ricavi lordi, costi, netto. Estratto conto scaricabile ogni mese. Un rapporto onesto sul tuo bene.",
         "link": "Vedi un esempio"
       }
     ]
@@ -92,26 +92,26 @@
     "eyebrow": "Come funziona",
     "titleOne": "Quattro step,",
     "titleTwo": "nessuna sorpresa.",
-    "intro": "Dal primo contatto al primo ospite in poche settimane.\nOgni fase concordata con voi, ogni costo dichiarato in anticipo.",
+    "intro": "Dal primo contatto al primo ospite in poche settimane.\nOgni fase concordata con te, ogni costo dichiarato in anticipo.",
     "steps": [
       {
         "title": "Chiamata e sopralluogo",
-        "body": "Ci raccontate la casa, i vostri obiettivi, i vincoli d'uso personale. Fissiamo un sopralluogo gratuito, senza impegno.",
+        "body": "Ci racconti la casa, i tuoi obiettivi, i vincoli d'uso personale. Fissiamo un sopralluogo gratuito, senza impegno.",
         "duration": "Durata: 1 settimana"
       },
       {
         "title": "Analisi e piano di rendimento",
-        "body": "Vi consegniamo una proiezione realistica di occupazione, prezzi, ricavi netti attesi. Con dati storici e comparabili della zona.",
+        "body": "Ti consegniamo una proiezione realistica di occupazione, prezzi, ricavi netti attesi. Con dati storici e comparabili della zona.",
         "duration": "Durata: 1 settimana"
       },
       {
         "title": "Onboarding e pubblicazione",
-        "body": "Contratto trasparente, foto professionali, allestimento, apertura canali. Nulla da fare da parte vostra.",
+        "body": "Contratto trasparente, foto professionali, allestimento, apertura canali. Nulla da fare da parte tua.",
         "duration": "Durata: 2-3 settimane"
       },
       {
         "title": "Gestione e rendiconto",
-        "body": "Da qui in poi, relax. Ogni mese arriva il rendiconto e il bonifico.\nVoi tornate nella vostra casa quando volete.",
+        "body": "Da qui in poi, relax. Ogni mese arrivano il rendiconto e il bonifico.\nTu torni nella tua casa quando vuoi.",
         "duration": "In corso, sempre."
       }
     ]
@@ -215,9 +215,9 @@
         "slug": "padenghe-sul-garda"
       },
       {
-        "name": "La vostra zona?",
+        "name": "La tua zona?",
         "highlight": true,
-        "note": "chiedete un sopralluogo"
+        "note": "chiedi un sopralluogo"
       }
     ],
     "alsoServe": "Serviamo anche",
@@ -227,16 +227,16 @@
   "estimator": {
     "eyebrow": "Valutazione gratuita",
     "titleOne": "Quanto potrebbe rendere",
-    "titleTwo": "la vostra casa sul Garda?",
-    "intro": "Compilate il modulo: analizziamo comune, tipologia, potenziale del vostro immobile e vi mandiamo una stima motivata entro 48 ore — senza impegno.",
+    "titleTwo": "la tua casa sul Garda?",
+    "intro": "Compila il modulo: analizziamo comune, tipologia e potenziale del tuo immobile e ti mandiamo una stima motivata entro 48 ore — senza impegno.",
     "form": {
       "name": "Nome e cognome",
       "email": "Email",
       "phone": "Telefono",
       "zone": "Comune",
-      "zonePlaceholder": "Selezionate",
+      "zonePlaceholder": "Seleziona",
       "type": "Tipologia immobile",
-      "typePlaceholder": "Selezionate",
+      "typePlaceholder": "Seleziona",
       "types": [
         "Villa",
         "Appartamento",
@@ -307,7 +307,7 @@
       "upTo": "fino a"
     },
     "side": {
-      "eyebrow": "Cosa riceverete",
+      "eyebrow": "Cosa riceverai",
       "titleOne": "Una relazione completa,",
       "titleTwo": "non un preventivo.",
       "items": [
@@ -325,7 +325,7 @@
         },
         {
           "title": "Preventivo trasparente",
-          "body": "Nessuna riga in piccolo. Se decidete di procedere, sapete già tutto."
+          "body": "Nessuna riga in piccolo. Se decidi di procedere, sai già tutto."
         }
       ]
     }
@@ -337,23 +337,23 @@
     "list": [
       {
         "q": "Quanto guadagnerò con Herocasa?",
-        "a": "Dipende da comune, tipologia, stagionalità e stato dell'immobile. In media, i proprietari che ci affidano una casa già pubblicata su portali autogestiti registrano <em>un aumento del rendimento netto del 20-35% nel primo anno</em>. La valutazione gratuita vi darà una stima motivata sulle vostre coordinate reali."
+        "a": "Dipende da comune, tipologia, stagionalità e stato dell'immobile. In media, i proprietari che ci affidano una casa già pubblicata su portali autogestiti registrano <em>un aumento del rendimento netto del 20-35% nel primo anno</em>. La valutazione gratuita ti darà una stima motivata sulla tua situazione reale."
       },
       {
         "q": "Quali sono le vostre commissioni?",
-        "a": "Applichiamo una percentuale sul ricavo lordo, senza costi di attivazione, senza abbonamenti mensili, senza fee nascoste. La percentuale esatta dipende dal servizio scelto (base o full concierge) e ve la comunichiamo in fase di preventivo, prima della firma."
+        "a": "Applichiamo una percentuale sul ricavo lordo, senza costi di attivazione, senza abbonamenti mensili, senza fee nascoste. La percentuale esatta dipende dal servizio scelto (base o full concierge) e te la comunichiamo in fase di preventivo, prima della firma."
       },
       {
         "q": "Chi si occupa della burocrazia?",
-        "a": "Noi. In totale autonomia. Ci occupiamo di CIN, pratiche SUAP, comunicazioni giornaliere alla Questura, adempimenti ISTAT, versamento della tassa di soggiorno al Comune. Voi ricevete un report riassuntivo. Se avete già aperto la partita IVA, la coordiniamo con il vostro commercialista."
+        "a": "Noi. In totale autonomia. Ci occupiamo di CIN, pratiche SUAP, comunicazioni giornaliere alla Questura, adempimenti ISTAT, versamento della tassa di soggiorno al Comune. Tu ricevi un report riassuntivo. Se hai già aperto la partita IVA, la coordiniamo con il tuo commercialista."
       },
       {
         "q": "Posso usare la mia casa quando voglio?",
-        "a": "Sempre. La casa è vostra. Basta segnalare le date di uso personale nel nostro calendario (via email o dashboard) e le blocchiamo. Consigliamo di darcele con qualche settimana di anticipo per non rinunciare a prenotazioni già confermate, ma non è un obbligo."
+        "a": "Sempre. La casa è tua. Basta segnalare le date di uso personale nel nostro calendario (via email o dashboard) e le blocchiamo. Ti consigliamo di darcele con qualche settimana di anticipo per non rinunciare a prenotazioni già confermate, ma non è un obbligo."
       },
       {
         "q": "Cosa succede se un ospite danneggia qualcosa?",
-        "a": "Verifichiamo l'immobile dopo ogni check-out. Piccoli danni li rifondiamo trattenendo la cauzione. Danni maggiori attivano la copertura assicurativa dei portali OTA. In ogni caso, <em>voi ricevete la casa nello stato in cui l'avete affidata</em>."
+        "a": "Verifichiamo l'immobile dopo ogni check-out. Piccoli danni li rifondiamo trattenendo la cauzione. Danni maggiori attivano la copertura assicurativa dei portali OTA. In ogni caso, <em>ricevi la casa nello stato in cui ce l'hai affidata</em>."
       },
       {
         "q": "Su quali portali pubblicate?",
@@ -365,7 +365,7 @@
       },
       {
         "q": "Come funziona il rendiconto mensile?",
-        "a": "Ogni mese, entro il 10, ricevete via email un rendiconto in PDF con: prenotazioni del mese precedente, tassi di occupazione, ricavi lordi per canale, costi (pulizie, biancheria, commissioni portali, tasse di soggiorno), netto trasferito al vostro conto. Il bonifico arriva contestualmente. Trasparenza totale."
+        "a": "Ogni mese, entro il 10, ricevi via email un rendiconto in PDF con: prenotazioni del mese precedente, tassi di occupazione, ricavi lordi per canale, costi (pulizie, biancheria, commissioni portali, tasse di soggiorno), netto trasferito sul tuo conto. Il bonifico arriva contestualmente. Trasparenza totale."
       }
     ]
   },
@@ -373,25 +373,25 @@
     "eyebrow": "Contatti",
     "titleOne": "Parliamone",
     "titleTwo": "con calma.",
-    "body": "Se preferite un contatto diretto senza compilare moduli, siamo raggiungibili nei modi tradizionali. Rispondiamo entro 2-4 ore.",
-    "emailLabel": "Scriveteci",
-    "phoneLabel": "Chiamateci",
+    "body": "Se preferisci un contatto diretto senza compilare moduli, ci trovi nei modi tradizionali. Rispondiamo entro 2-4 ore.",
+    "emailLabel": "Scrivici",
+    "phoneLabel": "Chiamaci",
     "hoursLabel": "Orari",
     "hours": "Lun-Ven 9:00-18:00\nSab 9:00-17:00",
     "callCta": {
       "eyebrow": "Chiamata conoscitiva",
       "title": "Trenta minuti per capire se possiamo aiutarvi.",
-      "body": "Prima ancora del sopralluogo, vi proponiamo una chiamata di trenta minuti per capire il vostro immobile, i vostri obiettivi, e se Herocasa è il partner giusto. Se non lo siamo, ve lo diciamo.",
+      "body": "Prima ancora del sopralluogo, ti proponiamo una chiamata di trenta minuti per capire il tuo immobile, i tuoi obiettivi e se Herocasa è il partner giusto. Se non lo siamo, te lo diciamo.",
       "bullets": [
         "Nessun costo, nessun impegno",
         "La conduce un responsabile senior, non un commerciale",
         "Slot disponibili nei prossimi cinque giorni"
       ],
       "cta": "Prenota una chiamata",
-      "orWrite": "Scrivete a",
+      "orWrite": "Oppure scrivi a",
       "success": "Abbiamo ricevuto la tua richiesta. Ti contatteremo a breve per fissare la chiamata."
     },
-    "whatsappCta": "Scriveteci su WhatsApp"
+    "whatsappCta": "Scrivici su WhatsApp"
   },
   "footer": {
     "tagline": "Agenzia per affitti brevi lago di Garda.",
@@ -405,10 +405,10 @@
   },
   "cookieBanner": {
     "title": "Cookie & privacy",
-    "description": "Usiamo cookie tecnici, necessari al funzionamento del sito, e — solo con il vostro consenso — cookie analitici e di marketing per capire come migliorarlo e misurare le nostre campagne. Nessuna profilazione invasiva. Potete scegliere quali attivare con «Personalizza» o leggere la <a href=\"/{locale}/cookie\">Cookie Policy</a>.",
+    "description": "Usiamo cookie tecnici, necessari al funzionamento del sito, e — solo con il tuo consenso — cookie analitici e di marketing per capire come migliorarlo e misurare le nostre campagne. Nessuna profilazione invasiva. Puoi scegliere quali attivare con «Personalizza» o leggere la <a href=\"/{locale}/cookie\">Cookie Policy</a>.",
     "necessaryTitle": "Tecnici",
     "necessaryBadge": "sempre attivi",
-    "necessaryDesc": "Necessari per il funzionamento del sito e per ricordare le vostre preferenze.",
+    "necessaryDesc": "Necessari per il funzionamento del sito e per ricordare le tue preferenze.",
     "analyticsTitle": "Analitici anonimi",
     "analyticsDesc": "Statistiche di traffico aggregate, senza profilazione.",
     "marketingTitle": "Marketing",

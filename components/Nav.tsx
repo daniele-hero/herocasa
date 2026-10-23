@@ -73,7 +73,7 @@ export default function Nav() {
             width={448}
             height={290}
             priority
-            className={`w-auto transition-[height] duration-300 ${scrolled ? 'h-[76px]' : 'h-[96px]'} max-[720px]:h-[44px]`}
+            className={`w-auto transition-[height] duration-300 ${scrolled ? 'h-[76px]' : 'h-[96px]'} max-[720px]:h-[52px]`}
           />
         </Link>
 
@@ -101,7 +101,11 @@ export default function Nav() {
               </span>
             ))}
           </div>
-          <a href="#valutazione" className="btn gold sm hidden sm:inline-flex">{t('cta')}</a>
+          {/* Wrapper carries the visibility: .btn (unlayered CSS) would override Tailwind's `hidden`.
+              Phones don't need it: the bottom bar (MobileCtaBar) has the same call to action. */}
+          <span className="hidden sm:inline-flex">
+            <a href="#valutazione" className="btn gold sm">{t('cta')}</a>
+          </span>
           <button
             type="button"
             className="lg:hidden inline-flex items-center justify-center bg-transparent border-0 cursor-pointer w-11 h-11 relative"

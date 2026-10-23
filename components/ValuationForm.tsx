@@ -135,7 +135,7 @@ export default function ValuationForm({ variant, source, presetZone }: Valuation
   };
 
   // ---- presentational helpers (one set of markup, two colour schemes) ----
-  const labelCls = `block text-[11px] tracking-[0.16em] uppercase mb-2 ${dark ? 'text-[var(--paper-70)]' : 'text-[var(--stone)]'}`;
+  const labelCls = `block text-[11px] max-sm:text-[12px] tracking-[0.16em] uppercase mb-2 ${dark ? 'text-[var(--paper-70)]' : 'text-[var(--stone)]'}`;
   const fieldCls = dark ? 'est-input' : 'hero-field';
   const selectCls = dark ? 'est-input appearance-none' : 'hero-field hero-select';
   const stepBtnCls = `w-11 h-11 rounded-full border text-[22px] leading-none flex items-center justify-center transition-colors disabled:opacity-30 disabled:cursor-not-allowed ${
@@ -205,7 +205,7 @@ export default function ValuationForm({ variant, source, presetZone }: Valuation
             />
           ))}
         </div>
-        <span className={`text-[11px] tracking-[0.16em] uppercase ${dark ? 'text-[var(--paper-70)]' : 'text-[var(--stone)]'}`}>
+        <span className={`text-[11px] max-sm:text-[12px] tracking-[0.16em] uppercase ${dark ? 'text-[var(--paper-70)]' : 'text-[var(--stone)]'}`}>
           {step}/2 · {step === 1 ? form.stepOne : form.stepTwo}
         </span>
       </div>
@@ -317,7 +317,7 @@ export default function ValuationForm({ variant, source, presetZone }: Valuation
                 )}
               </button>
             </div>
-            <p className={`sm:col-span-2 text-[11px] tracking-[0.06em] uppercase ${dark ? 'text-[var(--paper-60)]' : 'text-[var(--stone)]'}`}>{form.legal}</p>
+            <p className={`sm:col-span-2 text-[11px] max-sm:text-[12px] leading-[1.5] tracking-[0.06em] uppercase ${dark ? 'text-[var(--paper-60)]' : 'text-[var(--stone)]'}`}>{form.legal}</p>
           </motion.form>
         )}
       </AnimatePresence>

@@ -86,7 +86,7 @@ export default function Footer() {
           </ul>
         </div>
       </div>
-      <div className="max-w-[1440px] mx-auto mt-6 flex flex-wrap justify-between gap-6 text-[11px] tracking-[0.08em] uppercase" style={{ color: 'var(--paper-60)' }}>
+      <div className="max-w-[1440px] mx-auto mt-6 flex flex-wrap justify-between gap-6 text-[11px] max-sm:text-[12px] leading-[1.6] tracking-[0.08em] uppercase" style={{ color: 'var(--paper-60)' }}>
         <div>{t('legal')}</div>
         <div>
           <Link href={`/${locale}/privacy`} className="transition-colors hover:text-[var(--gold)]">{t('privacy')}</Link> · <Link href={`/${locale}/cookie`} className="transition-colors hover:text-[var(--gold)]">{t('cookies')}</Link> · <Link href={`/${locale}/termini`} className="transition-colors hover:text-[var(--gold)]">{t('terms')}</Link> ·{' '}

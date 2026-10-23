@@ -30,7 +30,7 @@ export default function Process({ numeral = 'iii.' }: { numeral?: string } = {})
                 <div className="serif italic text-[40px] leading-none text-[var(--gold)] mb-1">{String(i + 1).padStart(2, '0')}</div>
                 <h3 className="serif font-medium text-[22px] text-[var(--paper)]">{s.title}</h3>
                 <p className="text-[14px] leading-[1.6]" style={{ color: 'var(--paper-70)' }}>{s.body}</p>
-                <div className="mt-2 text-[11px] tracking-[0.14em] uppercase" style={{ color: 'var(--sage)' }}>{s.duration}</div>
+                <div className="mt-2 text-[11px] max-sm:text-[12px] tracking-[0.14em] uppercase" style={{ color: 'var(--sage)' }}>{s.duration}</div>
               </div>
             </Reveal>
           ))}

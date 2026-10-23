@@ -65,8 +65,18 @@ export default function HeroForm({ presetZone }: { presetZone?: string }) {
       </AnimatePresence>
 
       {!expanded && (
-        <div className="flex items-center gap-6 flex-wrap text-[12px] text-[var(--stone)]">
-          <span>{tHero('trust')}</span>
+        <div className="flex items-center gap-6 flex-wrap text-[12px] max-sm:text-[13px] text-[var(--stone)]">
+          {/* Each item stays on one line; wraps happen only between items. */}
+          <span className="leading-[1.6]">
+            {tHero('trust')
+              .split(' · ')
+              .map((item, i, all) => (
+                <span key={item}>
+                  <span className="whitespace-nowrap">{i < all.length - 1 ? `${item} ·` : item}</span>
+                  {i < all.length - 1 ? ' ' : ''}
+                </span>
+              ))}
+          </span>
           <a href="#processo" className="btn-arrow" style={{ fontSize: 12 }}>
             {tHero('secondaryCta')} <span className="arrow" />
           </a>

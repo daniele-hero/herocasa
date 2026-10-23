@@ -87,15 +87,15 @@ export default function Contact({ numeral = 'viii.' }: { numeral?: string } = {}
 
             <div className="flex flex-col gap-7 mt-10">
               <div className="flex flex-col gap-1.5">
-                <div className="text-[11px] tracking-[0.14em] uppercase text-[var(--stone)]">{t('emailLabel')}</div>
+                <div className="text-[11px] max-sm:text-[12px] tracking-[0.14em] uppercase text-[var(--stone)]">{t('emailLabel')}</div>
                 <a href="mailto:info@herocasa.it?subject=Richiesta%20valutazione%20immobile" className="serif text-[22px] text-[var(--olive)] transition-colors hover:text-[var(--gold-dark)]">info@herocasa.it</a>
               </div>
               <div className="flex flex-col gap-1.5">
-                <div className="text-[11px] tracking-[0.14em] uppercase text-[var(--stone)]">{t('phoneLabel')}</div>
+                <div className="text-[11px] max-sm:text-[12px] tracking-[0.14em] uppercase text-[var(--stone)]">{t('phoneLabel')}</div>
                 <a href="tel:+393663695252" className="serif text-[22px] text-[var(--olive)] transition-colors hover:text-[var(--gold-dark)]">+39 366 369 5252</a>
               </div>
               <div className="flex flex-col gap-1.5">
-                <div className="text-[11px] tracking-[0.14em] uppercase text-[var(--stone)]">WhatsApp</div>
+                <div className="text-[11px] max-sm:text-[12px] tracking-[0.14em] uppercase text-[var(--stone)]">WhatsApp</div>
                 <a
                   href="https://wa.me/393663695252?text=Ciao%2C%20vorrei%20una%20valutazione%20per%20la%20mia%20casa%20sul%20Garda"
                   target="_blank"
@@ -106,7 +106,7 @@ export default function Contact({ numeral = 'viii.' }: { numeral?: string } = {}
                 </a>
               </div>
               <div className="flex flex-col gap-1.5">
-                <div className="text-[11px] tracking-[0.14em] uppercase text-[var(--stone)]">{t('hoursLabel')}</div>
+                <div className="text-[11px] max-sm:text-[12px] tracking-[0.14em] uppercase text-[var(--stone)]">{t('hoursLabel')}</div>
                 <div className="text-[15px] whitespace-pre-line" style={{ color: 'var(--olive-70)' }}>{t('hours')}</div>
               </div>
             </div>
@@ -135,11 +135,11 @@ export default function Contact({ numeral = 'viii.' }: { numeral?: string } = {}
             ) : (
               <form onSubmit={onSubmit} className="flex flex-col gap-6">
                 <label className="block">
-                  <span className="block text-[11px] tracking-[0.16em] uppercase mb-2.5" style={{ color: 'var(--paper-70)' }}>{form.name}</span>
+                  <span className="block text-[11px] max-sm:text-[12px] tracking-[0.16em] uppercase mb-2.5" style={{ color: 'var(--paper-70)' }}>{form.name}</span>
                   <input name="name" type="text" required autoComplete="name" className="est-input" />
                 </label>
                 <label className="block">
-                  <span className="block text-[11px] tracking-[0.16em] uppercase mb-2.5" style={{ color: 'var(--paper-70)' }}>{form.phone}</span>
+                  <span className="block text-[11px] max-sm:text-[12px] tracking-[0.16em] uppercase mb-2.5" style={{ color: 'var(--paper-70)' }}>{form.phone}</span>
                   <input
                     name="phone"
                     type="tel"
@@ -152,11 +152,11 @@ export default function Contact({ numeral = 'viii.' }: { numeral?: string } = {}
                   />
                 </label>
                 <label className="block">
-                  <span className="block text-[11px] tracking-[0.16em] uppercase mb-2.5" style={{ color: 'var(--paper-70)' }}>{form.emailOptional}</span>
+                  <span className="block text-[11px] max-sm:text-[12px] tracking-[0.16em] uppercase mb-2.5" style={{ color: 'var(--paper-70)' }}>{form.emailOptional}</span>
                   <input name="email" type="email" autoComplete="email" className="est-input" />
                 </label>
                 <label className="block">
-                  <span className="block text-[11px] tracking-[0.16em] uppercase mb-2.5" style={{ color: 'var(--paper-70)' }}>{form.zone}</span>
+                  <span className="block text-[11px] max-sm:text-[12px] tracking-[0.16em] uppercase mb-2.5" style={{ color: 'var(--paper-70)' }}>{form.zone}</span>
                   <select name="zone" required value={zoneChoice} onChange={(e) => setZoneChoice(e.target.value)} className="est-input appearance-none">
                     <option value="" disabled>{form.zonePlaceholder}</option>
                     {ZONES.map((z) => <option key={z}>{z}</option>)}
@@ -165,7 +165,7 @@ export default function Contact({ numeral = 'viii.' }: { numeral?: string } = {}
                 </label>
                 {zoneChoice === form.otherZone && (
                   <label className="block">
-                    <span className="block text-[11px] tracking-[0.16em] uppercase mb-2.5" style={{ color: 'var(--paper-70)' }}>{form.otherZoneName}</span>
+                    <span className="block text-[11px] max-sm:text-[12px] tracking-[0.16em] uppercase mb-2.5" style={{ color: 'var(--paper-70)' }}>{form.otherZoneName}</span>
                     <input name="otherZoneName" type="text" required placeholder={form.otherZonePlaceholder} className="est-input" />
                   </label>
                 )}

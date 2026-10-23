@@ -48,7 +48,7 @@ export default function TrustBar() {
             <div className="serif text-[var(--olive)] leading-none" style={{ fontSize: 'clamp(32px, 3.6vw, 48px)' }}>
               <AnimatedNumber value={it.value} />
             </div>
-            <div className="text-[12px] tracking-[0.14em] uppercase text-[var(--stone)]">{it.label}</div>
+            <div className="text-[12px] max-sm:text-[13px] tracking-[0.14em] uppercase text-[var(--stone)]">{it.label}</div>
           </Reveal>
         ))}
       </div>

@@ -61,7 +61,7 @@ export default function Properties({ numeral = 'iv.' }: { numeral?: string } = {
               <div className="pt-5 px-1 flex justify-between items-baseline gap-6">
                 <div className="flex-1 min-w-0">
                   <h3 className="serif font-medium" style={{ fontSize: 'clamp(20px, 2.2vw, 28px)', lineHeight: 1.2 }}>{p.name}</h3>
-                  <div className="text-[12px] tracking-[0.08em] uppercase text-[var(--stone)] mt-2 leading-[1.6]">{p.meta}</div>
+                  <div className="text-[12px] max-sm:text-[13px] tracking-[0.08em] uppercase text-[var(--stone)] mt-2 leading-[1.6]">{p.meta}</div>
                 </div>
                 <div className="serif text-[22px] text-[var(--gold-dark)] whitespace-nowrap flex-none text-right">
                   {p.metric}

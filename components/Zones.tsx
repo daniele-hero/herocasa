@@ -30,17 +30,18 @@ export default function Zones({ numeral = 'v.' }: { numeral?: string } = {}) {
           </div>
         </Reveal>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 border-t border-[var(--olive-15)]">
+        {/* Two columns from phones up (one per row made the list ~1,600px tall on mobile). */}
+        <div className="grid grid-cols-2 gap-x-5 sm:gap-x-0 lg:grid-cols-4 border-t border-[var(--olive-15)]">
           {list.map((z, i) => (
-            <Reveal key={i} delay={0.03 * i}>
+            <Reveal key={i} delay={0.03 * i} className="h-full">
               <a
                 href={z.slug ? comunePath(locale, z.slug) : '#valutazione'}
-                className="py-8 flex flex-col gap-2 border-b border-[var(--olive-15)] sm:border-r sm:px-6 sm:last:border-r-0 no-underline transition-colors hover:bg-[var(--marble)]"
+                className="h-full py-5 sm:py-8 flex flex-col gap-2 border-b border-[var(--olive-15)] sm:border-r sm:px-6 sm:last:border-r-0 no-underline transition-colors hover:bg-[var(--marble)]"
                 style={{ borderRightColor: i % 4 === 3 ? 'transparent' : undefined }}
                 
               >
                 <div
-                  className="serif text-[26px]"
+                  className="serif text-[21px] leading-tight sm:text-[26px] sm:leading-normal"
                   style={{ color: z.highlight ? 'var(--gold-dark)' : 'var(--olive)' }}
                 >
                   {z.name}

@@ -72,6 +72,8 @@ img { max-width: 100%; display: block; }
   text-transform: uppercase;
   color: var(--stone);
 }
+/* Phones: one point bigger, and roomy line spacing when a label wraps. */
+@media (max-width: 639.98px) { .eyebrow { font-size: 13px; line-height: 1.5; } }
 .h-display { font-family: var(--font-serif); font-weight: 400; line-height: 1.05; letter-spacing: -0.01em; color: var(--olive); }
 .gold-italic { color: var(--gold-dark); font-style: italic; }
 
