@@ -341,7 +341,7 @@
       },
       {
         "q": "Wie hoch sind Ihre Gebühren?",
-        "a": "Wir berechnen einen Prozentsatz des Bruttoumsatzes, ohne Aktivierungskosten, ohne Monatsabonnement, ohne versteckte Gebühren. Der genaue Prozentsatz hängt von der gewählten Servicestufe ab und wird im Angebot vor der Unterzeichnung mitgeteilt."
+        "a": "Wir berechnen einen Prozentsatz des Bruttoumsatzes, ohne Aktivierungskosten, ohne Monatsabonnement, ohne versteckte Gebühren. Der genaue Prozentsatz hängt von der gewählten Servicestufe (Smart oder Premium) ab und wird im Angebot vor der Unterzeichnung mitgeteilt."
       },
       {
         "q": "Wer kümmert sich um die Bürokratie?",

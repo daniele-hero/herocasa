@@ -341,7 +341,7 @@
       },
       {
         "q": "What are your fees?",
-        "a": "We charge a percentage of gross revenue, with no setup cost, no monthly subscription, no hidden fees. The exact percentage depends on the service tier (base or full concierge) and we tell you in the quote, before signing."
+        "a": "We charge a percentage of gross revenue, with no setup cost, no monthly subscription, no hidden fees. The exact percentage depends on the service tier (Smart or Premium) and we tell you in the quote, before signing."
       },
       {
         "q": "Who handles the bureaucracy?",
