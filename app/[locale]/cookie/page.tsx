@@ -1,6 +1,8 @@
+import type { Metadata } from 'next';
 import type { ReactNode } from 'react';
 import PolicyLayout from '@/components/PolicyLayout';
 import { setRequestLocale } from 'next-intl/server';
+import { policyMetadata } from '@/lib/policy-metadata';
 
 type Copy = { eyebrow: string; title: ReactNode; lede: string; updated: string; body: ReactNode };
 
@@ -136,6 +138,12 @@ const COPY = (locale: string): Copy =>
       ),
     },
   })[locale] ?? COPY('it');
+
+export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }): Promise<Metadata> {
+  const { locale } = await params;
+  const c = COPY(locale);
+  return policyMetadata(locale, 'cookie', c.eyebrow, c.lede);
+}
 
 export default async function CookiePage({ params }: { params: Promise<{ locale: string }> }) {
   const { locale } = await params;
