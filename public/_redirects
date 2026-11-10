@@ -1,7 +1,9 @@
-# Locale-less legal pages (the old middleware added the prefix)
-/privacy /it/privacy 302
-/cookie /it/cookie 302
-/termini /it/termini 302
+# Locale-less legal pages (the old middleware added the prefix).
+# 301, not 302: with a temporary redirect Google keeps /privacy as the canonical
+# and drops /it/privacy as a duplicate.
+/privacy /it/privacy 301
+/cookie /it/cookie 301
+/termini /it/termini 301
 
 # DE comune pages moved to a German URL
 /de/gestione-affitti-brevi/:slug /de/ferienhaus-verwaltung/:slug 301
@@ -11,6 +13,13 @@
 /chi-siamo /it 301
 /contatti /it#contatti 301
 /lavori /it#immobili 301
+/it/home /it 301
+/it/chi-siamo /it 301
+/itchi-siamo /it 301
+/it/contatti /it#contatti 301
+/it/lavori /it#immobili 301
+/privacy-policy /it/privacy 301
+/cookie-policy /it/cookie 301
 
 # Some crawlers guess a text sitemap
 /sitemap.txt /sitemap.xml 301
