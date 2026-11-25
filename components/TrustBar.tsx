@@ -10,10 +10,16 @@ function AnimatedNumber({ value }: { value: string }) {
   const match = value.match(/^([^\d-]*)(-?[\d.,]+)(.*)$/);
   if (!match) return <>{value}</>;
   const [, prefix, num, suffix] = match;
-  const clean = parseFloat(num.replace(',', '.'));
+  // "5.000" / "5,000" are thousands, not decimals: count up to 5000 and print it with the same separator.
+  const thousands = /^\d{1,3}([.,]\d{3})+$/.test(num) ? num.match(/[.,]/)![0] : null;
+  const clean = thousands ? parseInt(num.replace(/[.,]/g, ''), 10) : parseFloat(num.replace(',', '.'));
   const isFloat = !Number.isInteger(clean);
   const mv = useMotionValue(0);
-  const display = useTransform(mv, (v) => (isFloat ? v.toFixed(1) : Math.round(v).toString()));
+  const display = useTransform(mv, (v) => {
+    if (isFloat) return v.toFixed(1);
+    const n = Math.round(v).toString();
+    return thousands ? n.replace(/\B(?=(\d{3})+(?!\d))/g, thousands) : n;
+  });
   const ref = useRef<HTMLSpanElement>(null);
   const inView = useInView(ref, { once: true, margin: '-10% 0px' });
 
