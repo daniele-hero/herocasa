@@ -2,7 +2,7 @@
 
 import { useTranslations, useLocale } from 'next-intl';
 import Link from 'next/link';
-import { openCookieBanner } from './CookieBanner';
+import { openCookieBanner, trackContact } from './CookieBanner';
 import { PUBLISHED_GUIDES, guidePath } from '@/lib/guide-links';
 import type { Locale } from '@/lib/routing';
 
@@ -72,6 +72,7 @@ export default function Footer() {
                 href="https://wa.me/393663695252?text=Ciao%2C%20vorrei%20una%20valutazione%20per%20la%20mia%20casa%20sul%20Garda"
                 target="_blank"
                 rel="noopener noreferrer"
+                onClick={() => trackContact('footer-whatsapp')}
                 className="transition-colors hover:text-[var(--gold)]"
               >
                 WhatsApp ↗

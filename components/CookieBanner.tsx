@@ -7,6 +7,10 @@ import { useTranslations, useLocale } from 'next-intl';
 // pre-ticked toggles) are not valid consent and everyone is asked again once.
 const STORAGE_KEY = 'herocasa_cookie_consent_v3';
 const META_PIXEL_ID = process.env.NEXT_PUBLIC_META_PIXEL_ID ?? '2304401749914019';
+// Google Ads (account 822-961-1939): tag ID and the two conversion actions.
+const GOOGLE_ADS_ID = 'AW-18596659098';
+const GOOGLE_ADS_LEAD = `${GOOGLE_ADS_ID}/nZ16CKLw4L8dEJr_yaNF`; // "Invio modulo per i lead": the campaign optimises on this
+const GOOGLE_ADS_CONTACT = `${GOOGLE_ADS_ID}/24jxCMmO7L8dEJr_yaNF`; // "Clic WhatsApp o telefono": reported only
 
 type Consent = {
   necessary: true;
@@ -65,6 +69,37 @@ function initMetaPixel() {
   (window as any).fbq('track', 'PageView');
 }
 
+/**
+ * Google Ads tag, loaded like the Meta Pixel only after marketing consent.
+ * Consent covers measuring the ads, not remarketing: ad_personalization stays denied.
+ */
+let gtagLoaded = false;
+function initGoogleAds() {
+  if (gtagLoaded || typeof window === 'undefined') return;
+  gtagLoaded = true;
+  const w = window as any;
+  w.dataLayer = w.dataLayer || [];
+  // gtag.js expects the `arguments` object itself, not an array.
+  w.gtag = function () {
+    // eslint-disable-next-line prefer-rest-params
+    w.dataLayer.push(arguments);
+  };
+  w.gtag('consent', 'default', { ad_storage: 'granted', ad_user_data: 'granted', ad_personalization: 'denied', analytics_storage: 'denied' });
+  w.gtag('js', new Date());
+  w.gtag('config', GOOGLE_ADS_ID);
+  const t = document.createElement('script');
+  t.async = true;
+  t.src = `https://www.googletagmanager.com/gtag/js?id=${GOOGLE_ADS_ID}`;
+  document.head.appendChild(t);
+}
+
+/** Calls gtag only while marketing consent stands (it can be withdrawn without a reload). */
+function gtag(...args: unknown[]) {
+  if (typeof window === 'undefined' || !hasMarketingConsent()) return;
+  const g = (window as any).gtag;
+  if (typeof g === 'function') g(...args);
+}
+
 function fbq(...args: unknown[]) {
   if (typeof window === 'undefined') return;
   const f = (window as any).fbq;
@@ -78,11 +113,14 @@ function fbq(...args: unknown[]) {
  */
 export function trackLead(sourceLabel: string, extra?: Record<string, unknown>, eventId?: string) {
   fbq('track', 'Lead', { content_category: sourceLabel, content_name: 'Valutazione immobile', ...extra }, eventId ? { eventID: eventId } : undefined);
+  // transaction_id stops Google counting the same request twice.
+  gtag('event', 'conversion', { send_to: GOOGLE_ADS_LEAD, value: 1.0, currency: 'EUR', ...(eventId ? { transaction_id: eventId } : {}) });
 }
 
 /** Meta standard Contact event (WhatsApp / phone clicks): intent, not a lead. */
 export function trackContact(sourceLabel: string) {
   fbq('track', 'Contact', { content_category: sourceLabel });
+  gtag('event', 'conversion', { send_to: GOOGLE_ADS_CONTACT, value: 1.0, currency: 'EUR' });
 }
 
 /** Custom funnel step (e.g. form opened, step 1 completed) — kept out of Lead so campaigns optimise on real leads. */
@@ -106,7 +144,19 @@ export default function CookieBanner() {
     }
     setAnalytics(existing.analytics);
     setMarketing(existing.marketing);
-    if (existing.marketing) initMetaPixel();
+    if (existing.marketing) {
+      initMetaPixel();
+      initGoogleAds();
+    }
+  }, []);
+
+  // Phone links sit in several components (nav, contact, footer): one listener covers them all.
+  useEffect(() => {
+    const onClick = (e: MouseEvent) => {
+      if ((e.target as Element | null)?.closest?.('a[href^="tel:"]')) trackContact('phone-click');
+    };
+    document.addEventListener('click', onClick);
+    return () => document.removeEventListener('click', onClick);
   }, []);
 
   const choose = useCallback(
@@ -125,7 +175,12 @@ export default function CookieBanner() {
       setMarketing(finalMarketing);
       setVisible(false);
       setCustomizing(false);
-      if (finalMarketing) initMetaPixel();
+      if (finalMarketing) {
+        initMetaPixel();
+        initGoogleAds();
+      } else if (gtagLoaded) {
+        (window as any).gtag('consent', 'update', { ad_storage: 'denied', ad_user_data: 'denied' });
+      }
     },
     [analytics, marketing],
   );

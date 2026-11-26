@@ -7,6 +7,7 @@ import { usePathname } from 'next/navigation';
 import { comunePath } from '@/lib/comuni';
 import { findGuide, guidePath } from '@/lib/guide-links';
 import type { Locale } from '@/lib/routing';
+import { trackContact } from './CookieBanner';
 import Image from 'next/image';
 import { AnimatePresence, motion } from 'motion/react';
 
@@ -194,6 +195,7 @@ export default function Nav() {
                   href="https://wa.me/393663695252?text=Ciao%2C%20vorrei%20una%20valutazione%20per%20la%20mia%20casa%20sul%20Garda"
                   target="_blank"
                   rel="noopener noreferrer"
+                  onClick={() => trackContact('nav-whatsapp')}
                   className="transition-colors hover:text-[var(--gold)]"
                 >
                   WhatsApp ↗

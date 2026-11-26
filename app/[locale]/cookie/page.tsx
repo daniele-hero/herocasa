@@ -13,13 +13,19 @@ const metaLink = (label: string) => (
   </a>
 );
 
+const googleLink = (label: string) => (
+  <a href="https://policies.google.com/privacy" target="_blank" rel="noopener noreferrer">
+    {label}
+  </a>
+);
+
 const COPY = (locale: string): Copy =>
   ({
     it: {
       eyebrow: 'Cookie policy',
       title: <>Cookie: {gold('cosa sono e cosa usiamo.')}</>,
-      lede: 'Usiamo solo i cookie strettamente necessari al funzionamento del sito e, se ci autorizzate, il Meta Pixel per misurare le nostre campagne. Nessuna casella è pre-selezionata: decidete voi.',
-      updated: '21 ottobre 2026',
+      lede: 'Usiamo solo i cookie strettamente necessari al funzionamento del sito e, se ci autorizzate, il Meta Pixel e il tag di Google Ads per misurare le nostre campagne. Nessuna casella è pre-selezionata: decidete voi.',
+      updated: '26 novembre 2026',
       body: (
         <>
           <h2>1. Cosa sono i cookie</h2>
@@ -44,6 +50,12 @@ const COPY = (locale: string): Copy =>
             consenso il Pixel non viene caricato e nessun dato viene inviato a Meta. Per sapere come Meta tratta questi dati consultate l&apos;
             {metaLink('informativa privacy di Meta')}.
           </p>
+          <p>
+            Con lo stesso consenso carichiamo anche il tag di Google Ads (Google Ireland Ltd.), per sapere quante richieste arrivano dai nostri annunci su
+            Google: registra quando inviate un modulo o ci contattate via WhatsApp o telefono. A Google non inviamo i dati che scrivete nel modulo e non
+            usiamo il tag per mostrarvi pubblicità personalizzata. Senza consenso il tag non viene caricato. Per sapere come Google tratta questi dati
+            consultate le {googleLink('norme sulla privacy di Google')}.
+          </p>
 
           <h2>3. Come gestire i cookie</h2>
           <p>
@@ -59,8 +71,8 @@ const COPY = (locale: string): Copy =>
     en: {
       eyebrow: 'Cookie policy',
       title: <>Cookies: {gold('what they are and what we use.')}</>,
-      lede: 'We only use the cookies strictly needed for the site to work and, if you allow it, the Meta Pixel to measure our ads. Nothing is pre-ticked: you decide.',
-      updated: '21 October 2026',
+      lede: 'We only use the cookies strictly needed for the site to work and, if you allow it, the Meta Pixel and the Google Ads tag to measure our ads. Nothing is pre-ticked: you decide.',
+      updated: '26 November 2026',
       body: (
         <>
           <h2>1. What cookies are</h2>
@@ -84,6 +96,11 @@ const COPY = (locale: string): Copy =>
             cookies, we also inform Meta that a request was made, with your email and phone in encrypted (hashed) form. Without consent the Pixel is not
             loaded and no data is sent to Meta. To learn how Meta handles this data, see {metaLink("Meta's privacy policy")}.
           </p>
+          <p>
+            With the same consent we also load the Google Ads tag (Google Ireland Ltd.), to know how many requests come from our Google ads: it records when
+            you submit a form or contact us on WhatsApp or by phone. We do not send Google the details you type in the form, and we do not use the tag to
+            show you personalised ads. Without consent the tag is not loaded. To learn how Google handles this data, see {googleLink("Google's privacy policy")}.
+          </p>
 
           <h2>3. Managing cookies</h2>
           <p>
@@ -99,8 +116,8 @@ const COPY = (locale: string): Copy =>
     de: {
       eyebrow: 'Cookie-Richtlinie',
       title: <>Cookies: {gold('was sie sind und was wir nutzen.')}</>,
-      lede: 'Wir verwenden nur die für den Betrieb der Website notwendigen Cookies und, wenn Sie zustimmen, das Meta-Pixel zur Messung unserer Werbung. Nichts ist vorausgewählt: Sie entscheiden.',
-      updated: '21. Oktober 2026',
+      lede: 'Wir verwenden nur die für den Betrieb der Website notwendigen Cookies und, wenn Sie zustimmen, das Meta-Pixel und das Google-Ads-Tag zur Messung unserer Werbung. Nichts ist vorausgewählt: Sie entscheiden.',
+      updated: '26. November 2026',
       body: (
         <>
           <h2>1. Was Cookies sind</h2>
@@ -124,6 +141,12 @@ const COPY = (locale: string): Copy =>
             ein Formular absenden, teilen wir Meta außerdem mit, dass eine Anfrage erfolgt ist – mit E-Mail und Telefonnummer in verschlüsselter (gehashter)
             Form. Ohne Einwilligung wird das Pixel nicht geladen und es werden keine Daten an Meta gesendet. Wie Meta diese Daten verarbeitet, lesen Sie in
             der {metaLink('Datenschutzrichtlinie von Meta')}.
+          </p>
+          <p>
+            Mit derselben Einwilligung laden wir auch das Google-Ads-Tag (Google Ireland Ltd.), um zu wissen, wie viele Anfragen über unsere Google-Anzeigen
+            kommen: Es erfasst, wenn Sie ein Formular absenden oder uns per WhatsApp oder Telefon kontaktieren. Die Angaben aus dem Formular senden wir nicht
+            an Google, und wir nutzen das Tag nicht für personalisierte Werbung. Ohne Einwilligung wird das Tag nicht geladen. Wie Google diese Daten
+            verarbeitet, lesen Sie in der {googleLink('Datenschutzerklärung von Google')}.
           </p>
 
           <h2>3. Cookies verwalten</h2>

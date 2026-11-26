@@ -15,7 +15,7 @@ const COPY = (locale: string): Copy =>
       eyebrow: 'Informativa privacy · art. 13 GDPR',
       title: <>Come trattiamo {gold('i vostri dati.')}</>,
       lede: 'In poche parole: raccogliamo solo ciò che serve a ricontattarvi, non lo vendiamo, potete chiedercelo indietro o farlo cancellare quando volete.',
-      updated: '22 ottobre 2026',
+      updated: '26 novembre 2026',
       body: (
         <>
           <h2>1. Titolare del trattamento</h2>
@@ -44,6 +44,10 @@ const COPY = (locale: string): Copy =>
               in forma cifrata (hash), per misurare l&apos;efficacia delle nostre campagne pubblicitarie (consenso, art. 6(1)(a) GDPR). Senza questo
               consenso nessun dato del modulo viene inviato a Meta.
             </li>
+            <li>
+              solo se avete accettato i cookie di marketing: registrare con il tag di Google Ads (Google Ireland Ltd.) che è stata inviata una richiesta,
+              senza i dati del modulo, per misurare l&apos;efficacia dei nostri annunci su Google (consenso, art. 6(1)(a) GDPR).
+            </li>
           </ul>
           <p>Non usiamo i vostri dati per inviarvi comunicazioni promozionali senza il vostro consenso esplicito.</p>
 
@@ -57,6 +61,7 @@ const COPY = (locale: string): Copy =>
             <li>Resend, Inc. — invio delle email di notifica e di conferma</li>
             <li>Aruba S.p.A. — casella di posta elettronica</li>
             <li>Meta Platforms Ireland Ltd. — solo con il consenso ai cookie di marketing (vedi punto 3)</li>
+            <li>Google Ireland Ltd. — solo con il consenso ai cookie di marketing (vedi punto 3)</li>
           </ul>
           <p>Alcuni di questi fornitori hanno sede negli Stati Uniti: il trasferimento avviene sulla base del Data Privacy Framework UE-USA o delle clausole contrattuali standard approvate dalla Commissione europea.</p>
 
@@ -73,7 +78,7 @@ const COPY = (locale: string): Copy =>
       eyebrow: 'Privacy notice · Art. 13 GDPR',
       title: <>How we handle {gold('your data.')}</>,
       lede: 'In short: we only collect what we need to get back to you, we never sell it, and you can ask for a copy or have it deleted whenever you like.',
-      updated: '22 October 2026',
+      updated: '26 November 2026',
       body: (
         <>
           <h2>1. Data controller</h2>
@@ -102,6 +107,10 @@ const COPY = (locale: string): Copy =>
               encrypted (hashed) form, to measure the effectiveness of our ads (consent, Art. 6(1)(a) GDPR). Without that consent, no form data is
               sent to Meta.
             </li>
+            <li>
+              only if you accepted marketing cookies: recording with the Google Ads tag (Google Ireland Ltd.) that a request was sent, without the form
+              details, to measure the effectiveness of our Google ads (consent, Art. 6(1)(a) GDPR).
+            </li>
           </ul>
           <p>We do not use your data to send you promotional messages without your explicit consent.</p>
 
@@ -115,6 +124,7 @@ const COPY = (locale: string): Copy =>
             <li>Resend, Inc. — sending notification and confirmation emails</li>
             <li>Aruba S.p.A. — email mailbox</li>
             <li>Meta Platforms Ireland Ltd. — only with your consent to marketing cookies (see section 3)</li>
+            <li>Google Ireland Ltd. — only with your consent to marketing cookies (see section 3)</li>
           </ul>
           <p>Some of these providers are based in the United States: transfers rely on the EU-US Data Privacy Framework or on the Standard Contractual Clauses approved by the European Commission.</p>
 
@@ -131,7 +141,7 @@ const COPY = (locale: string): Copy =>
       eyebrow: 'Datenschutzerklärung · Art. 13 DSGVO',
       title: <>Wie wir mit {gold('Ihren Daten umgehen.')}</>,
       lede: 'Kurz gesagt: Wir erheben nur, was wir brauchen, um Sie zu kontaktieren, wir verkaufen nichts, und Sie können Ihre Daten jederzeit einsehen oder löschen lassen.',
-      updated: '22. Oktober 2026',
+      updated: '26. November 2026',
       body: (
         <>
           <h2>1. Verantwortlicher</h2>
@@ -160,6 +170,10 @@ const COPY = (locale: string): Copy =>
               und Telefonnummer in verschlüsselter (gehashter) Form, um die Wirksamkeit unserer Werbung zu messen (Einwilligung, Art. 6 Abs. 1 lit. a
               DSGVO). Ohne diese Einwilligung werden keine Formulardaten an Meta übermittelt.
             </li>
+            <li>
+              nur wenn Sie Marketing-Cookies akzeptiert haben: Erfassung mit dem Google-Ads-Tag (Google Ireland Ltd.), dass eine Anfrage gesendet wurde –
+              ohne die Formulardaten –, um die Wirksamkeit unserer Google-Anzeigen zu messen (Einwilligung, Art. 6 Abs. 1 lit. a DSGVO).
+            </li>
           </ul>
           <p>Ohne Ihre ausdrückliche Einwilligung nutzen wir Ihre Daten nicht für Werbenachrichten.</p>
 
@@ -173,6 +187,7 @@ const COPY = (locale: string): Copy =>
             <li>Resend, Inc. — Versand der Benachrichtigungs- und Bestätigungs-E-Mails</li>
             <li>Aruba S.p.A. — E-Mail-Postfach</li>
             <li>Meta Platforms Ireland Ltd. — nur mit Ihrer Einwilligung in Marketing-Cookies (siehe Punkt 3)</li>
+            <li>Google Ireland Ltd. — nur mit Ihrer Einwilligung in Marketing-Cookies (siehe Punkt 3)</li>
           </ul>
           <p>Einige dieser Dienstleister haben ihren Sitz in den USA: Die Übermittlung erfolgt auf Grundlage des EU-US Data Privacy Framework oder der Standardvertragsklauseln der Europäischen Kommission.</p>
 

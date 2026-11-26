@@ -100,6 +100,7 @@ export default function Contact({ numeral = 'viii.' }: { numeral?: string } = {}
                   href="https://wa.me/393663695252?text=Ciao%2C%20vorrei%20una%20valutazione%20per%20la%20mia%20casa%20sul%20Garda"
                   target="_blank"
                   rel="noopener noreferrer"
+                  onClick={() => trackContact('contact-whatsapp')}
                   className="serif text-[22px] text-[var(--olive)] transition-colors hover:text-[var(--gold-dark)]"
                 >
                   {t('whatsappCta')} <span aria-hidden="true" className="text-[0.8em]">↗</span>
