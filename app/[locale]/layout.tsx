@@ -114,6 +114,11 @@ export default async function LocaleLayout({
       ...Object.values(COMUNI).map((c) => ({ '@type': 'City', name: c.name })),
     ],
     geo: { '@type': 'GeoCoordinates', latitude: 45.5636, longitude: 10.6417 },
+    // Same hours as the Google Business profiles.
+    openingHoursSpecification: [
+      { '@type': 'OpeningHoursSpecification', dayOfWeek: ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday'], opens: '08:00', closes: '19:00' },
+      { '@type': 'OpeningHoursSpecification', dayOfWeek: 'Saturday', opens: '09:00', closes: '18:00' },
+    ],
     sameAs: ['https://www.instagram.com/herocasa_affitti/', 'https://www.facebook.com/p/Herocasa-Affitti-Brevi-61556602923760/'],
   };
 
