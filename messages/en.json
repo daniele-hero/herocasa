@@ -456,7 +456,46 @@
             "title": "Families and theme parks",
             "body": "Gardaland and the other parks nearby bring families looking for apartments and homes with several bedrooms."
           }
-        ]
+        ],
+        "local": {
+          "area": "Our office is right here in Peschiera del Garda. We work across the whole comune: the old town inside the fortress and the lakefront; San Benedetto di Lugana, on the lake towards Sirmione among the Lugana vineyards; Broglie and the inland areas. We are minutes from every home, and our Castelnuovo office is close by too.",
+          "houses": [
+            {
+              "title": "Apartments in the old town and near the station",
+              "body": "Guests arriving by train or for a weekend want the fortress, the canals and the lakefront on their doorstep: these homes do well for much of the year."
+            },
+            {
+              "title": "Family homes near the parks",
+              "body": "Gardaland and the other theme parks are minutes away: families look for more bedrooms and parking, and stay longer."
+            },
+            {
+              "title": "Homes with a garden and pool in San Benedetto",
+              "body": "Between the lake and the Lugana vineyards, they appeal to families and groups looking for space and quiet, at the highest rates in the area."
+            }
+          ],
+          "faq": [
+            {
+              "q": "Do you manage homes across the whole comune of Peschiera?",
+              "a": "Yes: the old town, the lakefront, San Benedetto di Lugana, Broglie and the inland areas. Our office is right here in Peschiera, so we are minutes from every home."
+            },
+            {
+              "q": "Does renting in Peschiera work outside the high season?",
+              "a": "Yes. With the station on the Milan–Venice line, the motorway and Verona airport close by, the UNESCO-listed fortress and the theme parks, guests arrive for much of the year, for weekends and short stays too. With prices updated every day we make the most of every period."
+            },
+            {
+              "q": "Who welcomes the guests and looks after the home?",
+              "a": "Our own team, from our Peschiera office: guest welcome, assistance at any hour, cleaning and a check of the home after every departure. We are minutes away, so we can step in quickly when needed."
+            },
+            {
+              "q": "How much can a home in Peschiera del Garda earn?",
+              "a": "It depends on location, size and amenities: the old town and the lakefront, the number of beds, a garden and a pool weigh heavily on the price. With the free valuation we send you an estimate for your home within 48 hours. Meanwhile, read our <a href=\"/en/guide/how-much-lake-garda-home-earns\" class=\"underline\">guide to what a Lake Garda home earns</a>."
+            },
+            {
+              "q": "What do I need to rent out a home in Peschiera del Garda?",
+              "a": "You need the CIN (Italy's national rental code) and a few mandatory notifications (police guest registration, ISTAT, the town hall). If the home is not yet compliant, we take care of it before listing it. Everything is explained in our <a href=\"/en/guide/cin-suap-short-term-rentals-italy\" class=\"underline\">guide to CIN and SUAP</a>."
+            }
+          ]
+        }
       },
       "lazise": {
         "intro1": "Lazise combines a walled medieval village and its lakefront with a strategic spot on the Verona shore, minutes from the theme parks: a mix that fills the calendar with both couples and families.",
@@ -585,7 +624,46 @@
             "title": "Guests who come back",
             "body": "Couples and friends who choose Bardolino tend to return: reviews and a well-kept home make the difference."
           }
-        ]
+        ],
+        "local": {
+          "area": "We work across the whole comune: the town centre with its lakefront and harbour; Cisano, on the lake towards Lazise; Calmasino, in the hills among vineyards and olive groves. Our offices in Peschiera del Garda and Castelnuovo del Garda are about 20 minutes away, so we are on site quickly for guests and for anything unexpected.",
+          "houses": [
+            {
+              "title": "Apartments in the centre and on the lakefront",
+              "body": "Couples and friends book them for weekends and short stays: within walking distance of the lakefront, the restaurants and the cycle path, they do well from spring to the grape harvest."
+            },
+            {
+              "title": "Lake-view homes in Calmasino",
+              "body": "In the hills among the Bardolino vineyards, with a view of the lake: they appeal to guests looking for quiet and to those who come for the wineries."
+            },
+            {
+              "title": "Villas with a pool",
+              "body": "Between Calmasino and Cisano they are in high demand with groups and families from northern Europe, at the highest rates in the area."
+            }
+          ],
+          "faq": [
+            {
+              "q": "Do you also manage homes in Cisano and Calmasino?",
+              "a": "Yes. We work across the whole comune of Bardolino, from the centre to Cisano and Calmasino, and in the surrounding area. Our offices in Peschiera and Castelnuovo are about 20 minutes away."
+            },
+            {
+              "q": "Does renting in Bardolino work after the summer too?",
+              "a": "Yes. The grape harvest, the wineries and the Festa dell'Uva bring guests in September and October too, and the lakefront and cycle path draw couples from spring onwards. With prices updated every day we aim to fill the shoulder season too."
+            },
+            {
+              "q": "Who welcomes the guests and looks after the home?",
+              "a": "Our own team, on site: guest welcome, assistance at any hour, cleaning and a check of the home after every departure. We are about 20 minutes away, so we can step in quickly when needed."
+            },
+            {
+              "q": "How much can a home in Bardolino earn?",
+              "a": "It depends on location, size and amenities: the lakefront, a lake view and a pool weigh heavily on the price. With the free valuation we send you an estimate for your home within 48 hours. Meanwhile, read our <a href=\"/en/guide/how-much-lake-garda-home-earns\" class=\"underline\">guide to what a Lake Garda home earns</a>."
+            },
+            {
+              "q": "What do I need to rent out a home in Bardolino?",
+              "a": "You need the CIN (Italy's national rental code) and a few mandatory notifications (police guest registration, ISTAT, the town hall). If the home is not yet compliant, we take care of it before listing it. Everything is explained in our <a href=\"/en/guide/cin-suap-short-term-rentals-italy\" class=\"underline\">guide to CIN and SUAP</a>."
+            }
+          ]
+        }
       },
       "sirmione": {
         "intro1": "Sirmione is one of the best-known places on Lake Garda: the Scaliger castle, the Grottoes of Catullus and the spa draw international guests all year round, with average prices among the highest on the lake.",

@@ -456,7 +456,46 @@
             "title": "Familien und Freizeitparks",
             "body": "Gardaland und die anderen Parks der Umgebung bringen Familien, die Wohnungen und Häuser mit mehreren Schlafzimmern suchen."
           }
-        ]
+        ],
+        "local": {
+          "area": "Unser Büro ist direkt in Peschiera del Garda. Wir sind in der ganzen Gemeinde tätig: in der Altstadt innerhalb der Festung und an der Seepromenade; in San Benedetto di Lugana, am See Richtung Sirmione zwischen den Lugana-Weinbergen; in Broglie und im Hinterland. Wir sind in wenigen Minuten bei jedem Haus, und auch unser Büro in Castelnuovo ist ganz nah.",
+          "houses": [
+            {
+              "title": "Wohnungen in der Altstadt und nahe dem Bahnhof",
+              "body": "Wer mit dem Zug oder fürs Wochenende kommt, will Festung, Kanäle und Seepromenade vor der Tür: Diese Wohnungen laufen einen Großteil des Jahres gut."
+            },
+            {
+              "title": "Familienhäuser nahe den Parks",
+              "body": "Gardaland und die anderen Freizeitparks sind wenige Minuten entfernt: Familien suchen mehr Schlafzimmer und einen Parkplatz und bleiben länger."
+            },
+            {
+              "title": "Häuser mit Garten und Pool in San Benedetto",
+              "body": "Zwischen See und Lugana-Weinbergen sind sie bei Familien und Gruppen beliebt, die Platz und Ruhe suchen, und erzielen die höchsten Preise der Gegend."
+            }
+          ],
+          "faq": [
+            {
+              "q": "Verwalten Sie Häuser in der ganzen Gemeinde Peschiera?",
+              "a": "Ja: Altstadt, Seepromenade, San Benedetto di Lugana, Broglie und das Hinterland. Unser Büro ist direkt in Peschiera, wir sind also in wenigen Minuten bei jedem Haus."
+            },
+            {
+              "q": "Lässt sich in Peschiera auch außerhalb der Hochsaison vermieten?",
+              "a": "Ja. Mit dem Bahnhof an der Linie Mailand–Venedig, der Autobahn und dem Flughafen Verona in der Nähe, der Festung (UNESCO-Welterbe) und den Freizeitparks kommen Gäste einen Großteil des Jahres, auch für Wochenenden und Kurzaufenthalte. Mit täglich angepassten Preisen nutzen wir jede Zeit des Jahres."
+            },
+            {
+              "q": "Wer empfängt die Gäste und kümmert sich um das Haus?",
+              "a": "Unser eigenes Team, von unserem Büro in Peschiera aus: Empfang der Gäste, Betreuung rund um die Uhr, Reinigung und Kontrolle des Hauses nach jeder Abreise. Wir sind wenige Minuten entfernt und greifen bei Bedarf schnell ein."
+            },
+            {
+              "q": "Wie viel bringt ein Ferienhaus in Peschiera del Garda?",
+              "a": "Das hängt von Lage, Größe und Ausstattung ab: Altstadt und Seepromenade, Bettenzahl, Garten und Pool wirken sich stark auf den Preis aus. Mit der kostenlosen Bewertung schicken wir Ihnen innerhalb von 48 Stunden eine Schätzung für Ihr Haus. Bis dahin finden Sie mehr in unserem <a href=\"/de/ratgeber/was-bringt-ferienhaus-gardasee\" class=\"underline\">Ratgeber, was ein Ferienhaus am Gardasee bringt</a>."
+            },
+            {
+              "q": "Was brauche ich, um ein Haus in Peschiera del Garda zu vermieten?",
+              "a": "Sie brauchen den CIN (den nationalen Identifikationscode) und einige Pflichtmeldungen (Questura, ISTAT, Gemeinde). Ist das Haus noch nicht so weit, kümmern wir uns darum, bevor wir es veröffentlichen. Alles Wichtige steht in unserem <a href=\"/de/ratgeber/cin-suap-ferienvermietung-italien\" class=\"underline\">Ratgeber zu CIN und SUAP</a>."
+            }
+          ]
+        }
       },
       "lazise": {
         "intro1": "Lazise verbindet das mittelalterliche, ummauerte Städtchen und die Seepromenade mit einer strategischen Lage am Veroneser Ufer, wenige Minuten von den Freizeitparks entfernt: eine Mischung, die den Kalender mit Paaren und Familien füllt.",
@@ -585,7 +624,46 @@
             "title": "Gäste, die wiederkommen",
             "body": "Paare und Freundesgruppen, die Bardolino wählen, kommen gern wieder: Bewertungen und ein gepflegtes Haus machen den Unterschied."
           }
-        ]
+        ],
+        "local": {
+          "area": "Wir sind in der ganzen Gemeinde tätig: im Zentrum mit Seepromenade und Hafen; in Cisano, am See Richtung Lazise; in Calmasino, in den Hügeln zwischen Weinbergen und Olivenhainen. Unsere Büros in Peschiera del Garda und Castelnuovo del Garda sind etwa 20 Minuten entfernt: Für Gäste und bei Unvorhergesehenem sind wir schnell vor Ort.",
+          "houses": [
+            {
+              "title": "Wohnungen im Zentrum und an der Promenade",
+              "body": "Paare und Freunde buchen sie für Wochenenden und Kurzaufenthalte: Zu Fuß bei Seepromenade, Restaurants und Radweg, laufen sie vom Frühjahr bis zur Weinlese gut."
+            },
+            {
+              "title": "Häuser mit Seeblick in Calmasino",
+              "body": "In den Hügeln zwischen den Bardolino-Weinbergen, mit Blick auf den See: beliebt bei Gästen, die Ruhe suchen, und bei Weinliebhabern."
+            },
+            {
+              "title": "Villen mit Pool",
+              "body": "Zwischen Calmasino und Cisano sind sie bei Gruppen und Familien aus Nordeuropa sehr gefragt und erzielen die höchsten Preise der Gegend."
+            }
+          ],
+          "faq": [
+            {
+              "q": "Verwalten Sie auch Häuser in Cisano und Calmasino?",
+              "a": "Ja. Wir sind in der ganzen Gemeinde Bardolino tätig, vom Zentrum bis Cisano und Calmasino, und in der Umgebung. Unsere Büros in Peschiera und Castelnuovo sind etwa 20 Minuten entfernt."
+            },
+            {
+              "q": "Lässt sich in Bardolino auch nach dem Sommer vermieten?",
+              "a": "Ja. Weinlese, Weingüter und die Festa dell'Uva bringen auch im September und Oktober Gäste, und Seepromenade und Radweg ziehen schon ab dem Frühjahr Paare an. Mit täglich angepassten Preisen wollen wir auch die Nebensaison füllen."
+            },
+            {
+              "q": "Wer empfängt die Gäste und kümmert sich um das Haus?",
+              "a": "Unser eigenes Team vor Ort: Empfang der Gäste, Betreuung rund um die Uhr, Reinigung und Kontrolle des Hauses nach jeder Abreise. Wir sind etwa 20 Minuten entfernt und greifen bei Bedarf schnell ein."
+            },
+            {
+              "q": "Wie viel bringt ein Ferienhaus in Bardolino?",
+              "a": "Das hängt von Lage, Größe und Ausstattung ab: Seepromenade, Seeblick und Pool wirken sich stark auf den Preis aus. Mit der kostenlosen Bewertung schicken wir Ihnen innerhalb von 48 Stunden eine Schätzung für Ihr Haus. Bis dahin finden Sie mehr in unserem <a href=\"/de/ratgeber/was-bringt-ferienhaus-gardasee\" class=\"underline\">Ratgeber, was ein Ferienhaus am Gardasee bringt</a>."
+            },
+            {
+              "q": "Was brauche ich, um ein Haus in Bardolino zu vermieten?",
+              "a": "Sie brauchen den CIN (den nationalen Identifikationscode) und einige Pflichtmeldungen (Questura, ISTAT, Gemeinde). Ist das Haus noch nicht so weit, kümmern wir uns darum, bevor wir es veröffentlichen. Alles Wichtige steht in unserem <a href=\"/de/ratgeber/cin-suap-ferienvermietung-italien\" class=\"underline\">Ratgeber zu CIN und SUAP</a>."
+            }
+          ]
+        }
       },
       "sirmione": {
         "intro1": "Sirmione gehört zu den bekanntesten Orten am Gardasee: Die Skaligerburg, die Grotten des Catull und die Thermen ziehen das ganze Jahr über internationale Gäste an – mit Durchschnittspreisen unter den höchsten am See.",

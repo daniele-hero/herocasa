@@ -54,8 +54,10 @@ export type ComuneSlug = keyof typeof COMUNI;
 
 /** Frazioni named on the comune pages that have a local section (zonePages.list.<slug>.local). */
 export const FRAZIONI: Partial<Record<ComuneSlug, string[]>> = {
+  'peschiera-del-garda': ['San Benedetto di Lugana', 'Broglie'],
   lazise: ['Pacengo', 'Colà'],
   'castelnuovo-del-garda': ['Cavalcaselle', 'Sandrà', 'Oliosi'],
+  bardolino: ['Cisano', 'Calmasino'],
 };
 
 export const COMUNE_SLUGS = Object.keys(COMUNI) as ComuneSlug[];

@@ -456,7 +456,46 @@
             "title": "Famiglie e parchi a tema",
             "body": "Gardaland e gli altri parchi della zona portano famiglie che cercano appartamenti e case con più camere."
           }
-        ]
+        ],
+        "local": {
+          "area": "La nostra sede è proprio a Peschiera del Garda. Lavoriamo in tutto il comune: il centro storico dentro la fortezza e il lungolago; San Benedetto di Lugana, sul lago verso Sirmione tra i vigneti del Lugana; Broglie e le zone dell'entroterra. Siamo a pochi minuti da ogni casa, e anche la sede di Castelnuovo è vicina.",
+          "houses": [
+            {
+              "title": "Appartamenti in centro e vicino alla stazione",
+              "body": "Chi arriva in treno o per un weekend vuole la fortezza, i canali e il lungolago a due passi: lavorano bene per buona parte dell'anno."
+            },
+            {
+              "title": "Case per famiglie vicino ai parchi",
+              "body": "Gardaland e gli altri parchi a tema sono a pochi minuti: le famiglie cercano più camere e il parcheggio, e restano più notti."
+            },
+            {
+              "title": "Case con giardino e piscina a San Benedetto",
+              "body": "Tra il lago e i vigneti del Lugana, piacciono a famiglie e gruppi che cercano spazio e tranquillità, con le tariffe più alte della zona."
+            }
+          ],
+          "faq": [
+            {
+              "q": "Gestite case in tutto il comune di Peschiera?",
+              "a": "Sì: centro storico, lungolago, San Benedetto di Lugana, Broglie e l'entroterra. La nostra sede è proprio a Peschiera, quindi siamo a pochi minuti da ogni casa."
+            },
+            {
+              "q": "A Peschiera si affitta anche fuori stagione?",
+              "a": "Sì. Con la stazione sulla linea Milano–Venezia, l'autostrada e l'aeroporto di Verona vicini, la fortezza patrimonio UNESCO e i parchi a tema, gli ospiti arrivano per buona parte dell'anno, anche per weekend e soggiorni brevi. Con i prezzi aggiornati ogni giorno sfruttiamo ogni periodo."
+            },
+            {
+              "q": "Chi accoglie gli ospiti e si occupa della casa?",
+              "a": "Il nostro team, dalla sede di Peschiera: accoglienza degli ospiti, assistenza a qualsiasi ora, pulizie e controllo della casa dopo ogni partenza. Siamo a pochi minuti, quindi se serve interveniamo in fretta."
+            },
+            {
+              "q": "Quanto può rendere una casa a Peschiera del Garda?",
+              "a": "Dipende da posizione, dimensioni e servizi: centro storico e lungolago, posti letto, giardino e piscina pesano molto sul prezzo. Con la valutazione gratuita ti mandiamo entro 48 ore una stima per la tua casa. Intanto puoi leggere la nostra <a href=\"/it/guide/quanto-rende-casa-lago-di-garda\" class=\"underline\">guida su quanto rende una casa sul Garda</a>."
+            },
+            {
+              "q": "Cosa serve per affittare casa a Peschiera del Garda?",
+              "a": "Servono il CIN e alcune comunicazioni obbligatorie (Questura, ISTAT, Comune). Se la casa non è ancora in regola, ce ne occupiamo noi prima di pubblicarla. Trovi tutto nella nostra <a href=\"/it/guide/cin-suap-affitti-brevi\" class=\"underline\">guida su CIN e SUAP</a>."
+            }
+          ]
+        }
       },
       "lazise": {
         "intro1": "Lazise unisce il borgo medievale cinto dalle mura e il lungolago a una posizione strategica sulla sponda veronese, a pochi minuti dai parchi a tema: un mix che riempie il calendario sia di coppie sia di famiglie.",
@@ -585,7 +624,46 @@
             "title": "Ospiti che tornano",
             "body": "Coppie e gruppi di amici che scelgono Bardolino tendono a tornare: recensioni e cura della casa fanno la differenza."
           }
-        ]
+        ],
+        "local": {
+          "area": "Lavoriamo in tutto il comune: il centro con il lungolago e il porto; Cisano, sul lago verso Lazise; Calmasino, sulle colline tra vigneti e uliveti. Le nostre sedi di Peschiera del Garda e Castelnuovo del Garda sono a circa 20 minuti: per gli ospiti e per qualsiasi imprevisto siamo sul posto in fretta.",
+          "houses": [
+            {
+              "title": "Appartamenti in centro e sul lungolago",
+              "body": "Coppie e amici li cercano per weekend e brevi soggiorni: a piedi dal lungolago, dai ristoranti e dalla ciclabile, lavorano bene dalla primavera alla vendemmia."
+            },
+            {
+              "title": "Case con vista lago a Calmasino",
+              "body": "Sulle colline tra i vigneti del Bardolino, con vista sul lago: piacciono a chi cerca quiete e a chi viene per le cantine."
+            },
+            {
+              "title": "Ville con piscina",
+              "body": "Tra Calmasino e Cisano sono molto richieste da gruppi e famiglie del Nord Europa, con le tariffe più alte della zona."
+            }
+          ],
+          "faq": [
+            {
+              "q": "Gestite case anche a Cisano e Calmasino?",
+              "a": "Sì. Lavoriamo in tutto il comune di Bardolino, dal centro a Cisano e Calmasino, e nelle zone limitrofe. Le nostre sedi di Peschiera e Castelnuovo sono a circa 20 minuti."
+            },
+            {
+              "q": "A Bardolino si affitta anche dopo l'estate?",
+              "a": "Sì. La vendemmia, le cantine e la Festa dell'Uva portano ospiti anche a settembre e ottobre, e lungolago e ciclabile attirano coppie già dalla primavera. Con i prezzi aggiornati ogni giorno puntiamo a riempire anche la mezza stagione."
+            },
+            {
+              "q": "Chi accoglie gli ospiti e si occupa della casa?",
+              "a": "Il nostro team, che lavora sul posto: accoglienza degli ospiti, assistenza a qualsiasi ora, pulizie e controllo della casa dopo ogni partenza. Siamo a circa 20 minuti, quindi se serve interveniamo in fretta."
+            },
+            {
+              "q": "Quanto può rendere una casa a Bardolino?",
+              "a": "Dipende da posizione, dimensioni e servizi: lungolago, vista lago e piscina pesano molto sul prezzo. Con la valutazione gratuita ti mandiamo entro 48 ore una stima per la tua casa. Intanto puoi leggere la nostra <a href=\"/it/guide/quanto-rende-casa-lago-di-garda\" class=\"underline\">guida su quanto rende una casa sul Garda</a>."
+            },
+            {
+              "q": "Cosa serve per affittare casa a Bardolino?",
+              "a": "Servono il CIN e alcune comunicazioni obbligatorie (Questura, ISTAT, Comune). Se la casa non è ancora in regola, ce ne occupiamo noi prima di pubblicarla. Trovi tutto nella nostra <a href=\"/it/guide/cin-suap-affitti-brevi\" class=\"underline\">guida su CIN e SUAP</a>."
+            }
+          ]
+        }
       },
       "sirmione": {
         "intro1": "Sirmione è una delle località più conosciute del Garda: il castello scaligero, le Grotte di Catullo e le terme richiamano ospiti internazionali tutto l'anno, con prezzi medi tra i più alti del lago.",
