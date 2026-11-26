@@ -7,6 +7,19 @@ import { routing } from '@/lib/routing';
 import { COMUNI } from '@/lib/comuni';
 import '../globals.css';
 
+// Same hours as the Google Business profiles.
+const OPENING_HOURS = [
+  { '@type': 'OpeningHoursSpecification', dayOfWeek: ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday'], opens: '08:00', closes: '19:00' },
+  { '@type': 'OpeningHoursSpecification', dayOfWeek: 'Saturday', opens: '09:00', closes: '18:00' },
+];
+const officeAddress = (addressLocality: string, postalCode: string) => ({
+  '@type': 'PostalAddress',
+  addressLocality,
+  postalCode,
+  addressRegion: 'VR',
+  addressCountry: 'IT',
+});
+
 const SITE_URL = 'https://herocasa.it';
 
 
@@ -113,11 +126,21 @@ export default async function LocaleLayout({
       ...['Provincia di Verona', 'Provincia di Brescia', 'Provincia di Mantova', 'Provincia autonoma di Trento'].map((name) => ({ '@type': 'AdministrativeArea', name })),
       ...Object.values(COMUNI).map((c) => ({ '@type': 'City', name: c.name })),
     ],
-    geo: { '@type': 'GeoCoordinates', latitude: 45.5636, longitude: 10.6417 },
-    // Same hours as the Google Business profiles.
-    openingHoursSpecification: [
-      { '@type': 'OpeningHoursSpecification', dayOfWeek: ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday'], opens: '08:00', closes: '19:00' },
-      { '@type': 'OpeningHoursSpecification', dayOfWeek: 'Saturday', opens: '09:00', closes: '18:00' },
+    // Offices in Peschiera del Garda (main) and Castelnuovo del Garda: town only, no street
+    // address on the site (the owner's choice; the Castelnuovo office is a private home).
+    address: officeAddress('Peschiera del Garda', '37019'),
+    geo: { '@type': 'GeoCoordinates', latitude: COMUNI['peschiera-del-garda'].pos[0], longitude: COMUNI['peschiera-del-garda'].pos[1] },
+    openingHoursSpecification: OPENING_HOURS,
+    department: [
+      {
+        '@type': ['RealEstateAgent', 'LocalBusiness'],
+        name: 'Herocasa – Castelnuovo del Garda',
+        url: SITE_URL,
+        telephone: '+39 366 369 5252',
+        email: 'info@herocasa.it',
+        address: officeAddress('Castelnuovo del Garda', '37014'),
+        openingHoursSpecification: OPENING_HOURS,
+      },
     ],
     sameAs: ['https://www.instagram.com/herocasa_affitti/', 'https://www.facebook.com/p/Herocasa-Affitti-Brevi-61556602923760/'],
   };

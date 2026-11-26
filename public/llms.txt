@@ -4,6 +4,7 @@
 > Herocasa is a short-term rental management agency on Lake Garda (Italy) for second-home owners, also serving German- and English-speaking owners.
 
 ## Chi siamo e contatti
+- Sedi: Peschiera del Garda (VR) e Castelnuovo del Garda (VR), sulla sponda veronese del Lago di Garda
 - Sito: https://herocasa.it (italiano), https://herocasa.it/en (English), https://herocasa.it/de (Deutsch)
 - Email: info@herocasa.it
 - Telefono e WhatsApp: +39 366 369 5252
