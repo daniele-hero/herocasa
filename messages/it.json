@@ -434,6 +434,8 @@
     "highlightsEyebrow": "Il mercato locale",
     "highlightsTitle": "Perché affittare a {name}",
     "testimonialEyebrow": "Un proprietario a {name}",
+    "localAreaTitle": "Dove lavoriamo a {name}",
+    "localHousesTitle": "Le case che rendono di più",
     "otherZonesTitle": "Gestiamo anche a",
     "imageAlt": "Un immobile gestito da Herocasa sul Lago di Garda",
     "metaTitle": "Gestione affitti brevi a {name} | Herocasa",
@@ -471,7 +473,46 @@
             "title": "Stagione lunga",
             "body": "Mercati, eventi e il lungolago animato tengono vive le prenotazioni dalla primavera all'autunno."
           }
-        ]
+        ],
+        "local": {
+          "area": "Lavoriamo in tutto il comune: il centro storico dentro le mura e il lungolago; Pacengo, sul lago verso Peschiera e vicina ai parchi a tema; Colà, nell'entroterra tra ulivi e vigneti, con il suo parco termale. Le nostre sedi di Peschiera del Garda e Castelnuovo del Garda sono a circa 15 minuti: per gli ospiti e per qualsiasi imprevisto siamo sul posto in fretta.",
+          "houses": [
+            {
+              "title": "Appartamenti in centro e sul lungolago",
+              "body": "Le coppie li cercano per weekend e brevi soggiorni: a piedi dalle mura, dal porticciolo e dai ristoranti, lavorano bene dalla primavera all'autunno."
+            },
+            {
+              "title": "Case con piscina a Pacengo e Colà",
+              "body": "Le famiglie vengono per i parchi a tema e il lago e restano più notti: piscina, giardino e parcheggio fanno la differenza sul prezzo."
+            },
+            {
+              "title": "Ville con vista lago",
+              "body": "Sulle colline alle spalle del paese sono molto richieste da gruppi e famiglie del Nord Europa, con le tariffe più alte della zona."
+            }
+          ],
+          "faq": [
+            {
+              "q": "Gestite case anche a Pacengo e Colà?",
+              "a": "Sì. Lavoriamo in tutto il comune di Lazise, dal centro storico a Pacengo e Colà, e nelle zone limitrofe. Le nostre sedi di Peschiera e Castelnuovo sono a circa 15 minuti."
+            },
+            {
+              "q": "A Lazise si affitta solo d'estate?",
+              "a": "No. Tra lungolago, mercati, eventi e parchi a tema vicini, le prenotazioni partono in primavera e arrivano all'autunno. Con i prezzi aggiornati ogni giorno puntiamo a riempire anche la mezza stagione e i ponti."
+            },
+            {
+              "q": "Chi accoglie gli ospiti e si occupa della casa?",
+              "a": "Il nostro team, che lavora sul posto: accoglienza degli ospiti, assistenza a qualsiasi ora, pulizie e controllo della casa dopo ogni partenza. Siamo a pochi minuti, quindi se serve interveniamo in fretta."
+            },
+            {
+              "q": "Quanto può rendere una casa a Lazise?",
+              "a": "Dipende da posizione, dimensioni e servizi: centro e lungolago, piscina e vista lago pesano molto sul prezzo. Con la valutazione gratuita ti mandiamo entro 48 ore una stima per la tua casa. Intanto puoi leggere la nostra <a href=\"/it/guide/quanto-rende-casa-lago-di-garda\" class=\"underline\">guida su quanto rende una casa sul Garda</a>."
+            },
+            {
+              "q": "Cosa serve per affittare casa a Lazise?",
+              "a": "Servono il CIN e alcune comunicazioni obbligatorie (Questura, ISTAT, Comune). Se la casa non è ancora in regola, ce ne occupiamo noi prima di pubblicarla. Trovi tutto nella nostra <a href=\"/it/guide/cin-suap-affitti-brevi\" class=\"underline\">guida su CIN e SUAP</a>."
+            }
+          ]
+        }
       },
       "castelnuovo-del-garda": {
         "intro1": "Castelnuovo del Garda è il comune di Gardaland, a due passi dal lago e dall'autostrada: case e ville con giardino nell'entroterra sono molto richieste da famiglie e gruppi che cercano spazio e tranquillità a pochi minuti dalle spiagge.",
@@ -488,7 +529,46 @@
             "title": "Comodo per tutto il lago",
             "body": "Dall'entroterra si raggiungono in pochi minuti Peschiera, Lazise e Sirmione."
           }
-        ]
+        ],
+        "local": {
+          "area": "La nostra sede è proprio a Castelnuovo del Garda. Lavoriamo nel capoluogo e in tutte le frazioni: Cavalcaselle, a ridosso di Peschiera; Sandrà, verso Colà e Pastrengo; Oliosi, tra colline e campagna verso Valeggio. Siamo a pochi minuti da ogni casa, e anche la sede di Peschiera è vicina.",
+          "houses": [
+            {
+              "title": "Villette con giardino",
+              "body": "Le famiglie che vengono per Gardaland e il lago cercano spazio, giardino e parcheggio: a Cavalcaselle e Sandrà restano spesso diverse notti."
+            },
+            {
+              "title": "Ville con piscina in collina",
+              "body": "Sulle colline di Oliosi e Sandrà sono le più richieste da gruppi e famiglie numerose, con le tariffe più alte della zona."
+            },
+            {
+              "title": "Appartamenti vicino ai parchi",
+              "body": "Comodi per Gardaland e per l'autostrada, lavorano con weekend e soggiorni brevi anche fuori dall'estate."
+            }
+          ],
+          "faq": [
+            {
+              "q": "Gestite case in tutte le frazioni di Castelnuovo?",
+              "a": "Sì: capoluogo, Cavalcaselle, Sandrà e Oliosi. La nostra sede è proprio a Castelnuovo, quindi siamo a pochi minuti da ogni casa."
+            },
+            {
+              "q": "Una casa nell'entroterra si affitta bene come una sul lago?",
+              "a": "Sì, se offre quello che cercano famiglie e gruppi: spazio, giardino, parcheggio e magari la piscina. Il lago e i parchi a tema sono a pochi minuti d'auto, e chi sceglie l'entroterra spesso resta più notti."
+            },
+            {
+              "q": "Gardaland porta prenotazioni anche fuori stagione?",
+              "a": "Sì. Oltre all'estate, i weekend di primavera e autunno e le aperture speciali del parco portano famiglie anche fuori dall'alta stagione. Con i prezzi aggiornati ogni giorno sfruttiamo questi picchi di richiesta."
+            },
+            {
+              "q": "Quanto può rendere una casa a Castelnuovo del Garda?",
+              "a": "Dipende da frazione, dimensioni e servizi: giardino, piscina e posti letto pesano molto sul prezzo. Con la valutazione gratuita ti mandiamo entro 48 ore una stima per la tua casa. Intanto puoi leggere la nostra <a href=\"/it/guide/quanto-rende-casa-lago-di-garda\" class=\"underline\">guida su quanto rende una casa sul Garda</a>."
+            },
+            {
+              "q": "Cosa serve per affittare casa a Castelnuovo del Garda?",
+              "a": "Servono il CIN e alcune comunicazioni obbligatorie (Questura, ISTAT, Comune). Se la casa non è ancora in regola, ce ne occupiamo noi prima di pubblicarla. Trovi tutto nella nostra <a href=\"/it/guide/cin-suap-affitti-brevi\" class=\"underline\">guida su CIN e SUAP</a>."
+            }
+          ]
+        }
       },
       "bardolino": {
         "intro1": "Bardolino è il lago del vino: il lungolago, la ciclabile e le cantine del Bardolino DOC attirano coppie e appassionati di enoturismo, con una stagione che si allunga fino all'autunno della vendemmia.",

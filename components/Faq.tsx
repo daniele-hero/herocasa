@@ -7,9 +7,10 @@ import Reveal from './Reveal';
 
 type QA = { q: string; a: string };
 
-export default function Faq({ numeral = 'vii.' }: { numeral?: string } = {}) {
+/** `extra`: questions about one comune, shown before the general ones (comune pages). */
+export default function Faq({ numeral = 'vii.', extra = [] }: { numeral?: string; extra?: QA[] } = {}) {
   const t = useTranslations('faq');
-  const list = t.raw('list') as QA[];
+  const list = [...extra, ...(t.raw('list') as QA[])];
   const [open, setOpen] = useState<number | null>(0);
 
   // FAQPage structured data — strips HTML (e.g. <em>) since schema.org Text

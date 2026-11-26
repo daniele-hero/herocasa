@@ -434,6 +434,8 @@
     "highlightsEyebrow": "Der lokale Markt",
     "highlightsTitle": "Warum in {name} vermieten",
     "testimonialEyebrow": "Ein Eigentümer in {name}",
+    "localAreaTitle": "Wo wir in {name} tätig sind",
+    "localHousesTitle": "Diese Häuser bringen am meisten",
     "otherZonesTitle": "Wir verwalten auch in",
     "imageAlt": "Eine von Herocasa verwaltete Immobilie am Gardasee",
     "metaTitle": "Ferienhaus-Verwaltung in {name} | Herocasa",
@@ -471,7 +473,46 @@
             "title": "Lange Saison",
             "body": "Märkte, Veranstaltungen und die belebte Promenade sorgen von Frühling bis Herbst für Buchungen."
           }
-        ]
+        ],
+        "local": {
+          "area": "Wir sind in der ganzen Gemeinde tätig: in der Altstadt innerhalb der Mauern und an der Seepromenade; in Pacengo, am See Richtung Peschiera und nahe den Freizeitparks; in Colà, im Hinterland zwischen Olivenhainen und Weinbergen, mit seinem Thermalpark. Unsere Büros in Peschiera del Garda und Castelnuovo del Garda sind etwa 15 Minuten entfernt: Für Gäste und bei Unvorhergesehenem sind wir schnell vor Ort.",
+          "houses": [
+            {
+              "title": "Wohnungen in der Altstadt und an der Promenade",
+              "body": "Paare buchen sie für Wochenenden und Kurzaufenthalte: Zu Fuß bei Stadtmauer, Hafen und Restaurants, laufen sie vom Frühjahr bis in den Herbst gut."
+            },
+            {
+              "title": "Häuser mit Pool in Pacengo und Colà",
+              "body": "Familien kommen wegen der Freizeitparks und des Sees und bleiben länger: Pool, Garten und Parkplatz machen beim Preis einen echten Unterschied."
+            },
+            {
+              "title": "Villen mit Seeblick",
+              "body": "In den Hügeln hinter dem Ort sind sie bei Gruppen und Familien aus Nordeuropa sehr gefragt und erzielen die höchsten Preise der Gegend."
+            }
+          ],
+          "faq": [
+            {
+              "q": "Verwalten Sie auch Häuser in Pacengo und Colà?",
+              "a": "Ja. Wir sind in der ganzen Gemeinde Lazise tätig, von der Altstadt bis Pacengo und Colà, und in der Umgebung. Unsere Büros in Peschiera und Castelnuovo sind etwa 15 Minuten entfernt."
+            },
+            {
+              "q": "Lohnt sich die Vermietung in Lazise nur im Sommer?",
+              "a": "Nein. Mit Seepromenade, Märkten, Veranstaltungen und den nahen Freizeitparks beginnen die Buchungen im Frühjahr und reichen bis in den Herbst. Mit täglich angepassten Preisen wollen wir auch Nebensaison und Brückentage füllen."
+            },
+            {
+              "q": "Wer empfängt die Gäste und kümmert sich um das Haus?",
+              "a": "Unser eigenes Team vor Ort: Empfang der Gäste, Betreuung rund um die Uhr, Reinigung und Kontrolle des Hauses nach jeder Abreise. Wir sind wenige Minuten entfernt und greifen bei Bedarf schnell ein."
+            },
+            {
+              "q": "Wie viel bringt ein Ferienhaus in Lazise?",
+              "a": "Das hängt von Lage, Größe und Ausstattung ab: Altstadt und Seepromenade, Pool und Seeblick wirken sich stark auf den Preis aus. Mit der kostenlosen Bewertung schicken wir Ihnen innerhalb von 48 Stunden eine Schätzung für Ihr Haus. Bis dahin finden Sie mehr in unserem <a href=\"/de/ratgeber/was-bringt-ferienhaus-gardasee\" class=\"underline\">Ratgeber, was ein Ferienhaus am Gardasee bringt</a>."
+            },
+            {
+              "q": "Was brauche ich, um ein Haus in Lazise zu vermieten?",
+              "a": "Sie brauchen den CIN (den nationalen Identifikationscode) und einige Pflichtmeldungen (Questura, ISTAT, Gemeinde). Ist das Haus noch nicht so weit, kümmern wir uns darum, bevor wir es veröffentlichen. Alles Wichtige steht in unserem <a href=\"/de/ratgeber/cin-suap-ferienvermietung-italien\" class=\"underline\">Ratgeber zu CIN und SUAP</a>."
+            }
+          ]
+        }
       },
       "castelnuovo-del-garda": {
         "intro1": "Castelnuovo del Garda ist die Heimat von Gardaland, nur einen Katzensprung vom See und von der Autobahn entfernt: Häuser und Villen mit Garten im Hinterland sind bei Familien und Gruppen sehr gefragt, die Platz und Ruhe wenige Minuten von den Stränden suchen.",
@@ -488,7 +529,46 @@
             "title": "Nah am ganzen See",
             "body": "Peschiera, Lazise und Sirmione erreicht man in wenigen Autominuten."
           }
-        ]
+        ],
+        "local": {
+          "area": "Unser Büro ist direkt in Castelnuovo del Garda. Wir sind im Hauptort und in allen Ortsteilen tätig: Cavalcaselle, direkt neben Peschiera; Sandrà, Richtung Colà und Pastrengo; Oliosi, zwischen Hügeln und Feldern Richtung Valeggio. Wir sind in wenigen Minuten bei jedem Haus, und auch unser Büro in Peschiera ist ganz nah.",
+          "houses": [
+            {
+              "title": "Häuser mit Garten",
+              "body": "Familien, die wegen Gardaland und des Sees kommen, suchen Platz, Garten und Parkplatz: In Cavalcaselle und Sandrà bleiben sie oft mehrere Nächte."
+            },
+            {
+              "title": "Villen mit Pool in den Hügeln",
+              "body": "In den Hügeln von Oliosi und Sandrà sind sie bei Gruppen und großen Familien am gefragtesten und erzielen die höchsten Preise der Gegend."
+            },
+            {
+              "title": "Wohnungen nahe den Parks",
+              "body": "Praktisch für Gardaland und die Autobahn, laufen sie mit Wochenenden und Kurzaufenthalten auch außerhalb des Sommers gut."
+            }
+          ],
+          "faq": [
+            {
+              "q": "Verwalten Sie Häuser in allen Ortsteilen von Castelnuovo?",
+              "a": "Ja: im Hauptort, in Cavalcaselle, Sandrà und Oliosi. Unser Büro ist direkt in Castelnuovo, wir sind also in wenigen Minuten bei jedem Haus."
+            },
+            {
+              "q": "Lässt sich ein Haus im Hinterland so gut vermieten wie eines am See?",
+              "a": "Ja, wenn es bietet, was Familien und Gruppen suchen: Platz, Garten, Parkplatz und am besten einen Pool. See und Freizeitparks sind nur wenige Autominuten entfernt, und wer im Hinterland bucht, bleibt oft länger."
+            },
+            {
+              "q": "Bringt Gardaland auch außerhalb der Hochsaison Buchungen?",
+              "a": "Ja. Neben dem Sommer bringen die Wochenenden im Frühjahr und Herbst und die Sonderöffnungen des Parks Familien auch außerhalb der Hochsaison. Mit täglich angepassten Preisen nutzen wir diese Nachfragespitzen."
+            },
+            {
+              "q": "Wie viel bringt ein Ferienhaus in Castelnuovo del Garda?",
+              "a": "Das hängt von Ortsteil, Größe und Ausstattung ab: Garten, Pool und Bettenzahl wirken sich stark auf den Preis aus. Mit der kostenlosen Bewertung schicken wir Ihnen innerhalb von 48 Stunden eine Schätzung für Ihr Haus. Bis dahin finden Sie mehr in unserem <a href=\"/de/ratgeber/was-bringt-ferienhaus-gardasee\" class=\"underline\">Ratgeber, was ein Ferienhaus am Gardasee bringt</a>."
+            },
+            {
+              "q": "Was brauche ich, um ein Haus in Castelnuovo del Garda zu vermieten?",
+              "a": "Sie brauchen den CIN (den nationalen Identifikationscode) und einige Pflichtmeldungen (Questura, ISTAT, Gemeinde). Ist das Haus noch nicht so weit, kümmern wir uns darum, bevor wir es veröffentlichen. Alles Wichtige steht in unserem <a href=\"/de/ratgeber/cin-suap-ferienvermietung-italien\" class=\"underline\">Ratgeber zu CIN und SUAP</a>."
+            }
+          ]
+        }
       },
       "bardolino": {
         "intro1": "Bardolino ist der See des Weins: Die Seepromenade, der Radweg und die Weingüter des Bardolino DOC ziehen Paare und Weinliebhaber an – mit einer Saison, die bis in den Herbst der Weinlese reicht.",

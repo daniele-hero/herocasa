@@ -434,6 +434,8 @@
     "highlightsEyebrow": "The local market",
     "highlightsTitle": "Why rent out in {name}",
     "testimonialEyebrow": "An owner in {name}",
+    "localAreaTitle": "Where we work in {name}",
+    "localHousesTitle": "The homes that earn the most",
     "otherZonesTitle": "We also manage homes in",
     "imageAlt": "A property managed by Herocasa on Lake Garda",
     "metaTitle": "Short-term rental management in {name} | Herocasa",
@@ -471,7 +473,46 @@
             "title": "A long season",
             "body": "Markets, events and the lively lakefront keep bookings coming from spring to autumn."
           }
-        ]
+        ],
+        "local": {
+          "area": "We work across the whole comune: the old town inside the walls and the lakefront; Pacengo, on the lake towards Peschiera and close to the theme parks; Colà, inland among olive groves and vineyards, with its thermal park. Our offices in Peschiera del Garda and Castelnuovo del Garda are about 15 minutes away, so we are on site quickly for guests and for anything unexpected.",
+          "houses": [
+            {
+              "title": "Apartments in the old town and on the lakefront",
+              "body": "Couples book them for weekends and short stays: within walking distance of the walls, the harbour and the restaurants, they do well from spring to autumn."
+            },
+            {
+              "title": "Homes with a pool in Pacengo and Colà",
+              "body": "Families come for the theme parks and the lake and stay longer: a pool, a garden and parking make a real difference to the price."
+            },
+            {
+              "title": "Villas with a lake view",
+              "body": "In the hills behind the town they are in high demand with groups and families from northern Europe, at the highest rates in the area."
+            }
+          ],
+          "faq": [
+            {
+              "q": "Do you also manage homes in Pacengo and Colà?",
+              "a": "Yes. We work across the whole comune of Lazise, from the old town to Pacengo and Colà, and in the surrounding area. Our offices in Peschiera and Castelnuovo are about 15 minutes away."
+            },
+            {
+              "q": "Does renting in Lazise only work in summer?",
+              "a": "No. With the lakefront, markets, events and the nearby theme parks, bookings start in spring and run into autumn. With prices updated every day we aim to fill the shoulder season and long weekends too."
+            },
+            {
+              "q": "Who welcomes the guests and looks after the home?",
+              "a": "Our own team, on site: guest welcome, assistance at any hour, cleaning and a check of the home after every departure. We are minutes away, so we can step in quickly when needed."
+            },
+            {
+              "q": "How much can a home in Lazise earn?",
+              "a": "It depends on location, size and amenities: the old town and the lakefront, a pool and a lake view weigh heavily on the price. With the free valuation we send you an estimate for your home within 48 hours. Meanwhile, read our <a href=\"/en/guide/how-much-lake-garda-home-earns\" class=\"underline\">guide to what a Lake Garda home earns</a>."
+            },
+            {
+              "q": "What do I need to rent out a home in Lazise?",
+              "a": "You need the CIN (Italy's national rental code) and a few mandatory notifications (police guest registration, ISTAT, the town hall). If the home is not yet compliant, we take care of it before listing it. Everything is explained in our <a href=\"/en/guide/cin-suap-short-term-rentals-italy\" class=\"underline\">guide to CIN and SUAP</a>."
+            }
+          ]
+        }
       },
       "castelnuovo-del-garda": {
         "intro1": "Castelnuovo del Garda is home to Gardaland, a stone's throw from the lake and the motorway: houses and villas with gardens inland are much in demand among families and groups looking for space and quiet minutes from the beaches.",
@@ -488,7 +529,46 @@
             "title": "Close to the whole lake",
             "body": "Peschiera, Lazise and Sirmione are a few minutes' drive away."
           }
-        ]
+        ],
+        "local": {
+          "area": "Our office is right here in Castelnuovo del Garda. We work in the main town and in every hamlet: Cavalcaselle, next to Peschiera; Sandrà, towards Colà and Pastrengo; Oliosi, among hills and countryside towards Valeggio. We are minutes from every home, and our Peschiera office is close by too.",
+          "houses": [
+            {
+              "title": "Houses with a garden",
+              "body": "Families coming for Gardaland and the lake look for space, a garden and parking: in Cavalcaselle and Sandrà they often stay several nights."
+            },
+            {
+              "title": "Villas with a pool in the hills",
+              "body": "In the hills of Oliosi and Sandrà they are the most requested by groups and large families, at the highest rates in the area."
+            },
+            {
+              "title": "Apartments near the parks",
+              "body": "Handy for Gardaland and the motorway, they do well with weekends and short stays outside summer too."
+            }
+          ],
+          "faq": [
+            {
+              "q": "Do you manage homes in every part of Castelnuovo?",
+              "a": "Yes: the main town, Cavalcaselle, Sandrà and Oliosi. Our office is right here in Castelnuovo, so we are minutes from every home."
+            },
+            {
+              "q": "Does an inland home rent as well as one on the lake?",
+              "a": "Yes, if it offers what families and groups look for: space, a garden, parking and ideally a pool. The lake and the theme parks are a short drive away, and guests who choose an inland home often stay longer."
+            },
+            {
+              "q": "Does Gardaland bring bookings outside the high season?",
+              "a": "Yes. Besides summer, spring and autumn weekends and the park's special openings bring families outside the peak season. With prices updated every day we make the most of these peaks in demand."
+            },
+            {
+              "q": "How much can a home in Castelnuovo del Garda earn?",
+              "a": "It depends on the hamlet, size and amenities: a garden, a pool and the number of beds weigh heavily on the price. With the free valuation we send you an estimate for your home within 48 hours. Meanwhile, read our <a href=\"/en/guide/how-much-lake-garda-home-earns\" class=\"underline\">guide to what a Lake Garda home earns</a>."
+            },
+            {
+              "q": "What do I need to rent out a home in Castelnuovo del Garda?",
+              "a": "You need the CIN (Italy's national rental code) and a few mandatory notifications (police guest registration, ISTAT, the town hall). If the home is not yet compliant, we take care of it before listing it. Everything is explained in our <a href=\"/en/guide/cin-suap-short-term-rentals-italy\" class=\"underline\">guide to CIN and SUAP</a>."
+            }
+          ]
+        }
       },
       "bardolino": {
         "intro1": "Bardolino is the lake of wine: the lakefront, the cycle path and the Bardolino DOC wineries attract couples and wine lovers, with a season that stretches into the autumn harvest.",

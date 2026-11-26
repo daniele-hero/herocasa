@@ -18,6 +18,8 @@ import { COMUNI, comunePath, nearbyComuni, type ComuneSlug } from '@/lib/comuni'
 
 type Highlight = { title: string; body: string };
 type Testimonial = { quote: string; author: string; role: string };
+/** Optional, only for some comuni: where we work (frazioni, distance from the offices), which homes earn most, local FAQ. */
+type Local = { area: string; houses: Highlight[]; faq: { q: string; a: string }[] };
 
 /** Landing page for one comune: local intro + highlights, then the shared sections with the town pre-selected in the forms. */
 export default function ComunePage({ slug }: { slug: ComuneSlug }) {
@@ -27,7 +29,7 @@ export default function ComunePage({ slug }: { slug: ComuneSlug }) {
   const tTestimonials = useTranslations();
   const { name, photo } = COMUNI[slug];
 
-  const highlights = t.raw(`list.${slug}.highlights`) as Highlight[];
+  const { highlights, local } = t.raw(`list.${slug}`) as { highlights: Highlight[]; local?: Local };
   const testimonial = (tTestimonials.raw('testimonials') as Testimonial[]).find((x) => x.role.includes(name));
 
   return (
@@ -84,6 +86,30 @@ export default function ComunePage({ slug }: { slug: ComuneSlug }) {
               ))}
             </div>
 
+            {local && (
+              <div className="mt-16 grid gap-12 md:grid-cols-2 md:gap-[clamp(40px,6vw,96px)]">
+                <Reveal>
+                  <h3 className="serif text-[var(--olive)] mb-4" style={{ fontSize: 'clamp(26px, 2.6vw, 34px)', lineHeight: 1.15 }}>
+                    {t('localAreaTitle', { name })}
+                  </h3>
+                  <p className="text-[16px] leading-[1.65]" style={{ color: 'var(--olive-90)' }}>{local.area}</p>
+                </Reveal>
+                <Reveal delay={0.05}>
+                  <h3 className="serif text-[var(--olive)] mb-4" style={{ fontSize: 'clamp(26px, 2.6vw, 34px)', lineHeight: 1.15 }}>
+                    {t('localHousesTitle')}
+                  </h3>
+                  <ul>
+                    {local.houses.map((h) => (
+                      <li key={h.title} className="border-t border-[var(--olive-15)] py-4">
+                        <h4 className="serif text-[20px] leading-tight text-[var(--olive)] mb-1.5">{h.title}</h4>
+                        <p className="text-[15px] leading-[1.6]" style={{ color: 'var(--olive-90)' }}>{h.body}</p>
+                      </li>
+                    ))}
+                  </ul>
+                </Reveal>
+              </div>
+            )}
+
             {testimonial && (
               <Reveal>
                 <figure className="mt-16 max-w-[820px]">
@@ -103,7 +129,7 @@ export default function ComunePage({ slug }: { slug: ComuneSlug }) {
         <Services numeral="ii." />
         <Process numeral="iii." />
         <Estimator presetZone={name} sectionNumber="iv." />
-        <Faq numeral="v." />
+        <Faq numeral="v." extra={local?.faq} />
 
         <section className="container-x pb-20">
           <div className="eyebrow mb-4">{t('otherZonesTitle')}</div>

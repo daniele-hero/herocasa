@@ -3,7 +3,7 @@ import { notFound } from 'next/navigation';
 import { getTranslations, setRequestLocale } from 'next-intl/server';
 import ComunePage from '@/components/ComunePage';
 import { routing } from '@/lib/routing';
-import { COMUNI, comuneParams, comunePath, isComuneSlug } from '@/lib/comuni';
+import { COMUNI, FRAZIONI, comuneParams, comunePath, isComuneSlug } from '@/lib/comuni';
 
 const SITE_URL = 'https://herocasa.it';
 const LOCALE_OG: Record<string, string> = { it: 'it_IT', en: 'en_US', de: 'de_DE' };
@@ -58,7 +58,10 @@ export default async function Page({ params }: Params) {
       name: t('h1', { name }),
       serviceType: 'Short-term rental management',
       url,
-      areaServed: { '@type': 'City', name },
+      areaServed: [
+        { '@type': 'City', name },
+        ...(FRAZIONI[comune] ?? []).map((f) => ({ '@type': 'Place', name: `${f}, ${name}` })),
+      ],
       provider: { '@type': 'RealEstateAgent', name: 'Herocasa', url: SITE_URL, telephone: '+39 366 369 5252', email: 'info@herocasa.it' },
     },
     {
